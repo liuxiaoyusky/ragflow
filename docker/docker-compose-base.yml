@@ -33,7 +33,7 @@ services:
       retries: 120
     networks:
       - ragflow
-    restart: on-failure
+    restart: always
 
   opensearch01:
     container_name: ragflow-opensearch-01
@@ -71,7 +71,7 @@ services:
       retries: 120
     networks:
       - ragflow
-    restart: on-failure
+    restart: always
 
   infinity:
     container_name: ragflow-infinity
@@ -101,7 +101,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
-    restart: on-failure
+    restart: always
 
   sandbox-executor-manager:
     container_name: ragflow-sandbox-executor-manager
@@ -131,7 +131,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    restart: on-failure
+    restart: always
 
   mysql:
     # mysql:5.7 linux/arm64 image is unavailable.
@@ -161,7 +161,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
-    restart: on-failure
+    restart: always
 
   minio:
     image: quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
@@ -179,7 +179,7 @@ services:
       - minio_data:/data
     networks:
       - ragflow
-    restart: on-failure
+    restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 30s
@@ -198,7 +198,7 @@ services:
       - redis_data:/data
     networks:
       - ragflow
-    restart: on-failure
+    restart: always
     healthcheck:
       test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
       interval: 5s

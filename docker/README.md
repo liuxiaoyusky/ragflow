@@ -7,6 +7,7 @@
 - 🐬 [Docker environment variables](#-docker-environment-variables)
 - 🐋 [Service configuration](#-service-configuration)
 - 📋 [Setup Examples](#-setup-examples)
+- 🚀 [GPU Setup](#-gpu-setup)
 
 </details>
 
@@ -16,6 +17,8 @@
   Sets up environment for RAGFlow and its dependencies.
 - **docker-compose-base.yml**  
   Sets up environment for RAGFlow's dependencies: Elasticsearch/[Infinity](https://github.com/infiniflow/infinity), MySQL, MinIO, and Redis.
+- **docker-compose-gpu.yml**  
+  GPU-enabled configuration for RAGFlow with NVIDIA GPU support. Includes all base services plus GPU-specific configurations.
 
 > [!CAUTION]
 > We do not actively maintain **docker-compose-CN-oc9.yml**, **docker-compose-gpu-CN-oc9.yml**, or **docker-compose-gpu.yml**, so use them at your own risk. However, you are welcome to file a pull request to improve any of them.
@@ -267,3 +270,95 @@ If you already have SSL certificates from another provider:
 2. Update the volume paths in `docker-compose.yml` to point to your certificate files
 3. Ensure the certificate file contains the full certificate chain
 4. Follow steps 4-5 from the Let's Encrypt guide above
+
+### 🚀 GPU Setup
+
+#### Prerequisites
+
+- NVIDIA GPU with CUDA support
+- NVIDIA Container Toolkit installed
+- Docker with GPU support enabled
+
+#### GPU Configuration Details
+
+The `docker-compose-gpu.yml` file provides GPU-enabled configuration for RAGFlow with the following unique parameters:
+
+##### GPU-Specific Configuration
+
+```yaml
+deploy:
+  resources:
+    reservations:
+      devices:
+        - driver: nvidia
+          count: all
+          capabilities: [gpu]
+```
+
+**Key Parameters:**
+- `driver: nvidia`: Specifies the NVIDIA GPU driver
+- `count: all`: Allocates all available GPUs to the container
+- `capabilities: [gpu]`: Enables GPU compute capabilities
+
+##### Additional Ports
+
+```yaml
+ports:
+  - ${SVR_HTTP_PORT}:9380  # RAGFlow API port
+  - 8080:80                # HTTP web interface
+  - 8443:443               # HTTPS web interface
+```
+
+##### Host Network Configuration
+
+```yaml
+extra_hosts:
+  - "host.docker.internal:host-gateway"
+```
+
+This ensures the host's internal IP is accessible to the container for proper networking.
+
+#### Starting GPU-Enabled RAGFlow
+
+1. **Ensure NVIDIA Container Toolkit is installed:**
+   ```bash
+   # Check if nvidia-docker is available
+   docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
+   ```
+
+2. **Start the GPU-enabled services:**
+   ```bash
+   docker compose -f docker-compose-gpu.yml up -d
+   ```
+
+3. **Verify GPU access:**
+   ```bash
+   # Check if containers can access GPU
+   docker exec ragflow-server nvidia-smi
+   ```
+
+#### GPU Performance Optimization
+
+- **Memory Management**: GPU-enabled containers may require more memory allocation
+- **CUDA Version**: Ensure your NVIDIA drivers support the CUDA version used in the RAGFlow image
+- **Multi-GPU**: For systems with multiple GPUs, the `count: all` parameter will utilize all available GPUs
+
+#### Troubleshooting GPU Issues
+
+1. **Check NVIDIA drivers:**
+   ```bash
+   nvidia-smi
+   ```
+
+2. **Verify Docker GPU support:**
+   ```bash
+   docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
+   ```
+
+3. **Check container logs:**
+   ```bash
+   docker logs ragflow-server
+   ```
+
+> [!NOTE]
+> GPU support is experimental and may require additional configuration based on your specific hardware and driver versions.
