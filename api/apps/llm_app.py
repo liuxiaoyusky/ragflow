@@ -63,8 +63,14 @@ def set_api_key():
     for llm in LLMService.query(fid=factory):
         if not embd_passed and llm.model_type == LLMType.EMBEDDING.value:
             assert factory in EmbeddingModel, f"Embedding model from {factory} is not supported yet."
+            base_url = req.get("base_url")
+            if factory in ["SILICONFLOW", "SILICONFLOW-OVERSEAS"]:
+                if not base_url:
+                    base_url = "https://api.siliconflow.cn/v1/embeddings" if factory == "SILICONFLOW" else "https://api.siliconflow.com/v1/embeddings"
+                elif base_url.endswith("/v1"):
+                    base_url = base_url + "/embeddings"
             mdl = EmbeddingModel[factory](
-                req["api_key"], llm.llm_name, base_url=req.get("base_url"))
+                req["api_key"], llm.llm_name, base_url=base_url)
             try:
                 arr, tc = mdl.encode(["Test if the api key is available"])
                 if len(arr[0]) == 0:
@@ -87,8 +93,14 @@ def set_api_key():
                     e)
         elif not rerank_passed and llm.model_type == LLMType.RERANK:
             assert factory in RerankModel, f"Re-rank model from {factory} is not supported yet."
+            base_url = req.get("base_url")
+            if factory in ["SILICONFLOW", "SILICONFLOW-OVERSEAS"]:
+                if not base_url:
+                    base_url = "https://api.siliconflow.cn/v1/rerank" if factory == "SILICONFLOW" else "https://api.siliconflow.com/v1/rerank"
+                elif base_url.endswith("/v1"):
+                    base_url = base_url + "/rerank"
             mdl = RerankModel[factory](
-                req["api_key"], llm.llm_name, base_url=req.get("base_url"))
+                req["api_key"], llm.llm_name, base_url=base_url)
             try:
                 arr, tc = mdl.similarity("What's the weather?", ["Is it sunny today?"])
                 if len(arr) == 0 or tc == 0:

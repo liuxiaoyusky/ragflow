@@ -125,3 +125,111 @@ docker compose -f docker-compose-gpu.yml restart
 # 更新镜像
 docker compose -f docker-compose-gpu.yml pull
 ```
+
+## 💾 数据备份与恢复
+
+### 数据卷配置
+RAGFlow使用以下数据卷存储持久化数据：
+- `soft_ragflow_mysql_data`: MySQL数据库 (用户、知识库、对话等)
+- `soft_ragflow_minio_data`: MinIO对象存储 (上传的文件)
+- `soft_ragflow_redis_data`: Redis缓存数据
+- `soft_ragflow_esdata01`: Elasticsearch索引数据
+
+### 🔧 预防措施配置
+
+#### 1. 固定项目名称
+在 `.env` 文件中添加：
+```bash
+COMPOSE_PROJECT_NAME=ragflow
+```
+这确保无论在哪个目录运行，都使用相同的数据卷名称。
+
+#### 2. 外部数据卷配置
+在 `docker-compose-base.yml` 中配置：
+```yaml
+volumes:
+  mysql_data:
+    external: true
+    name: soft_ragflow_mysql_data
+  minio_data:
+    external: true
+    name: soft_ragflow_minio_data
+  # ... 其他数据卷
+```
+
+### 📦 备份操作
+
+#### 自动备份脚本
+```bash
+# 创建带时间戳的备份
+../backup_script.sh
+
+# 创建自定义名称的备份
+../backup_script.sh my_backup_name
+```
+
+#### 官方迁移工具
+```bash
+# 停止服务
+docker compose -f docker-compose-gpu.yml down
+
+# 创建备份
+bash migration.sh backup backup_folder_name
+
+# 重新启动服务
+docker compose -f docker-compose-gpu.yml up -d
+```
+
+### 🔄 恢复操作
+
+#### 从备份恢复数据
+```bash
+# 停止当前服务
+docker compose -f docker-compose-gpu.yml down
+
+# 从备份恢复数据
+bash migration.sh restore backup_folder_name
+
+# 重新启动服务
+docker compose -f docker-compose-gpu.yml up -d
+```
+
+### 🔍 数据卷管理
+
+```bash
+# 查看所有RAGFlow相关数据卷
+docker volume ls | grep ragflow
+
+# 查看特定数据卷详情
+docker inspect volume_name
+
+# 检查容器挂载的数据卷
+docker inspect ragflow-mysql | grep -A 10 "Mounts"
+```
+
+### ⚠️ 注意事项
+
+1. **备份前必须停止服务**：避免数据不一致
+2. **恢复会覆盖现有数据**：请确保备份数据的正确性
+3. **定期备份**：建议每周或重要操作前进行备份
+4. **测试恢复流程**：定期验证备份的完整性
+
+### 🚨 故障排除
+
+#### 数据卷不存在错误
+```bash
+# 检查数据卷是否存在
+docker volume ls | grep ragflow
+
+# 如果不存在，从备份恢复
+bash migration.sh restore backup_folder_name
+```
+
+#### 容器无法启动
+```bash
+# 查看容器挂载信息
+docker inspect container_name | grep -A 10 "Mounts"
+
+# 检查数据卷权限 (需要sudo)
+sudo ls -la /var/lib/docker/volumes/volume_name/_data
+```

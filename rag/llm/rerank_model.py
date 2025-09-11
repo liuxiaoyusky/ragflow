@@ -447,6 +447,42 @@ class SILICONFLOWRerank(Base):
         )
 
 
+class SILICONFLOWOverseasRerank(Base):
+    _FACTORY_NAME = "SILICONFLOW-OVERSEAS"
+
+    def __init__(self, key, model_name, base_url="https://api.siliconflow.com/v1/rerank"):
+        if not base_url:
+            base_url = "https://api.siliconflow.com/v1/rerank"
+        self.model_name = model_name
+        self.base_url = base_url
+        self.headers = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "authorization": f"Bearer {key}",
+        }
+
+    def similarity(self, query: str, texts: list):
+        payload = {
+            "model": self.model_name,
+            "query": query,
+            "documents": texts,
+            "top_n": len(texts),
+            "return_documents": False,
+            "max_chunks_per_doc": 1024,
+            "overlap_tokens": 80,
+        }
+        response = requests.post(self.base_url, json=payload, headers=self.headers).json()
+        rank = np.zeros(len(texts), dtype=float)
+        try:
+            for d in response["results"]:
+                rank[d["index"]] = d["relevance_score"]
+        except Exception as _e:
+            log_exception(_e, response)
+        return (
+            rank,
+            response["meta"]["tokens"]["input_tokens"] + response["meta"]["tokens"]["output_tokens"],
+        )
+
 class BaiduYiyanRerank(Base):
     _FACTORY_NAME = "BaiduYiyan"
 
