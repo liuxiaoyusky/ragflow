@@ -55,6 +55,7 @@ export enum LLMFactory {
   DeepInfra = 'DeepInfra',
   Grok = 'Grok',
   XAI = 'xAI',
+  Meituan = 'Meituan',
 }
 
 // Please lowercase the file name
@@ -115,4 +116,5 @@ export const IconMap = {
   [LLMFactory.DeepInfra]: 'deepinfra',
   [LLMFactory.Grok]: 'grok',
   [LLMFactory.XAI]: 'xai',
+  [LLMFactory.Meituan]: 'longcat',
 };
