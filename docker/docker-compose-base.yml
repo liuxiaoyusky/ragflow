@@ -210,17 +210,21 @@ services:
 
 volumes:
   esdata01:
-    driver: local
+    external: true
+    name: soft_ragflow_esdata01
   osdata01:
     driver: local
   infinity_data:
     driver: local
   mysql_data:
-    driver: local
+    external: true
+    name: soft_ragflow_mysql_data
   minio_data:
-    driver: local
+    external: true
+    name: soft_ragflow_minio_data
   redis_data:
-    driver: local
+    external: true
+    name: soft_ragflow_redis_data
 
 networks:
   ragflow:
