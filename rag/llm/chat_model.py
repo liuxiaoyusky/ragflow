@@ -1393,6 +1393,7 @@ class LiteLLMBase(ABC):
         "Meituan",
         "CometAPI",
         "SILICONFLOW",
+        "SILICONFLOW-Overseas",
         "OpenRouter",
         "StepFun",
         "PPIO",
