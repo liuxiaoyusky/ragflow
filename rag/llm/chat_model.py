@@ -1550,6 +1550,7 @@ class LiteLLMBase(ABC):
         "LongCat",
         "CometAPI",
         "SILICONFLOW",
+        "SILICONFLOW-Overseas",
         "OpenRouter",
         "StepFun",
         "PPIO",
