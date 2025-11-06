@@ -150,6 +150,10 @@ RUN --mount=type=cache,id=ragflow_uv,target=/root/.cache/uv,sharing=locked \
     fi; \
     uv sync --python 3.10 --frozen
 
+# Install optional dependencies: docling (for advanced document parsing)
+RUN --mount=type=cache,id=ragflow_uv,target=/root/.cache/uv,sharing=locked \
+    uv pip install docling==2.58.0
+
 COPY web web
 COPY docs docs
 RUN --mount=type=cache,id=ragflow_npm,target=/root/.npm,sharing=locked \
