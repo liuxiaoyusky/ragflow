@@ -387,6 +387,16 @@ class SILICONFLOWTTS(Base):
             if chunk:
                 yield chunk
 
+
+class SILICONFLOWOverseasTTS(SILICONFLOWTTS):
+    _FACTORY_NAME = "SILICONFLOW-Overseas"
+
+    def __init__(self, key, model_name="FunAudioLLM/CosyVoice2-0.5B", base_url="https://api.siliconflow.com/v1"):
+        if not base_url:
+            base_url = "https://api.siliconflow.com/v1"
+        super().__init__(key, model_name, base_url)
+
+
 class DeepInfraTTS(OpenAITTS):
     _FACTORY_NAME = "DeepInfra"
 

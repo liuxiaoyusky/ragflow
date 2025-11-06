@@ -482,6 +482,15 @@ class SILICONFLOWCV(GptV4):
         super().__init__(key, model_name, lang, base_url, **kwargs)
 
 
+class SILICONFLOWOverseasCV(SILICONFLOWCV):
+    _FACTORY_NAME = "SILICONFLOW-Overseas"
+
+    def __init__(self, key, model_name, lang="Chinese", base_url="https://api.siliconflow.com/v1", **kwargs):
+        if not base_url:
+            base_url = "https://api.siliconflow.com/v1"
+        super().__init__(key, model_name, lang, base_url, **kwargs)
+
+
 class OpenRouterCV(GptV4):
     _FACTORY_NAME = "OpenRouter"
 
