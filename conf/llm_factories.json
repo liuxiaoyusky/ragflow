@@ -4920,6 +4920,27 @@
                     "is_tools": false
                 },
                 {
+                    "llm_name": "Qwen/Qwen3-Reranker-8B",
+                    "tags": "TEXT RE-RANK,32k",
+                    "max_tokens": 32000,
+                    "model_type": "rerank",
+                    "is_tools": false
+                },
+                {
+                    "llm_name": "Qwen/Qwen3-Reranker-4B",
+                    "tags": "TEXT RE-RANK,32k",
+                    "max_tokens": 32000,
+                    "model_type": "rerank",
+                    "is_tools": false
+                },
+                {
+                    "llm_name": "Qwen/Qwen3-Reranker-0.6B",
+                    "tags": "TEXT RE-RANK,32k",
+                    "max_tokens": 32000,
+                    "model_type": "rerank",
+                    "is_tools": false
+                },
+                {
                     "llm_name": "Qwen/Qwen2.5-VL-72B-Instruct",
                     "tags": "LLM,CHAT,IMAGE2TEXT,128k",
                     "max_tokens": 128000,
@@ -4953,13 +4974,6 @@
                     "max_tokens": 32000,
                     "model_type": "chat",
                     "is_tools": true
-                },
-                {
-                    "llm_name": "Pro/BAAI/bge-reranker-v2-m3",
-                    "tags": "LLM,RE-RANK,8k",
-                    "max_tokens": 8192,
-                    "model_type": "rerank",
-                    "is_tools": false
                 }
             ]
         }
