@@ -94,6 +94,10 @@ services:
       - ../conf/llm_factories.json:/ragflow/conf/llm_factories.json
       - ./entrypoint.sh:/ragflow/entrypoint.sh
     env_file: .env
+    environment:
+      - USE_MINERU=${USE_MINERU:-false}
+      - USE_DOCLING=${USE_DOCLING:-false}
+      - HF_ENDPOINT=${HF_ENDPOINT:-https://hf-mirror.com}
     networks:
       - ragflow
     restart: on-failure
