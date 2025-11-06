@@ -302,6 +302,15 @@ class SILICONFLOWRerank(Base):
         )
 
 
+class SILICONFLOWOverseasRerank(SILICONFLOWRerank):
+    _FACTORY_NAME = "SILICONFLOW-Overseas"
+
+    def __init__(self, key, model_name, base_url="https://api.siliconflow.com/v1/rerank"):
+        if not base_url:
+            base_url = "https://api.siliconflow.com/v1/rerank"
+        super().__init__(key, model_name, base_url)
+
+
 class BaiduYiyanRerank(Base):
     _FACTORY_NAME = "BaiduYiyan"
 

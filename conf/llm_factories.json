@@ -5248,13 +5248,6 @@
                     "is_tools": true
                 },
                 {
-                    "llm_name": "Pro/BAAI/bge-m3",
-                    "tags": "LLM,EMBEDDING,8k",
-                    "max_tokens": 8192,
-                    "model_type": "embedding",
-                    "is_tools": false
-                },
-                {
                     "llm_name": "Pro/BAAI/bge-reranker-v2-m3",
                     "tags": "LLM,RE-RANK,8k",
                     "max_tokens": 8192,
