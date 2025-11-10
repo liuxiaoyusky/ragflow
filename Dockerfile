@@ -158,7 +158,7 @@ RUN --mount=type=cache,id=ragflow_uv,target=/root/.cache/uv,sharing=locked \
     cd /ragflow/uv_tools && \
     uv venv .venv && \
     source .venv/bin/activate && \
-    uv pip install -U "mineru[core]" -i https://mirrors.aliyun.com/pypi/simple --extra-index-url https://pypi.org/simple && \
+    uv pip install -U "mineru[all]" -i https://mirrors.aliyun.com/pypi/simple --extra-index-url https://pypi.org/simple && \
     deactivate
 
 COPY web web
