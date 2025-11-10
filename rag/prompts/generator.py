@@ -763,7 +763,8 @@ async def run_toc_from_text(chunks, chat_mdl, callback=None):
 
     # Merge structure and content (by index)
     prune = len(toc_with_levels) > 512
-    max_lvl = sorted([t.get("level", "0") for t in toc_with_levels if isinstance(t, dict)])[-1]
+    toc_levels = sorted([t.get("level", "0") for t in toc_with_levels if isinstance(t, dict)])
+    max_lvl = toc_levels[-1] if toc_levels else "0"
     merged = []
     for _ , (toc_item, src_item) in enumerate(zip(toc_with_levels, filtered)):
         if prune and toc_item.get("level", "0") >= max_lvl:
