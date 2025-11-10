@@ -147,37 +147,37 @@ class MinerUParser(RAGFlowPdfParser):
                     logging.warning(f"[MinerU] vlm-http-client server connection check failed: {server_url}: {e}")
                     return False, reason
 
+        # Priority 1: Try API server first (if configured)
+        if self.mineru_api:
+            try:
+                logging.info(f"[MinerU] Checking external API server: {self.mineru_api}")
+                openapi_exists = self._is_http_endpoint_valid(self.mineru_api + "/openapi.json")
+                if openapi_exists:
+                    logging.info(f"[MinerU] External API server available, using API: {self.mineru_api}")
+                    self.using_api = True
+                    return True, reason
+                else:
+                    logging.info(f"[MinerU] External API server not available, falling back to local executable")
+            except Exception as e:
+                logging.warning(f"[MinerU] API check failed: {e}, falling back to local executable")
+
+        # Priority 2: Fall back to local executable
         try:
             result = subprocess.run([str(self.mineru_path), "--version"], **subprocess_kwargs)
             version_info = result.stdout.strip()
             if version_info:
-                logging.info(f"[MinerU] Detected version: {version_info}")
+                logging.info(f"[MinerU] Using local executable, version: {version_info}")
             else:
-                logging.info("[MinerU] Detected MinerU, but version info is empty.")
+                logging.info("[MinerU] Using local executable (version info empty)")
             return True, reason
         except subprocess.CalledProcessError as e:
-            logging.warning(f"[MinerU] Execution failed (exit code {e.returncode}).")
+            logging.warning(f"[MinerU] Local executable check failed (exit code {e.returncode})")
         except FileNotFoundError:
-            logging.warning("[MinerU] MinerU not found. Please install it via: pip install -U 'mineru[core]'")
+            logging.warning("[MinerU] Local MinerU not found. Please install it via: pip install -U 'mineru[core]'")
         except Exception as e:
-            logging.error(f"[MinerU] Unexpected error during installation check: {e}")
+            logging.error(f"[MinerU] Unexpected error during local executable check: {e}")
 
-        # If executable check fails, try API check
-        try:
-            if self.mineru_api:
-                # check openapi.json
-                openapi_exists = self._is_http_endpoint_valid(self.mineru_api + "/openapi.json")
-                if not openapi_exists:
-                    reason = "[MinerU] Failed to detect vaild MinerU API server"
-                    return openapi_exists, reason
-                logging.info(f"[MinerU] Detected {self.mineru_api}/openapi.json: {openapi_exists}")
-                self.using_api = openapi_exists
-                return openapi_exists, reason
-            else:
-                logging.info("[MinerU] api not exists.")
-        except Exception as e:
-            reason = f"[MinerU] Unexpected error during api check: {e}"
-            logging.error(f"[MinerU] Unexpected error during api check: {e}")
+        reason = "[MinerU] Neither external API server nor local executable available"
         return False, reason
 
     def _run_mineru(
