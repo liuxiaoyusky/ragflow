@@ -105,9 +105,9 @@ class MinerUParser(RAGFlowPdfParser):
     def check_installation(self, backend: str = "pipeline", server_url: Optional[str] = None) -> tuple[bool, str]:
         reason = ""
 
-        valid_backends = ["pipeline", "vlm-http-client", "vlm-transformers", "vlm-vllm-engine"]
+        valid_backends = ["pipeline", "vlm-http-client", "vlm-transformers", "vlm-vllm-engine", "vlm-vllm-async-engine"]
         if backend not in valid_backends:
-            reason = "[MinerU] Invalid backend '{backend}'. Valid backends are: {valid_backends}"
+            reason = f"[MinerU] Invalid backend '{backend}'. Valid backends are: {valid_backends}"
             logging.warning(reason)
             return False, reason
 
@@ -570,8 +570,15 @@ class MinerUParser(RAGFlowPdfParser):
             self.logger.info(f"[MinerU] Parsed {len(outputs)} blocks from PDF.")
             if callback:
                 callback(0.75, f"[MinerU] Parsed {len(outputs)} blocks from PDF.")
-                
-            return self._transfer_to_sections(outputs, parse_method), self._transfer_to_tables(outputs)
+            
+            # LLM enhancement hook (optional)
+            if os.environ.get("MINERU_LLM_ENHANCE") == "true":
+                self.logger.info("[MinerU] Applying LLM enhancement...")
+                outputs = self._llm_enhance_outputs(outputs, callback=callback)
+                if callback:
+                    callback(0.85, "[MinerU] LLM enhancement completed.")
+            
+            return self._transfer_to_sections(outputs), self._transfer_to_tables(outputs)
         finally:
             if temp_pdf and temp_pdf.exists():
                 try:

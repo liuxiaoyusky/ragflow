@@ -154,14 +154,7 @@ RUN --mount=type=cache,id=ragflow_uv,target=/root/.cache/uv,sharing=locked \
 RUN --mount=type=cache,id=ragflow_uv,target=/root/.cache/uv,sharing=locked \
     uv pip install docling==2.58.0
 
-# Install MinerU for advanced document parsing
-RUN --mount=type=cache,id=ragflow_uv,target=/root/.cache/uv,sharing=locked \
-    mkdir -p /ragflow/uv_tools && \
-    cd /ragflow/uv_tools && \
-    uv venv .venv && \
-    source .venv/bin/activate && \
-    uv pip install -U "mineru[all]" -i https://mirrors.aliyun.com/pypi/simple --extra-index-url https://pypi.org/simple && \
-    deactivate
+# MinerU is deployed externally, no local installation needed
 
 COPY web web
 COPY docs docs
@@ -185,9 +178,6 @@ WORKDIR /ragflow
 ENV VIRTUAL_ENV=/ragflow/.venv
 COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 ENV PATH="${VIRTUAL_ENV}/bin:${PATH}"
-
-# Copy MinerU tools
-COPY --from=builder /ragflow/uv_tools /ragflow/uv_tools
 
 ENV PYTHONPATH=/ragflow/
 
