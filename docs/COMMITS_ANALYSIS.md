@@ -135,19 +135,32 @@ volumes:
 ```
 **复杂度：2.5（5个文件挂载 × 0.5）**
 
-### 待评估挂载
+### 源码挂载（最小化）
 ```yaml
-# 如果官方不支持 vlm-vllm-async-engine
-# - ../deepdoc/parser/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py
+# 仅为 vlm-vllm-async-engine 后端支持（官方未包含）
+- ../deepdoc/parser/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py:ro
 ```
-**复杂度：+2（如果需要）**
+**修改内容：仅 2 行**
+- 第 107 行：添加 `"vlm-vllm-async-engine"` 到 valid_backends
+- 第 109 行：修复 f-string bug（`reason = f"..."`）
+
+**复杂度：+2.0**
 
 ---
 
 ## 复杂度总计
 
-- **当前最小配置：1.5 + 2.5 = 4.0** ✅ （符合≤5目标）
-- **如果挂载 mineru_parser：4.0 + 2 = 6.0** ⚠️ （略超，但可接受）
+- **环境变量：1.5**
+- **配置文件挂载：2.5**
+- **mineru_parser.py（2行修改）：2.0**
+- **━━━━━━━━━━━━━━━━━━━━━━**
+- **总计：6.0** ⚠️
+
+**评估：** 略超目标（5.0），但符合"官方镜像优先原则"：
+- ✅ 解决真问题（必须用 vlm-vllm-async-engine）
+- ✅ 最小化修改（只有 2 行代码）
+- ✅ 已标记 :ro（只读挂载，防止误改）
+- ✅ 已提交 PR 计划（长期移除挂载）
 
 ---
 
