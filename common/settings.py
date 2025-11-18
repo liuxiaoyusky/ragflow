@@ -85,6 +85,9 @@ kg_retriever = None
 # user registration switch
 REGISTER_ENABLED = 1
 
+# default team for new users
+DEFAULT_TEAM_ENABLED = None
+DEFAULT_TEAM_ID = None
 
 # sandbox-executor-manager
 SANDBOX_HOST = None
@@ -207,7 +210,11 @@ def init_settings():
     IMAGE2TEXT_CFG = _resolve_per_model_config(image2text_entry, LLM_FACTORY, API_KEY, LLM_BASE_URL)
 
     CHAT_MDL = CHAT_CFG.get("model", "") or ""
-    EMBEDDING_MDL = os.getenv("TEI_MODEL", "BAAI/bge-small-en-v1.5") if "tei-" in os.getenv("COMPOSE_PROFILES", "") else ""
+    # Use TEI_MODEL if TEI profile is enabled, otherwise use configured embedding model
+    if "tei-" in os.getenv("COMPOSE_PROFILES", ""):
+        EMBEDDING_MDL = os.getenv("TEI_MODEL", "BAAI/bge-small-en-v1.5")
+    else:
+        EMBEDDING_MDL = EMBEDDING_CFG.get("model", "") or ""
     RERANK_MDL = RERANK_CFG.get("model", "") or ""
     ASR_MDL = ASR_CFG.get("model", "") or ""
     IMAGE2TEXT_MDL = IMAGE2TEXT_CFG.get("model", "") or ""
@@ -231,7 +238,13 @@ def init_settings():
     FEISHU_OAUTH = get_base_config("oauth", {}).get("feishu")
     OAUTH_CONFIG = get_base_config("oauth", {})
 
-    global DOC_ENGINE, DOC_ENGINE_INFINITY, docStoreConn, ES, OB, OS, INFINITY
+    # default team
+    global DEFAULT_TEAM_ENABLED, DEFAULT_TEAM_ID
+    default_team_conf = get_base_config("default_team", {})
+    DEFAULT_TEAM_ENABLED = default_team_conf.get("enabled", False)
+    DEFAULT_TEAM_ID = default_team_conf.get("team_id", None)
+
+    global DOC_ENGINE, docStoreConn, ES, OS, INFINITY
     DOC_ENGINE = os.environ.get("DOC_ENGINE", "elasticsearch")
     DOC_ENGINE_INFINITY = (DOC_ENGINE.lower() == "infinity")
     lower_case_doc_engine = DOC_ENGINE.lower()

@@ -31,7 +31,7 @@ services:
       retries: 120
     networks:
       - ragflow
-    restart: on-failure
+    restart: always
 
   opensearch01:
     profiles:
@@ -175,7 +175,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
-    restart: on-failure
+    restart: always
 
   minio:
     image: quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
@@ -191,7 +191,7 @@ services:
       - minio_data:/data
     networks:
       - ragflow
-    restart: on-failure
+    restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 10s
@@ -209,7 +209,7 @@ services:
       - redis_data:/data
     networks:
       - ragflow
-    restart: on-failure
+    restart: always
     healthcheck:
       test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
       interval: 10s

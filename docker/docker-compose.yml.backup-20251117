@@ -43,6 +43,8 @@ services:
       - ./service_conf.yaml:/ragflow/conf/service_conf.yaml.template
       - ../conf/llm_factories.json:/ragflow/conf/llm_factories.json
       - ./entrypoint.sh:/ragflow/entrypoint.sh
+      # Source code overlay: MinerU enhanced parser only
+      - ../deepdoc/parser/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py
     env_file: .env
     networks:
       - ragflow
@@ -93,6 +95,8 @@ services:
       - ./service_conf.yaml:/ragflow/conf/service_conf.yaml.template
       - ../conf/llm_factories.json:/ragflow/conf/llm_factories.json
       - ./entrypoint.sh:/ragflow/entrypoint.sh
+      # Source code overlay: MinerU enhanced parser only
+      - ../deepdoc/parser/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py
     env_file: .env
     environment:
       - USE_MINERU=${USE_MINERU:-false}
