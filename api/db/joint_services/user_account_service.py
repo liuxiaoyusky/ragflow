@@ -97,6 +97,22 @@ def create_new_user(user_info: dict) -> dict:
         TenantLLMService.insert_many(tenant_llm)
         FileService.insert(file)
 
+        # Auto-join default team if configured
+        if settings.DEFAULT_TEAM_ENABLED and settings.DEFAULT_TEAM_ID:
+            try:
+                default_team_relation = {
+                    "id": uuid.uuid1().hex,
+                    "tenant_id": settings.DEFAULT_TEAM_ID,
+                    "user_id": user_id,
+                    "invited_by": settings.DEFAULT_TEAM_ID,
+                    "role": UserTenantRole.NORMAL,
+                }
+                UserTenantService.insert(**default_team_relation)
+                logging.info(f"User {user_id} successfully joined default team {settings.DEFAULT_TEAM_ID}")
+            except Exception as e:
+                # Don't fail user creation if joining default team fails
+                logging.warning(f"Failed to add user {user_id} to default team: {e}")
+
         return {
             "success": True,
             "user_info": user_info,
