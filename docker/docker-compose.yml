@@ -40,13 +40,14 @@ services:
       - ./nginx/proxy.conf:/etc/nginx/proxy.conf
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ../history_data_agent:/ragflow/history_data_agent
-      - ./service_conf.yaml:/ragflow/conf/service_conf.yaml.template
-      - ../conf/llm_factories.json:/ragflow/conf/llm_factories.json
+      - ./service_conf.yaml.template:/ragflow/conf/service_conf.yaml.template
       - ./entrypoint.sh:/ragflow/entrypoint.sh
+      - /home/calvin/ragflow-mineru:/ragflow/uv_tools
+      - /home/calvin/apps/n8n/ssl:/etc/nginx/ssl:ro
     env_file: .env
     networks:
       - ragflow
-    restart: always
+    restart: on-failure
     # https://docs.docker.com/engine/daemon/prometheus/#create-a-prometheus-configuration
     # If you use Docker Desktop, the --add-host flag is optional. This flag ensures that the host's internal IP is exposed to the Prometheus container.
     extra_hosts:
@@ -75,9 +76,9 @@ services:
     #   - --no-transport-streamable-http-enabled #  Disable Streamable HTTP transport (/mcp endpoint)
     #   - --no-json-response # Disable JSON response mode in Streamable HTTP transport (instead of SSE over HTTP)
 
-    # Admin server enabled
-    command:
-      - --enable-adminserver
+    # Example configration to start Admin server:
+    # command:
+    #   - --enable-adminserver
     ports:
       - ${SVR_WEB_HTTP_PORT}:80
       - ${SVR_WEB_HTTPS_PORT}:443
@@ -90,17 +91,14 @@ services:
       - ./nginx/proxy.conf:/etc/nginx/proxy.conf
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ../history_data_agent:/ragflow/history_data_agent
-      - ./service_conf.yaml:/ragflow/conf/service_conf.yaml.template
-      - ../conf/llm_factories.json:/ragflow/conf/llm_factories.json
+      - ./service_conf.yaml.template:/ragflow/conf/service_conf.yaml.template
       - ./entrypoint.sh:/ragflow/entrypoint.sh
+      - /home/calvin/ragflow-mineru:/ragflow/uv_tools
+      - /home/calvin/apps/n8n/ssl:/etc/nginx/ssl:ro
     env_file: .env
-    environment:
-      - USE_MINERU=${USE_MINERU:-false}
-      - USE_DOCLING=${USE_DOCLING:-false}
-      - HF_ENDPOINT=${HF_ENDPOINT:-https://hf-mirror.com}
     networks:
       - ragflow
-    restart: always
+    restart: on-failure
     # https://docs.docker.com/engine/daemon/prometheus/#create-a-prometheus-configuration
     # If you use Docker Desktop, the --add-host flag is optional. This flag ensures that the host's internal IP is exposed to the Prometheus container.
     extra_hosts:
