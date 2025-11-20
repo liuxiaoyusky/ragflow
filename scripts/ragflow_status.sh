@@ -17,9 +17,12 @@ echo
 echo "=========================================="
 echo "资源使用情况"
 echo "=========================================="
-docker stats --no-stream --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}" \
-  docker-ragflow-gpu-1 docker-mysql-1 docker-minio-1 docker-es01-1 docker-redis-1 2>/dev/null || \
+CONTAINERS=$(docker compose ps -q 2>/dev/null | tr '\n' ' ')
+if [ -n "$CONTAINERS" ]; then
+  docker stats --no-stream --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}" $CONTAINERS
+else
   echo "容器未运行"
+fi
 
 echo
 echo "=========================================="
