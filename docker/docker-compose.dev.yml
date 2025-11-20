@@ -1,0 +1,66 @@
+services:
+  # --- 主服务 (GPU) ---
+  ragflow-gpu:
+    container_name: ragflow-dev-gpu
+    ports:
+      - "10080:80"
+      - "10443:443"
+      - "19380:9380"
+      - "19381:9381"
+      - "19382:9382"
+    # 加载 dev 专用环境变量 (OIDC 配置等)
+    env_file: .env.dev
+
+  # --- 基础依赖 ---
+  mysql:
+    container_name: ragflow-dev-mysql
+    ports:
+      - "13306:3306"
+    restart: always
+
+  es01:
+    container_name: ragflow-dev-es01
+    ports:
+      - "19200:9200"
+
+  minio:
+    container_name: ragflow-dev-minio
+    ports:
+      - "19000:9000"
+      - "19001:9001"
+
+  redis:
+    container_name: ragflow-dev-redis
+    ports:
+      - "16379:6379"
+
+  # --- 可选依赖 (根据你的需求启用) ---
+  infinity:
+    container_name: ragflow-dev-infinity
+    ports:
+      - "33817:23817"
+      - "33820:23820"
+      - "15432:5432"
+
+  # 如果你用 OpenSearch 替代 ES
+  opensearch01:
+    container_name: ragflow-dev-opensearch01
+    ports:
+      - "19201:9201"
+  
+  tei-gpu:
+    container_name: ragflow-dev-tei-gpu
+    ports:
+      - "16380:80"
+
+  sandbox-executor-manager:
+    container_name: ragflow-dev-sandbox
+    ports:
+      - "19385:9385"
+
+networks:
+  ragflow-dev-net:
+    driver: bridge
+
+
+
