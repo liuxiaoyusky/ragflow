@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# RagFlow 一键重启脚本
+# RagFlow 一键重启脚本（稳定版 stable）
+# 默认端口：8080 (HTTP) / 8443 (HTTPS) / 9380-9382 (API)
 # 使用 GPU + Elasticsearch 配置
 #
 
@@ -45,11 +46,12 @@ echo "=========================================="
 echo "✓ 重启完成！"
 echo "=========================================="
 echo
-echo "访问地址:"
-echo "  - Web UI:     http://localhost:8080"
-echo "  - API:        http://localhost:9380"
-echo "  - Admin:      http://localhost:9381"
-echo "  - MCP:        http://localhost:9382"
+echo "访问地址（稳定版 stable）:"
+echo "  - Web UI (HTTP):   http://localhost:8080"
+echo "  - Web UI (HTTPS):  https://localhost:8443"
+echo "  - API:             http://localhost:9380"
+echo "  - Admin:           http://localhost:9381"
+echo "  - MCP:             http://localhost:9382"
 echo
 echo "查看日志: docker compose logs -f ragflow-gpu"
 echo

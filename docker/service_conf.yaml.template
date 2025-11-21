@@ -118,7 +118,7 @@ oauth:
     client_secret: "gEpECC9GDDE2BLvMlLRYknelsGVsiI3mQlCjwGtO8LU"
     issuer: "https://anycross.feishu.cn/sso/FMZRONK5RNJ"
     scope: "openid email profile"
-    redirect_uri: "https://10.1.9.133:10443/v1/user/oauth/callback/feishu"
+    redirect_uri: "${FEISHU_REDIRECT_URI:-https://10.1.9.133:8443/v1/user/oauth/callback/feishu}"
 # authentication:
 #   client:
 #     switch: false

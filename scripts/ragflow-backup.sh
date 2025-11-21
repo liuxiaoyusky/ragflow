@@ -8,7 +8,7 @@ set -e
 
 # Configuration
 BACKUP_BASE="/home/calvin/backup"
-TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
+TIMESTAMP=$(TZ='Asia/Shanghai' date +%Y-%m-%d_%H-%M-%S)
 BACKUP_DIR="$BACKUP_BASE/$TIMESTAMP"
 COMPOSE_DIR="/home/calvin/github/ragflow/docker"
 LOG_FILE="$BACKUP_BASE/backup.log"
@@ -24,7 +24,7 @@ mkdir -p "$BACKUP_DIR"
 
 # Load environment variables
 if [ -f "$COMPOSE_DIR/.env" ]; then
-    source "$COMPOSE_DIR/.env"
+    . "$COMPOSE_DIR/.env"
 else
     log "[ERROR] .env file not found at $COMPOSE_DIR/.env"
     exit 1
@@ -34,7 +34,7 @@ log "Starting RAGFlow backup..."
 
 # 1. MySQL Backup
 log "1/4 Backing up MySQL..."
-docker exec docker-mysql-1 mysqldump \
+docker exec ragflow-mysql mysqldump \
     -uroot -p"${MYSQL_PASSWORD}" \
     --all-databases \
     --single-transaction \
@@ -45,15 +45,15 @@ log "MySQL: $(du -h $BACKUP_DIR/mysql.sql.gz | cut -f1)"
 
 # 2. Redis Backup
 log "2/4 Backing up Redis..."
-docker exec docker-redis-1 redis-cli -a "${REDIS_PASSWORD}" --no-auth-warning SAVE >/dev/null 2>&1
+docker exec ragflow-redis redis-cli -a "${REDIS_PASSWORD}" --no-auth-warning SAVE >/dev/null 2>&1
 sleep 2
-docker cp docker-redis-1:/data/dump.rdb "$BACKUP_DIR/redis-dump.rdb" 2>/dev/null || log "[WARN] Redis backup failed"
+docker cp ragflow-redis:/data/dump.rdb "$BACKUP_DIR/redis-dump.rdb" 2>/dev/null || log "[WARN] Redis backup failed"
 [ -f "$BACKUP_DIR/redis-dump.rdb" ] && gzip "$BACKUP_DIR/redis-dump.rdb" && log "Redis: $(du -h $BACKUP_DIR/redis-dump.rdb.gz | cut -f1)"
 
 # 3. Elasticsearch Backup
 log "3/4 Backing up Elasticsearch..."
-if docker ps | grep -q "docker-es01-1"; then
-    docker run --rm --volumes-from docker-es01-1 -v "$BACKUP_DIR":/backup \
+if docker ps | grep -q "ragflow-es01"; then
+    docker run --rm --volumes-from ragflow-es01 -v "$BACKUP_DIR":/backup \
         busybox tar czf /backup/elasticsearch.tar.gz /usr/share/elasticsearch/data 2>/dev/null
     log "Elasticsearch: $(du -h $BACKUP_DIR/elasticsearch.tar.gz | cut -f1)"
 else
@@ -62,8 +62,8 @@ fi
 
 # 4. MinIO Backup
 log "4/4 Backing up MinIO..."
-if docker ps | grep -q "docker-minio-1"; then
-    docker run --rm --volumes-from docker-minio-1 -v "$BACKUP_DIR":/backup \
+if docker ps | grep -q "ragflow-minio"; then
+    docker run --rm --volumes-from ragflow-minio -v "$BACKUP_DIR":/backup \
         busybox tar czf /backup/minio.tar.gz /data 2>/dev/null
     log "MinIO: $(du -h $BACKUP_DIR/minio.tar.gz | cut -f1)"
 else

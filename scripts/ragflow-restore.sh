@@ -36,30 +36,33 @@ if [ "$CONFIRM" != "yes" ]; then
 fi
 
 # Load environment
-source "$COMPOSE_DIR/.env"
+. "$COMPOSE_DIR/.env"
 
 echo "[$(date)] Starting restore from $BACKUP_DIR"
 
 # Stop RAGFlow
 echo "Stopping RAGFlow..."
 cd "$COMPOSE_DIR"
-docker compose stop ragflow-gpu 2>/dev/null || docker compose stop ragflow-cpu 2>/dev/null || true
+docker compose down
 sleep 3
 
 # 1. Restore MySQL
 echo "1/4 Restoring MySQL..."
+docker compose up -d mysql
+sleep 10
 if [ -f "$BACKUP_DIR/mysql.sql.gz" ]; then
-    gunzip -c "$BACKUP_DIR/mysql.sql.gz" | docker exec -i docker-mysql-1 mysql -uroot -p"${MYSQL_PASSWORD}" 2>/dev/null
+    docker exec -i ragflow-mysql mysql -uroot -p"${MYSQL_PASSWORD}" -e "DROP DATABASE IF EXISTS rag_flow; CREATE DATABASE rag_flow CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" 2>/dev/null
+    gunzip -c "$BACKUP_DIR/mysql.sql.gz" | docker exec -i ragflow-mysql mysql -uroot -p"${MYSQL_PASSWORD}" rag_flow 2>/dev/null
     echo "✓ MySQL restored"
 fi
 
 # 2. Restore Redis
 echo "2/4 Restoring Redis..."
 if [ -f "$BACKUP_DIR/redis-dump.rdb.gz" ]; then
-    gunzip -c "$BACKUP_DIR/redis-dump.rdb.gz" > /tmp/dump.rdb
-    docker cp /tmp/dump.rdb docker-redis-1:/data/dump.rdb
-    rm /tmp/dump.rdb
-    docker restart docker-redis-1
+    docker compose stop redis
+    docker run --rm -v docker_redis_data:/data alpine sh -c "rm -rf /data/*"
+    gunzip -c "$BACKUP_DIR/redis-dump.rdb.gz" | docker run --rm -i -v docker_redis_data:/data alpine sh -c "cat > /data/dump.rdb"
+    docker compose up -d redis
     sleep 3
     echo "✓ Redis restored"
 fi
@@ -67,11 +70,10 @@ fi
 # 3. Restore Elasticsearch
 echo "3/4 Restoring Elasticsearch..."
 if [ -f "$BACKUP_DIR/elasticsearch.tar.gz" ]; then
-    docker stop docker-es01-1
-    docker run --rm --volumes-from docker-es01-1 busybox sh -c "rm -rf /usr/share/elasticsearch/data/*"
-    docker run --rm --volumes-from docker-es01-1 -v "$BACKUP_DIR":/backup \
-        busybox tar xzf /backup/elasticsearch.tar.gz -C /
-    docker start docker-es01-1
+    docker compose stop es01
+    docker run --rm -v docker_esdata01:/data alpine sh -c "rm -rf /data/*"
+    docker run --rm -v docker_esdata01:/data -v "$BACKUP_DIR":/backup alpine sh -c "cd /data && tar -xzf /backup/elasticsearch.tar.gz"
+    docker compose up -d es01
     sleep 5
     echo "✓ Elasticsearch restored"
 fi
@@ -79,11 +81,10 @@ fi
 # 4. Restore MinIO
 echo "4/4 Restoring MinIO..."
 if [ -f "$BACKUP_DIR/minio.tar.gz" ]; then
-    docker stop docker-minio-1
-    docker run --rm --volumes-from docker-minio-1 busybox sh -c "rm -rf /data/*"
-    docker run --rm --volumes-from docker-minio-1 -v "$BACKUP_DIR":/backup \
-        busybox tar xzf /backup/minio.tar.gz -C /
-    docker start docker-minio-1
+    docker compose stop minio
+    docker run --rm -v docker_minio_data:/data alpine sh -c "rm -rf /data/*"
+    docker run --rm -v docker_minio_data:/data -v "$BACKUP_DIR":/backup alpine sh -c "cd /data && tar -xzf /backup/minio.tar.gz"
+    docker compose up -d minio
     sleep 3
     echo "✓ MinIO restored"
 fi
@@ -91,7 +92,7 @@ fi
 # Start RAGFlow
 echo "Starting RAGFlow..."
 cd "$COMPOSE_DIR"
-docker compose up -d ragflow-gpu 2>/dev/null || docker compose up -d ragflow-cpu 2>/dev/null
+docker compose --profile gpu --profile elasticsearch up -d
 sleep 5
 
 echo ""
