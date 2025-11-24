@@ -71,7 +71,7 @@ for arg in "$@"; do
       ENABLE_TASKEXECUTOR=0
       shift
       ;;
-    --disable-datasync)
+    --disable-datasyn)
       ENABLE_DATASYNC=0
       shift
       ;;
@@ -187,7 +187,7 @@ function start_mcp_server() {
 }
 
 function ensure_docling() {
-    [[ "${USE_DOCLING}" == "true" ]] || { echo "[docling] disabled by USE_DOCLING"; return 0; }
+    [[ "${USE_DOCLING}" == "true" ]] || return 0
     python3 -c 'import pip' >/dev/null 2>&1 || python3 -m ensurepip --upgrade || true
     DOCLING_PIN="${DOCLING_VERSION:-==2.58.0}"
     python3 -c "import importlib.util,sys; sys.exit(0 if importlib.util.find_spec('docling') else 1)" \
@@ -197,36 +197,25 @@ function ensure_docling() {
 function ensure_mineru() {
     [[ "${USE_MINERU}" == "true" ]] || { echo "[mineru] disabled by USE_MINERU"; return 0; }
 
-    export HUGGINGFACE_HUB_ENDPOINT="${HF_ENDPOINT:-https://hf-mirror.com}"
-
-    local default_prefix="/ragflow/uv_tools"
-    local venv_dir="${default_prefix}/.venv"
-    local exe="${MINERU_EXECUTABLE:-${venv_dir}/bin/mineru}"
-
-    if [[ -x "${exe}" ]]; then
-      echo "[mineru] found: ${exe}"
-      export MINERU_EXECUTABLE="${exe}"
-      return 0
+    if [[ -n "${MINERU_APISERVER}" ]]; then
+        echo "[mineru] Using external API server: ${MINERU_APISERVER}"
+        echo "[mineru] Local installation skipped (deployed externally)"
+        return 0
+    elif [[ -n "${MINERU_EXECUTABLE}" ]]; then
+        echo "[mineru] Using local MinerU executable: ${MINERU_EXECUTABLE}"
+        if [[ -x "${MINERU_EXECUTABLE}" ]]; then
+            echo "[mineru] MinerU executable found and is executable"
+            echo "[mineru] Backend: ${MINERU_BACKEND:-pipeline}"
+            return 0
+        else
+            echo "[mineru] ERROR: MINERU_EXECUTABLE not found or not executable: ${MINERU_EXECUTABLE}"
+            return 1
+        fi
+    else
+        echo "[mineru] WARNING: USE_MINERU=true but neither MINERU_APISERVER nor MINERU_EXECUTABLE configured"
+        echo "[mineru] Please set MINERU_APISERVER or MINERU_EXECUTABLE in docker/.env"
+        return 1
     fi
-
-    echo "[mineru] not found, bootstrapping with uv ..."
-
-    (
-        set -e
-        mkdir -p "${default_prefix}"
-        cd "${default_prefix}"
-        [[ -d "${venv_dir}" ]] || uv venv "${venv_dir}"
-
-        source "${venv_dir}/bin/activate"
-        uv pip install -U "mineru[core]" -i https://mirrors.aliyun.com/pypi/simple --extra-index-url https://pypi.org/simple
-        deactivate
-    )
-    export MINERU_EXECUTABLE="${exe}"
-    if ! "${MINERU_EXECUTABLE}" --help >/dev/null 2>&1; then
-      echo "[mineru] installation failed: ${MINERU_EXECUTABLE} not working" >&2
-      return 1
-    fi
-    echo "[mineru] installed: ${MINERU_EXECUTABLE}"
 }
 # -----------------------------------------------------------------------------
 # Start components based on flags
