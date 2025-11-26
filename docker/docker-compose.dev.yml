@@ -15,6 +15,8 @@ services:
       - ./patches/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py:ro
       - ./patches/naive.py:/ragflow/rag/app/naive.py:ro
       - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
+      # PyTorch 和重型依赖持久化缓存
+      - /home/calvin/ragflow-mineru/libs:/ragflow/uv_tools/libs
 
   # --- 基础依赖 ---
   mysql:

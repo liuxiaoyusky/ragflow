@@ -654,7 +654,8 @@ def chunk(filename, binary=None, from_page=0, to_page=100000,
         if not sections and not tables:
             return []
 
-        if name in ["tcadp", "docling", "mineru"]:
+        # MinerU 不再强制 chunk_token_num=0，允许相邻小 section（如表格标题）合并
+        if name in ["tcadp", "docling"]:
             parser_config["chunk_token_num"] = 0
         
         res = tokenize_table(tables, doc, is_english)
