@@ -188,10 +188,34 @@ function start_mcp_server() {
 
 function ensure_docling() {
     [[ "${USE_DOCLING}" == "true" ]] || return 0
+
+    # Use same directory as torch to avoid duplicate downloads
+    local libs_dir="/ragflow/uv_tools/libs"
+    local marker="${libs_dir}/.docling_installed"
+    local docling_version="${DOCLING_VERSION:-==2.58.0}"
+
+    # Check if already installed in persistent directory
+    if [[ -f "${marker}" ]]; then
+        echo "[docling] Using cached docling from ${libs_dir}"
+        export PYTHONPATH="${libs_dir}:${PYTHONPATH:-}"
+        return 0
+    fi
+
+    echo "[docling] Installing docling${docling_version} to persistent cache..."
+    mkdir -p "${libs_dir}"
+
     python3 -c 'import pip' >/dev/null 2>&1 || python3 -m ensurepip --upgrade || true
-    DOCLING_PIN="${DOCLING_VERSION:-==2.58.0}"
-    python3 -c "import importlib.util,sys; sys.exit(0 if importlib.util.find_spec('docling') else 1)" \
-      || python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --extra-index-url https://pypi.org/simple --no-cache-dir "docling${DOCLING_PIN}"
+
+    # Install docling to persistent directory (shares with torch)
+    if python3 -m pip install --target "${libs_dir}" "docling${docling_version}" \
+        -i https://pypi.tuna.tsinghua.edu.cn/simple --extra-index-url https://pypi.org/simple --no-cache-dir; then
+        echo "installed at $(date)" > "${marker}"
+        export PYTHONPATH="${libs_dir}:${PYTHONPATH:-}"
+        echo "[docling] Installation complete: ${libs_dir}"
+    else
+        echo "[docling] WARNING: Failed to install docling"
+        return 1
+    fi
 }
 
 function ensure_mineru() {
@@ -212,25 +236,26 @@ function ensure_torch() {
     # Skip if DEVICE=cpu
     [[ "${DEVICE}" != "cpu" ]] || { echo "[torch] DEVICE=cpu, skipping torch installation"; return 0; }
 
-    local torch_dir="/ragflow/uv_tools/torch_lib"
-    local marker="${torch_dir}/.torch_installed"
+    # Unified libs directory for all heavy dependencies
+    local libs_dir="/ragflow/uv_tools/libs"
+    local marker="${libs_dir}/.torch_installed"
     local torch_version="${TORCH_VERSION:->=2.5.0,<3.0.0}"
 
     # Check if already installed in persistent directory
     if [[ -f "${marker}" ]]; then
-        echo "[torch] Using cached pytorch from ${torch_dir}"
-        export PYTHONPATH="${torch_dir}:${PYTHONPATH:-}"
+        echo "[torch] Using cached pytorch from ${libs_dir}"
+        export PYTHONPATH="${libs_dir}:${PYTHONPATH:-}"
         return 0
     fi
 
     echo "[torch] Installing pytorch ${torch_version} to persistent cache..."
-    mkdir -p "${torch_dir}"
+    mkdir -p "${libs_dir}"
 
     # Install torch to persistent directory
-    if python3 -m pip install --target "${torch_dir}" "torch${torch_version}" -i https://pypi.tuna.tsinghua.edu.cn/simple; then
+    if python3 -m pip install --target "${libs_dir}" "torch${torch_version}" -i https://pypi.tuna.tsinghua.edu.cn/simple; then
         echo "installed at $(date)" > "${marker}"
-        export PYTHONPATH="${torch_dir}:${PYTHONPATH:-}"
-        echo "[torch] Installation complete: ${torch_dir}"
+        export PYTHONPATH="${libs_dir}:${PYTHONPATH:-}"
+        echo "[torch] Installation complete: ${libs_dir}"
     else
         echo "[torch] WARNING: Failed to install pytorch"
         return 1
@@ -239,9 +264,10 @@ function ensure_torch() {
 # -----------------------------------------------------------------------------
 # Start components based on flags
 # -----------------------------------------------------------------------------
+# Order matters: torch first (docling depends on it)
+ensure_torch
 ensure_docling
 ensure_mineru
-ensure_torch
 
 if [[ "${ENABLE_WEBSERVER}" -eq 1 ]]; then
     echo "Starting nginx..."
