@@ -44,6 +44,10 @@ services:
       - ./entrypoint.sh:/ragflow/entrypoint.sh
       - /home/calvin/ragflow-mineru:/ragflow/uv_tools
       - /home/calvin/apps/n8n/ssl:/etc/nginx/ssl:ro
+      # MinerU patches from dev version
+      - ./patches/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py:ro
+      - ./patches/naive.py:/ragflow/rag/app/naive.py:ro
+      - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
     env_file: .env
     networks:
       - ${NETWORK_NAME:-ragflow}
@@ -95,6 +99,10 @@ services:
       - ./entrypoint.sh:/ragflow/entrypoint.sh
       - /home/calvin/ragflow-mineru:/ragflow/uv_tools
       - /home/calvin/apps/n8n/ssl:/etc/nginx/ssl:ro
+      # MinerU patches from dev version
+      - ./patches/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py:ro
+      - ./patches/naive.py:/ragflow/rag/app/naive.py:ro
+      - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
     env_file: .env
     networks:
       - ${NETWORK_NAME:-ragflow}

@@ -214,11 +214,41 @@ function ensure_mineru() {
         return 1
     fi
 }
+
+function ensure_torch() {
+    # Skip if DEVICE=cpu
+    [[ "${DEVICE}" != "cpu" ]] || { echo "[torch] DEVICE=cpu, skipping torch installation"; return 0; }
+
+    local torch_dir="/ragflow/uv_tools/torch_lib"
+    local marker="${torch_dir}/.torch_installed"
+    local torch_version="${TORCH_VERSION:->=2.5.0,<3.0.0}"
+
+    # Check if already installed in persistent directory
+    if [[ -f "${marker}" ]]; then
+        echo "[torch] Using cached pytorch from ${torch_dir}"
+        export PYTHONPATH="${torch_dir}:${PYTHONPATH:-}"
+        return 0
+    fi
+
+    echo "[torch] Installing pytorch ${torch_version} to persistent cache..."
+    mkdir -p "${torch_dir}"
+
+    # Install torch to persistent directory
+    if python3 -m pip install --target "${torch_dir}" "torch${torch_version}" -i https://pypi.tuna.tsinghua.edu.cn/simple; then
+        echo "installed at $(date)" > "${marker}"
+        export PYTHONPATH="${torch_dir}:${PYTHONPATH:-}"
+        echo "[torch] Installation complete: ${torch_dir}"
+    else
+        echo "[torch] WARNING: Failed to install pytorch"
+        return 1
+    fi
+}
 # -----------------------------------------------------------------------------
 # Start components based on flags
 # -----------------------------------------------------------------------------
 ensure_docling
 ensure_mineru
+ensure_torch
 
 if [[ "${ENABLE_WEBSERVER}" -eq 1 ]]; then
     echo "Starting nginx..."
