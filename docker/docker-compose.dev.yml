@@ -10,6 +10,11 @@ services:
       - "19382:9382"
     # 加载 dev 专用环境变量 (OIDC 配置等)
     env_file: .env.dev
+    # MinerU 集成修复：挂载 patches 文件覆盖官方镜像
+    volumes:
+      - ./patches/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py:ro
+      - ./patches/naive.py:/ragflow/rag/app/naive.py:ro
+      - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
 
   # --- 基础依赖 ---
   mysql:
