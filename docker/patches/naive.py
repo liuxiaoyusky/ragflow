@@ -76,6 +76,11 @@ def by_mineru(filename, binary=None, from_page=0, to_page=100000, lang="Chinese"
         server_url=os.environ.get("MINERU_SERVER_URL", ""),
         delete_output=bool(int(os.environ.get("MINERU_DELETE_OUTPUT", 1))),
     )
+    
+    # 用 Vision 模型增强图表处理
+    tables = vision_figure_parser_pdf_wrapper(tbls=tables,
+                                              callback=callback,
+                                              **kwargs)
     return sections, tables, pdf_parser
 
 

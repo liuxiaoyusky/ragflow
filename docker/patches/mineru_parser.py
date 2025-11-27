@@ -506,7 +506,42 @@ class MinerUParser(RAGFlowPdfParser):
         return sections
 
     def _transfer_to_tables(self, outputs: list[dict[str, Any]]):
-        return []
+        """将 IMAGE 类型转换为 figure 格式，供 vision_figure_parser_pdf_wrapper 处理
+        
+        输出格式与 DeepDOC 兼容:
+        [
+            ((Image, [captions]), [(page_idx, x0, x1, top, bottom)]),
+            ...
+        ]
+        """
+        figures = []
+        for output in outputs:
+            if output["type"] == MinerUContentType.IMAGE:
+                img_path = output.get("img_path", "")
+                if img_path and os.path.exists(img_path):
+                    try:
+                        img = Image.open(img_path)
+                        page_idx = output.get("page_idx", 0)
+                        bbox = output.get("bbox", [0, 0, 100, 100])
+                        # bbox 格式: [x0, top, x1, bottom]
+                        x0, top, x1, bottom = bbox[0], bbox[1], bbox[2], bbox[3]
+                        
+                        # 收集 caption
+                        captions = output.get("image_caption", [])
+                        if output.get("image_footnote"):
+                            captions.extend(output.get("image_footnote", []))
+                        
+                        # 格式: ((Image, [captions]), [(page_idx, x0, x1, top, bottom)])
+                        figures.append((
+                            (img, captions),
+                            [(page_idx, x0, x1, top, bottom)]
+                        ))
+                        self.logger.info(f"[MinerU] Found figure on page {page_idx + 1}: {img_path}")
+                    except Exception as e:
+                        self.logger.warning(f"[MinerU] Failed to load image {img_path}: {e}")
+        
+        self.logger.info(f"[MinerU] Extracted {len(figures)} figures for VLM processing")
+        return figures
 
     def parse_pdf(
         self,
