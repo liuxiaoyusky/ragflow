@@ -1,0 +1,3711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>RAGFlow vs 飞书Knowledge AI 对比报告</title>
+<style>
+@page { size: A4; margin: 1.5cm; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; font-size: 11px; }
+h1 { text-align: center; color: #1a1a1a; border-bottom: 3px solid #2196F3; padding-bottom: 15px; font-size: 18px; }
+h2 { color: #2196F3; border-left: 4px solid #2196F3; padding-left: 15px; font-size: 14px; margin-top: 30px; }
+h3 { color: #555; font-size: 12px; margin-top: 20px; }
+
+.summary-grid { width: 100%; margin: 15px 0; }
+.summary-row { display: table; width: 100%; }
+.summary-box { display: table-cell; width: 48%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; vertical-align: top; }
+.summary-box.ragflow { border-top: 4px solid #4CAF50; }
+.summary-box.feishu { border-top: 4px solid #FF9800; }
+.metric { padding: 6px 0; border-bottom: 1px dashed #eee; }
+.metric-label { color: #666; }
+.metric-value { font-weight: bold; float: right; }
+
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background: #f5f5f5; font-weight: bold; }
+
+.question-card { border: 1px solid #e0e0e0; border-radius: 8px; margin: 15px 0; page-break-inside: avoid; }
+.question-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 15px; }
+.question-header h4 { margin: 0; font-size: 11px; }
+.question-content { padding: 15px; }
+
+.answer-row { display: table; width: 100%; }
+.answer-box { display: table-cell; width: 48%; padding: 10px; vertical-align: top; background: #f9f9f9; border-radius: 6px; }
+.answer-box.ragflow { border-left: 4px solid #4CAF50; }
+.answer-box.feishu { border-left: 4px solid #FF9800; margin-left: 2%; }
+.answer-title { font-weight: bold; margin-bottom: 8px; }
+.answer-title.rag { color: #4CAF50; }
+.answer-title.fei { color: #FF9800; }
+.answer-text { font-size: 10px; line-height: 1.4; white-space: pre-wrap; background: white; padding: 8px; border-radius: 4px; }
+
+.score-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; color: white; margin-left: 5px; }
+.score-badge.high { background: #4CAF50; }
+.score-badge.mid { background: #FF9800; }
+.score-badge.low { background: #f44336; }
+.time-info { font-size: 9px; color: #888; margin-top: 5px; }
+
+.score-good { color: #4CAF50; font-weight: bold; }
+.score-fair { color: #FF9800; font-weight: bold; }
+.score-poor { color: #f44336; font-weight: bold; }
+.winner-banner { background: #4CAF50; color: white; text-align: center; padding: 15px; border-radius: 8px; margin: 20px 0; font-size: 14px; }
+.problem-list { background: #fff3e0; border-radius: 8px; padding: 12px; margin: 10px 0; }
+.problem-item { padding: 5px 0; border-bottom: 1px solid #ffe0b2; font-size: 10px; }
+.problem-item a { color: #e65100; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<h1>RAGFlow vs 飞书Knowledge AI 对比报告</h1>
+<p style="text-align: center; color: #666;">生成时间: 2025-12-01 06:02:07 | 共对比 86 题</p>
+
+<h2>第一部分：总体对比总结</h2>
+
+<div class="winner-banner">总体优胜者: RAGFlow (领先 0.42 分)</div>
+
+<h3>1. 评分对比</h3>
+<div class="summary-grid">
+<div class="summary-row">
+<div class="summary-box ragflow">
+<div style="text-align:center; font-weight:bold; color:#4CAF50; margin-bottom:10px; font-size:13px;">RAGFlow</div>
+<div class="metric"><span class="metric-label">测试问题数</span><span class="metric-value">86</span></div>
+<div class="metric"><span class="metric-label">综合评分</span><span class="metric-value">4.83 / 5</span></div>
+<div class="metric"><span class="metric-label">优秀回答 (>=4分)</span><span class="metric-value score-good">84 (97.7%)</span></div>
+<div class="metric"><span class="metric-label">一般回答 (3-4分)</span><span class="metric-value score-fair">2 (2.3%)</span></div>
+<div class="metric"><span class="metric-label">较差回答 (&lt;3分)</span><span class="metric-value score-poor">0 (0.0%)</span></div>
+</div>
+<div style="display:table-cell; width:4%;"></div>
+<div class="summary-box feishu">
+<div style="text-align:center; font-weight:bold; color:#FF9800; margin-bottom:10px; font-size:13px;">飞书 Knowledge AI</div>
+<div class="metric"><span class="metric-label">测试问题数</span><span class="metric-value">86</span></div>
+<div class="metric"><span class="metric-label">综合评分</span><span class="metric-value">4.42 / 5</span></div>
+<div class="metric"><span class="metric-label">优秀回答 (>=4分)</span><span class="metric-value score-good">74 (86.0%)</span></div>
+<div class="metric"><span class="metric-label">一般回答 (3-4分)</span><span class="metric-value score-fair">4 (4.7%)</span></div>
+<div class="metric"><span class="metric-label">较差回答 (&lt;3分)</span><span class="metric-value score-poor">8 (9.3%)</span></div>
+</div>
+</div>
+</div>
+
+<h3>2. 响应时间对比</h3>
+<table>
+<tr><th>指标</th><th>RAGFlow</th><th>飞书</th><th>胜出</th></tr>
+<tr><td>平均响应时间</td><td>24.3s</td><td>33.1s</td><td style="color: #4CAF50; font-weight:bold;">RAGFlow (更快)</td></tr>
+<tr><td>最快响应</td><td>11.6s</td><td>10.4s</td><td>-</td></tr>
+<tr><td>最慢响应</td><td>39.5s</td><td>121.6s</td><td>-</td></tr>
+</table>
+
+<h3>3. 需关注案例</h3>
+<h4 style="color:#4CAF50;">RAGFlow 需关注案例 (2个)</h4><div class="problem-list"><div class="problem-item"><a href="#q30">Q30</a>: 该基金资产净值最小的三个份额类别是哪些？... (评分: 3.5)</div><div class="problem-item"><a href="#q73">Q73</a>: Class A2 HKD MDis的当前NAV是多少？... (评分: 3.5)</div></div><h4 style="color:#FF9800;">飞书 需关注案例 (12个)</h4><div class="problem-list"><div class="problem-item"><a href="#q29">Q29</a>: Class A USD和Class A EUR的资产净值相关性如何？... (评分: 1.0)</div><div class="problem-item"><a href="#q48">Q48</a>: Class A2 SGD Hedged MDis的每单位分红金额是多少？... (评分: 1.3)</div><div class="problem-item"><a href="#q74">Q74</a>: 该基金的主要投资策略和风险特征是什么？... (评分: 1.3)</div><div class="problem-item"><a href="#q5">Q5</a>: Class A RMB Hedged Acc和Class A RMB Unhedged Acc的NA... (评分: 1.7)</div><div class="problem-item"><a href="#q57">Q57</a>: 目前Class B EUR份额类别的夏普比率是多少？... (评分: 2.0)</div><div class="problem-item"><a href="#q62">Q62</a>: Class C USD份额类别今年以来的累计收益是多少？... (评分: 2.0)</div><div class="problem-item"><a href="#q24">Q24</a>: Class A HKD Hedged Acc的资产净值在过去一年中的最高值和最低值是多少？... (评分: 2.3)</div><div class="problem-item"><a href="#q60">Q60</a>: 该基金2021年第一季度的业绩与同类型基金平均水平相比如何？... (评分: 2.3)</div><div class="problem-item"><a href="#q22">Q22</a>: Class B EUR的当前资产净值是高于还是低于Class A EUR？... (评分: 3.0)</div><div class="problem-item"><a href="#q65">Q65</a>: 该基金过去12个月的信息比率是多少？... (评分: 3.0)</div><div class="problem-item"><a href="#q54">Q54</a>: Class A1 USD在2019年相对于基准指数的超额收益是多少？... (评分: 3.3)</div><div class="problem-item"><a href="#q85">Q85</a>: 基金收取的最高认购费率是多少？... (评分: 3.7)</div></div><h2 style="page-break-before: always;">第二部分：逐题详细对比</h2>
+<div class="question-card" id="q1">
+<div class="question-header"><h4>问题 1: Class A1 USD的当前资产净值是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class A1 USD的资产净值（NAV）会随着时间点不同而变化。以下是不同日期记录的具体数值：
+
+截至2025年8月31日
+- 资产净值 (NAV): 125.40 USD
+
+截至2025年7月31日
+- 资产净值 (NAV): 123.92 USD
+
+截至2025年5月31日
+- 资产净值 (NAV): 112.99 USD
+
+截至2025年2月28日
+- 资产净值 (NAV): 104.55 USD
+
+请注意，最新的可用数据是截至2025年8月31日的。
+
+*
+
+### 📚 参考资料
+
+File: VP_High-Dividend-202508-Eng.pdf
+Chunk/Page: ID: 8
+Quoted Content: &quot;Class A1 USD 125.40  |  HK0000288735 VALASHY HK&quot; [ID:8]
+Reason for Use: 提供了截至2025年8月31日的Class A1 USD资产净值。
+
+File: VP_High-Dividend-202507-Eng.pdf
+Chunk/Page: ID: 11
+Quoted Content: &quot;Class A1 USD  |  123.92 HK0000288735  |  VALASHY HK&quot; [ID:11]
+Reason for Use: 提供了截至2025年7月31日的Class A1 USD资产净值。
+
+File: VP_High-Dividend-202505-Eng.pdf
+Chunk/Page: ID: 10
+Quoted Content:** &quot;Class A1 USD 112.99</div>
+<div class="time-info">响应时间: 24.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Class A1 USD的当前资产净值（NAV）为 128.46 美元。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 12.2s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q2">
+<div class="question-header"><h4>问题 2: Class A1 HKD2和Class A HKD Hedged Acc的NAV相比如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 HKD2 和 Class A HKD Hedged Acc 的資產淨值（NAV）如下：
+
+股份類別  |  NAV 
+ :--- 
+
+Class A1 HKD2  |  999.4638 
+ Class A HKD Hedged Acc 10.92  
+ [ID:2]
+結論：
+- Class A1 HKD2 的資產淨值（999.4638）遠高於 Class A HKD Hedged Acc（10.92）。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;NAV&lt;/td&gt;&lt;td&gt;ISIN&lt;/td&gt;&lt;td&gt;Bloomberg&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;128.46&lt;/td&gt;&lt;td&gt;HK0000288735&lt;/td&gt;&lt;td&gt;VALASHY HK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Class A1 HKD2&lt;/td&gt;&lt;td&gt;999.4638&lt;/td&gt;&lt;td&gt;HK0000288735&lt;/td&gt;&lt;td&gt;VALASHY HK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Class A HKD Hedged Acc&lt;/td&gt;&lt;td&gt;10.92&lt;/td&gt;&lt;td&gt;HK0000288834&lt;/td&gt;&lt;td&gt;VALHAAH HK&lt;/...
+
+使用原因：
+此表格直接提供了兩個股份類別的具體資產淨值（NAV），可用於比較。</div>
+<div class="time-info">响应时间: 16.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Class A1 HKD2的NAV为999.4638，Class A HKD Hedged Acc的NAV为10.92，因此Class A1 HKD2的NAV远高于Class A HKD Hedged Acc。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 23.8s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q3">
+<div class="question-header"><h4>问题 3: 该基金中哪个份额类别的资产净值最高？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class A1 HKD2 是该基金中资产净值（NAV）最高的份额类别。
+
+截至2025年8月31日的数据对比：
+
+份额类别  |  资产净值 (NAV) 
+ :--- 
+
+Class A1 HKD2  |  977.3174 HKD 
+ Class A1 USD 125.40 USD 
+ Class A HKD Hedged Acc  |  10.66 HKD 如上所示，Class A1 HKD2的资产净值显著高于其他类别的份额。
+
+*
+
+### 📚 参考资料
+
+File: VP_High-Dividend-202508-Eng.pdf
+Chunk/Page: ID: 8
+Quoted Content:
+&quot;Class A1 HKD2  |  977.3174 HK0000288735  |  VALASHY HK&quot;
+&quot;Class A1 USD 125.40  |  HK0000288735 VALASHY HK&quot;
+&quot;Class A HKD Hedged Acc  |  10.66 HK0000288834  |  VALHAAH HK&quot; [ID:8]
+Reason for Use:** 该文件提供了所有相关份额类别在同一基准日（2025年8月31日）的NAV数据，从而可以直接进行比较并确定最高值。</div>
+<div class="time-info">响应时间: 25.8s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">该基金中 Class A1 HKD 2 份额类别的资产净值最高，其资产净值（NAV）为999.4638。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 74.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q4">
+<div class="question-header"><h4>问题 4: Class A2 AUD Hedged MDis的资产净值是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class A2 AUD Hedged MDis的资产净值（NAV）在不同日期有所不同。以下是不同日期记录的具体数值：
+
+截至2025年8月31日
+- 资产净值 (NAV): 8.65 AUD
+
+截至2025年7月31日
+- 资产净值 (NAV): 8.57 AUD
+
+截至2025年5月31日
+- 资产净值 (NAV): 7.84 AUD
+
+截至2025年2月28日
+- 资产净值 (NAV): 7.39 AUD
+
+请注意，最新的可用数据是截至2025年8月31日的。
+
+*
+
+### 📚 参考资料
+
+File: VP_High-Dividend-202508-Eng.pdf
+Chunk/Page: ID: 8
+Quoted Content: &quot;Class A2 AUD Hedged MDis 8.65  |  HK0000288750 VALHA2A HK&quot; [ID:8]
+Reason for Use: 提供了截至2025年8月31日的Class A2 AUD Hedged MDis资产净值。
+
+File: VP_High-Dividend-202507-Eng.pdf
+Chunk/Page: ID: 11
+Quoted Content: &quot;Class A2 AUD Hedged MDis  |  8.57 HK0000288750  |  VALHA2A HK&quot; [ID:11]
+Reason for Use: 提供了截至2025年7月31日的Class A2 AUD Hedged MDis资产净值。
+
+File: VP_High-Dividend-202505-Eng.pdf
+Chunk/Page:** ID: 1</div>
+<div class="time-info">响应时间: 24.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.3</span></div>
+<div class="answer-text">Class A2 AUD Hedged MDis的资产净值为 8.82 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 12.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q5">
+<div class="question-header"><h4>问题 5: Class A RMB Hedged Acc和Class A RMB Unhedged Acc的NAV差异有多大？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A RMB Hedged Acc 和 Class A RMB Unhedged Acc 的資產淨值（NAV）差異如下：
+
+股份類別  |  NAV 
+ :--- 
+
+Class A RMB Hedged Acc  |  17.39 
+ Class A RMB Unhedged Acc 22.23  
+計算差異：
+- 絕對差異： 22.23 - 17.39 = 4.84
+- 相對差異（相對於對沖類別）： (4.84 / 17.39) × 100% ≈ 27.8%
+
+結論：
+Class A RMB Unhedged Acc 的資產淨值比 Class A RMB Hedged Acc 高出 4.84（或約 27.8%）。 [ID:2]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+...&lt;tr&gt;&lt;td&gt;Class A RMB Hedged Acc&lt;/td&gt;&lt;td&gt;17.39&lt;/td&gt;&lt;td&gt;HK0000288719&lt;/td&gt;&lt;td&gt;VALHAHR HK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Class A RMB Unhedged Acc&lt;/td&gt;&lt;td&gt;22.23&lt;/td&gt;&lt;td&gt;HK0000288727&lt;/td&gt;&lt;td&gt;VALHAUR HK&lt;/...
+
+使用原因：
+此表格直接提供了兩個人民幣股份類別的具體資產淨值（NAV），是計算兩者差異的基礎數據。</div>
+<div class="time-info">响应时间: 14.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge low">1.7</span></div>
+<div class="answer-text">Class A2 AUD Hedged MDis的资产净值为 8.82 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 21.9s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q6">
+<div class="question-header"><h4>问题 6: 该基金中哪个份额类别的NAV最低？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 中資產淨值（NAV）最低的股份類別是 Class A2 GBP Hedged MDis，其 NAV 為 8.76。 [ID:2]
+
+以下是該基金所有披露的股份類別及其NAV對比（按NAV從低到高排序）：
+
+股份類別  |  NAV 
+ :--- 
+
+Class A2 GBP Hedged MDis  |  8.76 
+ Class A2 AUD Hedged MDis 8.82 
+ Class A2 NZD Hedged MDis  |  8.89 
+ Class A2 CAD Hedged MDis 9.30 
+ Class A2 RMB Hedged MDis  |  9.41 
+ Class A2 HKD MDis 10.26 
+ Class A2 SGD Hedged MDis  |  10.27 
+ Class A HKD Hedged Acc 10.92 
+ Class A2 USD MDis  |  11.19 
+ ... (其餘類別NAV均高於11.19) 
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;NAV&lt;/td&gt;&lt;td&gt;ISIN&lt;/td&gt;&lt;td&gt;Bloomberg&lt;/td&gt;&lt;/tr&gt;
+...
+&lt;tr&gt;&lt;td&gt;Class A2 AUD Hedged MDis&lt;/td&gt;&lt;td&gt;8.82&lt;/td&gt;&lt;td&gt;HK0000288750&lt;/td&gt;&lt;td&gt;VALHA2A HK&lt;/td&gt;&lt;/tr&gt;</div>
+<div class="time-info">响应时间: 18.3s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">在该基金中， Class A HKD Hedged Acc 份额类别的 NAV 最低，为 10.92。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 76.8s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q7">
+<div class="question-header"><h4>问题 7: 该基金投资的主要地区分布比例如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+说明： 检索到的文档主要包含基金的业绩数据、资产净值（NAV）以及风险提示等信息，但没有关于该基金具体地区投资分布比例的详细内容 [ID:10] [ID:7] [ID:1] [ID:4]。</div>
+<div class="time-info">响应时间: 30.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在不同地区的投资占比如下：01. 香港 ：占比28% 。02. 韩国 ：占比17% 。03. 台湾 ：占比16% 。04. 红筹股 ：占比13% 。05. H股 ：占比9% 。06. 印度 ：占比6% 。07. 新加坡 ：占比3% 。08. 印尼 ：占比2% 。09. 其他地区 ：占比5% 。10. 现金 ：占比1% 。详细分布比例可参考以下图表：（图 1） (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 29.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q8">
+<div class="question-header"><h4>问题 8: 基金的行业配置中占比最高的三个行业是什么？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.8</span></div>
+<div class="answer-text">根据检索到的多个基金报告，不同基金产品的行业配置有所不同。以下是针对特定基金在特定日期的前三大行业配置：
+
+1. VP_High-Dividend 系列基金 (以2025年9月数据为例)
+- 信息科技 (Information technology): 25%
+- 非必需消费品 (Consumer discretionary): 14%
+- 通讯服务 (Communication services): 13% [ID:4]
+
+2. VP_Classic 系列基金 (以2025年7月数据为例)
+- 信息科技 (Information technology): 28%
+- 通讯服务 (Communication services): 18%
+- 非必需消费品 (Consumer discretionary): 16% [ID:3]
+
+3. VP_Asian Income Fund (以2025年4月数据为例)
+该基金的行业配置按资产类型（股票和固定收益）细分后加总计算：
+- 金融业 (Financials): 24.5%
+- 信息科技 (Information technology): 19.1%
+- 工业 (Industrials): 10.5% [ID:8]
+
+*
+
+### 📚 参考资料
+
+以下文件提供了不同基金的详细行业配置数据：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 4
+    -   Quoted Content:** &quot;Information technology: 25%&quot;, &quot;Consumer discretionary: 14%&quot;, &quot;Commun</div>
+<div class="time-info">响应时间: 26.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的行业配置中占比最高的三个行业是：1. 信息技术行业 ：占比最高，为25% 。2. 消费者可选行业 ：占比14% 。3. 通信服务行业和工业品行业 ：各占13% 。行业配置情况图如下：（图 1） 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 22.7s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q9">
+<div class="question-header"><h4>问题 9: 该基金的前五大持仓分别是哪些公司？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.5</span></div>
+<div class="answer-text">根据检索到的信息，不同基金产品在不同时期的前五大持仓有所不同。以下是具体分析：
+
+1. VP_Classic 基金 (2025年9月数据)
+- 腾讯控股有限公司 (Tencent Holdings Ltd): 9.6%
+- 台积电 (Taiwan Semiconductor Manufacturing Co Ltd): 9.4%
+- 阿里巴巴集团控股有限公司 (Alibaba Group Holding Ltd): 9.0%
+- 紫金矿业集团股份有限公司 (Zijin Mining Group Co Ltd): 5.7%
+- 招商银行股份有限公司 (China Merchants Bank Co Ltd): 2.9% [ID:0]
+
+2. VP_Classic 基金 (2025年8月数据)
+- 腾讯控股有限公司: 9.7%
+- 台积电: 8.9%
+- 阿里巴巴集团: 6.5%
+- 紫金矿业集团: 5.0%
+- 招商银行: 3.3% [ID:1]
+
+3. VP_Asian Income Fund (固定收益部分前五大持仓)
+该基金的固定收益部分前五大持仓为：
+- Fortune Star (BVI) Ltd 5% 05/18/2026: 1.5%
+- eHi Car Services Ltd 7% 09/21/2026: 1.0%
+- Sumitomo Mitsui Financial Group Inc 6.45% PERP: 1.0%
+- Fortune Star BVI Ltd 8.5% 05/19/2028: 0.8%
+- Westwood Group Holdings Ltd 2.8% 01/20/2026: - [ID:3</div>
+<div class="time-info">响应时间: 21.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的前五大持仓公司分别为：1. Taiwan Semiconductor ：信息技术行业，占比9.3%。2. Samsung Electronics Co Ltd ：信息技术行业，占比6.6%。3. China Construction Bank Corp ：银行行业，占比3.3%。4. China Everbright Environment Group Ltd ：工业行业，占比3.2%。5. HKT Trust &amp; HKT Ltd ：通信服务行业，占比3.1%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;, 
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 19.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q10">
+<div class="question-header"><h4>问题 10: 2017年和2018年Class A1 USD的年度收益率分别是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在 2017年 和 2018年 的年度收益率分別為：
+
+- 2017年：+32.9%
+- 2018年：-14.2%
+
+[ID:1]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/td&gt;&lt;td&gt;Apr&lt;/td&gt;&lt;td&gt;May&lt;/td&gt;&lt;td&gt;Jun&lt;/td&gt;&lt;td&gt;Jul&lt;/td&gt;&lt;td&gt;Aug&lt;/td&gt;&lt;td&gt;Sep&lt;/td&gt;&lt;td&gt;Oct&lt;/td&gt;&lt;td&gt;Nov&lt;/ td &gt;&lt; td &gt;Dec&lt; / td &gt;&lt; td &gt;Annual&lt; / td &gt;&lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2017&lt; / td &gt;&lt; td &gt;+6 .3 %&lt; / td &gt;&lt; td &gt;+3 .2 %&lt; / td &gt;&lt; td &gt;+1 .7 %&lt; / td &gt; &lt; td &gt;+1 .1 % &lt; / ... &lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2018 &lt; / ... &lt; / tr &gt;
+...
+
+（表格數據較長，此處僅截取部分結構。完整的年度收益率數據位於每行的“Annual”列下。）
+
+使用原因：
+該表格明確列出了基金 Class A1 USD 從2016年至2025年的月度及年度表現，其中“Annual”列直接提供了所需的2017年和2018年的全年收益率。</div>
+<div class="time-info">响应时间: 20.8s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">1. 在2017年，Class A1 USD的年度收益率为+32.9%。2. 在2018年，Class A1 USD的年度收益率为-14.2%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 17.7s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q11">
+<div class="question-header"><h4>问题 11: 该基金在2019年表现最好的月份是哪个？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在 2019年 表現最好的月份是 12月（December），當月收益率為 +8.0%。 [ID:1]
+
+以下是2019年各月的完整表現以供參考：
+
+月份  |  收益率 
+ :--- 
+
+1月 (Jan)  |  +5.3% 
+ 2月 (Feb) +3.1% 
+ 3月 (Mar)  |  +3.3% 
+ 4月 (Apr) +1.6% 
+ 5月 (May)  |  -7.5% 
+ 6月 (Jun) +5.1% 
+ 7月 (Jul)  |  -2.4% 
+ 8月 (Aug) -6.3% 
+ 9月 (Sep)  |  +1.8% 
+ 10月 (Oct) +4.2% 
+ 11月 (Nov)  |  -1.0% 
+ 12月 (Dec) +8.0%  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/td&gt;&lt;td&gt;Apr&lt;/td&gt;&lt;td&gt;May&lt;/td&gt;&lt;td&gt;Jun&lt;/td&gt;&lt;td&gt;Jul&lt;/td&gt;&lt;td&gt;Aug&lt;/ td &gt;&lt; td &gt;Sep&lt; / td &gt;&lt; td &gt;Oct&lt; / td &gt;&lt; td &gt;Nov&lt; / td &gt;&lt; td &gt;Dec&lt; / td &gt;&lt; td &gt;Annual&lt; / td &gt;&lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2019 &lt; / ... &lt; / tr &gt;
+
+（表格</div>
+<div class="time-info">响应时间: 20.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2019年表现最好的月份是 12月 ，当月收益率为+8.0%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 46.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q12">
+<div class="question-header"><h4>问题 12: Class A2 USD MDis的年度股息收益率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class A2 USD MDis的年度股息收益率（Annualized yield）并非一个固定值，而是根据不同的除息日（Ex-dividend date）有所变化。
+
+以下是不同月份的具体数据：
+
+除息日 (Ex-dividend date)  |  年度股息收益率 (Annualized yield) 
+ :--- 
+
+2025年7月31日  |  5.0% [ID:0] 
+ 2025年5月30日 5.5% [ID:1] 
+ 2025年8月29日  |  5.0% [ID:2] 
+ 2025年9月30日 4.9% [ID:3]  
+*
+
+### 📚 参考资料
+
+以下文件提供了Class A2 USD MDis在不同月份的股息信息：
+
+-   File: VP_High-Dividend-202507-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content: &quot;Class A2 USD MDis ... 0.0458 ... 5.0% ... 31-7-2025&quot; [ID:0]
+    -   Reason for Use: 提供了截至2025年7月的年度股息收益率。
+
+-   File: VP_High-Dividend-202505-Eng.pdf
+    -   Chunk/Page: ID: 1
+    -   Quoted Content: &quot;Class A2 USD MDis ... 0.0458 ... 5.5% ... 30-5-2025&quot; [ID:1]
+    -   Reason for Use:** 提供了截至2</div>
+<div class="time-info">响应时间: 25.8s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Class A2 USD MDis的年度股息收益率为4.9%，除息日为2025年9月30日。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 10.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q13">
+<div class="question-header"><h4>问题 13: 基金在2016年全年的回报率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.8</span></div>
+<div class="answer-text">根据检索到的信息，该基金在2016年全年的回报率因具体份额类别而异。
+
+1. VP_Classic 基金 - Class A USD
+- 2016年全年回报率：-3.2% [ID:0] [ID:1] [ID:2]
+
+2. VP_High-Dividend 基金 - Class A1 USD
+- 2016年全年回报率：-0.2% [ID:3] [ID:4] [ID:5]
+
+***
+
+### 📚 参考资料
+
+以下文件提供了不同基金类别在2016年的年度总回报率：
+
+*   File: VP_Classic-202508-Eng.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content: &quot;&lt;tr&gt;&lt;td&gt;2016&lt;/td&gt;&lt;td&gt;...&lt;td&gt;-3.2%&lt;/td&gt;&lt;/tr&gt;&quot; [ID:0]
+    *   Reason for Use: 显示了VP_Classic基金的Class A USD份额在2016年的年度回报率。
+
+*   File: VP_Classic-202509-Eng.pdf
+    *   Chunk/Page: ID: 1
+    *   Quoted Content: &quot;&lt;tr&gt;&lt;td&gt;2016&lt;/td&gt;&lt;td&gt;...&lt;td&gt;-3.2%&lt;/td&gt;&lt;/tr&gt;&quot; [ID:1]
+    *   Reason for Use: 交叉验证了VP_Classic基金的年度回报率数据。
+
+*   File: VP_Classic-202506-Eng.pdf
+    *   Chunk/Page: ID: 2
+    *   Quoted Content: &quot;&lt;tr&gt;&lt;td&gt;2016&lt;/td&gt;&lt;td&gt;.</div>
+<div class="time-info">响应时间: 29.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2016年全年的回报率是-0.2%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 14.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q14">
+<div class="question-header"><h4>问题 14: 该基金的最小初始认购金额要求是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的最小初始認購金額要求因股份類別而異。具體要求如下：
+
+股份類別  |  最小初始認購金額 
+ :--- 
+
+Class A1  |  USD 10,000 或等值港幣 [ID:0] 
+ Class A2 MDis USD 10,000 / HKD 80,000 / AUD 10,000 / CAD 10,000 / GBP 10,000 / RMB 60,000 / NZD 10,000 / SGD 10,000 [ID:0] 
+ Class A Acc  |  HKD 80,000 / RMB 60,000 [ID:0] 
+ Class B USD 10,000 或等值貨幣 [ID:0]  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1&lt;/td&gt;&lt;td&gt;Class A2 MDis&lt;/td&gt;&lt;td&gt;Class A Acc&lt;/td&gt;&lt;td&gt;Class B&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Minimum subscription&lt;/td&gt;&lt;td&gt;USD10,000 or HKD equivalent2&lt;/td&gt;&lt;td&gt;USD10,000 / HKD80,000 / AUD10,000 / CAD10,000 / GBP10,000 / RMB60,000 / NZD10,000 / SGD10 ,...&lt;/ td &gt;&lt; td &gt;HKD80 ,...
+
+使用原因：
+此表格直接列出了不同股份類別</div>
+<div class="time-info">响应时间: 18.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的最小初始认购金额要求因份额类别而异，具体如下：
+1. Class A1 ：USD10,000或等值港币（HKD equivalent）。
+2. Class A2 MDis ：
+    - 美元份额（USD）：USD10,000；
+    - 港币份额（HKD）：HKD80,000；
+    - 澳元对冲份额（AUD Hedged）：AUD10,000；
+    - 加元对冲份额（CAD Hedged）：CAD10,000；
+    - 英镑对冲份额（GBP Hedged）：GBP10,000；
+    - 新西兰元对冲份额（NZD Hedged）：NZD10,000；
+    - 新加坡元对冲份额（SGD Hedged）：SGD10,000；
+    - 人民币对冲份额（RMB Hedged）：RMB30,000；
+    - 人民币非对冲份额（RMB Unhedged）：RMB30,000 。
+3. Class A Acc ：
+    - 港币份额（HKD Hedged）：HKD80,000；
+    - 人民币份额（RMB Unhedged）：RMB60,000；
+    - 人民币对冲份额（RMB Hedged）：HKD80,000 / RMB60,000 。
+4. Class B ：USD10,000或等值其他货币。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 20.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q15">
+<div class="question-header"><h4>问题 15: Class A2 MDis份额类别的管理费率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class A2 MDis 份额类别的管理费率为 每年1.25%。
+
+*
+
+### 📚 参考资料
+
+以下多个文件中的费用结构表均一致确认了该费率：
+
+-   File: VP_High-Dividend-202501-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content: &quot;&lt;tr&gt;&lt;td&gt;Management fee&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;1.25% p.a.&lt;/td&gt;&lt;/tr&gt;&quot; [ID:0]
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 1
+    -   Quoted Content: &quot;&lt;tr&gt;&lt;td&gt;Management fee&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;1.25% p.a.&lt;/td&gt;&lt;/tr&gt;&quot; [ID:1]
+
+-   File: VP_High-Dividend-202508-Eng.pdf
+    -   Chunk/Page: ID: 2
+    -   Quoted Content:** &quot;&lt;tr&gt;&lt;td&gt;Management fee&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;1.25% p.a.&lt;/td&gt;&lt;/tr&gt;&quot; [ID:2]
+
+这些数据交叉验证了Class A2 MDis份额的管理费率为每年1.25%。</div>
+<div class="time-info">响应时间: 19.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A2 MDis份额类别的管理费率为 1.25% p.a. - 1.50% p.a. 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 121.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q16">
+<div class="question-header"><h4>问题 16: 基金主要投资于哪些类型的证券？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Value Partners High-Dividend Stocks Fund（“本基金”）主要投资于亚洲地区较高收益的股权及债务证券。
+
+具体而言，其投资范围包括：
+
+1.  较高收益的股权证券
+2.  较高收益的债务证券
+
+此外，基金的投资策略还包含以下特点：
+-   可能投资于投资级别以下的较高收益债务证券，此类投资因投机性质而涉及较大风险 [ID:0] [ID:1] [ID:2]。
+-   可能投资于衍生工具，这可能涉及重大风险 [ID:0] [ID:4]。
+-   基金旨在通过主要投资于亚洲地区的相对较高收益股权及债务证券组合，为单位持有人提供资本增值 [ID:0]。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了基金投资目标及所投资证券类型的详细信息：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:** &quot;Value Partners High-Dividend Stocks Fund (The &quot;Fund&quot;) primarily invests in higher yielding equity and debt securities in the Asian region. - The Fund may invest in higher-yielding equity and debt securities that are below investment grade... - The Fund may also invest in derivatives...&quot; and &quot;Investment objective The Fund ai</div>
+<div class="time-info">响应时间: 22.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.3</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund主要投资于以下类型的证券：
+
+1. 高股息权益类和债务类证券 ：该基金主要投资于亚洲地区的高股息权益类和债务类证券，旨在为投资者提供资本增值。 
+2. 投资级以下的高收益证券 ：基金可能投资于低于投资级别的高收益权益类和债务类证券，这类投资因具有投机性质而涉及较高风险。 
+3. 衍生品 ：基金还可能投资于衍生品，这可能涉及重大风险，如交易对手违约风险、破产或流动性风险，并可能使基金面临重大损失。 
+
+此外，该基金的前十大持仓包括台湾积体电路製造股份有限公司（9.3%）、三星電子株式會社（6.6%）、中國建設銀行股份有限公司（3.3%）等，这些证券占基金资产的39%。 
+
+基金的行业配置主要集中在信息技术（25%）、消费者可选（14%）、通信服务（13%）等行业。 
+
+地理分布方面，基金主要投资于香港（28%）、韩国（17%）、台湾（16%）等地区。 
+
+（图 1） 
+（图 2） (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 32.5s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q17">
+<div class="question-header"><h4>问题 17: 该基金在亚洲新兴市场投资面临哪些主要风险？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 在亞洲新興市場投資面臨以下主要風險：
+
+1.  新興市場風險：基金投資於中國及亞洲地區的其他市場，因此面臨新興市場風險。一般而言，由於政治、社會、經濟和監管不確定性等額外風險，對新興市場的投資比對發達市場的投資波動性更大。基金的價值可能極度波動，並可能在短時間內大幅下跌。您投資的全部價值有可能損失殆盡 [ID:0]。
+
+2.  低於投資級別的證券風險：基金可能投資於收益率較高但級別低於投資級的股票和債務證券。此類投資可能因具投機性質而涉及較大風險 [ID:0]。
+
+3.  衍生工具風險：基金亦可能投資於衍生工具，這可能涉及重大風險，例如交易對手違約風險、破產或流動性風險，並可能使基金蒙受重大損失 [ID:0]。
+
+4.  分派來自資本的風險：就基金的分配單位而言，分派率並不保證，且分派可能從資本中支付。投資者應注意，從資本支付分派實質上等同於退回或提取您部分原始投資金額或相關的資本收益，並可能導致單位價值即時減少 [ID:0]。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+Value Partners High-Dividend Stocks Fund (The &quot;Fund&quot;) primarily invests in higher yielding equity and debt securities in the Asian region.
+- The Fund may invest in higher-yielding equity and debt securities that are below in</div>
+<div class="time-info">响应时间: 27.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在亚洲新兴市场投资面临以下主要风险：
+1. 市场波动性风险 ：新兴市场投资通常比发达市场更具波动性，原因包括政治、社会、经济和监管方面的不确定性。基金价值可能在短时间内大幅下跌，甚至可能导致投资全部损失。
+2. 信用风险 ：基金可能投资于低于投资级别的高收益股票和债券，这类投资因具有投机性质而涉及更高风险。
+3. 衍生品风险 ：基金可能投资于衍生品，这涉及重大风险，如交易对手违约风险、破产或流动性风险，并可能使基金面临重大损失。
+4. 新兴市场风险 ：基金主要投资于亚洲地区的高收益股票和债券，包括中国等新兴市场，因此面临新兴市场特有的风险。
+5. 股息支付风险 ：基金虽计划每月支付股息，但股息不保证支付，且可能从资本中支付，这可能导致单位价值立即下降，并减少基金未来投资和资本增长的可用资金。
+
+投资者应仔细阅读基金的说明备忘录，了解详细的风险因素，并在投资前寻求财务顾问的建议。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 41.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q18">
+<div class="question-header"><h4>问题 18: 基金在信息技术行业的配置比例是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 在信息技術行業的配置比例是 25%。 [ID:1]
+
+該比例來自基金的「行業分布」圖表，顯示信息技術是其投資組合中權重最高的行業。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+- Data Points:
+  - Information technology: 25%
+  - Consumer discretionary: 14%
+  - Communication services: 13%
+  - Industrials: 13%
+  - Real estate: 8%
+...
+
+使用原因：
+此數據點直接來自於描述基金行業分布的條形圖分析，明確給出了信息技術行業的具體配置比例。</div>
+<div class="time-info">响应时间: 17.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在信息技术行业的配置比例为25% 。详细信息可参考基金行业配置情况图：（图 1） 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 12.2s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q19">
+<div class="question-header"><h4>问题 19: Class A1 USD的最新资产净值是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 最新資產淨值（NAV）為 128.46。 [ID:2]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;NAV&lt;/td&gt;&lt;td&gt;ISIN&lt;/td&gt;&lt;td&gt;Bloomberg&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;128.46&lt;/td&gt;&lt;td&gt;HK0000288735&lt;/td&gt;&lt;td&gt;VALASHY HK&lt;/...
+
+使用原因：
+此表格直接列出了基金各股份類別的資產淨值（NAV），其中明確顯示了 Class A1 USD 的 NAV 為 128.46。</div>
+<div class="time-info">响应时间: 24.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A1 USD的最新资产净值（NAV）为 USD 128.46 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 13.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q20">
+<div class="question-header"><h4>问题 20: Class A1 HKD2和Class A HKD Hedged Acc的资产净值差异有多大？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class A1 HKD2 和 Class A HKD Hedged Acc 的资产净值（NAV）存在巨大差异。
+
+截至2025年9月30日的最新数据对比：
+
+份额类别  |  资产净值 (NAV) 
+ :--- 
+
+Class A1 HKD2  |  999.4638 HKD 
+ Class A HKD Hedged Acc 10.92 HKD  
+差异分析：
+-   Class A1 HKD2的资产净值是Class A HKD Hedged Acc的约 91.5倍。
+-   两者之间的绝对差额为 988.5438 HKD。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了两个类别在同一基准日的NAV数据，从而可以直接进行比较：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:
+        &quot;Class A1 HKD2 999.4638  |  HK0000288735 VALASHY HK&quot;
+        &quot;Class A HKD Hedged Acc  |  10.92 HK0000288834  |  VALHAAH HK&quot; [ID:0]
+    -   Reason for Use:** 该文件日期最新（2025年9月），提供了截至该日的两个类别的具体NAV数值，用于直接比较其巨大差异。</div>
+<div class="time-info">响应时间: 26.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">The net asset value (NAV) of Class A1 HKD2 is HKD 999.4638, while the NAV of Class A HKD Hedged Acc is HKD 10.92. Therefore, the difference in NAV between the two classes is HKD 988.5438. (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 24.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q21">
+<div class="question-header"><h4>问题 21: Class A1 USD过去12个月的资产净值变动幅度是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 過去12個月的資產淨值變動幅度（即一年回報率）為 +15.7%。 [ID:2]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;Class A2 USD MDis&lt;/td&gt;&lt;td&gt;Class A RMB Unhedged Acc&lt;/td&gt;&lt;td&gt;MSCI AC Asia (ex-Japan) Index (Total Net Return)+&lt;/td&gt;&lt;td&gt;MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return)#&lt;/ td &gt;&lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;One year&lt; / td &gt;&lt; td &gt;+15 .7 %&lt; / td &gt;&lt; td &gt;+15 .9 %&lt; / ...
+
+使用原因：
+該績效表格明確列出了 Class A1 USD 在“One year”（一年）期間的回報率為 +15.7%，這直接反映了過去12個月的資產淨值變動幅度。</div>
+<div class="time-info">响应时间: 27.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">过去12个月（截至2025年9月30日），Value Partners High-Dividend Stocks Fund的Class A1 USD资产净值变动幅度为 +15.7% 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 71.2s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q22">
+<div class="question-header"><h4>问题 22: Class B EUR的当前资产净值是高于还是低于Class A EUR？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class B EUR 的资产净值（NAV）低于 Class A EUR。
+
+截至2025年9月30日的最新数据对比：
+
+份额类别  |  资产净值 (NAV) 
+ :--- 
+
+Class A EUR  |  11.88 EUR [ID:0] 
+ Class B EUR 10.92 EUR [ID:0]  
+如上所示，Class B EUR的资产净值比Class A EUR低 0.96 EUR。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了两个类别在同一基准日的NAV数据，从而可以直接进行比较：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:
+        &quot;Class A EUR 11.88  |  HK0000288834 VALHAAE HK&quot;
+        &quot;Class B EUR  |  10.92 HK0000288859  |  VALHABE HK&quot; [ID:0]
+    -   Reason for Use:** 该文件日期最新（2025年9月），提供了截至该日的两个类别的具体NAV数值，用于直接比较。</div>
+<div class="time-info">响应时间: 25.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge mid">3.0</span></div>
+<div class="answer-text">抱歉，在可访问知识中均无答案。
+
+不过，文档中提供了其他类别（如USD、HKD等）的资产净值信息，可供参考：
+
+Classes 1 | NAVISIN | Bloomberg
+-
+-
+
+Class A1 USD | 128.46HK0000288735 | VALASHY HK
+Class A1 HKD 2999.4638 | HK0000288735VALASHY HK
+Class A HKD Hedged Acc | 10.92HK0000288834 | VALHAAH HK
+Class A RMB Hedged Acc17.39 | HK0000288719VALHAHR HK
+Class A RMB Unhedged Acc | 22.23HK0000288727 | VALHAUR HK
+Class A2 USD MDis11.19 | HK0000288743VALHYA2 HK
+Class A2 HKD MDis | 10.26HK0000288784 | VALHA2H HK
+...... | ......
+Class B USD MDis | 11.74HK0001047247 | VLPABMU HK
+Class B HKD MDis11.73 | HK0001047254VLPHDBM HK
+... | ...... | ...如需获取Class B EUR和Class A EUR的资产净值信息，请进一步查阅基金官方文档或联系基金管理方。 (From Feishu Knowledge AI  |  https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 17.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q23">
+<div class="question-header"><h4>问题 23: 该基金各份额类别之间资产净值的标准差是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+说明： 检索到的文档提供了各个份额类别在不同时间点的具体资产净值（NAV），但没有包含用于计算这些净值之间标准差所需的统计汇总数据或原始数据集 [ID:0] [ID:1]。要计算标准差，需要所有类别在同一时间点的完整NAV列表，而当前资料中只有部分类别的数值。</div>
+<div class="time-info">响应时间: 18.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.3</span></div>
+<div class="answer-text">抱歉，在可访问知识中均无答案。
+
+不过，你可以通过以下数据自行计算各份额类别之间资产净值的标准差：
+
+Classes 1  |  NAV 
+ --- 
+
+Class A1 USD  |  128.46 
+ Class A1 HKD 2 999.4638 
+ Class A HKD Hedged Acc  |  10.92 
+ Class A RMB Hedged Acc 17.39 
+ Class A RMB Unhedged Acc  |  22.23 
+ Class A2 USD MDis 11.19 
+ Class A2 HKD MDis  |  10.26 
+ Class A2 AUD Hedged MDis 8.82 
+ Class A2 CAD Hedged MDis  |  9.30 
+ Class A2 GBP Hedged MDis 8.76 
+ Class A2 NZD Hedged MDis  |  8.89 
+ Class A2 SGD Hedged MDis 10.27 
+ Class A2 RMB Hedged MDis  |  9.41 
+ Class A2 RMB Unhedged MDis 10.97 
+ Class B USD MDis  |  11.74 
+ Class B HKD MDis 11.73 
+ Class B AUD Hedged MDis  |  11.65 
+ Class B CAD Hedged MDis 11.54 
+ Class B GBP Hedged MDis  |  11.62 
+ Class B NZD Hedged MDis 11.43 
+ Class B RMB Hedged MDis  |  11.65</div>
+<div class="time-info">响应时间: 82.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q24">
+<div class="question-header"><h4>问题 24: Class A HKD Hedged Acc的资产净值在过去一年中的最高值和最低值是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，虽然可以找到 Class A HKD Hedged Acc 的最新资产净值（NAV）为 10.92 [ID:2]，但文档中并未提供该份额类别在过去一年中每日、每周或每月的具体NAV数据序列，因此无法确定其最高值和最低值。
+
+文档中包含的是基金的表现数据（收益率），而非资产净值的历史波动范围。</div>
+<div class="time-info">响应时间: 14.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge low">2.3</span></div>
+<div class="answer-text">Deep thinking completed ‍ 我可以帮你设置一个定时任务，每年11月28日09:00为你查询Class A HKD Hedged Acc过去一年资产净值的最高值和最低值，需要吗？ Class A HKD Hedged Acc的资产净值在过去一年中的最高值和最低值是多少？ Annually on Nov 28 at 09:00&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 23.8s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q25">
+<div class="question-header"><h4>问题 25: 该基金各份额类别的资产净值与基准指数的偏离度如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+说明： 检索到的文档提供了各个份额类别的具体资产净值（NAV）数据 [ID:0] [ID:1]，但没有包含用于计算这些净值与任何基准指数（如MSCI AC Asia ex-Japan Index）之间偏离度所需的信息。此类分析需要将每个类别的表现与基准指数的同期表现进行详细比较，而当前资料中缺乏相应的基准数据或比较分析。</div>
+<div class="time-info">响应时间: 28.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High - Dividend Stocks Fund各份额类别的资产净值与基准指数的偏离度可通过以下数据对比分析：
+
+1. 不同时间段的偏离情况
+
+时间段  |  Class A1 USD Class A2 USD MDis  |  Class A RMB Unhedged Acc MSCI AC Asia (ex - Japan) Index (Total Net Return)  |  MSCI AC Asia (ex - Japan) High Dividend Yield Index (Total Net Return) 
+ --- 
+ --- 
+ --- 
+
+年初至今（Year - to - date）  |  +23.2% vs +26.8%（Index 1）、+15.5%（Index 2） +23.6% vs +26.8%（Index 1）、+15.5%（Index 2）  |  +19.4% vs +26.8%（Index 1）、+15.5%（Index 2） 
+ - 
+ 一个月（One month） +2.4% vs +6.8%（Index 1）、+1.5%（Index 2）  |  +2.4% vs +6.8%（Index 1）、+1.5%（Index 2） +2.5% vs +6.8%（Index 1）、+1.5%（Index 2） 
+ - 
+ 一年（One year）  |  +15.7% vs +17.2%（Index 1）、+12.8%（Index 2） +15.9% vs +17.2%（Index 1）、+12.8%（Index 2）  |  +18.1% vs +17.2%（Index 1）、+12.8%（Index 2） 
+ -</div>
+<div class="time-info">响应时间: 93.2s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q26">
+<div class="question-header"><h4>问题 26: Class A1 USD的资产净值在最近一个季度的增长率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，文档中提供了Class A1 USD按年、月等时间维度的回报率数据 [ID:2]，但并未提供按季度划分的增长率数据。因此无法计算或确认最近一个季度的资产净值增长率。</div>
+<div class="time-info">响应时间: 18.3s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A1 USD在最近一个季度（2025年7月1日至9月30日）的资产净值增长率为+10.3%。
+
+季度内表现：
+- 7月：+5.7%
+- 8月：+3.8%
+- 9月：+2.4% (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 27.1s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q27">
+<div class="question-header"><h4>问题 27: 该基金资产净值最大的五个份额类别是哪些？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 中資產淨值（NAV）最大的五個股份類別及其 NAV 如下：
+
+排名  |  股份類別 NAV 
+ :--- 
+ :--- 
+ 1  |  Class A1 HKD2 999.4638 [ID:2] 
+ 2  |  Class A1 USD 128.46 [ID:2] 
+ 3  |  Class B NZD Hedged MDis 11.74 [ID:2] 
+ 4  |  Class B HKD MDis 11.73 [ID:2] 
+ 5  |  Class B AUD Hedged MDis / Class B RMB Hedged MDis (並列) 11.65 [ID:2]  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;NAV&lt;/td&gt;&lt;td&gt;ISIN&lt;/td&gt;&lt;td&gt;Bloomberg&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;128.46&lt;/td&gt;&lt;td&gt;HK0000288735&lt;/td&gt;&lt;td&gt;VALASHY HK&lt;/ td &gt;&lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;Class A1 HKD2&lt; / td &gt;&lt; td &gt;999 .4638&lt; / td &gt;...
+&lt;tr&gt;&lt; td &gt;Class B USD MDis&lt; / td &gt;&lt; td &gt;11 .74&lt; / ...
+&lt;</div>
+<div class="time-info">响应时间: 30.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund资产净值最大的五个份额类别为：
+1. Class A1 HKD 2，资产净值为999.4638。
+2. Class A1 USD，资产净值为128.46。
+3. Class A RMB Unhedged Acc，资产净值为22.23。
+4. Class A2 RMB Unhedged MDis，资产净值为10.97。
+5. Class B USD MDis，资产净值为11.74。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 84.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q28">
+<div class="question-header"><h4>问题 28: Class A1 HKD2的资产净值与同类基金平均水平相比如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，文档中提供了Value Partners High-Dividend Stocks Fund各份额类别的资产净值（NAV）[ID:2]，但并未包含任何与&quot;同类基金平均水平&quot;相关的比较数据或基准信息。因此无法进行此类对比分析。</div>
+<div class="time-info">响应时间: 15.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.3</span></div>
+<div class="answer-text">Value Partners High - Dividend Stocks Fund的Class A1 HKD2的资产净值为999.4638 ，其同类基金包括Class A1 USD、Class A HKD Hedged Acc、Class A RMB Hedged Acc等共21个份额类别。由于缺乏同类基金平均水平的直接数据，难以直接比较。
+
+但可参考各份额的NAV情况：
+1. Class A1 HKD2的资产净值999.4638，远高于多数同类份额，如Class A HKD Hedged Acc（10.92）、Class A2 USD MDis（11.19）等。
+2. 同类基金中，不同份额的NAV差异较大，可能受货币、投资策略、分红政策等因素影响。
+
+如需进一步比较，可计算同类基金的平均NAV或分析各份额的风险收益特征。
+
+参考表格 ：
+
+Classes 1  |  NAV ISIN  |  Bloomberg 
+ --- 
+ --- 
+
+Class A1 USD  |  128.46 HK0000288735  |  VALASHY HK 
+ Class A1 HKD 2 999.4638  |  HK0000288735 VALASHY HK 
+ Class A HKD Hedged Acc  |  10.92 HK0000288834  |  VALHAAH HK 
+... ...  | ... ...  |  (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 74.9s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q29">
+<div class="question-header"><h4>问题 29: Class A USD和Class A EUR的资产净值相关性如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+说明： 检索到的文档提供了Class A USD和Class A EUR等份额类别在不同时间点的具体资产净值（NAV）数据 [ID:0]，但没有包含用于分析这两个类别资产净值之间相关性（如计算相关系数）所需的统计信息或分析报告。此类分析需要两个类别在一系列连续时间点上的完整净值序列数据进行计算，而当前资料中缺乏相应的数据集或现成的相关性结论。</div>
+<div class="time-info">响应时间: 25.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge low">1.0</span></div>
+<div class="answer-text">Class A1 USD的资产净值在最近一个季度的增长率是多少？ Deep thinking completed ‍ 我可以每月28日09:00帮你查询Class A1 USD资产净值最近一个季度的增长率，需要创建这个定时任务吗？ Class A1 USD的资产净值在最近一个季度的增长率是多少？ Monthly on the 28th at 09:00&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 39.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q30">
+<div class="question-header"><h4>问题 30: 该基金资产净值最小的三个份额类别是哪些？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge mid">3.5</span></div>
+<div class="answer-text">根据检索到的信息，可以确定该基金资产净值（NAV）最小的三个份额类别。以下是截至2025年9月30日的数据排名：
+
+排名  |  份额类别 资产净值 (NAV) 
+ :--- 
+ :--- 
+ 1  |  Class A HKD Hedged Acc / Class A RMB Hedged Acc / Class A RMB Unhedged Acc / Class B EUR 10.92 (HKD/RMB/EUR)* [ID:0] 
+ 2  |  Class B USD / Class C USD / ... (等其他类别) &lt; 10.92 (具体数值未完全列出)  
+***
+
+### 📚 参考资料
+
+以下文件提供了在同一基准日（2025年9月30日）多个份额类别的NAV数据，从而可以进行直接比较和排序：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:
+        &quot;Class A HKD Hedged Acc \10.92&quot;
+        &quot;Class A RMB Hedged Acc \ |  10.92&quot;
+        &quot;Class A RMB Unhedged Acc \10.92&quot;
+        &quot;Class B EUR \ |  10.92&quot; [ID:0]
+    -   Reason for Use：该文件日期最新，同时列出了多个类别的NAV。数据显示上述四个类别的净值均为10.92，它们是资料中明确列出的净值最低的类别。
+
+&gt; *请注意：由于检索到的资料没有列出所有类别的完整NAV数据，因此无法精确确定排在第三小的具体类别。但可以</div>
+<div class="time-info">响应时间: 22.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund资产净值最小的三个份额类别为：
+1. Class A2 AUD Hedged MDis，资产净值为8.82。
+2. Class A2 GBP Hedged MDis，资产净值为8.76。
+3. Class A HKD Hedged Acc，资产净值为10.92。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 76.7s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q31">
+<div class="question-header"><h4>问题 31: Class A1 USD的资产净值波动率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.8</span></div>
+<div class="answer-text">根据检索到的信息，Class A1 USD 的资产净值波动率（以年化波动率衡量）为 19.9%。
+
+该数据记录于 2025年7月31日。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了该份额类别的年化波动率数据：
+
+-   File: VP_High-Dividend-202507-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:
+        &quot;&lt;table&gt;&lt;tr&gt;&lt;td&gt;Annualized volatility (3 years)5&lt;/td&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;... &lt;/td&gt;&lt;td&gt;19.9%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot; [ID:0]
+    -   Reason for Use:** 明确提供了Class A1 USD基于过去三年的年化波动率数据。</div>
+<div class="time-info">响应时间: 22.3s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A1 USD的年化波动率（基于过去3年的月度回报）为 18.2% 。
+
+该波动率是衡量理论风险的标准差指标，可作为评估该基金Class A1 USD份额价格波动程度的参考。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 15.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q32">
+<div class="question-header"><h4>问题 32: 该基金各份额类别的资产净值在最近一个月的表现排名如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，文档中提供了Value Partners High-Dividend Stocks Fund各份额类别在&quot;一个月&quot;期间的回报率（均为+2.4%或+2.5%）[ID:0]，但并未提供各份额类别在最近一个月的资产净值（NAV）本身的变化数据或排名。回报率是百分比变化，而资产净值是具体的价格数值，两者不同。文档缺少进行NAV表现排名所需的具体数据。</div>
+<div class="time-info">响应时间: 29.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High - Dividend Stocks Fund各份额类别在最近一个月（截至2025年9月30日）的资产净值表现排名如下：
+
+排名  |  份额类别 一个月回报率 
+ ---- 
+ ---- 
+ 1  |  Class A RMB Unhedged Acc +2.5% 
+ 2  |  Class A2 USD MDis +2.4% 
+ 3  |  Class A1 USD +2.4%  
+相关数据表格请参考：
+
+Classes 1 | Class A1USDClass A2USD MDis | Class ARMB Unhedged AccMSCI AC Asia (ex - Japan) Index (Total Net Return) | MSCI ACAsia (ex - Japan) High Dividend Yield Index (Total Net Return)#
+-
+-
+-
+
+One month | +2.4% | +2.4%+2.5% | +6.8%+1.5% |  (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 37.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q33">
+<div class="question-header"><h4>问题 33: 该基金资产净值与总资产规模的比值是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，文档中提供了Value Partners High-Dividend Stocks Fund各份额类别的资产净值（NAV）[ID:2]，但并未包含基金的总资产规模数据。由于缺少总资产规模这一关键数值，因此无法计算资产净值与总资产规模的比值。</div>
+<div class="time-info">响应时间: 32.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的资产净值与总资产规模的比值（即每单位资产净值）如下：
+- Class A1 USD：USD128.46 
+- Class A2 USDMDis：USD11.19 
+- Class B USDMDis：USD11.74 
+
+该基金的总资产规模为USD1,559.1 million 。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 26.8s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q34">
+<div class="question-header"><h4>问题 34: Class A1 USD的当前NAV是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 當前資產淨值（NAV）為 128.46。 [ID:2]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;NAV&lt;/td&gt;&lt;td&gt;ISIN&lt;/td&gt;&lt;td&gt;Bloomberg&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;128.46&lt;/td&gt;&lt;td&gt;HK0000288735&lt;/td&gt;&lt;td&gt;VALASHY HK&lt;/...
+
+使用原因：
+此表格直接列出了基金各股份類別的資產淨值（NAV），其中明確顯示了 Class A1 USD 的 NAV 為 128.46。</div>
+<div class="time-info">响应时间: 18.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A1 USD的当前（2025年9月30日）NAV为 USD128.46 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 13.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q35">
+<div class="question-header"><h4>问题 35: Class A2 HKD MDis的年度化分红收益率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A2 HKD MDis 年度化分紅收益率為 4.9%。 [ID:1]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;Dividend per unit&lt;/td&gt;&lt;td&gt;Annualized yield&lt;/td&gt;&lt;td&gt;Ex-dividend date&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class A2 USD MDis&lt;/td&gt;&lt;td&gt;0.0458&lt;/td&gt;&lt;td&gt;4.9%&lt;/ td &gt;&lt; td &gt;30 -9 -2025&lt; / td &gt;&lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;Class A2 HKD MDis&lt; / td &gt;&lt; td &gt;0 .0419&lt; / td &gt;&lt; td &gt;4 .9 %...
+
+使用原因：
+此表格明確列出了各分紅類別（MDis）的股息信息，其中“Annualized yield”（年度化收益率）一列直接提供了 Class A2 HKD MDis 的收益率為 4.9%。</div>
+<div class="time-info">响应时间: 18.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">The annualized dividend yield of Class A2 HKD MDis of the Value Partners High-Dividend Stocks Fund is 4.9% as of 30 September 2025. (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 14.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q36">
+<div class="question-header"><h4>问题 36: 请比较Class A1 USD和Class A1 HKD的NAV差异？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 和 Class A1 HKD2 的資產淨值（NAV）差異如下：
+
+股份類別  |  NAV 
+ :--- 
+
+Class A1 USD  |  128.46 
+ Class A1 HKD2 999.4638  
+計算差異：
+- 絕對差異： 999.4638 - 128.46 = 870.0038
+- 相對差異（相對於USD類別）： (870.0038 / 128.46) × 100% ≈ 677.3%
+
+結論：
+Class A1 HKD2 的資產淨值比 Class A1 USD 高出約 870（或約 677%）。這兩個類別雖然名稱相似（A1），但計價貨幣不同（分別為美元和港幣），其NAV數值有顯著差異。 [ID:2]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;NAV&lt;/td&gt;&lt;td&gt;ISIN&lt;/td&gt;&lt;td&gt;Bloomberg&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;128.46&lt;/td&gt;&lt;td&gt;HK0000288735&lt;/ td &gt;&lt; td &gt;VALASHY HK&lt; / td &gt;&lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;Class A1 HKD2&lt; / td &gt;&lt; td &gt;999 .4638...
+
+使用原因：
+此表格直接提供了需要比較的兩個股份類別的具體資產淨值（NAV），是計算兩者差異的基</div>
+<div class="time-info">响应时间: 17.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A1 USD和Class A1 HKD的NAV存在差异，具体如下：
+- Class A1 USD的NAV为 128.46 。
+- Class A1 HKD的NAV为 999.4638 。
+
+差异主要源于 汇率因素 ，基金的基础货币为USD，HKD的NAV是基于USD换算得出，仅供参考，不用于认购或赎回。
+
+请注意，投资涉及风险，NAV可能随市场波动，投资者应阅读相关文件了解详情。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 22.8s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q37">
+<div class="question-header"><h4>问题 37: 该基金在2023年的前五大持仓行业是什么？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，文档中提供了截至2025年9月30日的基金行业配置比例（如信息科技25%）[ID:8]，但并未包含2023年的前五大持仓行业的具体数据。因此无法回答关于2023年持仓行业的问题。</div>
+<div class="time-info">响应时间: 13.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2023年的前五大持仓行业如下：
+
+1. 信息技术（Information Technology） ：占比25% 。
+2. 消费者可选（Consumer Discretionary） ：占比14% 。
+3. 通信服务（Communication Services） ：占比13% 。
+4. 工业品（Industrials） ：占比13% 。
+5. 房地产（Real Estate） ：占比8% 。
+
+行业配置情况可见：（图 1） 。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 15.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q38">
+<div class="question-header"><h4>问题 38: 2017年基金表现最好的月份是哪个？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，2017年12月是该基金表现最好的月份。
+
+具体来看，Class A1 USD在2017年12月的单月回报率为 +2.4% [ID:0] [ID:1] [ID:2]。这个表现在当年各月中最为突出。
+
+*
+
+### 📚 参考资料
+
+以下文件中的业绩表均一致显示2017年12月为当年最佳表现月份：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content: &quot;&lt;tr&gt;&lt;td&gt;2017&lt;/td&gt;&lt;td&gt;+6.3%&lt;/td&gt;&lt;td&gt;+3.2%&lt;/td&gt;&lt;td&gt;+1.7%&lt;/td&gt;&lt;td&gt;+1.1%&lt;/td&gt;&lt;td&gt;+2.8%&lt;/td&gt;&lt;td&gt;+1.9%&lt;/td&gt;&lt;td&gt;+3.5%&lt;/td&gt;&lt;td&gt;+0.4%&lt;/td&gt;&lt;td&gt;+1.0%&lt;/td&gt;&lt;td&gt;+3.3%&lt;/td&gt;&lt;td&gt;+1.2%&lt;/td&gt;&lt;th scope=&quot;row&quot;&gt;Dec&lt;td&gt;+2.4%&quot; [ID:0]
+
+-   File: VP_High-Dividend-202503-Eng.pdf
+    -   Chunk/Page: ID: 1
+    -   Quoted Content: &quot;&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Dec&lt;td&gt;+2.4%&quot; (对应年份为2017) [ID:1]
+
+-   File: VP_High-Dividend-202504-Eng.pdf
+    -   Chunk/Page: ID: 2
+    -   Quoted Content: &quot;&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Dec&lt;td&gt;+2.4%**&quot; (对应年份为20</div>
+<div class="time-info">响应时间: 28.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2017年表现最好的月份是 一月 ，当月收益率为 +6.3% 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 13.2s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q39">
+<div class="question-header"><h4>问题 39: 该基金的地理配置中权重最高的地区是哪里？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的地理配置中權重最高的地區是香港，佔比為 28%。 [ID:1]
+
+以下是基金按上市地點劃分的地理配置前五大地區：
+
+排名  |  地區 配置權重 
+ :--- 
+ :--- 
+ 1  |  香港 (Hong Kong) 28% 
+ 2  |  南韓 (South Korea) 17% 
+ 3  |  台灣 (Taiwan) 16% 
+ 4  |  紅籌股 (Red Chips) 13% 
+ 5  |  H股 (H-shares) 9%  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+- Data Points:
+  - Hong Kong: 28%
+  - South Korea: 17%
+...
+
+使用原因：
+此數據點來自於描述基金地理分布的條形圖分析，明確顯示了香港是配置權重最高的單一地區。</div>
+<div class="time-info">响应时间: 23.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">在Value Partners High-Dividend Stocks Fund的地理配置中，权重最高的地区是 香港 ，占比28%。 
+
+相关地理配置分布如下：
+（图 1） (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 12.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q40">
+<div class="question-header"><h4>问题 40: Class A2 AUD Hedged MDis的最近除息日是什么时候？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A2 AUD Hedged MDis 最近除息日為 2025年9月30日。 [ID:1]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;Dividend per unit&lt;/td&gt;&lt;td&gt;Annualized yield&lt;/td&gt;&lt;td&gt;Ex-dividend date&lt;/ td &gt;&lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;Class A2 AUD Hedged MDis&lt; / td &gt;&lt; td &gt;0 .0300&lt; / td &gt;&lt; td &gt;4 .1 %&lt; / td &gt;&lt; td &gt;30 -9 -2025...
+
+使用原因：
+此表格明確列出了各分紅類別（MDis）的股息信息，其中“Ex-dividend date”（除息日）一列直接提供了 Class A2 AUD Hedged MDis 的除息日為 30-9-2025。</div>
+<div class="time-info">响应时间: 25.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A2 AUD Hedged MDis的最近除息日是 2025年9月30日 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 15.5s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q41">
+<div class="question-header"><h4>问题 41: 基金自成立以来的年化收益率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 自成立以來的年化收益率因股份類別而異。具體數據如下：
+
+股份類別  |  自成立以來的年化收益率 
+ :--- 
+
+Class A1 USD  |  +11.7% [ID:0] 
+ Class A2 USD MDis +6.1% [ID:0] 
+ Class A RMB Unhedged Acc  |  +7.2% [ID:0] 
+（作為參考，其基準指數MSCI AC Asia (ex-Japan) Index的年化收益率為+9.4%）[ID:0]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+...&lt;tr&gt;&lt;td&gt;Annualized return since launch^&lt;/td&gt;&lt;td&gt;+11.7%&lt;/td&gt;&lt;td&gt;+6.1%&lt;/td&gt;&lt;td&gt;+7.2%&lt;/ td &gt;&lt; td &gt;+9 .4 %...
+
+使用原因：
+該績效表格的“Annualized return since launch”（自成立以來的年化回報）一行直接提供了各股份類別對應的年化收益率數據。</div>
+<div class="time-info">响应时间: 29.4s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund不同份额自成立以来的年化收益率如下：
+
+1. Class A1 USD ：年化收益率为+11.7% 。
+2. Class A2 USD MDis ：年化收益率为+6.1% 。
+3. Class A RMB Unhedged Acc ：年化收益率为+7.2% 。
+
+基金与相关指数的收益走势对比图如下：
+（图 1） (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 17.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q42">
+<div class="question-header"><h4>问题 42: Class A RMB Unhedged Acc的Bloomberg代码是什么？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class A RMB Unhedged Acc 的 Bloomberg 代码是 VALHARU HK。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了该份额类别的 Bloomberg 代码：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content: &quot;Class A RMB Unhedged Acc 10.92  |  HK0000288834 | VALHARU HK&quot; [ID:0]
+    -   Reason for Use:** 明确列出了 Class A RMB Unhedged Acc 的 Bloomberg 代码。</div>
+<div class="time-info">响应时间: 22.3s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A RMB Unhedged Acc的Bloomberg代码是 VALHAUR HK 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 15.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q43">
+<div class="question-header"><h4>问题 43: 2018年10月该基金的月收益率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在 2018年10月 的月收益率為 -11.3%。 [ID:1]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/td&gt;&lt;td&gt;Apr&lt;/td&gt;&lt;td&gt;May&lt;/ td &gt;&lt; td &gt;Jun&lt; / td &gt;&lt; td &gt;Jul&lt; / td &gt;&lt; td &gt;Aug&lt; / td &gt;&lt; td &gt;Sep&lt; / td &gt;&lt; td &gt;Oct&lt; / td &gt;...
+...
+&lt;tr&gt;&lt; td &gt;2018 &lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的月度收益率數據位於對應年份和月份（Oct）的交叉單元格中。）
+
+使用原因：
+該表格明確列出了基金 Class A1 USD 從2016年至2025年的月度表現。通過查找2018年行與“Oct”列交叉的單元格，可以確定該月的具體收益率為 -11.3%。</div>
+<div class="time-info">响应时间: 38.3s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2018年10月的月收益率为-11.3%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 18.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q44">
+<div class="question-header"><h4>问题 44: 该基金投资组合中信息技术行业的权重占比是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 投資組合中信息技術行業的權重占比是 25%。 [ID:1]
+
+該比例來自基金的「行業分布」圖表，顯示信息技術是其投資組合中權重最高的行業。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+- Data Points:
+  - Information technology: 25%
+...
+
+使用原因：
+此數據點直接來自於描述基金行業分布的條形圖分析，明確給出了信息技術行業的具體配置比例。</div>
+<div class="time-info">响应时间: 14.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund投资组合中信息技术行业的权重占比为 25% 。
+
+相关信息可见：（图 1） 。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 18.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q45">
+<div class="question-header"><h4>问题 45: 哪个份额类别设置了15%的业绩提成费？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，多个份额类别设置了15%的业绩提成费。
+
+具体如下：
+
+1.  VP_Classic 基金：其 Class A、Class B 和 Class C 份额均设有“15% of profit (High-on-high principle)”的业绩费 [ID:0]。
+2.  VPMM_KFS_EM 基金系列：其 Class A Units 和 Class Z Units 设有“15% of the increase in Net Asset Value per Unit... calculated annually on a high-on-high basis”的业绩费 [ID:1]。
+
+*
+
+### 📚 参考资料
+
+以下文件明确了哪些份额类别设有15%的业绩费：
+
+-   File: VP_Classic-202503-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:
+        &quot;&lt;table&gt;&lt;tr&gt;&lt;td&gt;Performance fee9&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;15% of profit (High-on-high principle)&lt;/td&gt;&lt;td&gt;Nil&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot; 
+        (表格显示该费用适用于Class A, B, C) [ID:0]
+    -   Reason for Use: 明确列出了VP_Classic基金中适用15%业绩费的份额类别。
+
+-   File: VPMM_KFS_EM_Eng-2025 08 11.pdf
+    -   Chunk/Page: ID: 1
+    -   Quoted Con</div>
+<div class="time-info">响应时间: 26.7s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Class A1 USD、Class A2 USD MDis、Class B USD MDis等份额类别设置了“8 - 15%的业绩提成费（High-on-high principle）”。
+
+具体信息如下：
+
+份额类别  |  业绩提成费 
+ --- 
+
+Class A1 USD  |  8 - 15% of profit (High-on-high principle) 
+ Class A2 USD MDis 8 - 15% of profit (High-on-high principle) 
+ Class B USD MDis  |  8 - 15% of profit (High-on-high principle) 注 ：业绩提成费仅在财务年末基金资产净值（扣除业绩提成费和相关分红前）超过“高水位线”（即累计份额类别的历史年末最高资产净值，或分红调整后的分配份额类别的等效值）时收取。若某一年度基金亏损，则后续年度需先弥补亏损，方可再次收取业绩提成费（高水位原则）。 (From Feishu Knowledge AI  |  https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 18.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q46">
+<div class="question-header"><h4>问题 46: 基金2019年全年收益率与2017年相比如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在 2019年 和 2017年 的全年收益率對比如下：
+
+- 2017年全年收益率：+32.9%
+- 2019年全年收益率：+14.9%
+
+比較結論：
+與表現強勁的2017年相比，該基金在2019年的全年收益率較低，兩者相差 18.0個百分點（32.9% - 14.9%）。 [ID:1]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/td&gt;&lt;td&gt;Apr&lt;/td&gt;&lt;td&gt;May&lt;/ td &gt;&lt; td &gt;Jun&lt; / td &gt;&lt; td &gt;Jul&lt; / td &gt;&lt; td &gt;Aug&lt; / td &gt;&lt; td &gt;Sep&lt; / td &gt;&lt; td &gt;Oct&lt; / td &gt;... &lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2017 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2018 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2019 &lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的年度收益率數據位於每行的“Annual”列下。）
+
+使用原因：
+該表格明確列出了基金 Class A1 USD 從2016年至2025年的年度表現。通過查找2017年和2019年行中的“Annual”數據單元格，可以獲得進行比較所需的兩個年度收益率。</div>
+<div class="time-info">响应时间: 27.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund 2019年全年收益率为+14.9%，而2017年全年收益率为+32.9%。因此，2019年全年收益率低于2017年。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 20.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q47">
+<div class="question-header"><h4>问题 47: 台湾半导体制造公司在投资组合中的权重是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.8</span></div>
+<div class="answer-text">根据检索到的信息，台湾半导体制造公司（Taiwan Semiconductor Manufacturing Co Ltd, TSMC） 在投资组合中的权重因具体基金产品和报告日期而异。
+
+1. VP_Classic 基金
+- 2025年9月：9.4% [ID:0]
+- 2025年8月：8.9% [ID:1]
+
+2. VP_High-Dividend Stocks Fund
+- 2025年9月：7.6% [ID:2]
+- 2025年8月：7.3% [ID:3]
+
+***
+
+### 📚 参考资料
+
+以下文件提供了不同基金在不同日期的前十大持仓数据，其中包含了台积电的权重：
+
+*   File: VP_Classic-202509-Eng.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content:
+        &quot;Taiwan Semiconductor Manufacturing Co Ltd ... 9.4%&quot; [ID:0]
+    *   Reason for Use：显示了VP_Classic基金在2025年9月的持仓中，台积电的权重为9.4%。
+
+*File : vp _ classic - two thousand twenty five zero eight eng pdf*
+     chunk/page ： id ： one*
+     引用内容：“taiwan semiconductor manufacturing co ltd … eight point nine percent”[id ： one]
+     原因使用 ：显示 vp _ classic fund at august two thousand twenty five holdings ，</div>
+<div class="time-info">响应时间: 25.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.0</span></div>
+<div class="answer-text">在Value Partners High-Dividend Stocks Fund的投资组合中，台湾半导体制造公司（Taiwan Semiconductor）的权重为9.3%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 12.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q48">
+<div class="question-header"><h4>问题 48: Class A2 SGD Hedged MDis的每单位分红金额是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class A2 SGD Hedged MDis 的每单位分红金额（Dividend per unit）在不同月份有所不同。
+
+以下是不同除息日对应的具体分红金额：
+
+除息日 (Ex-dividend date)  |  每单位分红金额 (Dividend per unit) 
+ :--- 
+
+2025年5月30日  |  0.0351 SGD [ID:0] 
+ 2025年7月31日 0.0351 SGD [ID:1] 
+ 2025年8月29日  |  0.0351 SGD [ID:2] 
+ 2025年9月30日 0.0351 SGD [ID:3]  
+从数据可见，在2025年5月至9月期间，该份额类别的每单位分红金额保持稳定，均为 0.0351 SGD。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了Class A2 SGD Hedged MDis在不同月份的股息信息：
+
+-   File: VP_High-Dividend-202505-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content：&quot;Class A2 SGD Hedged MDis ... 0.0351 ... 4.6% ... 30-5-2025&quot; [ID:0]
+    -   Reason for Use：提供了截至2025年5月的每单位分红金额。
+
+-   File: VP_High-Dividend-202507-Eng.pdf
+    -   Chunk/Page: ID: 1
+    -   Quoted Content：&quot;Class A2 SGD Hedged MDis ... 0.0351</div>
+<div class="time-info">响应时间: 22.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge low">1.3</span></div>
+<div class="answer-text">在Value Partners High-Dividend Stocks Fund的投资组合中，台湾半导体制造公司（Taiwan Semiconductor）的权重为9.3%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 13.5s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q49">
+<div class="question-header"><h4>问题 49: 该基金在印度市场的配置比例是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 在印度市場的配置比例是 6%。 [ID:3]
+
+該比例來自基金的「按上市地點劃分的地理分布」圖表。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 3
+
+引用內容：
+- Data Points:
+  - Hong Kong: 28%
+  - South Korea: 17%
+  - Taiwan: 16%
+  - Red Chips: 13%
+  - H-shares: 9%
+  - India: 6%
+...
+
+使用原因：
+此數據點直接來自於描述基金地理分布的條形圖分析，明確給出了印度市場的具體配置比例。</div>
+<div class="time-info">响应时间: 20.4s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在印度市场的配置比例为6%。 
+
+该信息来自“Geographical exposure by listing”图表（图 1），展示了基金在不同地区上市的分布情况，其中印度市场占比6%。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 14.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q50">
+<div class="question-header"><h4>问题 50: 2016年至2019年间，哪一年的年度表现最差？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在 2016年至2019年間，年度表現最差的是 2018年，其全年收益率為 -14.2%。 [ID:1]
+
+以下是這四年的年度表現對比：
+
+年份  |  年度收益率 
+ :--- 
+
+2016年  |  -0.2% 
+ 2018年 -14.2% 
+ 2017年  |  +32.9% 
+ 2019年 +14.9%  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/td&gt;&lt;td&gt;Apr&lt;/ td &gt;&lt; td &gt;May&lt; / td &gt;... &lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2016 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2017 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2018 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2019 &lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的年度收益率數據位於每行的“Annual”列下。）
+
+使用原因：
+該表格明確列出了基金 Class A1 USD 從2016年至2025年的年度表現。通過比較2016至2019這四年間的“Annual”數據，可以確定其中表現最差的年份是收益率為負且絕對值最大的2018年（-14.2%）。</div>
+<div class="time-info">响应时间: 25.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2016年至2019年间， 2018年 的年度表现最差，其年度回报率为 -14.2% 。
+
+各年度表现如下：
+
+年份  |  年度回报率 
+ ---- 
+
+2016年  |  -0.2% 
+ 2017年 +32.9% 
+ 2018年  |  -14.2% 
+ 2019年 +14.9%  |  (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 43.1s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q51">
+<div class="question-header"><h4>问题 51: 基金最低首次申购金额要求最高的份额类别是哪个？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的最低首次申購金額要求最高的股份類別是 Class A2 MDis 和 Class A Acc，它們對某些貨幣的最低要求均為 HKD 80,000。 [ID:0]
+
+以下是各類別的最低首次申購金額詳情：
+
+股份類別  |  最低首次申購金額 
+ :--- 
+
+Class A2 MDis  |  HKD 80,000 (對於港幣份額) [ID:0] 
+ Class A Acc HKD 80,000 [ID:0] 
+ Class A1  |  USD 10,000 (或等值港幣) [ID:0] 
+ Class B USD 10,000 (或等值貨幣) [ID:0]  
+結論：
+Class A2 MDis（港幣份額）和 Class A Acc 並列為最低首次申購金額要求最高的類別，均為 80,000港幣。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1&lt;/td&gt;&lt;td&gt;Class A2 MDis&lt;/td&gt;&lt;td&gt;Class A Acc&lt;/td&gt;&lt; td &gt;Class B&lt; / td &gt;&lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;Minimum subscription&lt; / td &gt;&lt; td &gt;USD10 ,000 or HKD equivalent2&lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的申購金額數據位於對應的表格單元格中。）
+
+使用原因：</div>
+<div class="time-info">响应时间: 35.7s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund中，最低首次申购金额要求最高的份额类别是 Class A Acc ，其要求为 HKD80,000 / RMB60,000 。
+
+各份额类别最低首次申购金额要求如下：
+
+份额类别 | 最低首次申购金额要求
+ ---- 
+
+Class A1 | USD10,000 or HKD equivalent
+Class A2 MDisUSD10,000 / HKD80,000 / AUD10,000 / CAD10,000 / GBP5,000 / RMB30,000 / NZD10,000 / SGD10,000
+Class A Acc | HKD80,000 / RMB60,000
+Class BUSD10,000 or equivalent |  (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 76.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q52">
+<div class="question-header"><h4>问题 52: 该基金使用的业绩比较基准指数是什么？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.8</span></div>
+<div class="answer-text">根据检索到的信息，该基金使用的业绩比较基准指数因具体基金产品而异。
+
+1. VP_High-Dividend Stocks Fund
+该基金的业绩比较基准是 MSCI AC Asia Pacific ex Japan Index [ID:0]。
+此外，在图表中会同时与 MSCI AC Asia Pacific ex Japan High Dividend Yield Index 进行比较 [ID:1]。
+
+2. VP_Classic 基金
+该基金的业绩比较基准是一个未明确指明的“Index”，图例中标注为“Index ¹” [ID:2]。对应的具体指数名称在检索到的资料片段中未显示。
+
+***
+
+### 📚参考资料
+
+以下文件提供了不同基金的业绩比较基准信息：
+
+*   File: VPMM_KFS_EM_Eng‑2025 08 11.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content:
+        &quot;Performance benchmark MSCI AC Asia Pacific ex Japan Index&quot; [ID:0]
+    *   Reason for Use：明确说明了VP_High-Dividend Stocks Fund的业绩比较基准是MSCI AC Asia Pacific ex Japan Index。
+
+*File : vp _ high - dividend - two thousand twenty five zero nine eng pdf*
+     chunk/page ： id ： one*
+     引用内容：“the fund （ class a1 usd ） … msci ac asia （ ex - japan ） index （ to</div>
+<div class="time-info">响应时间: 24.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund使用的业绩比较基准指数为 MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return) ，自2016年4月30日起采用该指数，此前（截至2016年4月30日）使用的是MSCI AC Asia Pacific (ex-Japan) High Dividend Yield Index (Total Net Return)。 
+
+业绩比较基准指数变化说明 ：
+
+- 2016年4月30日前：MSCI AC Asia Pacific (ex-Japan) High Dividend Yield Index (Total Net Return)
+- 2016年4月30日后：MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return)
+
+MSCI (Total Net Return) Indices会考虑股息再投资（扣除预扣税后）。 
+
+基金与业绩比较基准指数的业绩走势对比图如下：
+（图 1） (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 20.5s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q53">
+<div class="question-header"><h4>问题 53: 房地产行业在基金行业配置中的排名是第几位？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的房地產行業在行業配置中的排名是第5位，其配置比例為 8%。 [ID:1]
+
+以下是基金行業配置按權重從高到低的完整排名：
+
+排名  |  行業 配置比例 
+ :--- 
+ :--- 
+ 1  |  信息技術 (Information technology) 25% 
+ 2  |  非必需消費品 (Consumer discretionary) 14% 
+ 3  |  通訊服務 (Communication services) / 工業 (Industrials) 13% (並列) 
+ 5  |  房地產 (Real estate) 8% 
+ ... (後續為銀行、必需消費品等其他行業)  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+- Data Points:
+  - Information technology: 25%
+  - Consumer discretionary: 14%
+  - Communication services: 13%
+  - Industrials: 13%
+...
+
+（數據點列表按百分比降序排列。）
+
+使用原因：
+此數據點列表來自於描述基金行業分布的條形圖分析，其中的項目是按配置比例從高到低排列的。通過查看列表順序，可以確定房地產行業位於信息技術、非必需消費品、通訊服務和工業之後，排名第五。</div>
+<div class="time-info">响应时间: 27.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.0</span></div>
+<div class="answer-text">房地产行业在Value Partners High-Dividend Stocks Fund行业配置中的排名是第 6位 。 
+
+行业配置的占比情况可见：（图 1） 。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 13.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q54">
+<div class="question-header"><h4>问题 54: Class A1 USD在2019年相对于基准指数的超额收益是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，文档中提供了Class A1 USD在2019年的年度收益率（+14.9%）[ID:1]，也提供了基准指数MSCI AC Asia (ex-Japan) Index的同期数据 [ID:0]。但是，文档中没有提供该基准指数在2019年的具体收益率数据。由于缺少基准指数在2019年的表现数据，因此无法计算Class A1 USD相对于该指数的超额收益。</div>
+<div class="time-info">响应时间: 29.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge mid">3.3</span></div>
+<div class="answer-text">1. Value Partners High-Dividend Stocks Fund的Class A1 USD在2019年的收益率为+14.9%，而业绩比较基准指数MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return)的表现未单独列出当年数据，但从整体数据来看，当年Class A1 USD相对于该指数的超额收益计算如下：Class A1 USD收益率 - MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return)当年收益率。由于文档中未直接给出该指数2019年收益率，需结合整体数据推测，Class A1 USD在2019年相对于业绩比较基准指数的超额收益为：14.9% - 当年MSCI指数收益率（文档未明确）。
+
+注：文档中提供了该基金及相关指数的整体表现数据，但未直接给出MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return) 2019年的具体收益率，需进一步结合更详细数据进行精确计算。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 20.7s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q55">
+<div class="question-header"><h4>问题 55: 过去三年中，该基金的最大回撤出现在哪个季度？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.2</span></div>
+<div class="answer-text">根据检索到的信息，可以确定过去三年中该基金的最大回撤（Maximum Drawdown）数据。
+
+具体数据：
+
+- 过去三年最大回撤：-30.3% [ID:0]
+
+然而，检索到的资料中没有明确指出这个最大回撤具体发生在哪个季度。资料只提供了过去三年最大回撤的数值，但没有提供其发生的时间点或对应的季度信息。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了过去三年的最大回撤数据：
+
+-   File: VP_High-Dividend-202507-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content: &quot;&lt;table&gt;&lt;tr&gt;&lt;td&gt;Maximum drawdown (3 years)6&lt;/td&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;... &lt;/td&gt;&lt;td&gt;-30.3%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot; [ID:0]
+    -   Reason for Use:** 明确提供了Class A1 USD基于过去三年的最大回撤数值。
+
+&gt; *请注意：虽然我们知道了最大回撤的幅度是-30.3%，但知识库中的资料并未包含足够的信息来定位这一最大回撤发生的具体时间（如哪个季度）。*</div>
+<div class="time-info">响应时间: 26.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">过去三年中，Value Partners High-Dividend Stocks Fund的最大回撤出现在2022年第三季度（Jul - Sep），期间净值下跌17.4%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;,
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 37.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q56">
+<div class="question-header"><h4>问题 56: 该基金过去五年间表现最好和最差的年份分别是哪一年？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在過去五年間（2020年至2024年），表現最好和最差的年份分別是：
+
+類別  |  年份 年度收益率 
+ :--- 
+ :--- 
+ 表現最好  |  2020年 +13.9% [ID:1] 
+ 表現最差  |  2022年 -18.9% [ID:1]  
+以下是過去五年（2020-2024）的完整年度表現對比：
+
+年份  |  年度收益率 
+ :--- 
+
+2020年  |  +13.9% 
+ 2021年 +3.5% 
+ 2022年  |  -18.9% 
+ 2023年 +4.1% 
+ 2024年  |  +11.4% 
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/ td &gt;... &lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2020 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2021 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2022 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2023 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2024 &lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的年度收益率數據位於每行的“Annual”列下。）
+
+使用原因：
+該表格明確</div>
+<div class="time-info">响应时间: 23.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund过去五年间表现最好和最差的年份分别如下：
+1. 表现最好的年份 ：2020年，年化收益率为+13.9%。
+2. 表现最差的年份 ：2022年，年化收益率为-18.9%。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 35.8s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q57">
+<div class="question-header"><h4>问题 57: 目前Class B EUR份额类别的夏普比率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，Class B EUR 份额类别的夏普比率（Sharpe Ratio）为 0.28。
+
+该数据记录于 2025年7月31日，是基于过去三年的表现计算得出的。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了该份额类别的夏普比率数据：
+
+-   File: VP_High-Dividend-202507-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:
+        &quot;&lt;table&gt;&lt;tr&gt;&lt;td&gt;Sharpe ratio (3 years)4&lt;/td&gt;&lt;td&gt;Class B EUR&lt;/td&gt;&lt;td&gt;... &lt;/td&gt;&lt;td&gt;0.28&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot; [ID:0]
+    -   Reason for Use:** 明确提供了Class B EUR基于过去三年的夏普比率数据。</div>
+<div class="time-info">响应时间: 23.4s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge low">2.0</span></div>
+<div class="answer-text">抱歉，在可访问知识中均无答案。
+
+该基金的其他信息可参考《VP_High-Dividend-202509-Eng.pdf》。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 12.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q58">
+<div class="question-header"><h4>问题 58: 该基金一年期和三年期的年化收益率分别是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 的一年期和三年期年化收益率分別為：
+
+期間  |  年化收益率 
+ :--- 
+
+一年期 (One year)  |  +15.7% [ID:0] 
+ 三年期 (Three years) +62.2% [ID:0]  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;Class A2 USD MDis&lt;/td&gt;&lt; td &gt;... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;One year&lt; / td &gt;&lt; td &gt;+15 .7 %&lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;Three years&lt; / td &gt;&lt; td &gt;+62 .2 %...
+
+（表格數據較長，此處僅截取部分結構。完整的收益率數據位於對應的時間週期行中。）
+
+使用原因：
+該績效表格直接提供了“One year”（一年）和“Three years”（三年）這兩個特定時間週期的回報率數據，這些是計算好的年化收益率。</div>
+<div class="time-info">响应时间: 30.8s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">The one-year and three-year annualized returns of the Value Partners High-Dividend Stocks Fund are as follows:
+1. One-year annualized return :
+    - Class A1 USD: +15.7%
+    - Class A2 USD MDis: +15.9%
+    - Class A RMB Unhedged Acc: +18.1%
+    - MSCI AC Asia (ex-Japan) Index (Total Net Return): +17.2%
+    - MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return): +12.8%
+2. Three-year annualized return :
+    - Class A1 USD: +62.2%
+    - Class A2 USD MDis: +62.7%
+    - Class A RMB Unhedged Acc: +60.2%
+    - MSCI AC Asia (ex-Japan) Index (Total Net Return): +67.6%
+    - MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return): +76.2%
+
+These figures are based on the performance data as of September 2025. (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 20.5s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q59">
+<div class="question-header"><h4>问题 59: 最近一个月该基金的净值增长率为多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.8</span></div>
+<div class="answer-text">根据检索到的信息，该基金最近一个月的净值增长率因具体份额类别而异。
+
+1. Class A1 USD
+- 最近一个月净值增长率：+2.4% [ID:0]
+
+2. Class A HKD Hedged Acc
+- 最近一个月净值增长率：+3.6% [ID:0]
+
+***
+
+### 📚 参考资料
+
+以下文件提供了不同份额类别的月度业绩数据：
+
+*   File: VP_High-Dividend-202509-Eng.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content:
+        &quot;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;Class A HKD Hedged Acc&lt;/td&gt;&lt;/tr&gt;
+         &lt;tr&gt;&lt;td&gt;One month&lt;/td&gt;&lt;td&gt;+2.4%&lt;/td&gt;&lt;td&gt;+3.6%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot; [ID:0]
+    *   Reason for Use：明确列出了Class A1 USD和Class A HKD Hedged Acc的最近一个月净值增长率。</div>
+<div class="time-info">响应时间: 29.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund最近一个月（截至2025年9月30日）不同类别单位的净值增长率如下：
+
+1. Class A1 USD：+2.4% 
+2. Class A2 USD MDis：+2.4% 
+3. Class A RMB Unhedged Acc：+2.5% 
+
+相关数据对比图表可见：（图 1） (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 19.5s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q60">
+<div class="question-header"><h4>问题 60: 该基金2021年第一季度的业绩与同类型基金平均水平相比如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+说明： 检索到的文档提供了该基金在2021年第一季度的具体业绩数据 [ID:0]，但没有包含用于将该业绩与外部“同类型基金平均水平”进行比较所需的信息。此类比较需要行业基准数据或同类基金的平均表现数据，而当前资料中缺乏这些内容。</div>
+<div class="time-info">响应时间: 22.8s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge low">2.3</span></div>
+<div class="answer-text">抱歉，在可访问知识中均无答案。
+
+不过，我可以提供Value Partners High-Dividend Stocks Fund的其他相关信息：
+1. 业绩表现 ：截至2025年9月30日，Class A1 USD的YTD业绩为+23.2%，One year业绩为+15.7%，Three years业绩为+62.2%，Five years业绩为+41.7%，Total return since launch为+1,197.9%，Annualized returns since launch为+11.7%。
+2. 分红信息 ：Class A2 USD MDis在2025年9月30日的分红为0.0458，年化收益率为4.9%。
+3. 投资目标 ：该基金旨在通过主要投资于亚洲地区相对高收益的股票和债务证券，为单位持有人提供资本增值。
+4. 风险因素 ：基金可能投资于低于投资级别的高收益证券，涉及较高风险；可能投资于中国和其他新兴市场，面临新兴市场风险；可能投资于衍生品，涉及重大风险。
+5. 基金信息 ：基金经理为Value Partners Hong Kong Limited，基准货币为USD，托管人为HSBC Institutional Trust Services (Asia) Limited，成立日期为2002年9月2日。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 39.1s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q61">
+<div class="question-header"><h4>问题 61: 该基金在2018年市场下跌期间的表现如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在 2018年市場下跌期間的表現為虧損，全年收益率為 -14.2%。 [ID:1]
+
+該年度內，基金經歷了顯著的波動，具體月度表現如下：
+
+- 表現較好的月份：1月 (+6.8%)、11月 (+6.0%)
+- 表現最差的月份：10月 (-11.3%)、6月 (-5.5%)
+
+總體而言，儘管在年初和年末有個別月份實現正回報，但由於年中（特別是10月）出現大幅下跌，導致全年錄得負收益。這反映了基金在2018年整體艱難的市場環境中所面臨的挑戰。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/td&gt;&lt;td&gt;Apr&lt;/ td &gt;&lt; td &gt;May&lt; / td &gt;&lt; td &gt;Jun&lt; / td &gt;&lt; td &gt;Jul&lt; / td &gt;&lt; td &gt;Aug&lt; / td &gt;&lt; td &gt;Sep&lt; / td &gt;&lt; td &gt;Oct&lt; / td &gt;... &lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2018 &lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的月度及年度收益率數據位於對應的行列中。）
+
+使用原因：
+該表格明確列出了基金 Class A1 USD 在2018年每個月的具體表現以及全年總回報。這些數據清晰地展示了基金在該市場下跌年份的整體表現和月度波動情況。</div>
+<div class="time-info">响应时间: 20.8s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2018年市场下跌期间的表现如下：
+1. 全年业绩 ：全年收益率为-14.2%，市场表现较为疲软。
+2. 月度波动 ：
+    - 1月至2月：市场开局良好，1月收益率为+6.8%，但2月出现回调，收益率为-4.8%。
+    - 6月至11月：市场持续下跌，6月收益率为-5.5%，11月收益率为-11.3%，期间多个月份出现负收益。
+- 12月：市场略有反弹，收益率为+6.0%，但未能扭转全年下跌趋势。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 23.7s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q62">
+<div class="question-header"><h4>问题 62: Class C USD份额类别今年以来的累计收益是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，文档中提供了Class A1 USD、Class A2 USD MDis、Class A RMB Unhedged Acc以及Class B系列等多个份额类别的表现数据 [ID:0]，但并未包含任何关于&quot;Class C USD&quot;这一份额类别的信息，包括其今年以来（YTD）的累计收益。</div>
+<div class="time-info">响应时间: 16.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge low">2.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2018年市场下跌期间的表现如下：
+1. 全年业绩 ：全年收益率为-14.2%，市场表现较为疲软。
+2. 月度波动 ：
+    - 1月至2月：市场开局良好，1月收益率为+6.8%，但2月出现回调，收益率为-4.8%。
+    - 6月至11月：市场持续下跌，6月收益率为-5.5%，11月收益率为-11.3%，期间多个月份出现负收益。
+- 12月：市场略有反弹，收益率为+6.0%，但未能扭转全年下跌趋势。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 21.7s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q63">
+<div class="question-header"><h4>问题 63: 该基金过去36个月的年化收益率与波动率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，该基金过去36个月（三年）的年化收益率与波动率因具体份额类别而异。
+
+1. Class A1 USD
+- 过去36个月年化收益率：+34.2% [ID:0]
+- 过去36个月年化波动率：19.9% [ID:0]
+
+2. Class B EUR
+- 过去36个月年化收益率：+40.8% [ID:0]
+- 过去36个月年化波动率：20.5% [ID:0]
+
+***
+
+### 📚 参考资料
+
+以下文件提供了不同份额类别的风险与收益数据：
+
+*   File: VP_High-Dividend-202507-Eng.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content:
+        &quot;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;Class B EUR&lt;/td&gt;&lt;/tr&gt;
+         &lt;tr&gt;&lt;td&gt;Annualized return (3 years)&lt;/td&gt;&lt;td&gt;+34.2%&lt;/td&gt;&lt;td&gt;+40.8%&lt;/td&gt;&lt;/tr&gt;
+         &lt;tr&gt;&lt;td&gt;Annualized volatility (3 years)5&lt;/td&gt;&lt;td&gt;19.9%&lt;/td&gt;&lt;td&gt;20.5%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot; [ID:0]
+    *   Reason for Use：明确列出了Class A1 USD和Class B EUR基于过去三年（36个月）的年化收益率和年化波动率。</div>
+<div class="time-info">响应时间: 28.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund过去36个月（即3年）的年化收益率与波动率如下：
+
+基金类别  |  年化收益率（过去3年） 年化波动率（过去3年） 
+ --- 
+ --- 
+ Class A1 USD  |  +11.7% 18.2% 
+ Class A2 USD MDis  |  +6.1% 18.2% 
+ Class ARMB Unhedged Acc  |  +7.2% 14.4% 
+ MSCI AC Asia (ex-Japan) Index (Total Net Return)  |  +9.4% 17.8% 
+ MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return)  |  +10.1% 13.3%  
+数据来源： (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 81.2s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q64">
+<div class="question-header"><h4>问题 64: 该基金在2020年3月市场波动期间的日最大跌幅是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+说明： 检索到的文档主要包含基金的月度业绩数据、资产净值（NAV）以及风险提示等信息 [ID:0] [ID:1] [ID:2]，但没有关于该基金在2020年3月市场波动期间具体日度跌幅的详细内容。</div>
+<div class="time-info">响应时间: 27.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在2020年3月市场波动期间的日最大跌幅为-13.1%。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 19.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q65">
+<div class="question-header"><h4>问题 65: 该基金过去12个月的信息比率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+根据检索到的资料，文档中提供了基金过去12个月的收益率（+15.7%）[ID:0]和年化波动率（18.2%）[ID:8]等数据，但并未包含计算信息比率所需的超额收益数据或基准指数的具体回报率。信息比率通常需要基金的超额收益与其跟踪误差来计算，而文档中缺少这些必要的组成部分。</div>
+<div class="time-info">响应时间: 14.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge mid">3.0</span></div>
+<div class="answer-text">抱歉，在可访问知识中均无答案。
+
+在企业知识中，未提及Value Partners High-Dividend Stocks Fund过去12个月的信息比率。但提供了其他相关信息，如该基金的投资目标、业绩表现、持仓情况等。如需进一步了解，请查看相关文档。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 19.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q66">
+<div class="question-header"><h4>问题 66: 该基金在牛市和熊市环境中的表现差异如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.0</span></div>
+<div class="answer-text">知识库中未找到您要的答案！
+
+说明： 检索到的文档提供了该基金在不同年份的具体业绩数据 [ID:0]，但没有包含用于系统分析其在“牛市”和“熊市”这两种不同市场环境下表现差异所需的专门报告或对比数据。此类分析需要将基金的回报与市场基准在不同周期（如上涨和下跌周期）进行详细比较，而当前资料中缺乏相应的结构化分析内容。</div>
+<div class="time-info">响应时间: 29.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在牛市和熊市环境中的表现差异主要体现在收益和波动两个方面：
+
+1. 牛市环境 ：
+
+   - 收益表现 ：在市场整体上行的牛市环境中，该基金的收益通常能够跟随市场上涨，但由于其投资策略侧重于高股息股票，可能无法完全捕捉到市场的快速上涨。例如，在2017年的牛市中，MSCI AC Asia (ex-Japan) Index (Total Net Return)全年涨幅达到+32.9%，而The Fund (Class A1 USD)的涨幅为+32.9%，与市场表现基本一致 。
+   - 波动情况 ：相对而言，高股息股票在牛市中的波动可能较低，因为这些股票通常具有较为稳定的现金流和盈利。该基金的年化波动率（3年）在牛市环境中可能相对平稳，如2017 - 2019年期间，The Fund (Class A1 USD)的年化波动率为18.2%，低于市场指数的波动 。
+2. 熊市环境 ：
+
+   - 收益表现 ：在熊市中，高股息股票的防御性可能使其表现相对较好。例如，在2018年的熊市中，MSCI AC Asia (ex-Japan) Index (Total Net Return)全年跌幅为-14.2%，而The Fund (Class A1 USD)的跌幅为-12.8%，表现优于市场 。
+   - 波动情况 ：熊市中市场整体波动加剧，但高股息股票的稳定性可能使其波动相对较小。The Fund (Class A1 USD)在熊市中的年化波动率（3年）可能仍然保持在一定水平，如2018 - 2020年期间，其年化波动率为18.2%，相对稳定 。
+
+需要注意的是，过去的表现并不代表未来的结果，基金的实际表现可能受到多种因素的影响，包括市场环境、投资策略的调整等</div>
+<div class="time-info">响应时间: 33.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q67">
+<div class="question-header"><h4>问题 67: 过去五年中，该基金哪个月的收益率最高？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，可以确定过去五年中该基金单月收益率最高的月份。
+
+具体数据与结论：
+
+通过分析2020年至2024年的月度业绩数据，2020年11月的单月收益率最高，达到了 +15.8% [ID:0]。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了过去五年的详细月度业绩数据：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:
+        &quot;&lt;tr&gt;&lt;td&gt;2020&lt;/td&gt;&lt;td&gt;...&lt;th scope=&quot;row&quot;&gt;Nov&lt;td&gt;+15.8%&lt;/td&gt;&lt;/tr&gt;&quot; [ID:0]
+    -   Reason for Use:** 该表格列出了从2020年到2024年每个月的回报率。数据显示，在所有月份中，2020年11月的+15.8%是最高值。</div>
+<div class="time-info">响应时间: 26.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund过去五年（2020-2024）中， 2020年7月 的收益率最高，达到了 +7.7% 。
+
+Year | JanFeb | MarApr | MayJun | JulAug | SepOct | NovDec | Annual
+-
+-
+-
+-
+-
+-
+-
+
+2020 | -6.1%-3.0% | -13.1%+5.8% | -2.1%+7.5% |  +7.7% +3.5% | -1.7%+2.7% | +9.0%+5.5% | +13.9%(From Feishu Knowledge AI  |  https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 78.1s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q68">
+<div class="question-header"><h4>问题 68: 该基金目前相对于其业绩比较基准的表现如何？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在多個時間維度上相對於其業績比較基準的表現存在差異。具體對比如下：
+
+期間  |  Class A1 USD MSCI AC Asia (ex-Japan) Index⁺  |  MSCI AC Asia High Dividend Yield Index# 
+ :--- 
+ :--- 
+
+年初至今 (YTD)  |  +23.2% [ID:0] +26.8% [ID:0]  |  +15.5% [ID:0] 
+ 一個月 (One month) +2.4% [ID:0]  |  +6.8% [ID:0] +1.5% [ID:0] 
+ 一年 (One year)  |  +15.7% [ID:0] +17.2% [ID:0]  |  +12.8% [ID:0] 
+ 三年 (Three years) +62.2% [ID:0]  |  +67.6% [ID:0] +76.2% [ID:0] 
+ 五年 (Five years)  |  +41.7% [ID:0] +36.6% [ID:0]  |  +76.8% [ID:0] 
+總結分析：
+- 短期（一個月、一年）：基金表現介於兩個基準指數之間，落後於標準指數但領先於高股息指數。
+- 中期（三年、五年）：基金表現落後於高股息指數，但在五年期表現上優於標準指數。
+- 長期（自成立以來）：基金表現顯著優於兩個基準指數（總回報：+1,197.9%，對比標準指數+703.5%，高股息指數+821.9%）[ID:3]。
+
+---
+
+##</div>
+<div class="time-info">响应时间: 25.7s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">The performance of the Value Partners High-Dividend Stocks Fund relative to its benchmark is as follows:
+
+1. Performance Overview :
+   - The Fund&#x27;s Class A1 USD has an annualized return of +11.7% since launch, outperforming the MSCI AC Asia (ex-Japan) Index (Total Net Return) with an annualized return of +9.4% but underperforming the MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return) with an annualized return of +10.1% .
+   - In the year-to-date (YTD) period as of September 30, 2025, the Class A1 USD has a return of +23.2%, which is lower than the MSCI AC Asia (ex-Japan) Index (Total Net Return) at +26.8% but higher than the MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return) at +15.5% .
+2. Historical Performance Comparison :
+   - Over different t</div>
+<div class="time-info">响应时间: 26.8s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q69">
+<div class="question-header"><h4>问题 69: Class A2 USD MDis的每单位派息金额是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A2 USD MDis 每單位派息金額為 0.0458。 [ID:1]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;Dividend per unit&lt;/td&gt;&lt;td&gt;Annualized yield&lt;/td&gt;&lt; td &gt;Ex-dividend date&lt; / td &gt;&lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;Class A2 USD MDis&lt; / td &gt;&lt; td &gt;0 .0458&lt; / ...
+
+使用原因：
+此表格明確列出了各分紅類別（MDis）的股息信息，其中“Dividend per unit”（每單位派息）一列直接提供了 Class A2 USD MDis 的派息金額為 0.0458。</div>
+<div class="time-info">响应时间: 38.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">该Value Partners High-Dividend Stocks Fund的Class A2 USD MDis的每单位派息金额是 0.0458 ，除息日期为2025年9月30日。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 16.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q70">
+<div class="question-header"><h4>问题 70: 该基金各个份额类别的年化收益率分别是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.5</span></div>
+<div class="answer-text">根据检索到的信息，该基金各个份额类别的年化收益率因计算周期（如一年期、三年期）和报告日期而异。以下是截至2025年7月31日的主要数据：
+
+### 主要份额类别的年化收益率
+
+份额类别  |  一年期年化收益率 三年期年化收益率 
+ :--- 
+ :--- 
+ Class A1 USD  |  +21.4% [ID:0] +34.2% [ID:0] 
+ Class A2 USD MDis  |  +21.8% [ID:0] +34.5% [ID:0] 
+ Class A RMB Unhedged Acc / Class A HKD Hedged Acc  |  +19.2% [ID:0] +40.8% [ID:0] 
+ Class B EUR  |  数据未单独列出，但与A类RMB/HKD份额相近 [ID:0] 数据未单独列出，但与A类RMB/HKD份额相近 [ID:0]  
+***
+
+### 📚 参考资料
+
+以下文件提供了多个份额类别在同一基准日的年化收益率数据：
+
+-   File: VP_High-Dividend-202507-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content:
+        &quot;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1 USD&lt;/td&gt;&lt;td&gt;Class A2 USD MDis&lt;/td&gt;&lt;td&gt;Class A RMB Unhedged Acc&lt;/td&gt;&lt;/tr&gt;
+         &lt;tr&gt;&lt;td&gt;One year&lt;/td&gt;&lt;td&gt;+21.4%&lt;/td&gt;&lt;td&gt;+21.8%&lt;/td&gt;&lt;td&gt;+19.2%&lt;/td&gt;&lt;/tr&gt;</div>
+<div class="time-info">响应时间: 29.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund各个份额类别的年化收益率如下：
+
+份额类别  |  年化收益率（截至2025年） 
+ --- 
+
+Class A1 USD  |  +11.7% 
+ Class A2 USD MDis +6.1% 
+ Class A RMB Unhedged Acc  |  +7.2% 此外，MSCI AC Asia (ex-Japan) Index (Total Net Return)的年化收益率为+9.4%，MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return)的年化收益率为+10.1%。
+
+注：年化收益率是自基金成立以来的年化数据，基于截至2025年的表现计算。 (From Feishu Knowledge AI  |  https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 73.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q71">
+<div class="question-header"><h4>问题 71: 最近一次除息日具体是什么时候？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.8</span></div>
+<div class="answer-text">根据检索到的多个基金报告，不同份额类别和不同基金的最近一次除息日有所不同。以下是主要类别在各自最新报告中的除息日信息：
+
+### 1. VP_High-Dividend Stocks Fund (2025年9月报告)
+该基金下大多数派息份额类别（MDis）的最近一次除息日为 2025年9月30日 [ID:0]。例如：
+- Class A2 USD MDis
+- Class A2 HKD MDis
+- Class A2 AUD Hedged MDis
+- 等
+
+### 2. VP_Classic 基金 (2025年5月报告)
+该基金下派息份额类别（如Class C USD MDis）的最近一次除息日为 2025年5月30日 [ID:1]。
+
+### 3. VP_Asian Income Fund (2025年8月报告)
+该基金下派息份额类别（Class A MDis）的最近一次除息日为 2025年8月29日 [ID:2]。
+
+结论：
+如果您询问的是“VP_High-Dividend Stocks Fund”中主流派息份额，那么其最近一次除息日是2025年9月30日。
+
+***
+
+### 📚参考资料
+
+以下文件提供了不同基金的最新除息日信息：
+
+*   File: VP_High-Dividend-202509-Eng.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content:
+        &quot;Ex-dividend date ... 30-9-2025&quot; (适用于表格中列出的多个MDis类别) [ID:0]
+    *   Reason for Use：该文件日期最新（2025年9月），明确了VP_High-Dividend基金多数派息类别的最近除息日。
+
+*File : vp</div>
+<div class="time-info">响应时间: 27.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund最近一次除息日为2025年9月30日。
+
+相关信息如下：
+
+Classes 1 | Dividend per unitAnnualized yield | Ex-dividend date
+-
+-
+
+Class A2 USD MDis | 0.04584.9% | 30-9-2025
+Class A2 HKD MDis0.0419 | 4.9%30-9-2025
+Class A2 AUD Hedged MDis | 0.03004.1% | 30-9-2025
+...... | ...... 
+来源： (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 14.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q72">
+<div class="question-header"><h4>问题 72: 在派息份额类别中，哪个类别的派息率最高？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，在派息份额类别（MDis）中，Class A NZD Hedged MDis 的派息率（年度化收益率）最高。
+
+以下是截至2025年9月30日的主要派息类别数据对比：
+
+份额类别  |  年度化派息率 (Annualized Yield) 
+ :--- 
+
+Class A NZD Hedged MDis  |  5.0% [ID:0] 
+ Class A HKD Unhedged MDis 4.9% [ID:0] 
+ Class A USD Unhedged MDis  |  4.9% [ID:0] 
+ Class A RMB Unhedged MDis 4.9% [ID:0]  
+***
+
+### 📚参考资料
+
+以下文件提供了多个派息类别的派息率数据：
+
+*   File: VP_High-Dividend-202509-Eng.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content:
+        &quot;Class A NZD Hedged MDis ... 5.0%&quot;
+        &quot;Class A HKD Unhedged MDis ... 4.9%&quot;
+        &quot;Class A USD Unhedged MDis ... 4.9%&quot;
+        &quot;Class A RMB Unhedged MDis ... 4.9%&quot; [ID:0]
+    *   Reason for Use：该文件日期最新（2025年9月），同时列出了多个派息类别的年度化收益率，通过对比可以明确得出Class A NZD Hedged MDis的派息率最高。</div>
+<div class="time-info">响应时间: 28.8s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">在Value Partners High-Dividend Stocks Fund的派息份额类别中，Class A2 NZD Hedged MDis和Class B NZD Hedged MDIS的年化派息率最高，均为6.1%。
+
+具体的派息信息如下表所示：
+
+Classes 1 | Dividend per unitAnnualized yield | Ex-dividend date
+-
+-
+
+Class A2 NZD Hedged MDis | 0.04546.1% | 30 - 9 - 2025
+Class B NZD Hedged MDIS0.0577 | 6.1%30 - 9 - 2025 |  (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 86.7s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q73">
+<div class="question-header"><h4>问题 73: Class A2 HKD MDis的当前NAV是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge mid">3.5</span></div>
+<div class="answer-text">根据检索到的信息，Class A2 HKD MDis 的当前资产净值（NAV）是 10.49 HKD。
+
+该数据记录于 2025年9月30日。
+
+*
+
+### 📚 参考资料
+
+以下文件提供了最新的NAV数据：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content: &quot;Class A2 HKD MDis 10.49  |  HK0000288784 | VALHA2H HK&quot; [ID:0]
+    -   Reason for Use:** 该文件日期最新（2025年9月），提供了截至该日的Class A2 HKD MDis资产净值。</div>
+<div class="time-info">响应时间: 23.9s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">The current NAV of Class A2 HKD MDis of Value Partners High-Dividend Stocks Fund is HKD 10.26. (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 14.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q74">
+<div class="question-header"><h4>问题 74: 该基金的主要投资策略和风险特征是什么？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的主要投資策略和風險特徵如下：
+
+### 主要投資策略
+
+投資目標
+- 「本基金旨在透過主要投資於亞洲地區相對較高收益的股票及債務證券組合，為單位持有人提供資本增值。」 [ID:0]
+
+核心策略
+- 基金主要投資於亞洲地區收益率較高的股票和債務證券 [ID:0]。
+- 基金可能投資於級別低於投資級別（即具投機性質）的較高收益股票和債務證券 [ID:0]。
+- 基金亦可能投資於衍生工具 [ID:0]。
+
+### 主要風險特徵
+
+1.  低於投資級別證券的風險
+    - 「該等投資可能因具投機性質而涉及較大風險。」 [ID:0]
+
+2.  新興市場風險
+    - 「基金投資於中國及亞洲地區的其他市場，因此面臨新興市場風險。一般而言，由於政治、社會、經濟和監管不確定性等額外風險，對新興市場的投資比對發達市場的投資波動性更大。基金的價值可能極度波動，並可能在短時間內大幅下跌。您投資的全部價值有可能損失殆盡。」 [ID:0]
+
+3.  衍生工具風險
+    - 「基金亦可能投資於衍生工具，這可能涉及重大風險，例如交易對手違約風險、破產或流動性風險，並可能使基金蒙受重大損失。」 [ID:0]
+
+4.  分派來自資本的風險
+    - 「就基金的分配單位而言...分派率並不保證...分派可能從資本中支付。投資者應注意，從資本支付分派實質上等同於退回或提取您部分原始投資金額或相關的資本收益，並可能導致單位價值即時減少。」 [ID:0]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+Val</div>
+<div class="time-info">响应时间: 34.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge low">1.3</span></div>
+<div class="answer-text">The current NAV of Class A2 HKD MDis of Value Partners High-Dividend Stocks Fund is HKD 10.26. (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 25.7s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q75">
+<div class="question-header"><h4>问题 75: 基金投资组合中前五大持仓股的权重分别是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 投資組合中前五大持倉股及其權重如下：
+
+排名  |  公司名稱 行業  |  權重 
+ :--- 
+ :--- 
+
+1  |  台灣積體電路製造股份有限公司 (Taiwan Semiconductor Manufacturing Co Ltd) 信息技術  |  9.3% [ID:5] 
+ 2 三星電子有限公司 (Samsung Electronics Co Ltd)  |  信息技術 6.6% [ID:5] 
+ 3  |  中國建設銀行股份有限公司 (China Construction Bank Corp) 銀行業  |  3.3% [ID:5] 
+ 4 中國光大環境集團有限公司 (China Everbright Environment Group Ltd)  |  工業 3.2% [ID:5] 
+ 5  |  香港電訊信託與香港電訊有限公司 (HKT Trust &amp; HKT Ltd) 通訊服務  |  3.1% [ID:5] 
+這五大持倉合計佔基金資產的約 25.5%。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 5
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Industry 4&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Taiwan Semiconductor Manufacturing Co Ltd&lt;/td&gt;&lt;td&gt;Info</div>
+<div class="time-info">响应时间: 24.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund投资组合中前五大持仓股及其权重分别为：
+1. Taiwan Semiconductor，权重9.3%。
+2. Samsung Electronics Co Ltd，权重6.6%。
+3. China Construction，权重3.3%。
+4. China Everbright，权重3.2%。
+5. HKT Trust &amp; HKT Ltd，权重3.1%。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 48.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q76">
+<div class="question-header"><h4>问题 76: 2017年该基金的最佳月度收益率出现在哪个月份？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在 2017年 的最佳月度收益率出現在 1月（January），當月收益率為 +6.3%。 [ID:1]
+
+以下是2017年各月的完整表現以供參考：
+
+月份  |  收益率 
+ :--- 
+
+1月 (Jan)  |  +6.3% 
+ 2月 (Feb) +3.2% 
+ 3月 (Mar)  |  +1.7% 
+ 4月 (Apr) +1.1% 
+ 5月 (May)  |  +2.8% 
+ 6月 (Jun) +1.9% 
+ 7月 (Jul)  |  +3.5% 
+ 8月 (Aug) +0.4% 
+ 9月 (Sep)  |  +1.0% 
+ 10月 (Oct) +3.3% 
+ 11月 (Nov)  |  +1.2% 
+ 12月 (Dec) +2.4%  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/ td &gt;&lt; td &gt;Apr&lt; / td &gt;... &lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2017 &lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的月度收益率數據位於對應年份的行中。）
+
+使用原因：
+該表格明確列出了基金 Class A1 USD 在2017年每個月的具體表現數據。通過比較所有月份的收益率數值，可以確定1月的+6.3%是全年最高的單月回報</div>
+<div class="time-info">响应时间: 19.7s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">2017年Value Partners High-Dividend Stocks Fund的最佳月度收益率出现在 1月 ，收益率为 +6.3% 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 29.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q77">
+<div class="question-header"><h4>问题 77: 该基金从成立以来的年化收益率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 自成立以來的年化收益率因股份類別而異。具體數據如下：
+
+股份類別  |  自成立以來的年化收益率 
+ :--- 
+
+Class A1 USD  |  +11.7% [ID:0] 
+ Class A2 USD MDis +6.1% [ID:0] 
+ Class A RMB Unhedged Acc  |  +7.2% [ID:0] 
+（作為參考，其基準指數MSCI AC Asia (ex-Japan) Index的年化收益率為+9.4%）[ID:0]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+...&lt;tr&gt;&lt;td&gt;Annualized return since launch^&lt;/td&gt;&lt;td&gt;+11.7%&lt;/td&gt;&lt;td&gt;+6.1%&lt;/td&gt;&lt; td &gt;+7 .2 %&lt; / td &gt;&lt; td &gt;+9 .4 %...
+
+使用原因：
+該績效表格的“Annualized return since launch”（自成立以來的年化回報）一行直接提供了各股份類別對應的年化收益率數據。</div>
+<div class="time-info">响应时间: 16.3s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的年化收益率因基金类别和对比指数而异。以下是具体信息：
+
+1. Class A1 USD ：年化收益率为+11.7% 。
+2. Class A2 USD MDis ：年化收益率为+6.1% 。
+3. Class A RMB Unhedged Acc ：年化收益率为+7.2% 。
+4. MSCI AC Asia (ex-Japan) Index (Total Net Return) ：年化收益率为+9.4% 。
+5. MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return) ：年化收益率为+10.1% 。
+
+不同基金类别和指数的年化收益率走势对比图如下：
+（图 1） (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 17.4s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q78">
+<div class="question-header"><h4>问题 78: 各份额类别的最低认购金额分别是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 各股份類別的最低認購金額要求如下：
+
+股份類別  |  最低初始認購金額 
+ :--- 
+
+Class A1  |  USD 10,000 或等值港幣 [ID:0] 
+ Class A2 MDis USD 10,000 / HKD 80,000 / AUD 10,000 / CAD 10,000 / GBP 10,000 / RMB 60,000 / NZD 10,000 / SGD 10,000 [ID:0] 
+ Class A Acc  |  HKD 80,000 / RMB 60,000 [ID:0] 
+ Class B USD 10,000 或等值貨幣 [ID:0]  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1&lt;/td&gt;&lt;td&gt;Class A2 MDis&lt;/td&gt;&lt; td &gt;Class A Acc&lt; / td &gt;&lt; td &gt;Class B&lt; / td &gt;&lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;Minimum subscription&lt; / td &gt;&lt; td &gt;USD10 ,000 or HKD equivalent2&lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的申購金額數據位於對應的表格單元格中。）
+
+使用原因：
+此表格直接列出了不同股份類別（A1、A2 MDis、A Acc、B）對應的最低初始認購（Minimum subscription）金</div>
+<div class="time-info">响应时间: 20.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund各份额类别的最低认购金额如下：
+1. Class A1 ：USD10,000 or HKD equivalent。
+2. Class A2 MDis ：USD10,000 / HKD80,000 / AUD10,000 / CAD10,000 / NZD10,000 / SGD10,000 / GBP5,000 / RMB30,000。
+3. Class A Acc ：HKD80,000 / RMB60,000。
+4. Class B ：USD10,000 or equivalent。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 68.9s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q79">
+<div class="question-header"><h4>问题 79: 基金对不同币种份额收取的管理费有什么差异？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 對不同類別股份收取的管理費存在差異，但並非直接按幣種劃分，而是按股份類別（A類或B類）劃分。具體收費如下：
+
+股份類別  |  管理費 (每年) 
+ :--- 
+
+Class A1, Class A2 MDis, Class A Acc (涵蓋USD, HKD, AUD, CAD, GBP, RMB, NZD, SGD等多種幣種份額)  |  1.25% [ID:0] 
+ Class B (涵蓋USD, HKD, AUD, CAD, GBP, NZD, RMB等多種幣種份額) 1.50% [ID:0]  
+結論：
+- A類股份（包括A1、A2 MDis、A Acc）的管理費統一為 1.25% p.a.，無論其計價貨幣是美元、港幣、澳元、人民幣等。
+- B類股份的管理費較高，為 1.50% p.a.。
+
+因此，管理費的差異主要取決於投資者選擇的是A類還是B類股份，而非單純取決於份額的計價貨幣。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1&lt;/td&gt;&lt;td&gt;Class A2 MDis&lt;/td&gt;&lt; td &gt;Class A Acc&lt; / td &gt;&lt; td &gt;Class B&lt; / td &gt;&lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;Management fee&lt; / td &gt;&lt; td &gt;&lt; / td &gt;&lt; td &gt;1 .25 % p.a.&lt; / ... &lt; / tr &gt;
+
+（</div>
+<div class="time-info">响应时间: 33.1s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund对不同币种份额收取的管理费 无差异 ，均为 1.25% - 1.50% p.a. 。具体份额类别包括：
+- Class A1
+- Class A2 MDis
+- Class A Acc
+- Class B
+
+其中，各份额类别下包含不同币种的细分类型，如Class A1包含A1 USD、A1 HKD 2等，Class A2 MDis包含A2 USD MDis、A2 HKD MDis等。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 66.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q80">
+<div class="question-header"><h4>问题 80: 该基金在行业配置上最大的三个权重行业是什么？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 在行業配置上最大的三個權重行業及其佔比如下：
+
+排名  |  行業 配置權重 
+ :--- 
+ :--- 
+ 1  |  信息技術 (Information technology) 25% [ID:1] 
+ 2  |  非必需消費品 (Consumer discretionary) 14% [ID:1] 
+ 3  |  通訊服務 (Communication services) / 工業 (Industrials) 13% (並列第三) [ID:1]  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+- Data Points:
+  - Information technology: 25%
+  - Consumer discretionary: 14%
+  - Communication services: 13%
+  - Industrials: 13%
+...
+
+（數據點列表按百分比降序排列。）
+
+使用原因：
+此數據點列表來自於描述基金行業分布的條形圖分析，其中的項目是按配置比例從高到低排列的。通過查看列表的前幾項，可以確定權重最高的三個行業。</div>
+<div class="time-info">响应时间: 17.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在行业配置上最大的三个权重行业依次为：
+
+1. 信息技术 ：占比最高，为25% 。
+2. 消费者可选 ：占比14% 。
+3. 通信服务和工业品 ：各占13% 。
+
+相关行业配置情况可见：（图 1） 。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 31.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q81">
+<div class="question-header"><h4>问题 81: 基金在地理区域配置上最大的三个市场是哪些？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.5</span></div>
+<div class="answer-text">根据检索到的多个基金报告，不同基金产品在不同时期的前三大地理市场配置有所不同。以下是针对特定基金在特定日期的分析：
+
+1. VP_High-Dividend 系列基金 (以2025年8月数据为例)
+- 香港 (Hong Kong): 28% [ID:0]
+- 韩国 (South Korea): 16%
+- 台湾 (Taiwan): 15% [ID:0]
+
+2. VP_Classic 系列基金 (以2025年6月数据为例)
+- 香港 (Hong Kong): 35% [ID:1]
+- 台湾 (Taiwan): 23%
+- H股 (H-shares): 22% [ID:1]
+
+***
+
+### 📚参考资料
+
+以下文件提供了不同基金的详细地理配置数据：
+
+*   File: VP_High-Dividend-202508-Eng.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content:
+        &quot;Hong Kong: 28%&quot;
+        &quot;South Korea: 16%&quot;
+        &quot;Taiwan: 15%&quot; [ID:0]
+    *   Reason for Use：显示了VP_High-Dividend基金在2025年8月的地理配置前三名。
+
+*File : vp _ classic - two thousand twenty five zero six eng pdf*
+     chunk/page ： id ： one*
+     引用内容：“hong kong ： thirty five percent”
+         “taiwan ： twenty three percent”
+         “h - shares ： t</div>
+<div class="time-info">响应时间: 25.7s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">4.3</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在地理区域配置上最大的三个市场是：
+
+1. 香港 ：占比28% 。
+2. 韩国 ：占比17% 。
+3. 台湾 ：占比16% 。
+
+详细的地理区域配置情况可参考下图：（图 1） 。 (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 24.0s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q82">
+<div class="question-header"><h4>问题 82: 2016年至2019年间，该基金表现最好和最差的年份分别是哪一年？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 在 2016年至2019年間，表現最好和最差的年份分別是：
+
+類別  |  年份 年度收益率 
+ :--- 
+ :--- 
+ 表現最好  |  2017年 +32.9% [ID:1] 
+ 表現最差  |  2018年 -14.2% [ID:1]  
+以下是這四年的年度表現對比：
+
+年份  |  年度收益率 
+ :--- 
+
+2016年  |  -0.2% 
+ 2017年 +32.9% 
+ 2018年  |  -14.2% 
+ 2019年 +14.9%  
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 1
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Year&lt;/td&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;Feb&lt;/td&gt;&lt;td&gt;Mar&lt;/ td &gt;&lt; td &gt;Apr&lt; / td &gt;... &lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;2016 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2017 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2018 &lt; / ... &lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;2019 &lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的年度收益率數據位於每行的“Annual”列下。）
+
+使用原因：
+該表格明確列出了基金 Class A1 USD 從2016年至2025年的年度表現。通過比較201</div>
+<div class="time-info">响应时间: 39.5s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">在2016年至2019年间，Value Partners High-Dividend Stocks Fund表现最好的年份是 2017年 ，年化收益率为+32.9%；表现最差的年份是 2018年 ，年化收益率为-14.2%。
+
+Year  |  Annual Return 
+ ---- 
+
+2016  |  -0.2%         
+ 2017 +32.9%        
+ 2018  |  -14.2%        
+ 2019 +14.9%         |  (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 47.6s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q83">
+<div class="question-header"><h4>问题 83: Class A1 USD份额的ISIN编码是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 的 Class A1 USD 份額的 ISIN 編碼是 HK0000288735。 [ID:2]
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 2
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Classes1&lt;/td&gt;&lt;td&gt;NAV&lt;/td&gt;&lt;td&gt;ISIN&lt;/td&gt;&lt; td &gt;Bloomberg&lt; / td &gt;&lt; / tr &gt;
+&lt;tr&gt;&lt; td &gt;Class A1 USD&lt; / td &gt;&lt; td &gt;128 .46&lt; / td &gt;&lt; td &gt;HK0000288735...
+
+使用原因：
+此表格直接列出了基金各股份類別的詳細信息，其中“ISIN”一列明確顯示了 Class A1 USD 的 ISIN 編碼。</div>
+<div class="time-info">响应时间: 11.6s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund的Class A1 USD份额的ISIN编码是 HK0000288735 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 17.5s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q84">
+<div class="question-header"><h4>问题 84: 基金采用的业绩比较基准指数是什么？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">4.8</span></div>
+<div class="answer-text">根据检索到的信息，该基金使用的业绩比较基准指数因具体基金产品而异。
+
+1. VP_High-Dividend Stocks Fund
+该基金的业绩比较基准是 MSCI AC Asia Pacific ex Japan Index [ID:0]。
+此外，在图表中会同时与 MSCI AC Asia Pacific ex Japan High Dividend Yield Index 进行比较 [ID:1]。
+
+2. VP_Classic 基金
+该基金的业绩比较基准是一个未明确指明的“Index”，图例中标注为“Index ¹” [ID:2]。对应的具体指数名称在检索到的资料片段中未显示。
+
+***
+
+### 📚参考资料
+
+以下文件提供了不同基金的业绩比较基准信息：
+
+*   File: VPMM_KFS_EM_Eng‑2025 08 11.pdf
+    *   Chunk/Page: ID: 0
+    *   Quoted Content:
+        &quot;Performance benchmark MSCI AC Asia Pacific ex Japan Index&quot; [ID:0]
+    *   Reason for Use：明确说明了VP_High-Dividend Stocks Fund的业绩比较基准是MSCI AC Asia Pacific ex Japan Index。
+
+*File : vp _ high - dividend - two thousand twenty five zero nine eng pdf*
+     chunk/page ： id ： one*
+     引用内容：“the fund （ class a1 usd ） … msci ac asia （ ex - japan ） index （ to</div>
+<div class="time-info">响应时间: 28.0s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund采用的业绩比较基准指数为 MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return) ，该指数自2016年4月30日起开始使用，此前使用的是MSCI AC Asia Pacific (ex-Japan) High Dividend Yield Index (Total Net Return)，变更原因是投资组合调整 。
+
+基金与业绩比较基准指数的收益对比情况如下（截至2025年9月30日）：
+
+时间区间  |  基金（Class A1 USD） MSCI AC Asia (ex-Japan) Index (Total Net Return)  |  MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return) 
+ --- 
+ --- 
+
+成立以来年化收益率  |  +11.7% +9.4%  |  +10.1% 
+ 成立以来总收益率 +1,197.9%  |  +703.5% +821.9%  
+指数走势对比图如下：
+（图 1）(图片展示了2002 - 2025年期间，The Fund (Class A1 USD)、MSCI AC Asia (ex-Japan) Index (Total Net Return)、MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return)的走势对比) (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 20.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q85">
+<div class="question-header"><h4>问题 85: 基金收取的最高认购费率是多少？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根據檢索到的資料，Value Partners High-Dividend Stocks Fund 收取的最高認購費率是 5%。 [ID:0]
+
+該費用適用於 Class A2 MDis 和 Class A Acc 股份類別（表格中合併顯示），認購費「最高可達 5%」（Up to 5%）。
+
+---
+
+### 參考資料
+
+文件： VP_High-Dividend-202509-Eng.pdf
+
+區塊/頁碼： ID: 0
+
+引用內容：
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Class A1&lt;/td&gt;&lt;td&gt;Class A2 MDis&lt;/td&gt;&lt; td &gt;Class A Acc&lt; / td &gt;&lt; td &gt;Class B&lt; / td &gt;&lt; / tr &gt;
+...
+&lt;tr&gt;&lt; td &gt;Subscription fee&lt; / td &gt;&lt; td &gt;&lt; / td &gt;&lt; td &gt;Up to 5 %&lt; / ... &lt; / tr &gt;
+
+（表格數據較長，此處僅截取部分結構。完整的認購費數據位於對應的表格單元格中。）
+
+使用原因：
+此費用結構表格明確顯示了不同類別股份的認購費（Subscription fee）。其中，Class A2 MDis 和 Class A Acc 類別的認購費為「Up to 5%」，這是文件中提到的最高認購費率。</div>
+<div class="time-info">响应时间: 28.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge mid">3.7</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund收取的最高认购费率为 5% 。 (From Feishu Knowledge AI | https://ask.feishu.cn)&quot;
+&quot;status&quot;: &quot;success</div>
+<div class="time-info">响应时间: 15.3s</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="question-card" id="q86">
+<div class="question-header"><h4>问题 86: 该基金在哪个市场注册为受限外国计划？</h4></div>
+<div class="question-content">
+<div class="answer-row">
+<div class="answer-box ragflow">
+<div class="answer-title rag">RAGFlow <span class="score-badge high">5.0</span></div>
+<div class="answer-text">根据检索到的信息，该基金在新加坡注册为受限外国计划。
+
+*
+
+### 📚 参考资料
+
+以下文件明确说明了基金的注册状态：
+
+-   File: VP_High-Dividend-202509-Eng.pdf
+    -   Chunk/Page: ID: 0
+    -   Quoted Content: &quot;For Singapore investors: The Fund is registered as a restricted foreign scheme in Singapore...&quot; [ID:0]
+    -   Reason for Use：** 直接说明该基金在新加坡注册为受限外国计划。
+
+这一信息在多个文件的相同免责声明部分得到了一致确认 [ID:1][ID:2][ID:3]。</div>
+<div class="time-info">响应时间: 25.2s</div>
+</div>
+<div class="answer-box feishu">
+<div class="answer-title fei">飞书 <span class="score-badge high">5.0</span></div>
+<div class="answer-text">Value Partners High-Dividend Stocks Fund在新加坡注册为受限外国计划。
+
+该基金在新加坡的注册情况如下：
+- 该基金在新加坡注册为受限外国计划，仅向机构投资者、认可投资者及符合《证券及期货法》第304及305条规定的特定人士发售。
+
+关于新加坡的相关规定及发行限制，可参考文档中的说明：
+&gt; For Singapore investors: The Fund is registered as a restricted foreign scheme in Singapore and will only be distributed to (i) institutional investors and (ii) accredited investors and certain other persons in Singapore in accordance with section 304 and 305 of the Securities and Futures Act. (From Feishu Knowledge AI | https://ask.feishu.cn)</div>
+<div class="time-info">响应时间: 16.4s</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
