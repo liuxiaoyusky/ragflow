@@ -1,6 +1,6 @@
 # RAGFlow Chat 自动化测试工具
 
-这个工具用于自动化测试RAGFlow Chat API，特别是针对PDF文档的问答质量。
+这个工具用于自动化测试RAGFlow Chat API，特别是针对PDF文档的问答质量。工具位于 `tools/ragflow_qa_automation` 目录，便于独立复制或单独运行。
 
 ## 功能特性
 
@@ -42,7 +42,7 @@ export TEST_OUTPUT_DIR="./test_output"  # 默认./test_output
 ### 完整测试流程
 
 ```bash
-cd test/pdf_chat_test
+cd tools/ragflow_qa_automation
 python run_test.py
 ```
 
@@ -155,4 +155,3 @@ python run_test.py --questions-file ./custom_questions.json --results-file ./cus
 - EVAL_LLM_API_KEY是否有效
 - LLM API配额是否充足
 - 测试结果文件是否完整
-

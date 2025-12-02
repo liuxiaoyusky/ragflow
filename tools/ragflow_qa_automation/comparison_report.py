@@ -482,17 +482,29 @@ def main():
     parser = argparse.ArgumentParser(description="生成RAGFlow vs 飞书对比报告")
     parser.add_argument("--ragflow", type=str, default="test_output/test_results.json",
                         help="RAGFlow测试结果文件")
-    parser.add_argument("--feishu", type=str, default="../../../feishu-test-results.json",
+    parser.add_argument("--feishu", type=str, default="feishu-test-results.json",
                         help="飞书测试结果文件")
     parser.add_argument("--output", type=str, default="test_output",
                         help="输出目录")
     
     args = parser.parse_args()
     
-    generator = ComparisonReportGenerator(args.ragflow, args.feishu, args.output)
+    base_dir = Path(__file__).parent
+    ragflow_path = Path(args.ragflow)
+    if not ragflow_path.is_absolute():
+        ragflow_path = base_dir / ragflow_path
+    
+    feishu_path = Path(args.feishu)
+    if not feishu_path.is_absolute():
+        feishu_path = base_dir / feishu_path
+    
+    output_dir = Path(args.output)
+    if not output_dir.is_absolute():
+        output_dir = base_dir / output_dir
+    
+    generator = ComparisonReportGenerator(ragflow_path, feishu_path, output_dir)
     generator.generate()
 
 
 if __name__ == "__main__":
     main()
-

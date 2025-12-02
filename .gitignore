@@ -195,4 +195,4 @@ ragflow_cli.egg-info
 
 # Default backup dir
 backup
-test/pdf_chat_test/test_output/
+tools/ragflow_qa_automation/test_output/

@@ -625,7 +625,7 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description="评估飞书答案并生成对比报告")
-    parser.add_argument("--feishu", type=str, default="../../feishu-test-results.json",
+    parser.add_argument("--feishu", type=str, default="feishu-test-results.json",
                         help="飞书测试结果文件")
     parser.add_argument("--ragflow", type=str, default="test_output/test_results.json",
                         help="RAGFlow测试结果文件")
@@ -670,4 +670,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
