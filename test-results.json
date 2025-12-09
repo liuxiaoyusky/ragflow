@@ -1,0 +1,110 @@
+{
+  "testDate": "2025-12-08",
+  "startTime": "2025-12-08T02:18:44.740Z",
+  "endTime": "2025-12-08T02:25:11.752Z",
+  "totalQuestions": 11,
+  "completedQuestions": 11,
+  "successCount": 11,
+  "errorCount": 0,
+  "results": [
+    {
+      "index": 1,
+      "question": "what is the management fee for High Dividend Stocks fund?",
+      "startTime": "2025-12-08T02:18:46.415Z",
+      "endTime": "2025-12-08T02:18:52.826Z",
+      "duration": 6411,
+      "answer": "The management fee for the High Dividend Stocks Fund is **1.25% p.a. - 1.50% p.a.** , applicable to all share classes (Class A1, Class A2 MDis, Class A Acc, Class B). (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 2,
+      "question": "does High Dividend Stocks fund have performance fees?",
+      "startTime": "2025-12-08T02:18:59.295Z",
+      "endTime": "2025-12-08T02:19:22.051Z",
+      "duration": 22756,
+      "answer": "Yes, the High Dividend Stocks Fund has performance fees.\n\nThe performance fee structure is as follows:\n1. **Performance Fee Calculation** : 15% of profit (High-on-high principle) .\n2. **High Watermark Condition** : Performance fee will only be charged if at the end of the financial year the NAV (before deduction of performance fee and relevant distributions) exceeds the “high watermark,” which is the all-time year-end high of the Fund’s NAV for the accumulation classes (and dividend adjusted equivalent for distribution paying classes). If in any one year, the Fund suffers a loss, no performance fee can be charged in subsequent years until the loss is recovered fully .\n\nPlease note that this information is subject to change, and investors should refer to the latest offering document for detailed fee structures and terms. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 3,
+      "question": "what is the performance fee for High Dividend stocks fund?",
+      "startTime": "2025-12-08T02:19:26.203Z",
+      "endTime": "2025-12-08T02:19:47.959Z",
+      "duration": 21756,
+      "answer": "The performance fee for the High Dividend Stocks Fund is as follows:\n\n1. **Performance fee calculation principle** : The performance fee will only be charged if at the end of the financial year the NAV (before deduction of performance fee and relevant distributions) exceeds the “high watermark,” which is the all-time year-end high of the Fund’s NAV for the accumulation classes (and dividend adjusted equivalent for distribution paying classes). If in any one year, the Fund suffers a loss, no performance fee can be charged in subsequent years until the loss is recovered fully (the high-on-high principle).\n2. **Performance fee rate** : The performance fee rate is 15% of the profit.\n\nIt should be noted that different share classes may have the same performance fee calculation method, but please refer to the official documents for the most accurate information. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 4,
+      "question": "what is the performance fee rate for High Dividend Stocks Fund?",
+      "startTime": "2025-12-08T02:19:52.109Z",
+      "endTime": "2025-12-08T02:20:16.459Z",
+      "duration": 24350,
+      "answer": "The performance fee rate for the High Dividend Stocks Fund is **8 - 15% of profit (High-on-high principle) Nil** for most classes, which means the fee is only charged if the Net Asset Value (NAV) before deduction of the performance fee and relevant distributions exceeds the \"high watermark\" (the all-time year-end high of the Fund's NAV for accumulation classes, or dividend-adjusted equivalent for distribution-paying classes) at the end of the financial year. If the Fund incurs a loss in any year, no performance fee can be charged in subsequent years until the loss is fully recovered.\n\nThis fee structure applies to the following classes:\n1. Class A1 \n2. Class A2 MDis \n3. Class A Acc \n4. Class B \n\nFor more detailed information, please refer to the offering document or contact the Investment Manager at fis@vp.com.hk. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 5,
+      "question": "what is the top fixed income holdings for Asian Income fund as of September 2025",
+      "startTime": "2025-12-08T02:20:20.600Z",
+      "endTime": "2025-12-08T02:20:47.213Z",
+      "duration": 26613,
+      "answer": "The top fixed income holdings for the Asian Income Fund as of September 2025 are as follows:\n1. **Sumitomo Mitsui Financial Group Inc 6.45% PERP** - Financials, Japan, 1.0%.\n2. **Mitsubishi UFJ Financial Group Inc 6.35% PERP** - Financials, Japan, 0.9%.\n3. **eHi Car Services Ltd 7% 09/21/2026** - Industrials, China, 0.7%.\n4. **Fortune Star BVI Ltd 5.05% 01/27/2027** - Industrials, China, 0.7%.\n5. **Sumitomo Mitsui Financial Group Inc 6.6% PERP** - Financials, Japan, 0.7%. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 6,
+      "question": "what are the top equity holdings of Asian Income as of March 2025",
+      "startTime": "2025-12-08T02:20:51.373Z",
+      "endTime": "2025-12-08T02:21:14.282Z",
+      "duration": 22909,
+      "answer": "The top equity holdings of the Value Partners Asian Income Fund as of March 2025 are as follows:\n1. **Taiwan Semiconductor Manufacturing Co Ltd** - Semiconductors & semiconductor equipment, Taiwan, 7.2%.\n2. **China Telecom Corp Ltd** - Communication services, Hong Kong, 3.0%.\n3. **China Merchants Bank Co Ltd** - Banks, Hong Kong, 2.4%.\n4. **SK Hynix Inc** - Semiconductors & semiconductor equipment, South Korea, 2.1%.\n5. **ICICI Bank Ltd** - Banks, United States, 1.9%. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 7,
+      "question": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025",
+      "startTime": "2025-12-08T02:21:18.437Z",
+      "endTime": "2025-12-08T02:22:12.976Z",
+      "duration": 54539,
+      "answer": "The top holdings of the High Dividend Stocks Fund from January 2025 to July 2025 are as follows:\n\n**January 2025**\n\n| Name | Industry 4 | % |\n| --- | --- | --- |\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 8.7 |\n| China Telecom Corp Ltd | Telecommunication services | 5.9 |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 5.7 |\n| China Construction Bank Corp | Banks | 5.4 |\n| China State Construction International Holdings Ltd | Capital goods | 4.5 |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 2.8 |\n| Hyundai Motor Co | Automobiles & components | 2.7 |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.2 |\n| Far East Horizon Ltd | Diversified financials | 2.0 |\n| AIA Group Ltd | Insurance | 1.9 |\n\nThese securities constitute 42% of the Fund. \n\n**February 2025**\n\n| Name | Industry 4 | % |\n| --- | --- | --- |\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 8.9 |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 5.8 |\n| China Construction Bank Corp | Banks | 5.7 |\n| China Telecom Corp Ltd | Telecommunication services | 5.5 |\n| China State Construction International Holdings Ltd | Capital goods | 4.7 |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 2.8 |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.6 |\n| AIA Group Ltd | Insurance | 2.3 |\n| Far East Horizon Ltd | Diversified financials | 2.1 |\n| Hyundai Motor Co | Automobiles & components | 2.0 |\n\nThese securities constitute 42% of the Fund. \n\n**March 2025**\n\n| Name | Industry 4 | % |\n| --- | --- | --- |\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 7.8 |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 6.1 |\n| China Construction Bank Corp | Banks | 6.0 |\n| China Telecom Corp Ltd | Telecommunication services | 4.7 |\n| China State Construction International Holdings Ltd | Capital goods | 3.9 |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 2.9 |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.7 |\n| AIA Group Ltd | Insurance | 2.3 |\n| Far East Horizon Ltd | Diversified financials | 2.3 |\n| China Resources Land Ltd | Real estate | 2.1 |\n\nThese securities constitute 41% of the Fund. \n\n**April 2025**\n\n| Name | Industry 4 | % |\n| --- | --- | --- |\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 8.0 |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 6.2 |\n| China Construction Bank Corp | Banks | 5.3 |\n| China State Construction International Holdings Ltd | Capital goods | 4.4 |\n| China Telecom Corp Ltd | Telecommunication services | 3.7 |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 3.0 |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.9 |\n| AIA Group Ltd | Insurance | 2.4 |\n| Far East Horizon Ltd | Diversified financials | 2.2 |\n| China Resources Land Ltd | Real estate | 2.1 |\n\nThese securities constitute 40% of the Fund. \n\n**May 2025**\n\n| Name | Industry 4 | % |\n| --- | --- | --- |\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 8.4 |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 6.1 |\n| China Construction Bank Corp | Banks | 5.3 |\n| China State Construction International Holdings Ltd | Capital goods | 4.0 |\n| China Telecom Corp Ltd | Telecommunication services | 4.0 |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 3.1 |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.8 |\n| AIA Group Ltd | Insurance | 2.7 |\n| Chow Tai Fook Jewellery Group Ltd | Retailing | 2.2 |\n| JD Health International Inc | Food & staples retailing | 2.2 |\n\nThese securities constitute 41% of the Fund. \n\n**June 2025**\n\n| Name | Industry 4 | % |\n| --- | --- | --- |\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 9.2 |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 6.5 |\n| China Construction Bank Corp | Banks | 4.0 |\n| China State Construction International Holdings Ltd | Capital goods | 4.0 |\n| China Telecom Corp Ltd | Telecommunication services | 3.7 |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 3.0 |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.9 |\n| AIA Group Ltd | Insurance | 2.8 |\n| Chow Tai Fook Jewellery Group Ltd | Retailing | 2.5 |\n| Far East Horizon Ltd | Diversified financials | 2.3 |\n\nThese securities constitute 41% of the Fund. \n\n**July 2025**\n\n| Name | Industry 4 | % |\n| --- | --- | --- |\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 9.6 |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 7.0 |\n| China State Construction International Holdings Ltd | Capital goods | 3.9 |\n| China Telecom Corp Ltd | Telecommunication services | 3.9 |\n| China Construction Bank Corp | Banks | 3.4 |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 3.2 |\n| AIA Group Ltd | Insurance | 2.9 |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.9 |\n| Far East Horizon Ltd | Diversified financials | 2.6 |\n| JD Health International Inc | Food & staples retailing | 2.4 |\n\nThese securities constitute 42% of the Fund. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 8,
+      "question": "what is the geographic exposures for the High dividend stocks fund?",
+      "startTime": "2025-12-08T02:22:17.114Z",
+      "endTime": "2025-12-08T02:22:40.518Z",
+      "duration": 23404,
+      "answer": "The geographic exposures for the High Dividend Stocks Fund vary over time. Here are the details from different reports:\n\n1. **January 2025**\n\n\n   - Hong Kong: 23%\n   - South Korea: 16%\n   - H - shares: 15%\n   - Red - chips: 13%\n   - Taiwan: 13%\n   - India: 10%\n   - Indonesia: 2%\n   - Singapore: 2%\n   - Others: 4%\n   - Cash: 2%\n\n（Fig. 1） \n\n\n\n2. **June 2025**\n\n\n   - Hong Kong: 27%\n   - South Korea: 15%\n   - Red - chips: 14%\n   - Taiwan: 14%\n   - H - shares: 11%\n   - India: 9%\n   - Singapore: 3%\n   - Indonesia: 2%\n   - Others: 4%\n   - Cash: 1%\n\n（Fig. 2） \n\n\n\n3. **August 2025**\n\n\n   - Hong Kong: 28%\n   - South Korea: 16%\n   - Taiwan: 15%\n   - Red - chips: 14%\n   - H - shares: 10%\n   - India: 7%\n   - Singapore: 3%\n   - Indonesia: 2%\n   - Others: 4%\n   - Cash: 1%\n\n（Fig. 3） \n\n\n\nThese exposures are based on the listing locations of the fund's investments and are subject to change over time. It's important to note that the fund's investment strategy may also involve exposure to other regions or countries through derivatives or other financial instruments. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 9,
+      "question": "show me the geographic locations of High dividend stocks from January 2025 to September 2025",
+      "startTime": "2025-12-08T02:22:44.657Z",
+      "endTime": "2025-12-08T02:24:00.685Z",
+      "duration": 76028,
+      "answer": "The geographical locations of high dividend stocks from January 2025 to September 2025, based on the enterprise knowledge, mainly include:\n\n1. **Hong Kong** : Companies such as China Telecom Corp Ltd, HKT Trust & HKT Ltd, and China Merchants Bank Co Ltd are listed in Hong Kong. These companies are among the top holdings in the Value Partners High - Dividend Stocks Fund during this period, indicating that Hong Kong is an important region for high dividend stocks. For example, in August 2025, China Telecom Corp Ltd accounted for 2.8% of the fund's holdings .\n2. **Taiwan** : Taiwan Semiconductor Manufacturing Co Ltd is a significant high - dividend stock from Taiwan. It consistently ranks among the top holdings in the fund, with a relatively high proportion. For instance, in August 2025, it accounted for 9.0% of the fund .\n3. **South Korea** : Samsung Electronics Co Ltd and SK Hynix Inc are from South Korea. Samsung Electronics Co Ltd is also a major holding in the fund, with a proportion of 6.6% in August 2025 .\n4. **Other regions** :\n\n   - **China** : Although specific Chinese - mainland companies are not comprehensively listed, the fund may have exposure to H - shares and other Chinese - related assets.\n   - **India** : The fund has a certain proportion of investment in India, as shown in the geographical exposure by listing charts in relevant documents  .\n\nThe geographical exposure by listing of the Value Partners High - Dividend Stocks Fund in August 2025 is as follows:\n（Fig. 1）(Geographical exposure by listing chart, showing Hong Kong 28%, South Korea 16%, Taiwan 15%, Red Chips 14%, H - shares 10%, India 7%, Singapore 3%, Indonesia 2%, other regions 4%, and cash 1%) . (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 10,
+      "question": "what are the top holdings of Asian Income Fund from January 2025 to September 2025",
+      "startTime": "2025-12-08T02:24:04.837Z",
+      "endTime": "2025-12-08T02:24:47.134Z",
+      "duration": 42297,
+      "answer": "The top holdings of Asian Income Fund from January 2025 to September 2025 are as follows:\n\n1. **January 2025**\n- **Equities**\n\n    | Name | Industry | Country / region | % |\n    | --- | --- | --- | --- |\n    | Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 9.0% |\n    | Alchip Technologies Ltd | Semiconductors & semiconductor equipment | Taiwan | 3.0% |\n    | China Telecom Corp Ltd | Communication services | Hong Kong | 2.4% |\n    | SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.4% |\n    | ICICI Bank Ltd | Banks | United States | 2.2% | \n\n- **Fixed Income**\n\n    | Name | Sector | Country / region | % |\n    | --- | --- | --- | --- |\n    | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.4% |\n    | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0% |\n    | Elect Global Investments Ltd 4.1% PERP | Real estate | Hong Kong | 0.9% |\n    | Sumitomo Mitsui Financial Group Inc 6.6% PERP | Financials | Japan | 0.9% |\n    | Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.8% | \n\n2. **March 2025**\n- **Equities**\n\n    | Name | Industry | Country / region | % |\n    | --- | --- | --- | --- |\n    | Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 7.2% |\n    | China Telecom Corp Ltd | Communication services | Hong Kong | 3.0% |\n    | China Merchants Bank Co Ltd | Banks | Hong Kong | 2.4% |\n    | SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.1% |\n    | ICICI Bank Ltd | Banks | United States | 1.9% | \n\n- **Fixed Income**\n\n    | Name | Sector | Country / region | % |\n    | --- | --- | --- | --- |\n    | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.5% |\n    | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0% |\n    | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0% |\n    | Fortune Star BVI Ltd 8.5% 05/19/2028 | Industrials | China | 0.8% |\n    | Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.8% | \n\n3. **June 2025**\n- **Equities**\n\n    | Name | Industry | Country / region | % |\n    | --- | --- | --- | --- |\n    | Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors | Taiwan | 7.0% |\n    | SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 3.2% |\n    | China Merchants Bank Co Ltd | Banks | Hong Kong | 2.6% |\n    | Wiwynn Corp | Technology, hardware & equipment | Taiwan | 2.2% |\n    | China Telecom Corp Ltd | Communication services | Hong Kong | 2.0% | \n\n- **Fixed Income**\n\n    | Name | Sector | Country / region | % |\n    | --- | --- | --- | --- |\n    | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.3% |\n    | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0% |\n    | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 0.9% |\n    | Elect Global Investments Ltd 7.2% PERP | Real estate | Hong Kong | 0.8% |\n    | Fortune Star BVI Ltd 8.5% 05/19/2028 | Industrials | China | 0.7% | \n\n4. **August 2025**\n- **Equities**\n\n    | Name | Industry | Country / region | % |\n    | --- | --- | --- | --- |\n    | Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 6.1% |\n    | SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.3% |\n    | Wiwynn Corp | Technology, hardware & equipment | Taiwan | 2.0% |\n    | China Mobile Ltd | Telecommunication services | Hong Kong | 1.9% |\n    | China Merchants Bank Co Ltd | Banks | Hong Kong | 1.8% | \n\n- **Fixed Income**\n\n    | Name | Sector | Country / region | % |\n    | --- | --- | --- | --- |\n    | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.1% |\n    | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.1% |\n    | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 0.8% |\n    | Far East Horizon Ltd 6% 10/01/2028 | Financials | Hong Kong | 0.8% |\n    | Fortune Star BVI Ltd 5.05% 01/27/2027 | Industrials | China | 0.8% | \n\n5. **September 2025**\nNo detailed top holdings information for equities and fixed income is provided in the September 2025 document. However, the portfolio yield is 4.4%, and the annualized volatility (3 years) is 11.7%. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 11,
+      "question": "what is the return for high dividend stocks fund as of September 2025?",
+      "startTime": "2025-12-08T02:24:51.288Z",
+      "endTime": "2025-12-08T02:25:11.751Z",
+      "duration": 20463,
+      "answer": "The return for the High Dividend Stocks Fund as of September 2025 is as follows:\n\n| Classes | NAV | Year-to-date | One month | One year | Three years | Five years | Total return since launch | Annualized return since launch |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Class A1 USD | 128.46 | +23.2% | +2.4% | +15.7% | +62.2% | +41.7% | +1,197.9% | +11.7% |\n| Class A2 USD MDis | 11.19 | +23.6% | +2.4% | +15.9% | +62.7% | +42.1% | +115.5% | +6.1% |\n| Class A RMB Unhedged Acc | 22.23 | +19.4% | +2.5% | +18.1% | +60.2% | +48.7% | +122.3% | +7.2% |\n| MSCI AC Asia (ex-Japan) Index (Total Net Return) | - | +26.8% | +6.8% | +17.2% | +67.6% | +36.6% | +703.5% | +9.4% |\n| MSCI AC Asia (ex-Japan) High Dividend Yield Index (Total Net Return) | - | +15.5% | +1.5% | +12.8% | +76.2% | +76.8% | +821.9% | +10.1% |\n\nThe performance is calculated on NAV to NAV in respective currencies with dividend reinvested and net of fees. Please refer to the [VP_High-Dividend-202509-Eng.pdf](https://bytedance.feishu.cn/file/Cghwbxk9TonsRJxyHEacdL7annb?from=lark_search_qa&ccm_open_type=lark_search_qa#page_number=0&bbox=%5B0.8113530530375826%2C0.5452727315920133%2C0.8169550763007413%2C0.5521976148903064%5D) for more details. \n\nThe return of the fund is visualized in the following chart:\n（Fig. 1） (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    }
+  ]
+}

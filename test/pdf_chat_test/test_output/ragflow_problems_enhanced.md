@@ -161,3 +161,10 @@
 | Q99 | 该基金不同份额类别的最低认购金额要求有何区别？ | Value Partners High-Dividend Stocks Fund不同份额类别的最低认购金额要求有何区别？ |
 | Q100 | Class A2 USD MDis和Class A2 HKD MDis的年度化股息收益率分别是多少？ | Value Partners High-Dividend Stocks Fund的Class A2 USD MDis和Class A2 HKD MDis年度化股息收益率分别是多少？ |
 
+
+
+
+
+
+
+

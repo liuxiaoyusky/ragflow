@@ -1,0 +1,15 @@
+问题编号,问题内容,References,状态,答案摘要
+Q1,what is the management fee for High Dividend Stocks fund?,30,✅ 完整,"Class A1/A2 MDis: 1.25% p.a.; Class A Acc/B: 1.50% p.a."
+Q2,does High Dividend Stocks fund have performance fees?,26,✅ 完整,"Yes. Class A1/A Acc/B: 15% of profit (high-on-high); Class A2 MDis: Nil"
+Q3,what is the performance fee for High Dividend stocks fund?,30,✅ 完整,"15% of profit (high-on-high principle); Nil for Class A Acc"
+Q4,what is the performance fee rate for High Dividend Stocks Fund?,30,✅ 完整,"15% for Class A1/A2 MDis; Nil (0%) for Class A Acc"
+Q5,what is the top fixed income holdings for Asian Income fund as of September 2025,23,✅ 完整,"提供了Sep 2025 top equity holdings和fixed income地理分布，但注明具体fixed income证券未披露"
+Q6,what are the top equity holdings of Asian Income as of March 2025,30,⚠️ 部分,"仅返回fixed income holdings，未能识别equity holdings数据（数据实际存在于chunk中）"
+Q7,show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025,30,✅ 完整,"完整展示Jan/Mar/Apr/Jul四个月的top 10 holdings对比表格"
+Q8,what is the geographic exposures for the High dividend stocks fund?,30,✅ 完整,"详细列出各地区配置：Hong Kong ~25-28%, South Korea ~15-17%, Taiwan ~13-16%等"
+Q9,show me the geographic locations of High dividend stocks from January 2025 to September 2025,27,✅ 完整,"Jan/May/Jun/Jul/Sep五个月的地理配置变化趋势表格"
+Q10,what are the top holdings of Asian Income Fund from January 2025 to September 2025,30,⚠️ 部分,"仅返回fixed income holdings，未能识别equity holdings数据"
+Q11,what is the return for high dividend stocks fund as of September 2025?,30,✅ 完整,"YTD +23.2%, Since Launch +1197.9%, Annualized +11.7%"
+
+
+
