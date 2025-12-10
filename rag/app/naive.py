@@ -67,15 +67,27 @@ def by_mineru(filename, binary=None, from_page=0, to_page=100000, lang="Chinese"
         callback(-1, "MinerU not found.")
         return None, None, pdf_parser
 
+    # 默认使用vlm-vllm-async-engine提高表格识别精度
+    # 支持的backend: pipeline, vlm-http-client, vlm-transformers, vlm-vllm-engine, vlm-vllm-async-engine
+    default_backend = "vlm-vllm-async-engine"
+    
+    # 语言映射：RagFlow的lang参数转换为MinerU的lang_list格式
+    mineru_lang = '["en"]' if lang.lower() == "english" else None
+    
+    # 使用OCR模式提高表格边界识别精度
+    mineru_method = os.environ.get("MINERU_METHOD", "ocr")
+
     sections, tables = pdf_parser.parse_pdf(
         filepath=filename,
         binary=binary,
         callback=callback,
         output_dir=os.environ.get("MINERU_OUTPUT_DIR", ""),
-        backend=os.environ.get("MINERU_BACKEND", "pipeline"),
+        backend=os.environ.get("MINERU_BACKEND", default_backend),
         server_url=os.environ.get("MINERU_SERVER_URL", ""),
         delete_output=bool(int(os.environ.get("MINERU_DELETE_OUTPUT", 1))),
-        parse_method=parse_method
+        parse_method=parse_method,
+        method=mineru_method,
+        lang=mineru_lang
     )
     return sections, tables, pdf_parser
 

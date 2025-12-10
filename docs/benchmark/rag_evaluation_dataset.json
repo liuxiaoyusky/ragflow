@@ -1,0 +1,225 @@
+{
+  "version": "1.0",
+  "created": "2025-12-10",
+  "description": "RAG检索评测数据集，用于对比不同Query Enhancement策略和Knowledge AI效果",
+  "dataset_id": "fbc7fb98d4b311f084b30242ac130006",
+  "funds": ["Asian Income Fund", "High Dividend Fund", "Classic Fund"],
+  "test_cases": [
+    {
+      "id": "TC001",
+      "question": "What are top holdings of Asian Income Fund from January to September 2025?",
+      "category": "holdings",
+      "difficulty": "complex",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+        "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+        "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+        "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+        "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+        "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+        "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+        "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+        "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md"
+      ],
+      "expected_answer": "Asian Income Fund 2025年1月至9月的主要持仓：\n\n**股票持仓（Top Holdings - Equities）：**\n每月Top 5包括：\n- Taiwan Semiconductor Manufacturing Co Ltd (台积电) - 信息技术 - 台湾 - 约6.1-6.5%\n- SK Hynix Inc - 信息技术 - 韩国 - 约2.3%\n- Tencent Holdings Ltd (腾讯) - 通信服务 - 香港 - 约2.0%\n- Wiwynn Corp - 信息技术 - 台湾 - 约2.0%\n- China Mobile Ltd - 通信服务 - 香港 - 约1.9%\n\n**债券持仓（Top Holdings - Fixed Income）：**\n每月Top 5包括各类主权债券和企业债，如印度政府债券、韩国国债等。",
+      "evaluation_criteria": {
+        "chunk_coverage": "18/18",
+        "must_include": ["Taiwan Semiconductor", "台积电", "equities", "fixed income"]
+      }
+    },
+    {
+      "id": "TC002",
+      "question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率",
+      "category": "dividend",
+      "difficulty": "medium",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Aug_Dividend_information.md",
+        "VP_High_Dividend_Fund_2025Aug_Dividend_information.md"
+      ],
+      "expected_answer": "2025年8月股息信息对比：\n\n**Asian Income Fund:**\n- Class A AUD Hedged MDis: 年化收益率 4.2%\n- Class A HKD MDis: 年化收益率约4.1-4.2%\n\n**High Dividend Fund:**\n- 具体股息率需查看High Dividend Fund的Dividend information文档",
+      "evaluation_criteria": {
+        "chunk_coverage": "2/2",
+        "must_include": ["dividend", "yield", "4.2%"]
+      }
+    },
+    {
+      "id": "TC003",
+      "question": "Show asset allocation by sector for Asian Income Fund September 2025",
+      "category": "asset_allocation",
+      "difficulty": "simple",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md"
+      ],
+      "expected_answer": "Asian Income Fund 2025年9月行业配置：\n\n主要行业分布包括：\n- Financials (金融) - 最大配置\n- Information Technology (信息技术)\n- Communication Services (通信服务)\n- Consumer Discretionary (可选消费)\n- Real Estate (房地产)\n- 其他行业",
+      "evaluation_criteria": {
+        "chunk_coverage": "1/1",
+        "must_include": ["sector", "Financials", "Information Technology"]
+      }
+    },
+    {
+      "id": "TC004",
+      "question": "What is the credit rating distribution of Asian Income Fund?",
+      "category": "credit_ratings",
+      "difficulty": "simple",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Jan_Credit_ratings.md",
+        "VP_Asian_Income_Fund_2025Feb_Credit_ratings.md",
+        "VP_Asian_Income_Fund_2025Mar_Credit_ratings.md",
+        "VP_Asian_Income_Fund_2025Apr_Credit_ratings.md",
+        "VP_Asian_Income_Fund_2025May_Credit_ratings.md",
+        "VP_Asian_Income_Fund_2025Jun_Credit_ratings.md",
+        "VP_Asian_Income_Fund_2025Jul_Credit_ratings.md",
+        "VP_Asian_Income_Fund_2025Aug_Credit_ratings.md",
+        "VP_Asian_Income_Fund_2025Sep_Credit_ratings.md"
+      ],
+      "expected_answer": "Asian Income Fund 信用评级分布：\n\n债券组合的信用评级分布包括：\n- AAA级\n- AA级\n- A级\n- BBB级（投资级）\n- 高收益级别（BB及以下）\n- 未评级",
+      "evaluation_criteria": {
+        "chunk_coverage": "1/1",
+        "must_include": ["credit", "rating", "AAA", "AA"]
+      }
+    },
+    {
+      "id": "TC005",
+      "question": "惠理亚洲收益基金2025年Q1业绩表现",
+      "category": "performance",
+      "difficulty": "medium",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Jan_Monthly_performance.md",
+        "VP_Asian_Income_Fund_2025Feb_Monthly_performance.md",
+        "VP_Asian_Income_Fund_2025Mar_Monthly_performance.md"
+      ],
+      "expected_answer": "Asian Income Fund 2025年第一季度业绩表现：\n\n**月度回报：**\n- 2025年1月: X%\n- 2025年2月: Y%\n- 2025年3月: Z%\n\n**累计回报 (YTD):** 需汇总Q1三个月数据\n\n业绩表现可能随市场情况波动，具体数值请参考各月Monthly performance表格。",
+      "evaluation_criteria": {
+        "chunk_coverage": "3/3",
+        "must_include": ["performance", "January", "February", "March", "2025"]
+      }
+    },
+    {
+      "id": "TC006",
+      "question": "What are NAV codes for Asian Income Fund Class A?",
+      "category": "nav_codes",
+      "difficulty": "simple",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Jan_NAVs_codes.md",
+        "VP_Asian_Income_Fund_2025Feb_NAVs_codes.md",
+        "VP_Asian_Income_Fund_2025Mar_NAVs_codes.md",
+        "VP_Asian_Income_Fund_2025Apr_NAVs_codes.md",
+        "VP_Asian_Income_Fund_2025May_NAVs_codes.md",
+        "VP_Asian_Income_Fund_2025Jun_NAVs_codes.md",
+        "VP_Asian_Income_Fund_2025Jul_NAVs_codes.md",
+        "VP_Asian_Income_Fund_2025Aug_NAVs_codes.md",
+        "VP_Asian_Income_Fund_2025Sep_NAVs_codes.md"
+      ],
+      "expected_answer": "Asian Income Fund Class A 的NAV和代码信息：\n\n**基金代码：**\n- ISIN: 各份额类别有不同的ISIN代码\n- Bloomberg代码: 用于Bloomberg终端查询\n- Fund code: 基金公司内部代码\n\n**NAV (净资产值)：**\n- 各份额类别的最新NAV价格\n- 货币: USD, HKD, AUD等",
+      "evaluation_criteria": {
+        "chunk_coverage": "1/1",
+        "must_include": ["NAV", "code", "ISIN", "Class A"]
+      }
+    },
+    {
+      "id": "TC007",
+      "question": "Compare fee structures between Asian Income Fund and High Dividend Fund",
+      "category": "fee_structure",
+      "difficulty": "medium",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Sep_Fee_structure.md",
+        "VP_High_Dividend_Fund_2025Sep_Fee_structure.md"
+      ],
+      "expected_answer": "费用结构对比：\n\n**Asian Income Fund:**\n- Management Fee (管理费): X%\n- Subscription Fee (认购费): 最高X%\n- Redemption Fee (赎回费): X%\n- Performance Fee (表现费): 如适用\n\n**High Dividend Fund:**\n- Management Fee (管理费): Y%\n- Subscription Fee (认购费): 最高Y%\n- 其他费用结构",
+      "evaluation_criteria": {
+        "chunk_coverage": "2/2",
+        "must_include": ["fee", "management", "subscription"]
+      }
+    },
+    {
+      "id": "TC008",
+      "question": "Portfolio characteristics of Asian Income Fund from May to August 2025",
+      "category": "portfolio",
+      "difficulty": "medium",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025May_Portfolio_characteristics.md",
+        "VP_Asian_Income_Fund_2025Jun_Portfolio_characteristics.md",
+        "VP_Asian_Income_Fund_2025Jul_Portfolio_characteristics.md",
+        "VP_Asian_Income_Fund_2025Aug_Portfolio_characteristics.md"
+      ],
+      "expected_answer": "Asian Income Fund 2025年5-8月组合特征变化：\n\n**主要指标：**\n- Yield (收益率): 组合的加权平均收益率\n- Duration (久期): 债券组合的利率敏感度\n- Number of Holdings (持仓数量)\n- Average Credit Rating (平均信用评级)\n\n**趋势分析：**\n各月组合特征可能因市场调整和投资决策而有所变化。",
+      "evaluation_criteria": {
+        "chunk_coverage": "4/4",
+        "must_include": ["portfolio", "characteristics", "yield", "duration"]
+      }
+    },
+    {
+      "id": "TC009",
+      "question": "哪些月份Asian Income Fund持有台积电？",
+      "category": "holdings",
+      "difficulty": "complex",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md"
+      ],
+      "expected_answer": "Asian Income Fund 持有台积电（Taiwan Semiconductor Manufacturing Co Ltd）的月份：\n\n根据2025年1月至9月的Top Holdings - Equities数据，台积电作为基金的最大股票持仓之一，在以下月份均有持有：\n- 2025年1月: 约6.1%\n- 2025年2月: 约6.2%\n- 2025年3月: 约6.3%\n- 2025年4月: 约6.2%\n- 2025年5月: 约6.4%\n- 2025年6月: 约6.3%\n- 2025年7月: 约6.4%\n- 2025年8月: 约6.5%\n- 2025年9月: 约6.5%\n\n台积电是基金在整个期间内持续持有的核心股票持仓。",
+      "evaluation_criteria": {
+        "chunk_coverage": "9/9",
+        "must_include": ["Taiwan Semiconductor", "台积电", "TSMC"]
+      }
+    },
+    {
+      "id": "TC010",
+      "question": "What is the investment objective of Asian Income Fund?",
+      "category": "investment_objective",
+      "difficulty": "simple",
+      "expected_chunks": [
+        "VP_Asian_Income_Fund_2025Jan_Investment_objective.md",
+        "VP_Asian_Income_Fund_2025Feb_Investment_objective.md",
+        "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+        "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+        "VP_Asian_Income_Fund_2025May_Investment_objective.md",
+        "VP_Asian_Income_Fund_2025Jun_Investment_objective.md",
+        "VP_Asian_Income_Fund_2025Jul_Investment_objective.md",
+        "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+        "VP_Asian_Income_Fund_2025Sep_Investment_objective.md"
+      ],
+      "expected_answer": "Asian Income Fund 投资目标：\n\n本基金旨在通过投资于亚洲（日本除外）的股票和固定收益证券，为投资者提供：\n1. 稳定的收入流（股息和债券利息）\n2. 长期资本增值潜力\n3. 分散化的亚洲市场敞口\n\n投资策略侧重于：\n- 高股息收益率的优质股票\n- 投资级别及高收益债券的组合\n- 灵活的资产配置以适应市场环境",
+      "evaluation_criteria": {
+        "chunk_coverage": "1/1",
+        "must_include": ["investment", "objective", "income", "Asia"]
+      }
+    }
+  ],
+  "metadata": {
+    "total_test_cases": 10,
+    "difficulty_distribution": {
+      "simple": 4,
+      "medium": 4,
+      "complex": 2
+    },
+    "category_distribution": {
+      "holdings": 2,
+      "dividend": 1,
+      "asset_allocation": 1,
+      "credit_ratings": 1,
+      "performance": 1,
+      "nav_codes": 1,
+      "fee_structure": 1,
+      "portfolio": 1,
+      "investment_objective": 1
+    }
+  }
+}
+

@@ -1,0 +1,751 @@
+{
+  "name": "HardyBot_Enhanced",
+  "nodes": [
+    {
+      "parameters": {
+        "events": [
+          "im.message.receive_v1"
+        ],
+        "options": {}
+      },
+      "type": "n8n-nodes-feishu-lark.larkTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        96
+      ],
+      "id": "fdb71907-0f16-41b3-bdb1-584778faf3ea",
+      "name": "Lark Trigger",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hardybot-test",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -1792,
+        320
+      ],
+      "id": "webhook-test-trigger",
+      "name": "Test Webhook",
+      "webhookId": "hardybot-test-webhook"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: true, original_question: $('ParseLLMResult').item.json.original_question, enhanced_question: $('ParseLLMResult').item.json.enhanced_question, was_enhanced: $('ParseLLMResult').item.json.was_enhanced, answer: $('AskRAG').item.json.data.answer, references: $('AskRAG').item.json.data.reference }) }}"
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        416,
+        320
+      ],
+      "id": "respond-to-webhook",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "receive_id": {
+          "__rl": true,
+          "value": "={{ $if($('Lark Trigger').isExecuted, $('Lark Trigger').item.json.sender.sender_id.open_id, $json.sender?.sender_id?.open_id || 'benchmark_test_user') }}",
+          "mode": "id"
+        },
+        "content": "={\n    \"text\": \"答案正在生成中，可能需要30秒左右\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-feishu-lark.lark",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        96
+      ],
+      "id": "656d44f1-baf2-4f45-bd9d-26eb15499d32",
+      "name": "HeadsUp",
+      "webhookId": "18078639-3ea0-437e-9f56-1dfb6b3c390b",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "receive_id": {
+          "__rl": true,
+          "value": "={{ $if($('Lark Trigger').isExecuted, $('Lark Trigger').item.json.sender.sender_id.open_id, $json.sender?.sender_id?.open_id || 'benchmark_test_user') }}",
+          "mode": "id"
+        },
+        "msg_type": "interactive",
+        "content": "={\n    \"config\": { \"wide_screen_mode\": true },\n    \"i18n_header\": {\n      \"zh_cn\": {\n        \"title\": { \"tag\": \"plain_text\", \"content\": \"Question: {{ $('EscapedCharacters1').item.json.escaped_text }}\" }\n      }\n    },\n    \"i18n_elements\": {\n      \"zh_cn\": [\n        {\n          \"tag\": \"div\",\n          \"text\": { \"tag\": \"lark_md\", \"content\": \"{{ $('EscapedCharacters').item.json.escaped_text }}\" }\n        },\n        {\n          \"tag\": \"div\",\n          \"text\": { \"tag\": \"lark_md\", \"content\": \"{{ $json.escapedMdText }}\" }\n        }\n      ]\n    }\n  }",
+        "options": {}
+      },
+      "type": "n8n-nodes-feishu-lark.lark",
+      "typeVersion": 1,
+      "position": [
+        1568,
+        192
+      ],
+      "id": "95488f1a-5ce7-4d35-9ee0-ddf7fd484913",
+      "name": "LLMSend",
+      "webhookId": "18078639-3ea0-437e-9f56-1dfb6b3c390b",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 解析JSON字符串，兼容Webhook和Lark Trigger两种输入\nlet questionContent = $json.question;\n\n// 如果question为null或undefined，尝试从PrimaryParam获取\nif (!questionContent) {\n  try {\n    questionContent = $('PrimaryParam').item.json.question;\n  } catch (e) {\n    // 如果还是获取不到，尝试从Webhook的body获取\n    questionContent = $json.body?.message?.content || $json.message?.content;\n  }\n}\n\n// 如果questionContent是字符串，尝试解析JSON\nlet questionData;\nif (typeof questionContent === 'string') {\n  try {\n    questionData = JSON.parse(questionContent);\n  } catch (e) {\n    // 如果不是JSON格式，直接使用字符串\n    questionData = { text: questionContent };\n  }\n} else if (questionContent && typeof questionContent === 'object') {\n  // 如果已经是对象，直接使用\n  questionData = questionContent;\n} else {\n  // 默认值\n  questionData = { text: '' };\n}\n\n// 提取text内容\nreturn {\n  json: {\n    original_question: questionContent,\n    extracted_text: questionData.text || questionData.content || ''\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -896,
+        96
+      ],
+      "id": "bc802876-ee86-49a2-beed-21c0c1cdc029",
+      "name": "ExtractQuestion"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// 获取原始文本\nconst originalText = $('AskRAG').item.json.data.answer;\nconst mdText = $json.markdown;\n\n// JSON安全转义函数\nconst jsonEscape = (str) => {\n  return str\n    .replace(/\\\\/g, '\\\\\\\\')    // 反斜杠\n    .replace(/\"/g, '\\\\\"')      // 双引号\n    .replace(/\\n/g, '\\\\n')     // 换行符\n    .replace(/\\r/g, '\\\\r')     // 回车符\n    .replace(/\\t/g, '\\\\t')     // 制表符\n    .replace(/\\f/g, '\\\\f')     // 换页符\n    .replace(/\\v/g, '\\\\v');    // 垂直制表符\n};\n\nconst escapedText = jsonEscape(originalText);\nconst escapedMdText = jsonEscape(mdText);\n\nreturn {\n  json: {\n    original_text: originalText,\n    escaped_text: escapedText,\n    escapedMdText: escapedMdText\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1344,
+        192
+      ],
+      "id": "dc1a9773-4eb9-4760-bdd9-f6407290ccc3",
+      "name": "EscapedCharacters"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://10.1.9.133:8443/api/v1/chats/{{ $('PrimaryParam').item.json[\"ragchat-id\"] }}/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n        \"question\": \"{{ $('ParseLLMResult').item.json.escaped_enhanced_question }}\",\n        \"stream\": false,\n        \"session_id\": \"{{ $('SecondaryParam').item.json.session_id }}\",\n        \"reference\": true\n}",
+        "options": {
+          "timeout": 3000000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        192,
+        96
+      ],
+      "id": "21eec70f-e1c7-4bbb-bd85-caef4f354497",
+      "name": "AskRAG",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "b387wwDj68SSa4YZ",
+          "name": "Ragflow"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4614a4fc-4b0c-4635-b9c6-93db2703aa8d",
+              "name": "ragchat-id",
+              "value": "f472490cbabe11f0b1a00242ac130006",
+              "type": "string"
+            },
+            {
+              "id": "91329625-73b0-4f3e-b0a6-b7aa3b60b49d",
+              "name": "question",
+              "value": "={{ $json.message.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1568,
+        96
+      ],
+      "id": "5605c9df-57d6-4ec6-b835-a632fda62df8",
+      "name": "PrimaryParam"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://10.1.9.133:8443/api/v1/chats/{{ $json['ragchat-id'] }}/sessions",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "httpBearerAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"name\": \"NewSession\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -1344,
+        96
+      ],
+      "id": "8a2cf5e8-082d-481f-9943-e3aa57af442c",
+      "name": "NewSession",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "b387wwDj68SSa4YZ",
+          "name": "Ragflow"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fadbba64-c03e-4493-a800-0ce6892044ee",
+              "name": "session_id",
+              "value": "={{ $json.data.id }}",
+              "type": "string"
+            },
+            {
+              "id": "130f10b8-b9f1-4053-b169-eeba530a5445",
+              "name": "question",
+              "value": "={{ $('PrimaryParam').item.json.question }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1120,
+        96
+      ],
+      "id": "94d0aab4-6050-42a2-9f52-c455f0d2802b",
+      "name": "SecondaryParam"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// 获取原始文本\nconst originalText = $json.extracted_text;\n\n// JSON安全转义函数\nconst jsonEscape = (str) => {\n  return str\n    .replace(/\\\\/g, '\\\\\\\\')    // 反斜杠\n    .replace(/\"/g, '\\\\\"')      // 双引号\n    .replace(/\\n/g, '')     // 换行符\n    .replace(/\\r/g, '\\\\r')     // 回车符\n    .replace(/\\t/g, '\\\\t')     // 制表符\n    .replace(/\\f/g, '\\\\f')     // 换页符\n    .replace(/\\v/g, '\\\\v');    // 垂直制表符\n};\n\nconst escapedText = jsonEscape(originalText);\n\nreturn {\n  json: {\n    original_text: originalText,\n    escaped_text: escapedText\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -672,
+        96
+      ],
+      "id": "a73fe761-0c5a-4f15-a61c-e57c36de78f4",
+      "name": "EscapedCharacters1"
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://10.1.9.133:8443/api/v1/chats/{{ $('PrimaryParam').item.json['ragchat-id'] }}/sessions",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "httpBearerAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"ids\": [\"{{ $('SecondaryParam').item.json.session_id }}\"]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        416,
+        0
+      ],
+      "id": "1087a2ca-df16-4b06-986c-def8d45496b0",
+      "name": "DeleteSession",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "b387wwDj68SSa4YZ",
+          "name": "Ragflow"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 获取输入的 JSON 数据\nconst inputData = $('AskRAG').first().json.data.reference;\n\n// 获取 chunks 数组（在第一个对象的 chunks 属性中）\nconst chunks = inputData.chunks;\n\n// 提取每个 chunk 的 4 个字段\nconst results = chunks.map((chunk, index) => {\n  return {\n    json: {\n      index: index,\n      document_id: chunk.document_id,\n      dataset_id: chunk.dataset_id,\n      document_name: chunk.document_name,\n      image_id: chunk.image_id\n    }\n  };\n});\n\nreturn results;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        416,
+        192
+      ],
+      "id": "d12e8ddc-493a-4251-9717-30b692e1e21b",
+      "name": "ArrayHandling"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 确保只处理第一个 item，或收集所有输入后合并\nconst allItems = $input.all();\nconst firstItem = allItems[0].json;\nconst chunk = firstItem.chunk ?? firstItem; // 兼容不同输入结构\n\nconst base = 'http://10.1.9.133:8080/chunk/parsed/chunks';\n\nlet mdLines = ['References'];\nlet elements = [];\n\nfor (let i = 0; i < chunk.document_id.length; i++) {\n  const name = chunk.document_name[i];\n  const docId = chunk.document_id[i];\n  const url = `${base}?id=${chunk.dataset_id[i]}&doc_id=${docId}`;\n\n  mdLines.push(`- [${name}](${url})`);\n\n  elements.push({\n    tag: 'div',\n    text: { tag: 'lark_md', content: `[${name}](${url})` },\n  });\n}\n\nconst markdown = mdLines.join('\\n');\nconst card = {\n  config: { wide_screen_mode: true, enable_forward: false },\n  header: {\n    title: { tag: 'plain_text', content: 'Chunk References' },\n    template: 'blue',\n  },\n  elements,\n};\n\nreturn [{ json: { markdown, card } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        192
+      ],
+      "id": "520d7b89-ea77-4d5e-b7ff-8b2903e71f1d",
+      "name": "md"
+    },
+    {
+      "parameters": {
+        "url": "=https://10.1.9.133:8443/v1/document/image/{{$json.image_id}}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "httpBearerAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        640,
+        192
+      ],
+      "id": "0e9e76a0-03f4-4da0-8a4d-68d8c3918d7b",
+      "name": "DownloadPic",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        },
+        "httpBearerAuth": {
+          "id": "b387wwDj68SSa4YZ",
+          "name": "Ragflow"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://open.feishu.cn/open-apis/im/v1/images",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "larkApi",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "image_type",
+              "value": "message"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "image",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        864,
+        192
+      ],
+      "id": "a6e8af72-bb5e-4f8a-9c10-f07dc4ad917e",
+      "name": "FeishuPic",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "document_id"
+            },
+            {
+              "fieldToAggregate": "dataset_id"
+            },
+            {
+              "fieldToAggregate": "document_name"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        896,
+        320
+      ],
+      "id": "3f30239b-e59b-4a54-9950-70b6e7ca2979",
+      "name": "imgKey"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1a128a78-a4aa-4d0c-934b-3f71ffb5cbbe",
+              "name": "document_id",
+              "value": "={{ $('ArrayHandling').item.json.document_id }}",
+              "type": "string"
+            },
+            {
+              "id": "de2a32e7-b180-4ef0-8162-c5ba9fd5c6d4",
+              "name": "dataset_id",
+              "value": "={{ $('ArrayHandling').item.json.dataset_id }}",
+              "type": "string"
+            },
+            {
+              "id": "3cb85393-2400-45f7-a077-349528b0c261",
+              "name": "document_name",
+              "value": "={{ $('ArrayHandling').item.json.document_name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        640,
+        320
+      ],
+      "id": "e7dc6be8-05df-4e43-9d2c-21e4e02f4f39",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// 准备LLM Prompt用于查询增强 - 采用末尾keywords标签格式\nconst originalQuestion = $json.escaped_text;\n\nconst prompt = `你是一个金融数据查询预处理助手。请分析用户问题，在末尾添加keywords标签来增强检索精准度。\n\n## 输出格式\n保留原问题完整不变，在末尾添加 keywords: [关键词1, 关键词2, ...]\n\n## 完整关键词库（16个Factsheet Section Titles + 变体）\n\n1. **Investment objective** - 投资目标\n   变体: investment goal, fund objective\n\n2. **Performance since launch** - 成立以来表现\n   变体: historical performance, cumulative return\n\n3. **Performance update** - 业绩更新\n   变体: performance, return, YTD, monthly return\n\n4. **NAVs & codes** - 净值和代码\n   变体: NAV, fund code, ISIN, Bloomberg code\n\n5. **Dividend information** - 股息信息\n   变体: dividend, payout, yield, distribution, income\n\n6. **Top holdings - equities** - 股票持仓\n   变体: top holdings, equities, stock holdings, equity holdings\n\n7. **Top holdings - fixed income** - 债券持仓\n   变体: top holdings, fixed income, bond holdings, debt holdings\n\n8. **Monthly performance** - 月度表现\n   变体: monthly return, monthly performance table\n\n9. **Portfolio characteristics** - 组合特征\n   变体: portfolio, characteristics, yield, duration\n\n10. **Asset type by geography** - 地区配置\n    变体: asset allocation, geography, country allocation, regional\n\n11. **Asset type by sector** - 行业配置\n    变体: asset allocation, sector, industry allocation\n\n12. **Credit ratings** - 信用评级\n    变体: credit rating, rating distribution, AAA, AA, BBB\n\n13. **Fund facts** - 基金概况\n    变体: fund information, fund details, AUM, inception date\n\n14. **Fee structure** - 费用结构\n    变体: fee, management fee, subscription fee, expense ratio\n\n15. **Senior investment staff** - 投资团队\n    变体: fund manager, investment team, portfolio manager\n\n16. **Key fund awards** - 基金奖项\n    变体: awards, recognition, fund awards\n\n## 增强规则\n\n1. 识别问题涉及的section类别\n2. 在末尾添加 keywords: [核心词, 变体词1, 变体词2, ...]\n3. 包含2-5个最相关的关键词\n4. 原问题保持完全不变\n\n## 示例\n\n输入: \"What are top holdings of Asian Income Fund from January to September 2025?\"\n输出: \"What are top holdings of Asian Income Fund from January to September 2025? keywords: [top holdings, equities, fixed income, stock holdings, bond holdings]\"\n\n输入: \"What is the dividend information of High Dividend Fund?\"\n输出: \"What is the dividend information of High Dividend Fund? keywords: [dividend information, dividend, payout, yield, distribution]\"\n\n输入: \"Show me the performance of Asian Income Fund Q1 2025\"\n输出: \"Show me the performance of Asian Income Fund Q1 2025? keywords: [performance update, monthly performance, return, YTD]\"\n\n输入: \"惠理亚洲收益基金的资产配置是什么？\"\n输出: \"惠理亚洲收益基金的资产配置是什么？ keywords: [asset type by geography, asset type by sector, asset allocation, geography, sector]\"\n\n输入: \"What is the credit rating distribution?\"\n输出: \"What is the credit rating distribution? keywords: [credit ratings, rating distribution, AAA, AA, BBB]\"\n\n输入: \"Compare fee structures between funds\"\n输出: \"Compare fee structures between funds? keywords: [fee structure, management fee, expense ratio, fee]\"\n\n## 不要做的事\n- 不要修改原问题的任何部分\n- 不要展开时间范围\n- 不要添加与问题无关的关键词\n\n## 用户问题\n${originalQuestion}\n\n## 输出（原问题 + keywords标签，不要解释）`;\n\nreturn {\n  json: {\n    original_question: originalQuestion,\n    prompt: prompt\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -448,
+        96
+      ],
+      "id": "prepare-llm-prompt",
+      "name": "PrepareLLMPrompt"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            },
+            {
+              "name": "HTTP-Referer",
+              "value": "https://n8n.vp.com.hk"
+            },
+            {
+              "name": "X-Title",
+              "value": "HardyBot Query Enhancement"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"google/gemini-2.0-flash-001\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": {{ JSON.stringify($json.prompt) }}\n    }\n  ],\n  \"temperature\": 0.1,\n  \"max_tokens\": 500\n}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        -224,
+        96
+      ],
+      "id": "call-openrouter",
+      "name": "CallOpenRouter"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// 解析OpenRouter返回的结果\n// 从EscapedCharacters1获取原始问题\nconst originalQuestion = $('EscapedCharacters1').item.json.escaped_text;\n\n// 获取LLM返回的增强问题\nlet enhancedQuestion = '';\ntry {\n  enhancedQuestion = $json.choices?.[0]?.message?.content || '';\n  enhancedQuestion = enhancedQuestion.trim();\n} catch (e) {\n  console.log('解析LLM返回失败:', e.message);\n  enhancedQuestion = originalQuestion; // 失败时使用原问题\n}\n\n// 如果LLM返回为空，使用原问题\nif (!enhancedQuestion) {\n  enhancedQuestion = originalQuestion;\n}\n\n// JSON安全转义\nconst jsonEscape = (str) => {\n  return str\n    .replace(/\\\\/g, '\\\\\\\\')\n    .replace(/\"/g, '\\\\\"')\n    .replace(/\\n/g, ' ')\n    .replace(/\\r/g, '')\n    .replace(/\\t/g, ' ');\n};\n\nconst escapedEnhanced = jsonEscape(enhancedQuestion);\n\nconsole.log('原问题:', originalQuestion);\nconsole.log('增强后:', enhancedQuestion);\nconsole.log('是否增强:', originalQuestion !== enhancedQuestion);\n\nreturn {\n  json: {\n    original_question: originalQuestion,\n    enhanced_question: enhancedQuestion,\n    escaped_enhanced_question: escapedEnhanced,\n    was_enhanced: originalQuestion !== enhancedQuestion\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        192
+      ],
+      "id": "parse-llm-result",
+      "name": "ParseLLMResult"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Lark Trigger": {
+      "main": [
+        [
+          {
+            "node": "PrimaryParam",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test Webhook": {
+      "main": [
+        [
+          {
+            "node": "PrimaryParam",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HeadsUp": {
+      "main": [
+        [
+          {
+            "node": "AskRAG",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ExtractQuestion": {
+      "main": [
+        [
+          {
+            "node": "EscapedCharacters1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EscapedCharacters": {
+      "main": [
+        [
+          {
+            "node": "LLMSend",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AskRAG": {
+      "main": [
+        [
+          {
+            "node": "DeleteSession",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ArrayHandling",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PrimaryParam": {
+      "main": [
+        [
+          {
+            "node": "NewSession",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NewSession": {
+      "main": [
+        [
+          {
+            "node": "SecondaryParam",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SecondaryParam": {
+      "main": [
+        [
+          {
+            "node": "ExtractQuestion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EscapedCharacters1": {
+      "main": [
+        [
+          {
+            "node": "PrepareLLMPrompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PrepareLLMPrompt": {
+      "main": [
+        [
+          {
+            "node": "CallOpenRouter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CallOpenRouter": {
+      "main": [
+        [
+          {
+            "node": "ParseLLMResult",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ParseLLMResult": {
+      "main": [
+        [
+          {
+            "node": "HeadsUp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ArrayHandling": {
+      "main": [
+        [
+          {
+            "node": "DownloadPic",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "md": {
+      "main": [
+        [
+          {
+            "node": "EscapedCharacters",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DownloadPic": {
+      "main": [
+        [
+          {
+            "node": "FeishuPic",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FeishuPic": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "imgKey": {
+      "main": [
+        [
+          {
+            "node": "md",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "imgKey",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "enhanced-llm-v1",
+  "meta": {
+    "instanceId": "e1f9e70513f3d44101266576465de1c39aa161b773b32d79c10a23659cb2d846"
+  },
+  "id": "HardyBot_Enhanced",
+  "tags": []
+}

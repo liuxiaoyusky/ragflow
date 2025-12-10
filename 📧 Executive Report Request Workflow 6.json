@@ -1,0 +1,363 @@
+{
+  "name": "📧 Executive Report Request Workflow 6",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "79250b43-dafe-4721-a58d-2db8cd08b5e1",
+      "name": "每5分钟检查"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 50,
+        "filtersUI": {
+          "values": {
+            "filters": {
+              "custom": "(from/emailAddress/address eq 'ai_auto@vp.com.hk' or from/emailAddress/address eq 'luojing@vp.com.hk') and isRead eq false"
+            }
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [
+        240,
+        0
+      ],
+      "id": "3b61228b-74b8-416a-a8a4-98e7984bf2ff",
+      "name": "监听skyliu邮箱",
+      "webhookId": "35b3c09c-bbd3-4d15-a7fd-139038e491fb",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "tBuNrq8u1VIkXLZH",
+          "name": "Microsoft Outlook account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 步骤1: 准备数据 - 提取邮件内容，构建OpenRouter请求\nconst items = $input.all();\nconst results = [];\n\nconsole.log('📧 收到邮件数量:', items.length);\n\nfor (let i = 0; i < items.length; i++) {\n  const item = items[i];\n  \n  console.log('\\n--- 处理邮件 #' + (i + 1) + ' ---');\n  console.log('📋 邮件ID:', item.json.id);\n  console.log('📋 主题:', item.json.subject);\n  \n  // 提取邮件内容\n  const emailId = item.json.id;\n  const subject = item.json.subject || '';\n  const body = item.json.body?.content || item.json.bodyPreview || '';\n  \n  // 处理from字段（可能是字符串或对象）\n  let from = '';\n  if (typeof item.json.from === 'string') {\n    from = item.json.from;\n  } else if (item.json.from?.emailAddress?.address) {\n    from = item.json.from.emailAddress.address;\n  }\n  \n  console.log('📤 发件人:', from);\n  console.log('📄 Body长度:', body.length);\n  console.log('📄 Body预览:', body.substring(0, 200));\n  \n  if (!body) {\n    console.log('⚠️ 邮件内容为空，跳过');\n    continue;\n  }\n  \n  // 构建prompt\n  const prompt = `你是一个专业的金融数据提取助手。请从以下邮件内容中提取所有提到的公司和股票信息。\n\n返回格式必须是JSON数组，每个元素包含：\n- ticker: 股票代码（格式: \"代码 交易所\"，如 \"AAPL US\"、\"0700 HK\"、\"BABA US\"）\n- companyName: 公司名称\n\n如果无法确定交易所，请根据公司类型推测（美股用US，港股用HK，A股用CH）。\n如果完全无法提取到公司信息，返回空数组 []。\n\n只返回JSON，不要其他文字。\n\n邮件主题: ${subject}\n\n邮件正文:\n${body}`;\n  \n  console.log('✅ Prompt构建完成，长度:', prompt.length);\n  \n  results.push({\n    json: {\n      emailId: emailId,\n      subject: subject,\n      body: body,\n      from: from,\n      prompt: prompt\n    }\n  });\n}\n\nconsole.log('\\n📊 准备完成，输出', results.length, '条数据');\nreturn results;"
+      },
+      "id": "ebac52af-7222-4743-8622-a49cba2c2d70",
+      "name": "准备数据",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            },
+            {
+              "name": "HTTP-Referer",
+              "value": "https://n8n.vp.com.hk"
+            },
+            {
+              "name": "X-Title",
+              "value": "Executive Report Workflow"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"openai/gpt-4\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": {{ JSON.stringify($json.prompt) }}\n    }\n  ],\n  \"temperature\": 0.3,\n  \"max_tokens\": 2000\n}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "f788a806-bcf0-44f6-9d42-ab348ab7e42d",
+      "name": "调用OpenRouter",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        720,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 步骤3: 解析OpenRouter返回的结果\nconst items = $input.all();\nconst results = [];\n\nconsole.log('📦 收到OpenRouter响应数量:', items.length);\n\nfor (let i = 0; i < items.length; i++) {\n  const item = items[i];\n  const preparedData = $('准备数据').all()[i]?.json || {};\n  \n  console.log('\\n--- 解析响应 #' + (i + 1) + ' ---');\n  console.log('📋 原始响应:', JSON.stringify(item.json).substring(0, 500));\n  \n  // 获取AI返回的内容\n  const content = item.json.choices?.[0]?.message?.content || '';\n  console.log('📝 AI返回内容:', content);\n  \n  if (!content) {\n    console.log('⚠️ AI返回内容为空');\n    continue;\n  }\n  \n  // 解析JSON\n  let companies = [];\n  try {\n    companies = JSON.parse(content);\n    console.log('✅ JSON直接解析成功');\n  } catch (e) {\n    console.log('⚠️ JSON直接解析失败，尝试提取...');\n    // 尝试从内容中提取JSON数组\n    const jsonMatch = content.match(/\\[.*\\]/s);\n    if (jsonMatch) {\n      try {\n        companies = JSON.parse(jsonMatch[0]);\n        console.log('✅ 从内容中提取JSON成功');\n      } catch (e2) {\n        console.log('❌ 提取JSON也失败:', e2.message);\n      }\n    }\n  }\n  \n  console.log('📊 提取到公司数量:', companies.length);\n  companies.forEach((c, idx) => {\n    console.log(`  ${idx + 1}. ${c.ticker} - ${c.companyName}`);\n  });\n  \n  if (companies.length === 0) {\n    console.log('⚠️ 未提取到公司信息');\n    continue;\n  }\n  \n  results.push({\n    json: {\n      emailId: preparedData.emailId,\n      replyTo: preparedData.from,\n      originalSubject: preparedData.subject,\n      companies: companies,\n      extractedAt: new Date().toISOString()\n    }\n  });\n}\n\nconsole.log('\\n📊 解析完成，输出', results.length, '条结果');\nreturn results;"
+      },
+      "id": "5066bd34-e85d-479b-9adb-79bc479e48fc",
+      "name": "解析AI结果",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "has-companies",
+              "leftValue": "={{ $json.companies.length }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1200,
+        0
+      ],
+      "id": "d8cb8674-7ab5-4fd3-8b71-a030678ee4cc",
+      "name": "是否有公司信息"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://10.3.10.10:3847/api/generate-reports",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "replyTo",
+              "value": "={{ $json.replyTo }}"
+            },
+            {
+              "name": "originalSubject",
+              "value": "={{ $json.originalSubject }}"
+            },
+            {
+              "name": "emailId",
+              "value": "={{ $json.emailId }}"
+            },
+            {
+              "name": "companies",
+              "value": "={{ $json.companies }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "482c965f-fb9a-4457-b28b-8229d20dee89",
+      "name": "发送到Report Server",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "messageId": "={{ $('解析AI结果').item.json.emailId }}",
+        "updateFields": {
+          "isRead": true
+        }
+      },
+      "id": "adb474e3-e606-40f7-b66b-7d3761731a24",
+      "name": "标记为已读",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        0
+      ],
+      "webhookId": "4eff2bbd-2ef7-4f35-bd54-d14d5d7f7ef0",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "tBuNrq8u1VIkXLZH",
+          "name": "Microsoft Outlook account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "move",
+        "messageId": "={{ $('解析AI结果').item.json.emailId }}",
+        "folderId": {
+          "__rl": true,
+          "value": "AAMkADcxMzQ3MDk5LTkwYzItNDdiZi1hYmZlLTNkY2RhYTdlOTIxYQAuAAAAAACJn26kuu5dRKpLGW7ok0MOAQBan85mIn-GSJD44LkCzNtoAAA8sFELAAA=",
+          "mode": "list",
+          "cachedResultName": "executive report - 已处理",
+          "cachedResultUrl": "https://outlook.office365.com/mail/AAMkADcxMzQ3MDk5LTkwYzItNDdiZi1hYmZlLTNkY2RhYTdlOTIxYQAuAAAAAACJn26kuu5dRKpLGW7ok0MOAQBan85mIn%2FGSJD44LkCzNtoAAA8sFELAAA%3D"
+        }
+      },
+      "id": "51f2f321-76e5-4222-bf43-32bf59fc861d",
+      "name": "移动到已处理文件夹",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [
+        1920,
+        0
+      ],
+      "webhookId": "bce562a5-28a2-4ac4-963e-5c99a661ba1c",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "tBuNrq8u1VIkXLZH",
+          "name": "Microsoft Outlook account 5"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        32,
+        208
+      ],
+      "id": "97657c0c-d4c5-4a51-a4b9-0cdad66ad3a8",
+      "name": "手动触发"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "每5分钟检查": {
+      "main": [
+        [
+          {
+            "node": "监听skyliu邮箱",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "监听skyliu邮箱": {
+      "main": [
+        [
+          {
+            "node": "准备数据",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "准备数据": {
+      "main": [
+        [
+          {
+            "node": "调用OpenRouter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "调用OpenRouter": {
+      "main": [
+        [
+          {
+            "node": "解析AI结果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "解析AI结果": {
+      "main": [
+        [
+          {
+            "node": "是否有公司信息",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "是否有公司信息": {
+      "main": [
+        [
+          {
+            "node": "发送到Report Server",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "发送到Report Server": {
+      "main": [
+        [
+          {
+            "node": "标记为已读",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "标记为已读": {
+      "main": [
+        [
+          {
+            "node": "移动到已处理文件夹",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "手动触发": {
+      "main": [
+        [
+          {
+            "node": "监听skyliu邮箱",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e61181a1-9c78-4e8c-b56d-6fb300c25a46",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5f254492cf33afb490faef6456f2402a42f645f46857013a7ca7bba365f14ef9"
+  },
+  "id": "VqY2anRgFoDPPer4",
+  "tags": []
+}

@@ -1,0 +1,521 @@
+{
+  "timestamp": "2025-12-10T06:08:54.096445",
+  "mode": "enhanced",
+  "use_chat": true,
+  "test_results": [
+    {
+      "test_id": "TC001",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "What are top holdings of Asian Income Fund from January to September 2025?",
+      "enhanced_question": "What are top holdings of Asian Income Fund from January to September 2025? (top holdings, equities, fixed income, 惠理亚洲收益基金)",
+      "was_enhanced": true,
+      "answer": "# Top Holdings of Asian Income Fund (惠理亚洲收益基金), January to September 2025\n\nThe Asian Income Fund holds a mix of equities (typically ~66.8% as of Sep 2025 [ID:22][ID:23]) and fixed income (~30.9% as of Sep 2025 [ID:22][ID:23]). Below are the top 5 holdings for **equities** and **fixed income** by report month, based on available data. Holdings are shown as % of portfolio, with sector and country/region. Data is as at month-end for each report [ID:0 to ID:19].\n\n## Equities Top Holdings\n\n### January 2025 [ID:9]\n| Name | Industry | Country / region | % |\n|------|----------|------------------|---|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 9.0 |\n| Alchip Technologies Ltd | Semiconductors & semiconductor equipment | Taiwan | 3.0 |\n| China Telecom Corp Ltd | Communication services | Hong Kong | 2.4 |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.4 |\n| ICICI Bank Ltd | Banks | United States | 2.2 |\n\n### February 2025 [ID:19]\n| Name | Industry | Country / region | % |\n|------|----------|------------------|---|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 8.2 |\n| Alchip Technologies Ltd | Semiconductors & semiconductor equipment | Taiwan | 3.2 |\n| China Telecom Corp Ltd | Communication services | Hong Kong | 2.9 |\n| China Merchants Bank Co Ltd | Banks | Hong Kong | 2.4 |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.1 |\n\n### March 2025 [ID:15]\n| Name | Industry | Country / region | % |\n|------|----------|------------------|---|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 7.2 |\n| China Telecom Corp Ltd | Communication services | Hong Kong | 3.0 |\n| China Merchants Bank Co Ltd | Banks | Hong Kong | 2.4 |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.1 |\n| ICICI Bank Ltd | Banks | United States | 1.9 |\n\n### April 2025 [ID:18]\n| Name | Industry | Country / region | % |\n|------|----------|------------------|---|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 6.2 |\n| China Telecom Corp Ltd | Communication services | Hong Kong | 2.8 |\n| China Merchants Bank Co Ltd | Banks | Hong Kong | 2.3 |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.1 |\n| Tencent Holdings Ltd | Media & entertainment | Hong Kong | 1.9 |\n\n### May 2025 [ID:16]\n| Name | Industry | Country / region | % |\n|------|----------|------------------|---|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 6.7 |\n| China Telecom Corp Ltd | Communication services | Hong Kong | 2.9 |\n| China Merchants Bank Co Ltd | Banks | Hong Kong | 2.5 |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.3 |\n| Wiwynn Corp | Technology, hardware & equipment | Taiwan | 2.2 |\n\n### June 2025 [ID:13]\n| Name | Industry | Country / region % |\n|------|----------|--------------------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan 7.0 |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea 3.2 |\n| China Merchants Bank Co Ltd | Banks | Hong Kong 2.6 |\n| Wiwynn Corp | Technology, hardware & equipment | Taiwan 2.2 |\n| China Telecom Corp Ltd | Communication services | Hong Kong 2.0 |\n\n### July 2025 [ID:12]\n| Name | Industry | Country / region | % |\n|------|----------|------------------|---|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 6.3 |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.4 |\n| China Merchants Bank Co Ltd | Banks | Hong Kong | 2.0 |\n| Wiwynn Corp | Technology, hardware & equipment | Taiwan | 2.0 |\n| China Telecom Corp Ltd | Communication services | Hong Kong | 1.9 |\n\n### August 2025 [ID:10]\n| Name | Industry | Country / region | % |\n|------|----------|------------------|---|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 6.1 |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.3 |\n| Wiwynn Corp | Technology, hardware & equipment | Taiwan | 2.0 |\n| China Mobile Ltd | Telecommunication services | Hong Kong | 1.9 |\n| China Merchants Bank Co Ltd | Banks | Hong Kong | 1.8 |\n\n### September 2025 [ID:8]\n| Name | Industry | Country / region | % |\n|------|----------|------------------|---|\n| Taiwan Semiconductor Manufacturing Co Ltd | Information technology | Taiwan | 6.5 |\n| SK Hynix Inc | Information technology | South Korea | 2.3 |\n| Tencent Holdings Ltd | Communication services | Hong Kong | 2.0 |\n| Wiwynn Corp | Information technology | Taiwan | 2.0 |\n| China Mobile Ltd | Communication services | Hong Kong | 1.7 |\n\n## Fixed Income Top Holdings\n\n### January 2025 [ID:0]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.4 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0 |\n| Elect Global Investments Ltd 4.1% PERP | Real estate | Hong Kong | 0.9 |\n| Sumitomo Mitsui Financial Group Inc 6.6% PERP | Financials | Japan | 0.9 |\n| Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.8 |\n\n### February 2025 [ID:1]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.5 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0 |\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0 |\n| Bank Negara Indonesia Persero Tbk PT 4.3% PERP | Financials | Indonesia | 0.9 |\n| Elect Global Investments Ltd 4.1% PERP | Real estate | Hong Kong | 0.9 |\n\n### March 2025 [ID:17]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.5 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0 |\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0 |\n| Fortune Star BVI Ltd 8.5% 05/19/2028 | Industrials | China | 0.8 |\n| Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.8 |\n\n### April 2025 [ID:5]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.5 |\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.1 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0 |\n| Elect Global Investments Ltd 7.2% PERP | Real estate | Hong Kong | 0.9 |\n| Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.9 |\n\n### May 2025 [ID:4]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.4 |\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.1 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0 |\n| Elect Global Investments Ltd 7.2% PERP | Real estate | Hong Kong | 0.9 |\n| Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.8 |\n\n### June 2025 [ID:7]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.3 |\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 0.9 |\n| Elect Global Investments Ltd 7.2% PERP | Real estate | Hong Kong | 0.8 |\n| Fortune Star BVI Ltd 8.5% 05/19/2028 | Industrials | China | 0.7 |\n\n### July 2025 [ID:11]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.2 |\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.1 |\n| Far East Horizon Ltd 6% 10/01/2028 | Financials | Hong Kong | 0.9 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 0.8 |\n| Fortune Star BVI Ltd 5.05% 01/27/2027 | Industrials | China | 0.8 |\n\n### August 2025 [ID:14]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.1 |\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.1 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 0.8 |\n| Far East Horizon Ltd 6% 10/01/2028 | Financials | Hong Kong | 0.8 |\n| Fortune Star BVI Ltd 5.05% 01/27/2027 | Industrials | China | 0.8 |\n\n### September 2025 [ID:6]\n| Name | Sector | Country / region | % |\n|------|--------|------------------|---|\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0 |\n| Mitsubishi UFJ Financial Group Inc 6.35% PERP | Financials | Japan | 0.9 |\n| eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 0.7 |\n| Fortune Star BV I Ltd 5.05% 01/27/2027 | Industrials | China | 0.7 |\n| Sumitomo Mitsui Financial Group Inc 6.6% PERP | Financials | Japan | 0.7 |\n\n**Notes**: Taiwan Semiconductor Manufacturing Co Ltd consistently ranks as the top equity holding (6.1%-9.0%). In fixed income, Fortune Star (BVI) Ltd and eHi Car Services Ltd frequently appear top, with Japanese financials like Sumitomo Mitsui prominent. Credit ratings as of Sep 2025 show average BB+ for fixed income [ID:3]. Past performance is not indicative of future results [ID:3].\n\n## References\n**ID:0**  \nFile: VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md  \nReport Month: January 2025  \nFund Type: Asian Income Fund (Mixed)  \nChunk ID: 0  \nQuoted Content: \"**Fund:** Asian Income Fund **Report Month:** January 2025 ## Top holdings - fixed income\" (full table reproduced)  \nReason: Provides Jan fixed income top holdings.\n\n**ID:1**  \nFile: VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md  \nReport Month: February 2025  \nFund Type: Asian Income Fund (Mixed)  \nChunk ID: 1  \nQuoted Content: \"**Fund:** Asian Income Fund **Report Month:** February 2025 ## Top holdings - fixed income\" (full table)  \nReason: Feb fixed income top holdings.\n\n(Similar format for all used IDs: 4-19,22,23,3. Abbreviated for brevity; each table directly from source.)\n\n**ID:3**  \nFile: VP_Asian_Income_Fund_2025Sep_Credit_ratings.md  \nReport Month: September 2025  \nFund Type: Asian Income Fund (Mixed)  \nChunk ID: 3  \nQuoted Content: \"Average credit rating10 | BB+\"  \nReason: Contextual credit rating for fixed income.\n\nData sourced exclusively from retrieved knowledge. For latest NAVs/codes, see Sep 2025 [ID:29]. Investors should consult offering documents [ID:27].",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 18,
+        "expected_count": 18,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+          "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 18,
+        "unwanted_count": 12,
+        "wanted_avg": 0.3346335716964102,
+        "wanted_max": 0.3555401384626495,
+        "wanted_min": 0.3216700414506004,
+        "unwanted_avg": 0.29441993561704194,
+        "unwanted_max": 0.3563008607198376,
+        "unwanted_min": 0.2726800398903162,
+        "gap": 0.04021363607936829,
+        "gap_percent": "13.7%"
+      },
+      "timings": {
+        "t1_enhancement": 1.315504550933838,
+        "t2_retrieval": 1.1939606666564941,
+        "t3_generation": 51.073100328445435,
+        "total": 53.58256554603577
+      },
+      "time_distribution": {
+        "t1_enhancement": "2.5%",
+        "t2_retrieval": "2.2%",
+        "t3_generation": "95.3%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:09:47.971211"
+    },
+    {
+      "test_id": "TC002",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率",
+      "enhanced_question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率 (Dividend information, High Dividend Fund, Asian Income Fund, yield)",
+      "was_enhanced": true,
+      "answer": "### High Dividend Fund 与 Asian Income Fund 2025年8月股息率比较\n\n2025年8月（ex-dividend date: 29-8-2025），两个基金的MDis类别的年化股息率（annualized yield）整体相似，主要在4%-6%区间，但High Dividend Fund的部分类别（如NZD Hedged）更高，最高达6.2%[ID:14]；Asian Income Fund最高为5.1%，RMB Hedged最低2.5%[ID:1]。High Dividend Fund提供更多货币类别和Class B选项，平均水平略高（Class A2约4.2%-6.2%，Class B约3.2%-6.2%）[ID:14]，而Asian Income Fund Class A集中在2.5%-5.1%[ID:1]。\n\n#### 关键类别年化股息率对比表（Class A/A2 MDis，选常见货币）\n| 类别                  | High Dividend Fund (Class A2 MDis) | Asian Income Fund (Class A MDis) |\n|-----------------------|-----------------------------------|---------------------------------|\n| USD Unhedged/Hedged  | 5.0%[ID:14]                      | 5.0%[ID:1]                     |\n| HKD Unhedged         | 5.0%[ID:14]                      | 5.0%[ID:1]                     |\n| AUD Hedged           | 4.2%[ID:14]                      | 4.2%[ID:1]                     |\n| CAD Hedged           | 4.6%[ID:14]                      | 4.7%[ID:1]                     |\n| NZD Hedged           | 6.2%[ID:14]                      | 5.1%[ID:1]                     |\n| RMB Hedged           | 3.2%[ID:14]                      | 2.5%[ID:1]                     |\n| RMB Unhedged         | 5.1%[ID:14]                      | 5.0%[ID:1]                     |\n\n**注意**：股息不保证，可能从本金支付，过去不代表未来[ID:1][ID:14]。High Dividend Fund还有Class B MDIS（e.g., USD 4.9%，NZD 6.2%），提供类似水平[ID:14]。\n\n### References\n**File:** VP_Asian_Income_Fund_2025Aug_Dividend_information.md  \n**Report Month:** August 2025  \n**Fund:** Asian Income Fund  \n**Chunk ID:** 1  \n**Quoted Content:** \"Dividend information - Class MDis 2 ... Annualized yield: Class A AUD Hedged MDis 4.2%, ... Class A USD Unhedged MDis 5.0%\"  \n**Reason for Use:** 提供Asian Income Fund 2025年8月所有Class A MDis年化股息率，直接支持比较数据。\n\n**File:** VP_High_Dividend_Fund_2025Aug_Dividend_information.md  \n**Report Month:** August 2025  \n**Fund:** High Dividend Fund  \n**Chunk ID:** 14  \n**Quoted Content:** \"Dividend information - Class MDis ... Annualized yield: Class A2 USD MDis 5.0%, Class A2 NZD Hedged MDis 6.2%, ...\"  \n**Reason for Use:** 提供High Dividend Fund 2025年8月Class A2及B MDis年化股息率，直接支持比较数据。",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 2,
+        "expected_count": 2,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Aug_Dividend_information.md",
+          "VP_High_Dividend_Fund_2025Aug_Dividend_information.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 2,
+        "unwanted_count": 28,
+        "wanted_avg": 0.4146095518254605,
+        "wanted_max": 0.4322194793931081,
+        "wanted_min": 0.3969996242578129,
+        "unwanted_avg": 0.45072566453787155,
+        "unwanted_max": 0.544319425882568,
+        "unwanted_min": 0.37236458237224457,
+        "gap": -0.03611611271241105,
+        "gap_percent": "-8.0%"
+      },
+      "timings": {
+        "t1_enhancement": 1.0487141609191895,
+        "t2_retrieval": 1.225853443145752,
+        "t3_generation": 40.1514458656311,
+        "total": 42.426013469696045
+      },
+      "time_distribution": {
+        "t1_enhancement": "2.5%",
+        "t2_retrieval": "2.9%",
+        "t3_generation": "94.6%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:10:30.669419"
+    },
+    {
+      "test_id": "TC003",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "Show asset allocation by sector for Asian Income Fund September 2025",
+      "enhanced_question": "Show asset allocation by sector for Asian Income Fund September 2025 (Asset type by sector, asset allocation, sector, Asian Income Fund)",
+      "was_enhanced": true,
+      "answer": "## Asset Allocation by Sector - Asian Income Fund (September 2025)\n\nThe Asian Income Fund had the following asset allocation by sector as of the September 2025 report [ID:0].\n\n**Asset type by sector (%)** [ID:0]\n\n| Sector                  | Equities | Fixed Income | Total |\n|-------------------------|----------|--------------|-------|\n| Information technology  | 22.8     | 2.2          | 25.0  |\n| Financials              | 11.4     | 11.3         | 22.7  |\n| Industrials             | 6.0      | 4.7          | 10.7  |\n| Consumer discretionary  | 6.0      | 2.9          | 8.9   |\n| Communication services  | 6.9      | 0.7          | 7.6   |\n| Real estate             | 3.8      | 1.7          | 5.5   |\n| Energy                  | 1.6      | 3.5          | 5.1   |\n| Materials               | 2.6      | 1.5          | 4.1   |\n| Consumer staples        | 3.0      | 0.5          | 3.5   |\n| Utilities               | 1.6      | 0.9          | 2.5   |\n| Health care             | 1.1      | -            | 1.1   |\n| Sovereign               | -        | 1.0          | 1.0   |\n| Cash^7                  | -        | -            | 2.3   |\n| **Total**               | **66.8** | **30.9**     | **100.0** | [ID:0]\n\n**Notes:** [ID:0]  \n- Equities: 66.8%  \n- Fixed Income: 30.9%  \n- Cash includes receivables and payables (except cash for collaterals and margins).  \n- Data sourced directly from the September 2025 report.\n\n### References\n**File:** VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md [ID:0]  \n**Report Month:** September 2025 [ID:0]  \n**Fund Type:** Not specified (Fund: Asian Income Fund) [ID:0]  \n**Chunk ID:** 0 [ID:0]  \n**Quoted Content:** \"**Fund:** Asian Income Fund  \n**Report Month:** September 2025\n## Asset type by sector\n*Asset type by sector  $(\\%)$*\n| 0                      | 1        | 2            | 3     |\n|:-----------------------|:---------|:-------------|:------|\n| nan                    | Equities | Fixed Income | Total |\n| Information technology | 22.8     | 2.2          | 25.0  |\n...  \n| Total                  | 66.8     | 30.9         | 100.0 |\" [ID:0]  \n**Reason for Use:** This chunk provides the exact asset type by sector breakdown for the Asian Income Fund in September 2025, matching the query's specific temporal and fund requirements. No other chunks match the September 2025 report month.",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 1,
+        "expected_count": 1,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 1,
+        "unwanted_count": 29,
+        "wanted_avg": 0.5774628638696185,
+        "wanted_max": 0.5774628638696185,
+        "wanted_min": 0.5774628638696185,
+        "unwanted_avg": 0.4843517172469843,
+        "unwanted_max": 0.5834061518580769,
+        "unwanted_min": 0.39815413960330165,
+        "gap": 0.09311114662263426,
+        "gap_percent": "19.2%"
+      },
+      "timings": {
+        "t1_enhancement": 1.8915948867797852,
+        "t2_retrieval": 1.2387433052062988,
+        "t3_generation": 31.03871726989746,
+        "total": 34.169055461883545
+      },
+      "time_distribution": {
+        "t1_enhancement": "5.5%",
+        "t2_retrieval": "3.6%",
+        "t3_generation": "90.8%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:11:05.112402"
+    },
+    {
+      "test_id": "TC004",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "What is the credit rating distribution of Asian Income Fund?",
+      "enhanced_question": "What is the credit rating distribution of Asian Income Fund? (Credit ratings, Asian Income Fund, bond holdings)",
+      "was_enhanced": true,
+      "answer": "### Credit Rating Distribution of Asian Income Fund's Fixed Income Holdings\n\nThe Asian Income Fund reports credit ratings for its fixed income holdings across multiple monthly reports in 2025. The distribution categorizes bonds by rating (using the lowest rating from S&P, Moody's, or Fitch), with percentages representing portfolio allocation.[ID:0][ID:1][ID:2][ID:3][ID:4][ID:5][ID:6][ID:7][ID:8] Investment grade typically includes A and BBB, while BB and below are high yield; non-rated bonds are also disclosed.[ID:0] The weighted average credit rating is consistently BB or BB+ across reports, calculated as an asset-weighted average rounded to the nearest rating (note: this is not a statistical default risk measure).[ID:0][ID:1][ID:2][ID:3][ID:4][ID:5][ID:6][ID:7][ID:8]\n\n#### Key Distributions by Report Month (Selected Examples)\nDistributions vary slightly month-to-month due to portfolio changes. Below are verbatim tables from representative reports:\n\n**September 2025 [ID:2]**  \n*Credit ratings of fixed income*  \n| Rating     | Allocation | Category          | IG/HY/Avg |\n|------------|------------|-------------------|-----------|\n| A          | 2.3%      | nan               | nan       |\n| BBB        | 9.8%      | nan               | nan       |\n| BB         | 9.6%      | Investment grade  | 12.1%     |\n| B & Below  | 5.6%      | High yield        | 15.2%     |\n| Non-rated  | 3.6%      | Average credit rating | BB+   |[ID:2]\n\n**August 2025 [ID:8]**  \n| A          | 1.6% | nan              | nan   |\n| BBB        | 9.3% | nan              | nan",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 9,
+        "expected_count": 9,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Sep_Credit_ratings.md",
+          "VP_Asian_Income_Fund_2025Jun_Credit_ratings.md",
+          "VP_Asian_Income_Fund_2025Jan_Credit_ratings.md",
+          "VP_Asian_Income_Fund_2025May_Credit_ratings.md",
+          "VP_Asian_Income_Fund_2025Jul_Credit_ratings.md",
+          "VP_Asian_Income_Fund_2025Feb_Credit_ratings.md",
+          "VP_Asian_Income_Fund_2025Apr_Credit_ratings.md",
+          "VP_Asian_Income_Fund_2025Mar_Credit_ratings.md",
+          "VP_Asian_Income_Fund_2025Aug_Credit_ratings.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 9,
+        "unwanted_count": 21,
+        "wanted_avg": 0.7120943292659876,
+        "wanted_max": 0.714206717270786,
+        "wanted_min": 0.708499494657575,
+        "unwanted_avg": 0.3881804186794992,
+        "unwanted_max": 0.42444023042633316,
+        "unwanted_min": 0.3416336575947426,
+        "gap": 0.3239139105864884,
+        "gap_percent": "83.4%"
+      },
+      "timings": {
+        "t1_enhancement": 0.9209866523742676,
+        "t2_retrieval": 0.9883692264556885,
+        "t3_generation": 40.59290838241577,
+        "total": 42.50226426124573
+      },
+      "time_distribution": {
+        "t1_enhancement": "2.2%",
+        "t2_retrieval": "2.3%",
+        "t3_generation": "95.5%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:11:47.870730"
+    },
+    {
+      "test_id": "TC005",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "惠理亚洲收益基金2025年Q1业绩表现",
+      "enhanced_question": "惠理亚洲收益基金2025年Q1业绩表现 (Performance update, Asian Income Fund, performance, return)",
+      "was_enhanced": true,
+      "answer": "### 惠理亚洲收益基金 (Asian Income Fund) 2025年Q1业绩表现\n\n惠理亚洲收益基金Class A USD Unhedged Acc在2025年第一季度（截至3月）累计回报（Year-to-Date）为**+1.2%** [ID:11][ID:24]。季度内月度表现为1月**+0.5%**、2月**+1.1%**、3月**-0.3%** [ID:24]。\n\n详细业绩更新（截至2025年3月）[ID:11]：\n| 指标                          | 回报率          |\n|-------------------------------|-----------------|\n| Year-to-Date (YTD)            | +1.2%          |\n| One month                     | -0.3%          |\n| One year                      | +8.2%          |\n| Three years                   | +6.4%          |\n| Five years                    | +42.3%         |\n| Total return since launch     | +31.1%         |\n| Annualized return since launch| +3.7%          |\n\n**注意**：过去业绩不代表未来表现。投资者应参考最新产品关键事实声明及招股说明书，并咨询专业财务顾问[ID:16]。\n\n### 参考来源\n**File:** VP_Asian_Income_Fund_2025Mar_Performance_update.md [ID:11]  \n**Report Month:** March 2025  \n**Fund Type:** Asian Income Fund (Mixed - Equities & Fixed Income)  \n**Quoted Content:** \"*Performance update* | nan | The Fund (Class A USD Unhedged Acc) | Year-to-date +1.2% | One month -0.3% | One year +8.2% | Three years +6.4% | Five years +42.3% | Total return since launch +31.1% | Annualized return since launch ^ +3.7%\"  \n**Reason for Use:** 直接提供Q1结束时（3月）的综合业绩数据，支持YTD及多期回报。\n\n**File:** VP_Asian_Income_Fund_2025Mar_Monthly_performance.md [ID:24]  \n**Report Month:** March 2025  \n**Fund Type:** Asian Income Fund (Mixed - Equities & Fixed Income)  \n**Quoted Content:** \"2025 (YTD) | +0.5% | +1.1% | -0.3% | nan | ... | +1.2%\"  \n**Reason for Use:** 提供Q1逐月回报细节，与Performance update的YTD一致，支持季度分解分析。\n\n**File:** VPMM_KFS_EM_Eng-2025 08 11.pdf [ID:16]  \n**Report Month:** Not specified (2025 general)  \n**Fund Type:** Asian Income Fund  \n**Quoted Content:** \"Investors should seek advice from a financial adviser before making any investment... past performance is not indicative of future results.\"  \n**Reason for Use:** 提供合规免责声明，确保回答符合监管要求。",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 3,
+        "expected_count": 3,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Feb_Monthly_performance.md",
+          "VP_Asian_Income_Fund_2025Mar_Monthly_performance.md",
+          "VP_Asian_Income_Fund_2025Jan_Monthly_performance.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 3,
+        "unwanted_count": 27,
+        "wanted_avg": 0.32192721072353614,
+        "wanted_max": 0.3231868908810531,
+        "wanted_min": 0.32127020331908823,
+        "unwanted_avg": 0.36100131709444,
+        "unwanted_max": 0.39230213342906545,
+        "unwanted_min": 0.3212561186405935,
+        "gap": -0.03907410637090386,
+        "gap_percent": "-10.8%"
+      },
+      "timings": {
+        "t1_enhancement": 1.1324732303619385,
+        "t2_retrieval": 0.9696462154388428,
+        "t3_generation": 43.046281576156616,
+        "total": 45.1484010219574
+      },
+      "time_distribution": {
+        "t1_enhancement": "2.5%",
+        "t2_retrieval": "2.1%",
+        "t3_generation": "95.3%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:12:33.427795"
+    },
+    {
+      "test_id": "TC006",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "What are NAV codes for Asian Income Fund Class A?",
+      "enhanced_question": "What are NAV codes for Asian Income Fund Class A? (NAVs & codes, NAV, fund code, ISIN, Asian Income Fund)",
+      "was_enhanced": true,
+      "answer": "## Asian Income Fund - Class A Share Classes (NAVs, ISINs, Bloomberg Codes)\n\nThe Asian Income Fund Class A share classes have consistent ISIN and Bloomberg codes across monthly reports. NAV values vary by reporting month. Below is a summary table based on verified data from multiple reports, with the **latest available NAVs as of September 2025** [ID:3]. Codes confirmed identical across all listed reports (e.g., January to September 2025) [ID:0][ID:1][ID:2][ID:3][ID:4][ID:5][ID:6][ID:7][ID:8].\n\n| Share Class                  | NAV (Sep 2025) | ISIN          | Bloomberg Code |\n|------------------------------|----------------|---------------|----------------|\n| Class A USD Unhedged Acc     | 15.74         | HK0000352374 | VPUSUAU HK    [ID:3] |\n| Class A AUD Hedged MDis      | 9.53          | HK0000352259 | VPAAHMU HK    [ID:3] |\n| Class A CAD Hedged MDis      | 9.80          | HK0000352267 | VPACHMU HK    [ID:3] |\n| Class A HKD Unhedged MDis    | 10.41         | HK0000352291 | VPAHUMU HK    [ID:3] |\n| Class A NZD Hedged MDis      | 9.61          | HK0000352309 | VPANHMU HK    [ID:3] |\n| Class A RMB Hedged MDis      | 10.15         | HK0000352317 | VPARHMU HK    [ID:3] |\n| Class A RMB Unhedged MDis    | 11.51         | HK0000352325 | VPARUMU HK    [ID:3] |\n| Class A USD Unhedged MDis    | 10.43         | HK0000352382 | VPAUHMU HK    [ID:3] |\n| Class A HKD Unhedged Acc     | 15.71         | HK0000352283 | VPAHUAU HK    [ID:3] |\n\n**Notes**:\n- These 9 Class A share classes appear consistently in all retrieved NAV reports for the fund.\n- For prior months' NAVs (e.g., Aug 2025: Class A USD Unhedged Acc = 15.23 [ID:0]; Jul 2025: 14.84 [ID:1]), refer to specific reports below.\n- No data for other Class A variants or different funds (e.g., High Dividend or Classic Fund) matches this query.\n\n## References\n**File:** VP_Asian_Income_Fund_2025Sep_NAVs_codes.md  \n**Report Month:** September 2025  \n**Fund:** Asian Income Fund  \n**Chunk ID:** 3  \n**Quoted Content:** \"**Fund:** Asian Income Fund **Report Month:** September 2025 ## NAVs & codes ... | Class A USD Unhedged Acc | 15.74 | HK0000352374 | VPUSUAU HK | ...\"  \n**Reason for Use:** Provides the most recent NAVs, ISINs, and Bloomberg codes for all listed Class A share classes, directly matching query.\n\n**File:** VP_Asian_Income_Fund_2025Aug_NAVs_codes.md  \n**Report Month:** August 2025  \n**Fund:** Asian Income Fund  \n**Chunk ID:** 0  \n**Quoted Content:** \"**Fund:** Asian Income Fund **Report Month:** August 2025 ## NAVs & codes ... | Class A USD Unhedged Acc | 15.23 | HK0000352374 | VPUSUAU HK | ...\"  \n**Reason for Use:** Confirms identical ISIN/Bloomberg codes and prior NAV for cross-validation.\n\n(Similar structure applies to IDs 1,2,4-8 for months Jul/Apr/Mar/May/Jan/Jun/Feb 2025; codes unchanged, NAVs vary progressively upward.)",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 9,
+        "expected_count": 9,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Mar_NAVs_codes.md",
+          "VP_Asian_Income_Fund_2025Jun_NAVs_codes.md",
+          "VP_Asian_Income_Fund_2025Jan_NAVs_codes.md",
+          "VP_Asian_Income_Fund_2025Aug_NAVs_codes.md",
+          "VP_Asian_Income_Fund_2025Sep_NAVs_codes.md",
+          "VP_Asian_Income_Fund_2025May_NAVs_codes.md",
+          "VP_Asian_Income_Fund_2025Apr_NAVs_codes.md",
+          "VP_Asian_Income_Fund_2025Feb_NAVs_codes.md",
+          "VP_Asian_Income_Fund_2025Jul_NAVs_codes.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 9,
+        "unwanted_count": 21,
+        "wanted_avg": 0.6475426445971895,
+        "wanted_max": 0.6481681415278646,
+        "wanted_min": 0.6464752331633685,
+        "unwanted_avg": 0.5179182590436484,
+        "unwanted_max": 0.60632865943171,
+        "unwanted_min": 0.49818725362822913,
+        "gap": 0.12962438555354105,
+        "gap_percent": "25.0%"
+      },
+      "timings": {
+        "t1_enhancement": 1.0911691188812256,
+        "t2_retrieval": 1.0909295082092285,
+        "t3_generation": 41.619553327560425,
+        "total": 43.80165195465088
+      },
+      "time_distribution": {
+        "t1_enhancement": "2.5%",
+        "t2_retrieval": "2.5%",
+        "t3_generation": "95.0%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:13:17.609050"
+    },
+    {
+      "test_id": "TC007",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "Compare fee structures between Asian Income Fund and High Dividend Fund",
+      "enhanced_question": "Compare fee structures between Asian Income Fund and High Dividend Fund (fee structure, fee, Asian Income Fund, High Dividend Fund)",
+      "was_enhanced": true,
+      "answer": "# Fee Structure Comparison: Asian Income Fund vs. High Dividend Fund\n\nThe fee structures for both funds are detailed in Class A shares across multiple 2025 monthly reports. Fees are generally consistent within each fund over time, with minor table formatting variations (e.g., \"nan\" placeholders). Below is a side-by-side summary focusing on key elements: share classes, minimum subscriptions, subscription/redemption fees, management fees, and performance fees [ID:0][ID:1][ID:9][ID:11].\n\n## Key Similarities\n- **Minimum subsequent subscription**: USD5,000 or equivalent across relevant classes [ID:0][ID:9].\n- **Subscription fee**: Up to 5% where specified [ID:0][ID:9].\n- **Redemption fee**: Nil across all classes and reports [ID:0][ID:9].\n\n## Key Differences\n\n| Aspect                  | Asian Income Fund (Class A) [ID:0][ID:2] | High Dividend Fund [ID:9][ID:11] |\n|-------------------------|------------------------------------------|---------------------------------|\n| **Share Classes**      | Acc (Unhedged: HKD/SGD/USD; Hedged: SGD)<br>MDis (Unhedged: HKD/RMB/SGD/USD; Hedged: AUD/CAD/EUR/NZD/RMB/SGD) [ID:0] | A1, A2 MDis, A Acc, B (multi-currency options, e.g., USD/HKD/AUD etc. per class) [ID:9] |\n| **Minimum Subscription**| USD10,000 or equivalent (both Acc/MDis) [ID:0] | USD10,000 or HKD equivalent (A1); USD10,000/HKD80,000/etc. (A2 MDis); HKD80,000/RMB60,000 (A Acc); USD10,000 equiv. (B) [ID:9] |\n| **Management Fee**     | 1.5% p.a. (uniform for Acc/MDis) [ID:0] | 1.25% p.a. (A1/A2 MDis); 1.50% p.a. (A Acc/B) [ID:9][ID:11] |\n| **Performance Fee**    | None (\"nan\") [ID:0]                     | 15% of profit (High-on-high principle) for A1/A2; Nil for A Acc/B [ID:9] |\n\n**Notes**:\n- Asian Income Fund has a simpler, uniform structure focused on Acc/MDis with higher management fees but no performance fee [ID:0][ID:8].\n- High Dividend Fund offers more class variety with potentially lower management fees on select classes but includes performance fees on others [ID:9][ID:15]. Some reports show partial \"nan\" entries, but core data aligns [ID:10][ID:12].\n- Data consistent across 2025 reports (Jan-Sep); no material changes observed [ID:0][ID:1][ID:9][ID:17].\n\n## References\n**File:** VP_Asian_Income_Fund_2025Sep_Fee_structure.md  \n**Report Month:** September 2025  \n**Fund:** Asian Income Fund  \n**Chunk ID:** 0  \n**Quoted Content:** \"Management fee 1.5% p.a.; Performance fee nan; Subscription fee Up to 5%; Redemption fee Nil; Minimum subscription USD10,000 or equivalent\"  \n**Reason for Use:** Provides complete, recent fee details for Asian Income Fund Class A Acc/MDis.\n\n**File:** VP_High_Dividend_Fund_2025Apr_Fee_structure.md  \n**Report Month:** April 2025  \n**Fund:** High Dividend Fund  \n**Chunk ID:** 9  \n**Quoted Content:** \"Management fee 1.25% p.a. (A1/A2), 1.50% p.a. (A Acc/B); Performance fee8 15% of profit (High-on-high principle) for A1/A2, Nil for others; Subscription fee Up to 5%\"  \n**Reason for Use:** Details multi-class structure and fee variations for High Dividend Fund.\n\n**File:** VP_High_Dividend_Fund_2025Feb_Fee_structure.md  \n**Report Month:** February 2025  \n**Chunk ID:** 11  \n**Quoted Content:** Similar to ID:9, confirming consistency in minimums and fees.  \n**Reason for Use:** Cross-validates High Dividend fees across months.",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 2,
+        "expected_count": 2,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Sep_Fee_structure.md",
+          "VP_High_Dividend_Fund_2025Sep_Fee_structure.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 2,
+        "unwanted_count": 28,
+        "wanted_avg": 0.4229162310183323,
+        "wanted_max": 0.43008563400193434,
+        "wanted_min": 0.4157468280347303,
+        "unwanted_avg": 0.38911400813689584,
+        "unwanted_max": 0.4296319063688343,
+        "unwanted_min": 0.3044082935908737,
+        "gap": 0.03380222288143647,
+        "gap_percent": "8.7%"
+      },
+      "timings": {
+        "t1_enhancement": 1.1738121509552002,
+        "t2_retrieval": 1.2886486053466797,
+        "t3_generation": 34.0563383102417,
+        "total": 36.51879906654358
+      },
+      "time_distribution": {
+        "t1_enhancement": "3.2%",
+        "t2_retrieval": "3.5%",
+        "t3_generation": "93.3%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:13:54.421612"
+    },
+    {
+      "test_id": "TC008",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "Portfolio characteristics of Asian Income Fund from May to August 2025",
+      "enhanced_question": "Portfolio characteristics of Asian Income Fund from May to August 2025 (Portfolio characteristics, portfolio, Asian Income Fund)",
+      "was_enhanced": true,
+      "answer": "### Asian Income Fund - Portfolio Characteristics (May to August 2025)\n\nThe portfolio characteristics for the **Asian Income Fund** (Class A USD Unhedged Acc) from May to August 2025 are summarized below. Key metrics include **Portfolio yield** (weighted average of dividend yield for equities and Yield to Worst for fixed income securities) [ID:10] and **Annualized volatility (3 years)** (standard deviation based on monthly returns over the past 3 years) [ID:10].\n\n| Report Month | As at Date    | Portfolio Yield | Annualized Volatility (3 years) |\n|--------------|---------------|-----------------|---------------------------------|\n| May 2025    | 30 May 2025  | 5.4% [ID:4]    | 12.8% [ID:4]                   |\n| June 2025   | 30 Jun 2025  | 5.0% [ID:2]    | 12.5% [ID:2]                   |\n| July 2025   | 31 Jul 2025  | 4.5% [ID:3]    | 12.4% [ID:3]                   |\n| August 2025 | 29 Aug 2025  | 4.5% [ID:0]    | 12.5% [ID:0]                   |\n\n**Observations**:\n- Portfolio yield declined from 5.4% in May to 4.5% in July and August [ID:0][ID:3][ID:4].\n- Volatility remained stable around 12.4-12.8% across the period [ID:0][ID:2][ID:3][ID:4].\n\nData is specific to the Asian Income Fund, a mixed-asset strategy aiming to maximize return and income through Asian equities and fixed income while targeting lower volatility [ID:5].\n\n### References\n**File:** VP_Asian_Income_Fund_2025Aug_Portfolio_characteristics.md  \n**Report Month:** August 2025  \n**Fund Type:** Asian Income Fund  \n**Chunk ID:** 0  \n**Quoted Content:** \"Portfolio yield 5 | 4.5% ... Annualized volatility (3 years) 6 | 12.5%\"  \n**Reason for Use:** Provides August 2025 metrics matching user query timeframe.\n\n**File:** VP_Asian_Income_Fund_2025Jun_Portfolio_characteristics.md  \n**Report Month:** June 2025  \n**Fund Type:** Asian Income Fund  \n**Chunk ID:** 2  \n**Quoted Content:** \"Portfolio yield 5 | 5.0% ... Annualized volatility (3 years) 6 | 12.5%\"  \n**Reason for Use:** Provides June 2025 metrics matching user query timeframe.\n\n**File:** VP_Asian_Income_Fund_2025Jul_Portfolio_characteristics.md  \n**Report Month:** July 2025  \n**Fund Type:** Asian Income Fund  \n**Chunk ID:** 3  \n**Quoted Content:** \"Portfolio yield 5 | 4.5% ... Annualized volatility (3 years) 6 | 12.4%\"  \n**Reason for Use:** Provides July 2025 metrics matching user query timeframe.\n\n**File:** VP_Asian_Income_Fund_2025May_Portfolio_characteristics.md  \n**Report Month:** May 2025  \n**Fund Type:** Asian Income Fund  \n**Chunk ID:** 4  \n**Quoted Content:** \"Portfolio yield 5 | 5.4% ... Annualized volatility (3 years) 6 | 12.8%\"  \n**Reason for Use:** Provides May 2025 metrics matching user query timeframe.\n\n**File:** VP_Asian_Income_Fund_2025Aug_Investment_objective.md  \n**Report Month:** August 2025  \n**Fund Type:** Asian Income Fund  \n**Chunk ID:** 5  \n**Quoted Content:** \"The Fund aims to maximize return and income by investing in Asian equities, Asian fixed income securities...\"  \n**Reason for Use:** Confirms fund's mixed-asset nature for context.\n\n**File:** VP_Asian_Income_Fund_2025Aug_Credit_ratings.md  \n**Report Month:** August 2025  \n**Fund Type:** Asian Income Fund  \n**Chunk ID:** 10  \n**Quoted Content:** \"5. Source: FactSet & Bloomberg. It refers to the weighted average of dividend yield (equities) & Yield to Worst (fixed income securities). 6. Volatility is a measure of the theoretical risk...\"  \n**Reason for Use:** Defines footnotes for yield and volatility metrics.",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 4,
+        "expected_count": 4,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025May_Portfolio_characteristics.md",
+          "VP_Asian_Income_Fund_2025Jul_Portfolio_characteristics.md",
+          "VP_Asian_Income_Fund_2025Aug_Portfolio_characteristics.md",
+          "VP_Asian_Income_Fund_2025Jun_Portfolio_characteristics.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 4,
+        "unwanted_count": 26,
+        "wanted_avg": 0.7029466414830311,
+        "wanted_max": 0.7296800308847863,
+        "wanted_min": 0.6915031472838016,
+        "unwanted_avg": 0.5832632353692303,
+        "unwanted_max": 0.7744995701551917,
+        "unwanted_min": 0.5198635388342088,
+        "gap": 0.1196834061138008,
+        "gap_percent": "20.5%"
+      },
+      "timings": {
+        "t1_enhancement": 1.273611307144165,
+        "t2_retrieval": 0.9910280704498291,
+        "t3_generation": 37.40772795677185,
+        "total": 39.672367334365845
+      },
+      "time_distribution": {
+        "t1_enhancement": "3.2%",
+        "t2_retrieval": "2.5%",
+        "t3_generation": "94.3%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:14:35.145274"
+    },
+    {
+      "test_id": "TC009",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "哪些月份Asian Income Fund持有台积电？",
+      "enhanced_question": "哪些月份Asian Income Fund持有台积电？ (top holdings, equities, Taiwan Semiconductor, TSMC)",
+      "was_enhanced": true,
+      "answer": "### Asian Income Fund 持有台积电 (Taiwan Semiconductor Manufacturing Co Ltd) 的月份\n\n根据知识库中的 top holdings - equities 数据，**Asian Income Fund** 在 **2025年** 的以下月份均将 **Taiwan Semiconductor Manufacturing Co Ltd**（台积电）列为前五大股权持股（通常为第一大持股）[ID:0][ID:1][ID:2][ID:3][ID:4][ID:5][ID:6][ID:7][ID:8]：\n\n- **January 2025**：6.7%[ID:3]\n- **February 2025**：8.2%[ID:6]\n- **March 2025**：7.2%[ID:4]\n- **April 2025**：6.2%[ID:2]\n- **May 2025**：6.7%[ID:0]\n- **June 2025**：7.0%[ID:1]\n- **July 2025**：6.3%[ID:7]\n- **August 2025**：6.1%[ID:5]\n- **September 2025**：6.5%[ID:8]\n\n**注意**：这些数据仅限于检索到的 top holdings - equities 报告，未发现其他月份的相关信息。持股比例为报告期末数据，仅反映前五大股权持股。\n\n### References\n**File:** VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md  \n**Report Month:** May 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 0  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 6.7\"  \n**Reason for Use:** 确认 May 2025 月份持股及比例。\n\n**File:** VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md  \n**Report Month:** June 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 1  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 7.0\"  \n**Reason for Use:** 确认 June 2025 月份持股及比例。\n\n**File:** VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md  \n**Report Month:** April 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 2  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 6.2\"  \n**Reason for Use:** 确认 April 2025 月份持股及比例。\n\n**File:** VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md  \n**Report Month:** January 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 3  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 9.0\"  \n**Reason for Use:** 确认 January 2025 月份持股及比例。\n\n**File:** VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md  \n**Report Month:** March 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 4  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 7.2\"  \n**Reason for Use:** 确认 March 2025 月份持股及比例。\n\n**File:** VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md  \n**Report Month:** August 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 5  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 6.1\"  \n**Reason for Use:** 确认 August 2025 月份持股及比例。\n\n**File:** VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md  \n**Report Month:** February 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 6  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 8.2\"  \n**Reason for Use:** 确认 February 2025 月份持股及比例。\n\n**File:** VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md  \n**Report Month:** July 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 7  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 6.3\"  \n**Reason for Use:** 确认 July 2025 月份持股及比例。\n\n**File:** VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md  \n**Report Month:** September 2025  \n**Fund Type:** Equities  \n**Chunk ID:** 8  \n**Quoted Content:** \"Taiwan Semiconductor Manufacturing Co Ltd ... Taiwan 6.5\"  \n**Reason for Use:** 确认 September 2025 月份持股及比例。",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 9,
+        "expected_count": 9,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+          "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 9,
+        "unwanted_count": 21,
+        "wanted_avg": 0.39235282875520955,
+        "wanted_max": 0.3935347021155473,
+        "wanted_min": 0.39034370570332677,
+        "unwanted_avg": 0.32414375526821204,
+        "unwanted_max": 0.33440591074690473,
+        "unwanted_min": 0.30323944562962557,
+        "gap": 0.0682090734869975,
+        "gap_percent": "21.0%"
+      },
+      "timings": {
+        "t1_enhancement": 1.0654637813568115,
+        "t2_retrieval": 1.2928617000579834,
+        "t3_generation": 33.249403953552246,
+        "total": 35.60772943496704
+      },
+      "time_distribution": {
+        "t1_enhancement": "3.0%",
+        "t2_retrieval": "3.6%",
+        "t3_generation": "93.4%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:15:10.987582"
+    },
+    {
+      "test_id": "TC010",
+      "mode": "enhanced",
+      "use_chat": true,
+      "question": "What is the investment objective of Asian Income Fund?",
+      "enhanced_question": "What is the investment objective of Asian Income Fund? (investment objective, investment goal, fund objective)",
+      "was_enhanced": true,
+      "answer": "## Investment Objective of Asian Income Fund\n\nThe Asian Income Fund aims to **maximize return and income** by investing in Asian equities, Asian fixed income securities, and other assets relating to Asian companies that are listed in Asia, or have registered offices in Asia, or generate a predominant share of their sales and/or profits in Asia [ID:0][ID:1][ID:2][ID:3][ID:4][ID:5][ID:6][ID:7][ID:8][ID:16]. It also seeks to **achieve lower portfolio volatility** through active screening and selection of lower volatility equities and fixed income securities [ID:0][ID:1][ID:2][ID:3][ID:4][ID:5][ID:6][ID:7][ID:8][ID:16].\n\nThis objective is consistent across multiple monthly reports from January to September 2025, as well as the fund's Key Facts Statement [ID:0][ID:1][ID:2][ID:3][ID:4][ID:5][ID:6][ID:7][ID:8][ID:16]. There can be no assurance that the fund will achieve its investment objective [ID:16].\n\n### References\n**File:** VP_Asian_Income_Fund_2025Jul_Investment_objective.md  \n**Report Month:** July 2025  \n**Fund Type:** Mixed (Asian equities and fixed income)  \n**Chunk ID:** 0  \n**Quoted Content:** \"The Fund aims to maximize return and income by investing in Asian equities, Asian fixed income securities and other assets relating to Asian companies that are listed in Asia, or have registered offices in Asia or generate a predominant share of their sales and/or their profits in Asia. The Fund also aims to achieve lower portfolio volatility by actively screening and selecting a combination of lower volatility equities and fixed income securities.\"  \n**Reason for Use:** Direct statement of the investment objective; representative of identical content across IDs 0-8.\n\n**File:** VPMM_KFS_EM_Eng-2025 08 11.pdf  \n**Report Month:** Not specified (Key Facts Statement, August 2025 context)  \n**Fund Type:** Mixed (Asian equities and fixed income)  \n**Chunk ID:** 16  \n**Quoted Content:** \"The investment objective of the Sub-Fund is primarily to maximize return and income by investing in Asian equities, Asian fixed income securities and other assets relating to Asian companies that are listed, or have their registered offices in Asia or that generate a predominant share of their sales and/or their profits in Asia. The Sub-Fund aims to deliver lower portfolio volatility by actively screening and selecting a combination of lower volatility equities and fixed income securities. There can be no assurance that the Sub-Fund will achieve its investment objective.\"  \n**Reason for Use:** Confirms the objective with additional strategy details and disclaimer, matching monthly reports.",
+      "chat_refs_count": 30,
+      "coverage": {
+        "matched_count": 9,
+        "expected_count": 9,
+        "coverage": 1.0,
+        "matched_chunks": [
+          "VP_Asian_Income_Fund_2025Feb_Investment_objective.md",
+          "VP_Asian_Income_Fund_2025Jan_Investment_objective.md",
+          "VP_Asian_Income_Fund_2025May_Investment_objective.md",
+          "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+          "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+          "VP_Asian_Income_Fund_2025Jun_Investment_objective.md",
+          "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+          "VP_Asian_Income_Fund_2025Jul_Investment_objective.md",
+          "VP_Asian_Income_Fund_2025Aug_Investment_objective.md"
+        ],
+        "missing_chunks": []
+      },
+      "scores": {
+        "wanted_count": 9,
+        "unwanted_count": 21,
+        "wanted_avg": 0.6822230946420517,
+        "wanted_max": 0.683224464944735,
+        "wanted_min": 0.6812659936482659,
+        "unwanted_avg": 0.5413871840299321,
+        "unwanted_max": 0.5713701544945854,
+        "unwanted_min": 0.47839178906760177,
+        "gap": 0.14083591061211953,
+        "gap_percent": "26.0%"
+      },
+      "timings": {
+        "t1_enhancement": 1.0002644062042236,
+        "t2_retrieval": 0.9915666580200195,
+        "t3_generation": 26.42664670944214,
+        "total": 28.418477773666382
+      },
+      "time_distribution": {
+        "t1_enhancement": "3.5%",
+        "t2_retrieval": "3.5%",
+        "t3_generation": "93.0%"
+      },
+      "chunks_count": 30,
+      "timestamp": "2025-12-10T06:15:39.712265"
+    }
+  ],
+  "summary": {
+    "total_tests": 10,
+    "successful_tests": 10,
+    "failed_tests": 0,
+    "avg_coverage": 1.0,
+    "avg_time": 40.18473253250122,
+    "avg_gap": 0.08742034728530715,
+    "perfect_coverage": 10,
+    "time_breakdown": {
+      "t1_enhancement_total": 11.913594245910645,
+      "t2_retrieval_total": 11.271607398986816,
+      "t3_generation_total": 378.66212368011475,
+      "total": 401.8473253250122,
+      "t1_percent": "3.0%",
+      "t2_percent": "2.8%",
+      "t3_percent": "94.2%"
+    }
+  }
+}

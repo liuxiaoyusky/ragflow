@@ -1,0 +1,101 @@
+{
+  "testDate": "2025-12-10",
+  "startTime": "2025-12-10T03:56:03.882Z",
+  "endTime": "2025-12-10T04:02:05.073Z",
+  "totalQuestions": 10,
+  "completedQuestions": 10,
+  "successCount": 10,
+  "errorCount": 0,
+  "results": [
+    {
+      "index": 1,
+      "question": "What are top holdings of Asian Income Fund from January to September 2025?",
+      "startTime": "2025-12-10T03:56:08.275Z",
+      "endTime": "2025-12-10T03:56:36.869Z",
+      "duration": 28594,
+      "answer": "The top holdings of Asian Income Fund from January to September 2025 include the following:\n\n**January 2025**\n1. **Top Equities**\n    - Taiwan Semiconductor Manufacturing Co Ltd (9.0%, Semiconductors & semiconductor equipment, Taiwan)\n    - Alchip Technologies Ltd (3.0%, Semiconductors & semiconductor equipment, Taiwan)\n    - China Telecom Corp Ltd (2.4%, Communication services, Hong Kong)\n    - SK Hynix Inc (2.4%, Semiconductors & semiconductor equipment, South Korea)\n    - ICICI Bank Ltd (2.2%, Banks, United States)\n2. **Top Fixed Income**\n    - Fortune Star (BVI) Ltd 5% 05/18/2026 (1.4%, Industrials, China)\n    - eHi Car Services Ltd 7% 09/21/2026 (1.0%, Industrials, China)\n    - Elect Global Investments Ltd 4.1% PERP (0.9%, Real estate, Hong Kong)\n    - Sumitomo Mitsui Financial Group Inc 6.6% PERP (0.9%, Financials, Japan)\n    - Westwood Group Holdings Ltd 2.8% 01/20/2026 (0.8%, Real estate, Hong Kong)\n\n**September 2025**\n1. **Top Equities**\n    - Taiwan Semiconductor Manufacturing Co Ltd (6.5%, Information technology, Taiwan)\n    - SK Hynix Inc (2.3%, Information technology, South Korea)\n    - Tencent Holdings Ltd (2.0%, Communication services, Hong Kong)\n    - Wiwynn Corp (2.0%, Information technology, Taiwan)\n    - China Mobile Ltd (1.7%, Communication services, Hong Kong)\n2. **Top Fixed Income**\n    - Sumitomo Mitsui Financial Group Inc 6.45% PERP (1.0%, Financials, Japan)\n    - Mitsubishi UFJ Financial Group Inc 6.35% PERP (0.9%, Financials, Japan)\n    - eHi Car Services Ltd 7% 09/21/2026 (0.7%, Industrials, China)\n    - Fortune Star BV I Ltd 5.05% 01/27/2027 (0.7%, Industrials, China)\n    - Sumitomo Mitsui Financial Group Inc 6.6% PERP (0.7%, Financials, Japan)\n\nThe composition of top holdings may have changed over time, reflecting the fund's investment strategy and market dynamics. For the most up - to - date information, please refer to the latest official reports. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 2,
+      "question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率",
+      "startTime": "2025-12-10T03:56:41.007Z",
+      "endTime": "2025-12-10T03:57:31.543Z",
+      "duration": 50536,
+      "answer": "2025年8月，High Dividend Fund与Asian Income Fund的股息率情况如下：\n\n1. **Asian Income Fund 2025年8月股息率** ：\n   - Class A AUD Hedged MDis：4.2%\n   - Class A CAD Hedged MDis：4.7%\n   - Class A HKD Unhedged MDis：5.0%\n   - Class A NZD Hedged MDis：5.1%\n   - Class A RMB Hedged MDis：2.5%\n   - Class A RMB Unhedged MDis：5.0%\n   - Class A USD Unhedged MDis：5.0%\n   以上信息来自企业知识。\n\n2. **High Dividend Fund 2025年8月股息率** ：\n   - Class A2 USD MDis：5.0%\n   - Class A2 HKD MDis：5.0%\n   - Class A2 AUD Hedged MDis：4.2%\n   - Class A2 CAD Hedged MDis：4.6%\n   - Class A2 GBP Hedged MDis：5.0%\n   - Class A2 NZD Hedged MDis：6.2%\n   - Class A2 SGD Hedged MDis：4.2%\n   - Class A2 RMB Hedged MDis：3.2%\n   - Class A2 RMB Unhedged MDis：5.1%\n   - Class B USD MDIS：4.9%\n   - Class B HKD MDIS：4.9%\n   - Class B AUD Hedged MDIS：4.1%\n   - Class B CAD Hedged MDIS：4.6%\n   - Class B GBP Hedged MDIS：5.0%\n   - Class B NZD Hedged MDIS：6.2%\n   - Class B RMB Hedged MDIS：3.2%\n   以上信息来自企业知识。 (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 3,
+      "question": "Show asset allocation by sector for Asian Income Fund September 2025",
+      "startTime": "2025-12-10T03:57:35.684Z",
+      "endTime": "2025-12-10T03:57:53.077Z",
+      "duration": 17393,
+      "answer": "The asset allocation by sector for the Asian Income Fund in September 2025 is as follows:\n\n| Sector | Equities (%) | Fixed Income (%) | Total (%) |\n| --- | --- | --- | --- |\n| Information technology | 22.8 | 2.2 | 25.0 |\n| Financials | 11.4 | 11.3 | 22.7 |\n| Industrials | 6.0 | 4.7 | 10.7 |\n| Consumer discretionary | 6.0 | 2.9 | 8.9 |\n| Communication services | 6.9 | 0.7 | 7.6 |\n| Real estate | 3.8 | 1.7 | 5.5 |\n| Energy | 1.6 | 3.5 | 5.1 |\n| Materials | 2.6 | 1.5 | 4.1 |\n| Consumer staples | 3.0 | 0.5 | 3.5 |\n| Utilities | 1.6 | 0.9 | 2.5 |\n| Health care | 1.1 | - | 1.1 |\n| Sovereign | - | 1.0 | 1.0 |\n| Cash 7 | - | - | 2.3 |\n| Total | 66.8 | 30.9 | 100.0 | (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 4,
+      "question": "What is the credit rating distribution of Asian Income Fund?",
+      "startTime": "2025-12-10T03:57:57.217Z",
+      "endTime": "2025-12-10T03:58:23.029Z",
+      "duration": 25812,
+      "answer": "The credit rating distribution of Asian Income Fund varies by month in 2025, with the following details:\n\n**January 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 11.0% | 12.7% | - |\n| A | 1.2% | - | - |\n| BBB | 11.5% | - | - |\n| B & Below | 8.2% | - | 19.2% |\n| Non-rated | 2.5% | - | - |\n| Average Credit Rating | BB+ | - | - | \n\n**February 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 11.6% | 11.2% | - |\n| A | 0.9% | - | - |\n| BBB | 10.3% | - | - |\n| B & Below | 9.0% | - | 20.6% |\n| Non-rated | 2.6% | - | - |\n| Average Credit Rating | BB+ | - | - | \n\n**March 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 10.7% | 11.9% | - |\n| A | 0.9% | - | - |\n| BBB | 11.0% | - | - |\n| B & Below | 9.2% | - | 19.9% |\n| Non-rated | 3.1% | - | - |\n| Average Credit Rating | BB | - | - | \n\n**April 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 10.7% | 11.9% | - |\n| A | 0.9% | - | - |\n| BBB | 11.0% | - | - |\n| B & Below | 8.2% | - | 18.9% |\n| Non-rated | 3.0% | - | - |\n| Average Credit Rating | BB+ | - | - | \n\n**May 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 10.8% | 12.5% | - |\n| A | 0.9% | - | - |\n| BBB | 11.6% | - | - |\n| B & Below | 5.5% | - | 16.3% |\n| Non-rated | 2.8% | - | - |\n| Average Credit Rating | BB+ | - | - | \n\n**June 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 10.8% | 10.1% | - |\n| A | 1.3% | - | - |\n| BBB | 8.8% | - | - |\n| B & Below | 7.7% | - | 18.5% |\n| Non-rated | 2.4% | - | - |\n| Average Credit Rating | BB+ | - | - | \n\n**July 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 10.5% | 12.8% | - |\n| A | 1.5% | - | - |\n| BBB | 11.3% | - | - |\n| B & Below | 4.8% | - | 15.3% |\n| Non-rated | 2.7% | - | - |\n| Average Credit Rating | BB+ | - | - | \n\n**August 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 11.0% | 10.9% | - |\n| A | 1.6% | - | - |\n| BBB | 9.3% | - | - |\n| B & Below | 6.6% | - | 17.6% |\n| Non-rated | 2.4% | - | - |\n| Average Credit Rating | BB+ | - | - | \n\n**September 2025**\n\n| Credit Rating | Percentage | Investment Grade | High Yield |\n| --- | --- | --- | --- |\n| BB | 9.6% | 12.1% | - |\n| A | 2.3% | - | - |\n| BBB | 9.8% | - | - |\n| B & Below | 5.6% | - | 15.2% |\n| Non-rated | 3.6% | - | - |\n| Average Credit Rating | BB+ | - | - | \n\nThe average credit rating is generally around BB+ throughout the year, with fluctuations in the proportions of different ratings. The investment grade proportion ranges from 10.1% to 12.8%, and the high yield proportion ranges from 15.2% to 20.6%. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 5,
+      "question": "惠理亚洲收益基金2025年Q1业绩表现",
+      "startTime": "2025-12-10T03:58:27.165Z",
+      "endTime": "2025-12-10T03:58:33.755Z",
+      "duration": 6590,
+      "answer": "找不到相关信息 (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 6,
+      "question": "What are NAV codes for Asian Income Fund Class A?",
+      "startTime": "2025-12-10T03:58:37.889Z",
+      "endTime": "2025-12-10T03:58:56.518Z",
+      "duration": 18629,
+      "answer": "The NAV codes for Asian Income Fund Class A are as follows:\n\n| Classes 1 | NAV (Jan 2025) | ISIN | Bloomberg | NAV (Aug 2025) |\n| --- | --- | --- | --- | --- |\n| Class A USD Unhedged Acc | 13.01 | HK0000352374 | VPUSUAU HK | 15.23 |\n| Class A AUD Hedged MDis | 8.22 | HK0000352259 | VPAAHMU HK | 9.27 |\n| Class A CAD Hedged MDis | 8.50 | HK0000352267 | VPACHMU HK | 9.53 |\n| Class A HKD Unhedged MDis | 8.93 | HK0000352291 | VPAHUMU HK | 10.13 |\n| Class A NZD Hedged MDis | 8.37 | HK0000352309 | VPANHMU HK | 9.36 |\n| Class A RMB Hedged MDis | 8.72 | HK0000352317 | VPARHMU HK | 9.87 |\n| Class A RMB Unhedged MDis | 10.08 | HK0000352325 | VPARUMU HK | 11.18 |\n| Class A USD Unhedged MDis | 8.94 | HK0000352382 | VPAUHMU HK | 10.14 |\n| Class A HKD Unhedged Acc | 13.02 | HK0000352283 | VPAHUAU HK | 15.24 |\n\n\n\nThese NAV codes are sourced from the enterprise knowledge documents \"VP_Asian_Income_Fund_2025Jan_NAVs_codes\" and \"VP_Asian_Income_Fund_2025Aug_NAVs_codes\". For more detailed information, please refer to the original documents:\n- [VP_Asian_Income_Fund_2025Jan_NAVs_codes](https://bytedance.feishu.cn/wiki/GCkKwsIk4iYzg7kFsitcltysnpg?from=lark_search_qa&ccm_open_type=lark_search_qa#doxcnuSRFH2zsBwA8mygRwsGJ4b)\n- [VP_Asian_Income_Fund_2025Aug_NAVs_codes](https://bytedance.feishu.cn/wiki/URDUwiW79iatiakm4CkcI23an9c?from=lark_search_qa&ccm_open_type=lark_search_qa#doxcn2NfWrcBWLsU2JB4zFcqWYd) (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 7,
+      "question": "Compare fee structures between Asian Income Fund and High Dividend Fund",
+      "startTime": "2025-12-10T03:59:00.665Z",
+      "endTime": "2025-12-10T03:59:36.271Z",
+      "duration": 35606,
+      "answer": "The fee structures of the Asian Income Fund and High Dividend Fund are as follows:\n\n**Asian Income Fund (Class A)**\n\n| Share Classes | Acc | MDis |\n| --- | --- | --- |\n| **Unhedged Currencies** | HKD/SGD/USD (Acc), SGD (Hedged) | HKD/RMB/SGD/USD (Unhedged), AUD/CAD/EUR/NZD/RMB/SGD (Hedged) |\n| **Minimum Subscription** | USD10,000 or equivalent  | USD10,000 or equivalent  |\n| **Minimum Subsequent Subscription** | USD5,000 or equivalent  | USD5,000 or equivalent  |\n| **Subscription Fee** | Up to 5%  | Up to 5%  |\n| **Redemption Fee** | Nil  | Nil  |\n| **Management Fee** | 1.5% p.a.  | 1.5% p.a.  |\n| **Performance Fee** | N/A  | N/A  |\n\n**High Dividend Fund**\n\n| Share Classes | Class A1 | Class A2 MDis | Class A Acc | Class B |\n| --- | --- | --- | --- | --- |\n| **Minimum Subscription** | USD10,000 or HKD equivalent  | USD10,000 / HKD80,000 / AUD10,000 / CAD10,000 / GBP10,000 / RMB60,000 / NZD10,000 / SGD10,000  | HKD80,000 / RMB60,000  | USD10,000 or equivalent  |\n| **Minimum Subsequent Subscription** | USD5,000 or HKD equivalent  | USD5,000 / HKD40,000 / AUD5,000 / CAD5,000 / GBP5,000 / RMB30,000 / NZD5,000 / SGD5,000  | HKD40,000 / RMB30,000  | USD5,000 or equivalent  |\n| **Subscription Fee** | Up to 5%  | Up to 5%  | Up to 5%  | Up to 5%  |\n| **Management Fee** | 1.25% p.a.  | 1.25% p.a.  | 1.50% p.a.  | 1.50% p.a.  |\n| **Performance Fee** | 15% of profit (High-on-high principle)  | 15% of profit (High-on-high principle)  | Nil  | Nil  |\n| **Redemption Fee** | Nil  | Nil  | Nil  | Nil  |\n\n**Summary of Differences** :\n- **Management Fee** : The Asian Income Fund has a flat 1.5% management fee for both Acc and MDis classes. In the High Dividend Fund, Class A1 and Class A2 MDis have a 1.25% management fee, while Class A Acc and Class B have a 1.50% fee.\n- **Performance Fee** : The Asian Income Fund has no performance fee. In the High Dividend Fund, Class A1 and Class A2 MDis have a 15% performance fee based on the High-on-high principle, while Class A Acc and Class B have no performance fee.\n- **Minimum Subscription** : The Asian Income Fund has a consistent minimum subscription of USD10,000 or equivalent across Acc and MDis classes. The High Dividend Fund has different minimum subscription amounts depending on the share class. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 8,
+      "question": "Portfolio characteristics of Asian Income Fund from May to August 2025",
+      "startTime": "2025-12-10T03:59:40.405Z",
+      "endTime": "2025-12-10T04:00:46.415Z",
+      "duration": 66010,
+      "answer": "The portfolio characteristics of the Asian Income Fund from May to August 2025 are as follows:\n\n1. **Portfolio Yield and Annualized Volatility (3 years)**\n\n| Date | Portfolio Yield | Annualized Volatility (3 years) |\n| --- | --- | --- |\n| 30 May 2025 | 5.4% | 12.8%  |\n| 30 Jun 2025 | 5.0% | 12.5%  |\n| 31 Jul 2025 | 4.5% | 12.4%  |\n| 29 Aug 2025 | 4.5% | 12.5%  |\n\n2. **Asset Type by Geography (%)**\n- **May 2025** : The total asset allocation was 67.3% equities and 31.6% fixed income, with major regions including Hong Kong (17.2%), Taiwan (15.6%), and H-shares (12.4%) .\n- **June 2025** : The total asset allocation was 68.4% equities and 31.0% fixed income, with major regions including Hong Kong (16.6%), Taiwan (15.7%), and H-shares (11.8%) .\n- **July 2025** : The total asset allocation was 65.6% equities and 30.8% fixed income, with major regions including Taiwan (16.4%), Hong Kong (15.7%), and H-shares (10.8%) .\n- **August 2025** : The total asset allocation was 66.7% equities and 30.9% fixed income, with major regions including Taiwan (17.8%), Hong Kong (16.2%), and Japan (12.6%) .\n\n3. **Asset Type by Sector (%)**\n- **May 2025** : The total asset allocation was 67.3% equities and 31.6% fixed income, with major sectors including Financials (24.6%), Information technology (21.2%), and Industrials (10.7%) .\n- **June 2025** : The total asset allocation was 68.4% equities and 31.0% fixed income, with major sectors including Financials (25.3%), Information technology (23.0%), and Industrials (11.2%) .\n- **July 2025** : The total asset allocation was 65.6% equities and 30.8% fixed income, with major sectors including Financials (24.6%), Information technology (22.6%), and Industrials (10.9%) .\n- **August 2025** : The total asset allocation was 66.7% equities and 30.9% fixed income, with major sectors including Financials (23.9%), Information technology (23.9%), and Industrials (11.0%) .\n\n4. **Credit Ratings of Fixed Income**\n- **May 2025** : Investment grade was 12.5%, high yield was 16.3%, and the average credit rating was BB+ .\n- **June 2025** : Investment grade was 10.1%, high yield was 18.5%, and the average credit rating was BB+ .\n- **July 2025** : Investment grade was 12.8%, high yield was 15.3%, and the average credit rating was BB+ .\n- **August 2025** : Investment grade was 10.9%, high yield was 17.6%, and the average credit rating was BB+ .\n\n5. **Top Holdings - Equities**\n- **May 2025** : Taiwan Semiconductor Manufacturing Co Ltd (6.7%, Taiwan), China Telecom Corp Ltd (2.9%, Hong Kong), and China Merchants Bank Co Ltd (2.5%, Hong Kong) .\n- **June 2025** : Taiwan Semiconductor Manufacturing Co Ltd (7.0%, Taiwan), SK Hynix Inc (3.2%, South Korea), and China Merchants Bank Co Ltd (2.6%, Hong Kong) .\n- **July 2025** : Taiwan Semiconductor Manufacturing Co Ltd (6.3%, Taiwan), SK Hynix Inc (2.4%, South Korea), and China Merchants Bank Co Ltd (2.0%, Hong Kong) .\n- **August 2025** : Taiwan Semiconductor Manufacturing Co Ltd (6.1%, Taiwan), SK Hynix Inc (2.3%, South Korea), and Wiwynn Corp (2.0%, Taiwan) .\n\n6. **Top Holdings - Fixed Income**\n- **May 2025** : Fortune Star (BVI) Ltd 5% 05/18/2026 (1.4%, China), Sumitomo Mitsui Financial Group Inc 6.45% PERP (1.1%, Japan), and eHi Car Services Ltd 7% 09/21/2026 (1.0%, China) .\n- **June 2025** : Fortune Star (BVI) Ltd 5% 05/18/2026 (1.3%, China), Sumitomo Mitsui Financial Group Inc 6.45% PERP (1.0%, Japan), and eHi Car Services Ltd 7% 09/21/2026 (0.9%, China) .\n- **July 2025** : Fortune Star (BVI) Ltd 5% 05/18/2026 (1.2%, China), Sumitomo Mitsui Financial Group Inc 6.45% PERP (1.1%, Japan), and Far East Horizon Ltd 6% 10/01/2028 (0.9%, Hong Kong) .\n- **August 2025** : Fortune Star (BVI) Ltd 5% 05/18/2026 (1.1%, China), Sumitomo Mitsui Financial Group Inc 6.45% PERP (1.1%, Japan), and eHi Car Services Ltd 7% 09/21/2026 (0.8%, China) . (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 9,
+      "question": "哪些月份Asian Income Fund持有台积电？",
+      "startTime": "2025-12-10T04:00:50.553Z",
+      "endTime": "2025-12-10T04:01:44.261Z",
+      "duration": 53708,
+      "answer": "1. 2025年1月，Asian Income Fund持有台积电（Taiwan Semiconductor Manufacturing Co Ltd），占比9.0%。\n2. 2025年2月，持有台积电，占比8.2%。\n3. 2025年3月，持有台积电，占比7.2%。\n4. 2025年4月，持有台积电，占比6.2%。\n5. 2025年5月，持有台积电，占比6.7%。\n6. 2025年6月，持有台积电，占比7.0%。\n7. 2025年7月，持有台积电，占比6.3%。\n8. 2025年8月，持有台积电，占比6.1%。\n9. 2025年9月，持有台积电，占比6.5%。 (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    },
+    {
+      "index": 10,
+      "question": "What is the investment objective of Asian Income Fund?",
+      "startTime": "2025-12-10T04:01:48.402Z",
+      "endTime": "2025-12-10T04:02:05.073Z",
+      "duration": 16671,
+      "answer": "The investment objective of the Asian Income Fund is as follows:\n\nThe Fund aims to maximize return and income by investing in Asian equities, Asian fixed income securities, and other assets related to Asian companies. These companies are either listed in Asia, have registered offices in Asia, or generate a predominant share of their sales and/or profits in Asia. Additionally, the Fund seeks to achieve lower portfolio volatility by actively screening and selecting a combination of lower volatility equities and fixed income securities. (From Feishu Knowledge AI | https://ask.feishu.cn)",
+      "status": "success"
+    }
+  ]
+}

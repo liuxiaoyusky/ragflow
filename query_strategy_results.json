@@ -1,0 +1,2147 @@
+[
+  {
+    "name": "baseline",
+    "question": "What are top holdings of Asian Income Fund from January to September 2025",
+    "wanted_count": 19,
+    "unwanted_count": 11,
+    "wanted_avg": 0.4068240908699378,
+    "wanted_max": 0.44781624772380624,
+    "wanted_min": 0.3915336337416035,
+    "unwanted_avg": 0.3670324762013715,
+    "unwanted_max": 0.4568511304691718,
+    "unwanted_min": 0.33908567440760384,
+    "gap": 0.03979161466856629,
+    "gap_pct": 10.841442446835334,
+    "unwanted_top_rank": 1,
+    "wanted_chunks": [
+      {
+        "rank": 2,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+        "score": 0.44781624772380624,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 3,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "score": 0.4231197774113784,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 4,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+        "score": 0.42310492915116243,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 5,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+        "score": 0.4227979739551224,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 6,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+        "score": 0.4214815872133008,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 7,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+        "score": 0.42040692914267996,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 8,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+        "score": 0.4200109353701128,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 9,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+        "score": 0.41848770789501255,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 10,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+        "score": 0.3968489502614696,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 11,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities(1).md",
+        "score": 0.3967298852906753,
+        "keywords": [
+          "Top holdings",
+          "Top holdings  -  equities(1)",
+          "equities"
+        ]
+      },
+      {
+        "rank": 12,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+        "score": 0.395866060664101,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 13,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "score": 0.3952546789023541,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 14,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+        "score": 0.39429760026604055,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 15,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "score": 0.39309072717255733,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 16,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "score": 0.39284293281948757,
+        "keywords": [
+          "Top holdings",
+          "Top holdings - equities",
+          "equities",
+          "holdings",
+          "top holdings equities",
+          "equity holdings",
+          "stock holdings",
+          "top 5 holdings"
+        ]
+      },
+      {
+        "rank": 17,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "score": 0.3924743626248508,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 18,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+        "score": 0.3918218016487624,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 19,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "score": 0.3916710052743402,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 20,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "score": 0.3915336337416035,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      }
+    ],
+    "unwanted_chunks": [
+      {
+        "rank": 1,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Credit_ratings.md",
+        "score": 0.4568511304691718,
+        "keywords": [
+          "Credit ratings"
+        ]
+      },
+      {
+        "rank": 21,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+        "score": 0.37735017079515387,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 22,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Monthly_performance.md",
+        "score": 0.36873405454418806,
+        "keywords": [
+          "performance",
+          "Monthly performance"
+        ]
+      },
+      {
+        "rank": 23,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_geography.md",
+        "score": 0.3645246200199279,
+        "keywords": [
+          "Asset type by geography",
+          "geography"
+        ]
+      },
+      {
+        "rank": 24,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Portfolio_characteristics.md",
+        "score": 0.3594413448178787,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 25,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fund_facts.md",
+        "score": 0.35868942638496887,
+        "keywords": [
+          "Fund facts"
+        ]
+      },
+      {
+        "rank": 26,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Performance_update.md",
+        "score": 0.3578534078692072,
+        "keywords": [
+          "performance",
+          "Performance update"
+        ]
+      },
+      {
+        "rank": 27,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md",
+        "score": 0.3547736714790678,
+        "keywords": [
+          "Asset type by sector",
+          "sector"
+        ]
+      },
+      {
+        "rank": 28,
+        "doc": "VP_Asian_Income_Fund_2025Sep_NAVs_codes.md",
+        "score": 0.35316835514684586,
+        "keywords": [
+          "NAVs codes",
+          "NAV"
+        ]
+      },
+      {
+        "rank": 29,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Dividend_information.md",
+        "score": 0.34688538228107285,
+        "keywords": [
+          "dividend",
+          "Dividend information"
+        ]
+      },
+      {
+        "rank": 30,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fee_structure.md",
+        "score": 0.33908567440760384,
+        "keywords": [
+          "Fee structure"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "strategy_A",
+    "question": "What are top holdings top holdings top holdings of Asian Income Fund from January to September 2025 equities fixed income",
+    "wanted_count": 19,
+    "unwanted_count": 11,
+    "wanted_avg": 0.3503596054916045,
+    "wanted_max": 0.36689708101661184,
+    "wanted_min": 0.3429174178146493,
+    "unwanted_avg": 0.27355335246146734,
+    "unwanted_max": 0.2892276899881529,
+    "unwanted_min": 0.25868394018927426,
+    "gap": 0.07680625303013716,
+    "gap_pct": 28.07724794414869,
+    "unwanted_top_rank": 20,
+    "wanted_chunks": [
+      {
+        "rank": 1,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+        "score": 0.36689708101661184,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 2,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "score": 0.3578132337336015,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 3,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+        "score": 0.35725680295363416,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 4,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+        "score": 0.3569415432655043,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 5,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+        "score": 0.35530457558745776,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 6,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+        "score": 0.354390941968044,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 7,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+        "score": 0.3543296876207972,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 8,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+        "score": 0.35393194193282407,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 9,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities(1).md",
+        "score": 0.3500957950910556,
+        "keywords": [
+          "Top holdings",
+          "Top holdings  -  equities(1)",
+          "equities"
+        ]
+      },
+      {
+        "rank": 10,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "score": 0.34698463720848893,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 11,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+        "score": 0.34647536159196357,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 12,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "score": 0.3458182626604186,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 13,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "score": 0.34545499911891936,
+        "keywords": [
+          "Top holdings",
+          "Top holdings - equities",
+          "equities",
+          "holdings",
+          "top holdings equities",
+          "equity holdings",
+          "stock holdings",
+          "top 5 holdings"
+        ]
+      },
+      {
+        "rank": 14,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "score": 0.34473372884608416,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 15,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+        "score": 0.34470518575939024,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 16,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "score": 0.3446703028804403,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 17,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "score": 0.3443431733269226,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 18,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+        "score": 0.3437678319636777,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 19,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+        "score": 0.3429174178146493,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      }
+    ],
+    "unwanted_chunks": [
+      {
+        "rank": 20,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Asset_type_by_sector.md",
+        "score": 0.2892276899881529,
+        "keywords": [
+          "Asset type by sector",
+          "sector"
+        ]
+      },
+      {
+        "rank": 21,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md",
+        "score": 0.28775848866373627,
+        "keywords": [
+          "Asset type by sector",
+          "sector"
+        ]
+      },
+      {
+        "rank": 22,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+        "score": 0.2873183711341608,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 23,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_geography.md",
+        "score": 0.28321389726275986,
+        "keywords": [
+          "Asset type by geography",
+          "geography"
+        ]
+      },
+      {
+        "rank": 24,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Monthly_performance.md",
+        "score": 0.27103695168367964,
+        "keywords": [
+          "performance",
+          "Monthly performance"
+        ]
+      },
+      {
+        "rank": 25,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fund_facts.md",
+        "score": 0.26913403286238563,
+        "keywords": [
+          "Fund facts"
+        ]
+      },
+      {
+        "rank": 26,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Performance_update.md",
+        "score": 0.2680545593939921,
+        "keywords": [
+          "performance",
+          "Performance update"
+        ]
+      },
+      {
+        "rank": 27,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Portfolio_characteristics.md",
+        "score": 0.2670024762533896,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 28,
+        "doc": "VP_Asian_Income_Fund_2025Sep_NAVs_codes.md",
+        "score": 0.2643711881718417,
+        "keywords": [
+          "NAVs codes",
+          "NAV"
+        ]
+      },
+      {
+        "rank": 29,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Dividend_information.md",
+        "score": 0.26328528147276814,
+        "keywords": [
+          "dividend",
+          "Dividend information"
+        ]
+      },
+      {
+        "rank": 30,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fee_structure.md",
+        "score": 0.25868394018927426,
+        "keywords": [
+          "Fee structure"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "strategy_B",
+    "question": "What are top holdings of Asian Income Fund January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025, August 2025, September 2025",
+    "wanted_count": 17,
+    "unwanted_count": 13,
+    "wanted_avg": 0.573114354328118,
+    "wanted_max": 0.581415203628526,
+    "wanted_min": 0.5673936557400463,
+    "unwanted_avg": 0.5488182382494977,
+    "unwanted_max": 0.5614430910009065,
+    "unwanted_min": 0.5405370504679242,
+    "gap": 0.024296116078620256,
+    "gap_pct": 4.426987732061306,
+    "unwanted_top_rank": 18,
+    "wanted_chunks": [
+      {
+        "rank": 1,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+        "score": 0.581415203628526,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 2,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+        "score": 0.5806215441920037,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 3,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+        "score": 0.5800403874308794,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 4,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+        "score": 0.5799063443503205,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 5,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "score": 0.5796833532636497,
+        "keywords": [
+          "Top holdings",
+          "Top holdings - equities",
+          "equities",
+          "holdings",
+          "top holdings equities",
+          "equity holdings",
+          "stock holdings",
+          "top 5 holdings"
+        ]
+      },
+      {
+        "rank": 6,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+        "score": 0.5790854744995282,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 7,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities(1).md",
+        "score": 0.5728067106401491,
+        "keywords": [
+          "Top holdings",
+          "Top holdings  -  equities(1)",
+          "equities"
+        ]
+      },
+      {
+        "rank": 8,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "score": 0.5709067407406515,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 9,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "score": 0.5704965677492415,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 10,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+        "score": 0.5701468896440555,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 11,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "score": 0.5694943511237289,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 12,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "score": 0.5688701932243365,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 13,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+        "score": 0.5684413351484829,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 14,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "score": 0.5683418371600685,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 15,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "score": 0.5677461703709467,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 16,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+        "score": 0.5675472646713898,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 17,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+        "score": 0.5673936557400463,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      }
+    ],
+    "unwanted_chunks": [
+      {
+        "rank": 18,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Investment_objective.md",
+        "score": 0.5614430910009065,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 19,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+        "score": 0.5609548946266633,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 20,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Investment_objective.md",
+        "score": 0.5608907551877036,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 21,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+        "score": 0.5590585341514321,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 22,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Investment_objective.md",
+        "score": 0.5579680523018882,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 23,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Portfolio_characteristics.md",
+        "score": 0.54334686902524,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 24,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Portfolio_characteristics.md",
+        "score": 0.5432516335926718,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 25,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Portfolio_characteristics.md",
+        "score": 0.5419839791303095,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 26,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Portfolio_characteristics.md",
+        "score": 0.5414509647040254,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 27,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Dividend_information.md",
+        "score": 0.5413735483388129,
+        "keywords": [
+          "dividend",
+          "Dividend information"
+        ]
+      },
+      {
+        "rank": 28,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Portfolio_characteristics.md",
+        "score": 0.541331584101342,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 29,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Dividend_information.md",
+        "score": 0.5410461406145513,
+        "keywords": [
+          "dividend",
+          "Dividend information"
+        ]
+      },
+      {
+        "rank": 30,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Dividend_information.md",
+        "score": 0.5405370504679242,
+        "keywords": [
+          "dividend",
+          "Dividend information"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "strategy_C",
+    "question": "top holdings equities fixed income Asian Income Fund January February March April May June July August September 2025",
+    "wanted_count": 19,
+    "unwanted_count": 11,
+    "wanted_avg": 0.3708253743011834,
+    "wanted_max": 0.3845977364867781,
+    "wanted_min": 0.3510792204805439,
+    "unwanted_avg": 0.315377898072271,
+    "unwanted_max": 0.3385576161597812,
+    "unwanted_min": 0.29471992475653774,
+    "gap": 0.055447476228912385,
+    "gap_pct": 17.58128155708813,
+    "unwanted_top_rank": 20,
+    "wanted_chunks": [
+      {
+        "rank": 1,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+        "score": 0.3845977364867781,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 2,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+        "score": 0.3835644621984187,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 3,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+        "score": 0.38238885526645716,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 4,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+        "score": 0.3822665523584674,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 5,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+        "score": 0.38185495075678716,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 6,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "score": 0.3785075940742033,
+        "keywords": [
+          "Top holdings",
+          "Top holdings - equities",
+          "equities",
+          "holdings",
+          "top holdings equities",
+          "equity holdings",
+          "stock holdings",
+          "top 5 holdings"
+        ]
+      },
+      {
+        "rank": 7,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+        "score": 0.3706554412898345,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 8,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+        "score": 0.3705032360272942,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 9,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities(1).md",
+        "score": 0.36999013697116523,
+        "keywords": [
+          "Top holdings",
+          "Top holdings  -  equities(1)",
+          "equities"
+        ]
+      },
+      {
+        "rank": 10,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+        "score": 0.36974442100534255,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 11,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+        "score": 0.3679831834372112,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 12,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "score": 0.36646018165790584,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 13,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "score": 0.36521326794521536,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 14,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+        "score": 0.36447521384427584,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 15,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "score": 0.3644695288335089,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 16,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "score": 0.36441520129213345,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 17,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "score": 0.36379957771356886,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 18,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "score": 0.36371335008337313,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 19,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+        "score": 0.3510792204805439,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      }
+    ],
+    "unwanted_chunks": [
+      {
+        "rank": 20,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_geography.md",
+        "score": 0.3385576161597812,
+        "keywords": [
+          "Asset type by geography",
+          "geography"
+        ]
+      },
+      {
+        "rank": 21,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Asset_type_by_sector.md",
+        "score": 0.3364376385600738,
+        "keywords": [
+          "Asset type by sector",
+          "sector"
+        ]
+      },
+      {
+        "rank": 22,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md",
+        "score": 0.33399509432024965,
+        "keywords": [
+          "Asset type by sector",
+          "sector"
+        ]
+      },
+      {
+        "rank": 23,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+        "score": 0.32572838036601437,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 24,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Monthly_performance.md",
+        "score": 0.3172954167085262,
+        "keywords": [
+          "performance",
+          "Monthly performance"
+        ]
+      },
+      {
+        "rank": 25,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Performance_update.md",
+        "score": 0.3060461247910899,
+        "keywords": [
+          "performance",
+          "Performance update"
+        ]
+      },
+      {
+        "rank": 26,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fund_facts.md",
+        "score": 0.3054542828361929,
+        "keywords": [
+          "Fund facts"
+        ]
+      },
+      {
+        "rank": 27,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Portfolio_characteristics.md",
+        "score": 0.30539504055611005,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 28,
+        "doc": "VP_Asian_Income_Fund_2025Sep_NAVs_codes.md",
+        "score": 0.30350551375764667,
+        "keywords": [
+          "NAVs codes",
+          "NAV"
+        ]
+      },
+      {
+        "rank": 29,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Dividend_information.md",
+        "score": 0.3020218459827585,
+        "keywords": [
+          "dividend",
+          "Dividend information"
+        ]
+      },
+      {
+        "rank": 30,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fee_structure.md",
+        "score": 0.29471992475653774,
+        "keywords": [
+          "Fee structure"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "strategy_D",
+    "question": "Asian Income Fund top holdings top holdings equities fixed income January February March April May June July August September 2025 NOT performance NOT investment NOT credit NOT asset NOT portfolio",
+    "wanted_count": 19,
+    "unwanted_count": 11,
+    "wanted_avg": 0.32284887017249103,
+    "wanted_max": 0.3386157788367314,
+    "wanted_min": 0.30779373763582324,
+    "unwanted_avg": 0.29233420865183485,
+    "unwanted_max": 0.4434555201525504,
+    "unwanted_min": 0.2619686915401058,
+    "gap": 0.030514661520656183,
+    "gap_pct": 10.438279413614106,
+    "unwanted_top_rank": 1,
+    "wanted_chunks": [
+      {
+        "rank": 2,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+        "score": 0.3386157788367314,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 3,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+        "score": 0.33755746769144257,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 4,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+        "score": 0.3350356330855574,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 5,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+        "score": 0.33466047296317797,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 6,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+        "score": 0.3296016501409574,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 7,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+        "score": 0.32742951046215496,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 8,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "score": 0.3240419555219068,
+        "keywords": [
+          "Top holdings",
+          "Top holdings - equities",
+          "equities",
+          "holdings",
+          "top holdings equities",
+          "equity holdings",
+          "stock holdings",
+          "top 5 holdings"
+        ]
+      },
+      {
+        "rank": 9,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities(1).md",
+        "score": 0.32232825872908455,
+        "keywords": [
+          "Top holdings",
+          "Top holdings  -  equities(1)",
+          "equities"
+        ]
+      },
+      {
+        "rank": 10,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+        "score": 0.3217176116432421,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 11,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+        "score": 0.3198049196729577,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 12,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+        "score": 0.3185395111424629,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 13,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "score": 0.31769388985474545,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 14,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "score": 0.31731588261014,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 15,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+        "score": 0.31725974039646365,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 16,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "score": 0.316663847534557,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 17,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "score": 0.3166080524340986,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 18,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "score": 0.3157390637901271,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 19,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "score": 0.31572154913169886,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 20,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+        "score": 0.30779373763582324,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      }
+    ],
+    "unwanted_chunks": [
+      {
+        "rank": 1,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Credit_ratings.md",
+        "score": 0.4434555201525504,
+        "keywords": [
+          "Credit ratings"
+        ]
+      },
+      {
+        "rank": 21,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md",
+        "score": 0.2943359033356062,
+        "keywords": [
+          "Asset type by sector",
+          "sector"
+        ]
+      },
+      {
+        "rank": 22,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_geography.md",
+        "score": 0.29186033289351765,
+        "keywords": [
+          "Asset type by geography",
+          "geography"
+        ]
+      },
+      {
+        "rank": 23,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+        "score": 0.2897363729746692,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 24,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Monthly_performance.md",
+        "score": 0.28580871880951164,
+        "keywords": [
+          "performance",
+          "Monthly performance"
+        ]
+      },
+      {
+        "rank": 25,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Portfolio_characteristics.md",
+        "score": 0.28062969914203384,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 26,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Performance_update.md",
+        "score": 0.27294731341926515,
+        "keywords": [
+          "performance",
+          "Performance update"
+        ]
+      },
+      {
+        "rank": 27,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fund_facts.md",
+        "score": 0.2667085498231831,
+        "keywords": [
+          "Fund facts"
+        ]
+      },
+      {
+        "rank": 28,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fee_structure.md",
+        "score": 0.2647319449982226,
+        "keywords": [
+          "Fee structure"
+        ]
+      },
+      {
+        "rank": 29,
+        "doc": "VP_Asian_Income_Fund_2025Sep_NAVs_codes.md",
+        "score": 0.26349324808151753,
+        "keywords": [
+          "NAVs codes",
+          "NAV"
+        ]
+      },
+      {
+        "rank": 30,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Dividend_information.md",
+        "score": 0.2619686915401058,
+        "keywords": [
+          "dividend",
+          "Dividend information"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "strategy_E",
+    "question": "top holdings equities Asian Income Fund 2025",
+    "wanted_count": 19,
+    "unwanted_count": 11,
+    "wanted_avg": 0.43297783457086253,
+    "wanted_max": 0.44833868137241173,
+    "wanted_min": 0.4030913059330261,
+    "unwanted_avg": 0.3442233230261828,
+    "unwanted_max": 0.3556726992545908,
+    "unwanted_min": 0.3309932931947032,
+    "gap": 0.08875451154467973,
+    "gap_pct": 25.783991266021435,
+    "unwanted_top_rank": 20,
+    "wanted_chunks": [
+      {
+        "rank": 1,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+        "score": 0.44833868137241173,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 2,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities(1).md",
+        "score": 0.44730470188330484,
+        "keywords": [
+          "Top holdings",
+          "Top holdings  -  equities(1)",
+          "equities"
+        ]
+      },
+      {
+        "rank": 3,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+        "score": 0.44628842935463536,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 4,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "score": 0.44542116415352107,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 5,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "score": 0.4452151117660623,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 6,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "score": 0.4446203244701489,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 7,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "score": 0.444363194704489,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 8,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "score": 0.44355618874137076,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 9,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "score": 0.44347635177121303,
+        "keywords": [
+          "Top holdings",
+          "Top holdings - equities",
+          "equities",
+          "holdings",
+          "top holdings equities",
+          "equity holdings",
+          "stock holdings",
+          "top 5 holdings"
+        ]
+      },
+      {
+        "rank": 10,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "score": 0.44194893271276714,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 11,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+        "score": 0.43364037891932794,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 12,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+        "score": 0.43188746870289046,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 13,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+        "score": 0.4309042508639674,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 14,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+        "score": 0.4304910837721604,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 15,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+        "score": 0.4303500012625109,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 16,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+        "score": 0.4060999274101912,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 17,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+        "score": 0.4056570403998344,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 18,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+        "score": 0.4039243186525542,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 19,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+        "score": 0.4030913059330261,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      }
+    ],
+    "unwanted_chunks": [
+      {
+        "rank": 20,
+        "doc": "VP_Asian_Income_Fund_2025May_Investment_objective.md",
+        "score": 0.3556726992545908,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 21,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+        "score": 0.3546502883203032,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 22,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+        "score": 0.3539157431745007,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 23,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Investment_objective.md",
+        "score": 0.35333574764325326,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 24,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+        "score": 0.3532838679477852,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 25,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+        "score": 0.3532185527190819,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 26,
+        "doc": "VP_Asian_Income_Fund_2025May_Portfolio_characteristics.md",
+        "score": 0.33398503604057733,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 27,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Portfolio_characteristics.md",
+        "score": 0.3333583238866717,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 28,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Portfolio_characteristics.md",
+        "score": 0.33208220919424414,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 29,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Portfolio_characteristics.md",
+        "score": 0.3319607919122993,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 30,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Portfolio_characteristics.md",
+        "score": 0.3309932931947032,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "strategy_F",
+    "question": "What are the top 5 stock holdings and top 5 bond holdings of Asian Income Fund from January to September 2025",
+    "wanted_count": 19,
+    "unwanted_count": 11,
+    "wanted_avg": 0.4040468180380586,
+    "wanted_max": 0.47198073224640635,
+    "wanted_min": 0.3611672105217696,
+    "unwanted_avg": 0.37347058945163697,
+    "unwanted_max": 0.4474273043757214,
+    "unwanted_min": 0.32505194352708855,
+    "gap": 0.030576228586421617,
+    "gap_pct": 8.18705125651698,
+    "unwanted_top_rank": 6,
+    "wanted_chunks": [
+      {
+        "rank": 1,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+        "score": 0.47198073224640635,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 2,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+        "score": 0.4521198073942283,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 3,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+        "score": 0.4488774102989347,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 4,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+        "score": 0.44828481545009125,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 5,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+        "score": 0.4478994002970671,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 7,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+        "score": 0.44519756951152867,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 8,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+        "score": 0.42722252944336236,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 9,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_fixed_income.md",
+        "score": 0.42690466924664316,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 10,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_fixed_income.md",
+        "score": 0.4237943566121617,
+        "keywords": [
+          "Top holdings",
+          "fixed income",
+          "Top holdings  -  fixed income"
+        ]
+      },
+      {
+        "rank": 15,
+        "doc": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+        "score": 0.3892620898157313,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 16,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+        "score": 0.38692214289079313,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 18,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities(1).md",
+        "score": 0.36650699167838197,
+        "keywords": [
+          "Top holdings",
+          "Top holdings  -  equities(1)",
+          "equities"
+        ]
+      },
+      {
+        "rank": 19,
+        "doc": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+        "score": 0.3658321336823549,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 20,
+        "doc": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+        "score": 0.3644857324819243,
+        "keywords": [
+          "Top holdings",
+          "Top holdings - equities",
+          "equities",
+          "holdings",
+          "top holdings equities",
+          "equity holdings",
+          "stock holdings",
+          "top 5 holdings"
+        ]
+      },
+      {
+        "rank": 21,
+        "doc": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+        "score": 0.36294488176175416,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 22,
+        "doc": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+        "score": 0.36274233216519586,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 23,
+        "doc": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+        "score": 0.36253554251429254,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 24,
+        "doc": "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+        "score": 0.3622091947104928,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      },
+      {
+        "rank": 25,
+        "doc": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+        "score": 0.3611672105217696,
+        "keywords": [
+          "Top holdings",
+          "equities",
+          "Top holdings  -  equities"
+        ]
+      }
+    ],
+    "unwanted_chunks": [
+      {
+        "rank": 6,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Credit_ratings.md",
+        "score": 0.4474273043757214,
+        "keywords": [
+          "Credit ratings"
+        ]
+      },
+      {
+        "rank": 11,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Monthly_performance.md",
+        "score": 0.405340696641125,
+        "keywords": [
+          "performance",
+          "Monthly performance"
+        ]
+      },
+      {
+        "rank": 12,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_geography.md",
+        "score": 0.4012132924804137,
+        "keywords": [
+          "Asset type by geography",
+          "geography"
+        ]
+      },
+      {
+        "rank": 13,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Performance_update.md",
+        "score": 0.3956171901387371,
+        "keywords": [
+          "performance",
+          "Performance update"
+        ]
+      },
+      {
+        "rank": 14,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md",
+        "score": 0.3943943108724404,
+        "keywords": [
+          "Asset type by sector",
+          "sector"
+        ]
+      },
+      {
+        "rank": 17,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fee_structure.md",
+        "score": 0.37876655110493157,
+        "keywords": [
+          "Fee structure"
+        ]
+      },
+      {
+        "rank": 26,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+        "score": 0.3521253412470942,
+        "keywords": [
+          "Investment objective"
+        ]
+      },
+      {
+        "rank": 27,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Portfolio_characteristics.md",
+        "score": 0.3407484448517972,
+        "keywords": [
+          "Portfolio characteristics"
+        ]
+      },
+      {
+        "rank": 28,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Fund_facts.md",
+        "score": 0.3364217780056191,
+        "keywords": [
+          "Fund facts"
+        ]
+      },
+      {
+        "rank": 29,
+        "doc": "VP_Asian_Income_Fund_2025Sep_NAVs_codes.md",
+        "score": 0.3310696307230381,
+        "keywords": [
+          "NAVs codes",
+          "NAV"
+        ]
+      },
+      {
+        "rank": 30,
+        "doc": "VP_Asian_Income_Fund_2025Sep_Dividend_information.md",
+        "score": 0.32505194352708855,
+        "keywords": [
+          "dividend",
+          "Dividend information"
+        ]
+      }
+    ]
+  }
+]
