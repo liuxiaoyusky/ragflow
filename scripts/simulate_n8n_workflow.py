@@ -22,7 +22,7 @@ warnings.filterwarnings('ignore')
 
 # API配置
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "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"
 RAGFLOW_API_URL = "https://10.1.9.133:8443/api/v1"
 RAGFLOW_CHAT_API_URL = "https://10.1.9.133:8443/api/v1/chats"
 CHAT_ID = "f472490cbabe11f0b1a00242ac130006"
@@ -37,8 +37,27 @@ def load_benchmark():
         return json.load(f)
 
 def prepare_llm_prompt(original_question):
-    """准备LLM prompt - 优化版：使用精确section title，禁止泛化词"""
+    """准备LLM prompt - 优化版：使用精确section title，禁止泛化词，支持最近6个月"""
+    from datetime import datetime
+    
+    # 计算最近6个月（使用标准库）
+    now = datetime.now()
+    recent_months = []
+    for i in range(6):
+        # 计算i个月前的日期
+        year = now.year
+        month = now.month - i
+        while month <= 0:
+            month += 12
+            year -= 1
+        month_date = datetime(year, month, 1)
+        recent_months.append(month_date.strftime("%B %Y"))
+    recent_months_str = ", ".join(recent_months)
+    current_date = now.strftime("%Y年%m月%d日")
+    
     prompt = f"""你是基金文档检索优化专家。为问题添加精准关键词以提高检索精度。
+
+当前日期: {current_date}
 
 ## 严格规则
 
@@ -63,13 +82,20 @@ def prepare_llm_prompt(original_question):
 - Q3/第三季度 → July 2025, August 2025, September 2025
 - "从1月到9月" → January, February, March, April, May, June, July, August, September
 
-### 3. 精确实体名称
+### 3. 跨基金对比问题的时间处理（重要！）
+当问题涉及**多个基金的对比**（如 A Fund vs B Fund、比较X和Y）且**未指定具体时间**时：
+- 自动添加最近6个月作为时间范围关键词
+- 最近6个月是: {recent_months_str}
+- 示例: "Compare fee structures between Asian Income Fund and High Dividend Fund"
+  → 添加关键词: (Fee structure, {recent_months_str})
+
+### 4. 精确实体名称
 - 台积电 → Taiwan Semiconductor Manufacturing Co Ltd
 - 腾讯 → Tencent Holdings Ltd
 - 惠理亚洲收益基金 → Asian Income Fund
 - 惠理高息股票基金 → High Dividend Fund
 
-### 4. 禁止使用的泛化词（会干扰排名）
+### 5. 禁止使用的泛化词（会干扰排名）
 ❌ yield, return, goal, sector, bond, performance, allocation, holdings
 ❌ 这些词太通用，会匹配到不相关的chunks
 
@@ -80,6 +106,9 @@ def prepare_llm_prompt(original_question):
 
 输入: "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率"
 输出: "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率 (Dividend information, August 2025)"
+
+输入: "Compare fee structures between Asian Income Fund and High Dividend Fund"
+输出: "Compare fee structures between Asian Income Fund and High Dividend Fund (Fee structure, {recent_months_str})"
 
 输入: "哪些月份Asian Income Fund持有台积电？"
 输出: "哪些月份Asian Income Fund持有台积电？ (Top holdings - equities, Taiwan Semiconductor Manufacturing Co Ltd)"
