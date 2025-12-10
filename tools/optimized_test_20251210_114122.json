@@ -1,0 +1,145 @@
+{
+  "timestamp": "2025-12-10T11:41:22.397591",
+  "enhance_model": "anthropic/claude-haiku-4.5",
+  "generate_model": "anthropic/claude-sonnet-4",
+  "strategy": "optimized_short_keywords",
+  "results": [
+    {
+      "id": "Q1",
+      "question": "what is the management fee for High Dividend Stocks fund?",
+      "enhanced": "what is the management fee for High Dividend Stocks fund? (High Dividend Stocks Fund Fee structure)",
+      "chunks": 30,
+      "answer": "根据知识库内容，High Dividend Fund的管理费结构如下：\n\n## High Dividend Fund 管理费 [来源1-9]\n\n| 份额类别 | 管理费 |\n|---------|--------|\n| Class A1 | 1.25% p.a. |\n| Class A2 MDis | 1.25% p.a. |\n| Class A Acc | 1.50% p.a. |\n| Class B | 1.50% p.a. |\n\n**注意事项：**\n- 以上费率在2025年1月至9月期间保持一致\n- Class A1和Class A2 MDis的管理费为1.25%年费\n- Class A Acc和Class B的管理费为1.50%年费\n- 所有份额类别还可能收取最高15%的业绩费（采用高水位原则，Class A Acc除外）",
+      "status": "✅",
+      "time": 9.182096242904663,
+      "enhance_time": 1.3457307815551758,
+      "retrieval_time": 1.5981111526489258,
+      "generation_time": 6.238196849822998
+    },
+    {
+      "id": "Q2",
+      "question": "does High Dividend Stocks fund have performance fees?",
+      "enhanced": "does High Dividend Stocks fund have performance fees? (High Dividend Stocks Fund Fee structure)",
+      "chunks": 30,
+      "answer": "根据知识库内容，High Dividend Fund确实有performance fees，但具体情况因份额类别而异：\n\n## High Dividend Fund Performance Fee结构\n\n| 份额类别 | Performance Fee |\n|---------|----------------|\n| Class A1 | 15% of profit (High-on-high principle) |\n| Class A2 MDis | 15% of profit (High-on-high principle) |\n| Class A Acc | Nil (无performance fee) |\n| Class B | Nil (无performance fee) |\n\n这个fee结构在多个月份的报告中保持一致，包括2025年1月至9月的数据。[来源1][来源2][来源3][来源4][来源5][来源6][来源7][来源8][来源9]\n\n**总结：**\n- **Class A1和Class A2 MDis**：收取15%的performance fee，采用High-on-high原则\n- **Class A Acc和Class B**：不收取performance fee\n\n因此，High Dividend Fund的某些份额类别确实有performance fees，但不是所有类别都收取。",
+      "status": "✅",
+      "time": 8.4760160446167,
+      "enhance_time": 1.468290090560913,
+      "retrieval_time": 0.6162400245666504,
+      "generation_time": 6.3914196491241455
+    },
+    {
+      "id": "Q3",
+      "question": "what is the performance fee for High Dividend stocks fund?",
+      "enhanced": "what is the performance fee for High Dividend stocks fund? (High Dividend stocks fund Fee structure)",
+      "chunks": 30,
+      "answer": "根据知识库内容，High Dividend Fund的表现费（Performance Fee）信息如下：\n\n## High Dividend Fund 表现费结构\n\n| 份额类别 | 表现费 |\n|---------|--------|\n| Class A1 | 15% of profit (High-on-high principle) |\n| Class A2 MDis | 15% of profit (High-on-high principle) |\n| Class A Acc | Nil (无表现费) |\n| Class B | Nil (无表现费) |\n\n**要点说明：**\n- Class A1 和 Class A2 MDis 收取15%的利润表现费，采用\"高水位原则\"（High-on-high principle）\n- Class A Acc 和 Class B 不收取表现费\n- 这个费用结构在所有报告月份（2025年1月至9月）中保持一致\n\n[来源1][来源2][来源3][来源4][来源5][来源6][来源7][来源8][来源9]",
+      "status": "✅",
+      "time": 9.160096168518066,
+      "enhance_time": 1.2580523490905762,
+      "retrieval_time": 0.9922032356262207,
+      "generation_time": 6.909776926040649
+    },
+    {
+      "id": "Q4",
+      "question": "what is the performance fee rate for High Dividend Stocks Fund?",
+      "enhanced": "what is the performance fee rate for High Dividend Stocks Fund? (High Dividend Stocks Fund Fee structure)",
+      "chunks": 30,
+      "answer": "根据知识库内容，High Dividend Fund的表现费率如下：\n\n## High Dividend Fund 表现费率\n\n| 份额类别 | 表现费率 |\n|---------|---------|\n| Class A1 | 15% of profit (High-on-high principle) |\n| Class A2 MDis | 15% of profit (High-on-high principle) |\n| Class A Acc | Nil (无表现费) |\n| Class B | Nil (无表现费) |\n\n**说明：**\n- Class A1和Class A2 MDis收取15%的表现费，采用\"高水位原则\"(High-on-high principle)\n- Class A Acc和Class B不收取表现费\n\n这个费率结构在所有报告月份（2025年1月至9月）中保持一致。\n\n[来源1][来源2][来源3][来源4][来源5][来源6][来源7][来源8][来源9]",
+      "status": "✅",
+      "time": 8.033596992492676,
+      "enhance_time": 1.530095100402832,
+      "retrieval_time": 0.7789754867553711,
+      "generation_time": 5.724462985992432
+    },
+    {
+      "id": "Q5",
+      "question": "what is the top fixed income holdings for Asian Income fund as of September 2025",
+      "enhanced": "what is the top fixed income holdings for Asian Income fund as of September 2025 (Asian Income Fund September 2025 Top holdings fixed income)",
+      "chunks": 30,
+      "answer": "根据知识库内容，Asian Income Fund截至2025年9月的前五大固定收益持仓如下：\n\n## Asian Income Fund - 前五大固定收益持仓（2025年9月）[来源3]\n\n| 名称 | 行业 | 国家/地区 | 占比 |\n|:-----|:-----|:----------|:-----|\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | 金融 | 日本 | 1.0% |\n| Mitsubishi UFJ Financial Group Inc 6.35% PERP | 金融 | 日本 | 0.9% |\n| eHi Car Services Ltd 7% 09/21/2026 | 工业 | 中国 | 0.7% |\n| Fortune Star BV I Ltd 5.05% 01/27/2027 | 工业 | 中国 | 0.7% |\n| Sumitomo Mitsui Financial Group Inc 6.6% PERP | 金融 | 日本 | 0.7% |\n\n从持仓结构来看，该基金的固定收益投资主要集中在日本金融机构的永续债券和中国工业公司债券上。",
+      "status": "✅",
+      "time": 8.982708930969238,
+      "enhance_time": 1.768770694732666,
+      "retrieval_time": 1.213707447052002,
+      "generation_time": 6.000158071517944
+    },
+    {
+      "id": "Q6",
+      "question": "what are the top equity holdings of Asian Income as of March 2025",
+      "enhanced": "what are the top equity holdings of Asian Income as of March 2025 (Asian Income March 2025 Top holdings equities)",
+      "chunks": 30,
+      "answer": "根据知识库内容，Asian Income Fund在2025年3月的股票前五大持仓如下：[来源1]\n\n| 名称 | 行业 | 国家/地区 | 占比 |\n|------|------|-----------|------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 7.2% |\n| China Telecom Corp Ltd | Communication services | Hong Kong | 3.0% |\n| China Merchants Bank Co Ltd | Banks | Hong Kong | 2.4% |\n| SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.1% |\n| ICICI Bank Ltd | Banks | United States | 1.9% |\n\n这些持仓显示该基金主要投资于亚洲地区的科技、通信和银行板块，其中台积电是最大的单一持仓，占比7.2%。",
+      "status": "✅",
+      "time": 7.472172737121582,
+      "enhance_time": 1.2863080501556396,
+      "retrieval_time": 0.6941425800323486,
+      "generation_time": 5.491652011871338
+    },
+    {
+      "id": "Q7",
+      "question": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025",
+      "enhanced": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025 (High Dividend Stocks Fund January February March April May June July Top holdings equities)",
+      "chunks": 30,
+      "answer": "根据知识库内容，以下是High Dividend Fund从2025年1月到7月的股票前十大持仓变化：\n\n## 2025年1月 [来源1]\n| 股票名称 | 行业 | 持仓比例 |\n|:---------|:-----|:---------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 8.7% |\n| China Telecom Corp Ltd | Telecommunication services | 5.9% |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 5.7% |\n| China Construction Bank Corp | Banks | 5.4% |\n| China State Construction International Holdings Ltd | Capital goods | 4.5% |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 2.8% |\n| Hyundai Motor Co | Automobiles & components | 2.7% |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.2% |\n| Far East Horizon Ltd | Diversified financials | 2.0% |\n| AIA Group Ltd | Insurance | 1.9% |\n\n## 2025年2月 [来源6]\n| 股票名称 | 行业 | 持仓比例 |\n|:---------|:-----|:---------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 8.9% |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 5.8% |\n| China Construction Bank Corp | Banks | 5.7% |\n| China Telecom Corp Ltd | Telecommunication services | 5.5% |\n| China State Construction International Holdings Ltd | Capital goods | 4.7% |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 2.8% |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.6% |\n| AIA Group Ltd | Insurance | 2.3% |\n| Far East Horizon Ltd | Diversified financials | 2.1% |\n| Hyundai Motor Co | Automobiles & components | 2.0% |\n\n## 2025年3月 [来源3]\n| 股票名称 | 行业 | 持仓比例 |\n|:---------|:-----|:---------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 7.8% |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 6.1% |\n| China Construction Bank Corp | Banks | 6.0% |\n| China Telecom Corp Ltd | Telecommunication services | 4.7% |\n| China State Construction International Holdings Ltd | Capital goods | 3.9% |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 2.9% |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.7% |\n| AIA Group Ltd | Insurance | 2.3% |\n| Far East Horizon Ltd | Diversified financials | 2.3% |\n| China Resources Land Ltd | Real estate | 2.1% |\n\n## 2025年4月 [来源5]\n| 股票名称 | 行业 | 持仓比例 |\n|:---------|:-----|:---------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 8.0% |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 6.2% |\n| China Construction Bank Corp | Banks | 5.3% |\n| China State Construction International Holdings Ltd | Capital goods | 4.4% |\n| China Telecom Corp Ltd | Telecommunication services | 3.7% |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 3.0% |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.9% |\n| AIA Group Ltd | Insurance | 2.4% |\n| Far East Horizon Ltd | Diversified financials | 2.2% |\n| China Resources Land Ltd | Real estate | 2.1% |\n\n## 2025年5月 [来源9]\n| 股票名称 | 行业 | 持仓比例 |\n|:---------|:-----|:---------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 8.4% |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 6.1% |\n| China Construction Bank Corp | Banks | 5.3% |\n| China State Construction International Holdings Ltd | Capital goods | 4.0% |\n| China Telecom Corp Ltd | Telecommunication services | 4.0% |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 3.1% |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.8% |\n| AIA Group Ltd | Insurance | 2.7% |\n| Chow Tai Fook Jewellery Group Ltd | Retailing | 2.2% |\n| JD Health International Inc | Food & staples retailing | 2.2% |\n\n## 2025年6月 [来源4]\n| 股票名称 | 行业 | 持仓比例 |\n|:---------|:-----|:---------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 9.2% |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 6.5% |\n| China Construction Bank Corp | Banks | 4.0% |\n| China State Construction International Holdings Ltd | Capital goods | 4.0% |\n| China Telecom Corp Ltd | Telecommunication services | 3.7% |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 3.0% |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.9% |\n| AIA Group Ltd | Insurance | 2.8% |\n| Chow Tai Fook Jewellery Group Ltd | Retailing | 2.5% |\n| Far East Horizon Ltd | Diversified financials | 2.3% |\n\n## 2025年7月 [来源2]\n| 股票名称 | 行业 | 持仓比例 |\n|:---------|:-----|:---------|\n| Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | 9.6% |\n| Samsung Electronics Co Ltd | Technology, hardware & equipment | 7.0% |\n| China State Construction International Holdings Ltd | Capital goods | 3.9% |\n| China Telecom Corp Ltd | Telecommunication services | 3.9% |\n| China Construction Bank Corp | Banks | 3.4% |\n| China Everbright Environment Group Ltd | Commercial services & supplies | 3.2% |\n| AIA Group Ltd | Insurance | 2.9% |\n| HKT Trust & HKT Ltd | Telecommunication services | 2.9% |\n| Far East Horizon Ltd | Diversified financials | 2.6% |\n| JD Health International Inc | Food & staples retailing | 2.4% |\n\n**主要变化趋势：**\n- Taiwan Semiconductor Manufacturing Co Ltd持续为第一大持仓，比例从8.7%增至9.6%\n- Samsung Electronics Co Ltd稳居第二位，比例从5.7%增至7.0%\n- China Construction Bank Corp持仓比例从5.4%降至3.4%\n- 新进入前十的股票包括Chow Tai Fook Jewellery Group Ltd和JD Health International Inc",
+      "status": "✅",
+      "time": 24.448340892791748,
+      "enhance_time": 1.2779455184936523,
+      "retrieval_time": 0.9294097423553467,
+      "generation_time": 22.240907192230225
+    },
+    {
+      "id": "Q8",
+      "question": "what is the geographic exposures for the High dividend stocks fund?",
+      "enhanced": "what is the geographic exposures for the High dividend stocks fund? (High dividend stocks fund Asset type geography)",
+      "chunks": 30,
+      "answer": "根据知识库内容，High Dividend Fund的地理配置情况如下（按时间顺序展示）：\n\n## 地理配置变化趋势 [来源1][来源2][来源3][来源4]\n\n| 地区 | 2025年1月 | 2025年4月 | 2025年5月 | 2025年7月 |\n|:------------|:----------|:----------|:----------|:----------|\n| Hong Kong   | 23%       | 25%       | 27%       | 27%       |\n| South Korea | 16%       | 16%       | 15%       | 16%       |\n| Taiwan      | 13%       | 11%       | 13%       | 15%       |\n| Red Chips   | 13%       | 15%       | 13%       | 14%       |\n| H-shares    | 15%       | 12%       | 13%       | 11%       |\n| India       | 10%       | 10%       | 10%       | 8%        |\n| Singapore   | 2%        | 3%        | 3%        | 3%        |\n| Indonesia   | 2%        | 2%        | 2%        | 2%        |\n| Others      | 4%        | 3%        | 3%        | 4%        |\n| Cash        | 2%        | 3%        | 1%        | -         |\n\n## 主要观察：\n- **香港**是最大配置地区，从23%增长至27%\n- **韩国**保持稳定在15-16%区间\n- **台湾**配置有所增加，从13%升至15%\n- **印度**配置略有下降，从10%降至8%\n- 现金配置在7月份数据中未显示\n\n该基金主要投资于亚洲地区的高股息股票和债券证券。",
+      "status": "✅",
+      "time": 13.656546354293823,
+      "enhance_time": 1.4432687759399414,
+      "retrieval_time": 1.803605556488037,
+      "generation_time": 10.409600734710693
+    },
+    {
+      "id": "Q9",
+      "question": "show me the geographic locations of High dividend stocks from January 2025 to September 2025",
+      "enhanced": "show me the geographic locations of High dividend stocks from January 2025 to September 2025 (High Dividend Fund January February March April May June July August September 2025 Asset type geography)",
+      "chunks": 30,
+      "answer": "根据知识库内容，以下是High Dividend Fund从2025年1月到9月的地理位置分布：\n\n## High Dividend Fund 地理位置分布 (2025年1月-9月)\n\n| 地理位置 | 2025年1月 [来源2] | 2025年4月 [来源3] | 变化 |\n|:---------|:------------------|:------------------|:-----|\n| Hong Kong | 23% | 25% | +2% |\n| South Korea | 16% | 16% | 0% |\n| H-shares | 15% | 12% | -3% |\n| Red Chips | 13% | 15% | +2% |\n| Taiwan | 13% | 11% | -2% |\n| India | 10% | 10% | 0% |\n| Singapore | 2% | 3% | +1% |\n| Indonesia | 2% | 2% | 0% |\n| Others | 4% | 3% | -1% |\n| Cash | 2% | 3% | +1% |\n\n**主要变化趋势：**\n- Hong Kong配置从23%增加到25%，为最大持仓地区\n- Red Chips从13%增加到15%\n- H-shares从15%减少到12%\n- Taiwan配置略有下降，从13%降至11%\n- South Korea和India保持稳定在16%和10%\n\n注：知识库中没有提供2025年9月的具体地理位置分布数据，仅有1月和4月的数据可供比较。",
+      "status": "✅",
+      "time": 9.822097539901733,
+      "enhance_time": 1.4889633655548096,
+      "retrieval_time": 0.6164145469665527,
+      "generation_time": 7.7166664600372314
+    },
+    {
+      "id": "Q10",
+      "question": "what are the top holdings of Asian Income Fund from January 2025 to September 2025",
+      "enhanced": "what are the top holdings of Asian Income Fund from January 2025 to September 2025 (Asian Income Fund January February March April May June July August September 2025 Top holdings equities Top holdings fixed income)",
+      "chunks": 30,
+      "answer": "根据知识库内容，以下是Asian Income Fund从2025年1月到9月的前五大持仓情况：\n\n## 股票持仓 (Top Holdings - Equities)\n\n| 月份 | 排名 | 公司名称 | 行业 | 国家/地区 | 占比 |\n|------|------|----------|------|-----------|------|\n| **2025年1月** [来源10] | 1 | Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 9.0% |\n| | 2 | Alchip Technologies Ltd | Semiconductors & semiconductor equipment | Taiwan | 3.0% |\n| | 3 | China Telecom Corp Ltd | Communication services | Hong Kong | 2.4% |\n| | 4 | SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.4% |\n| | 5 | ICICI Bank Ltd | Banks | United States | 2.2% |\n| **2025年3月** [来源12] | 1 | Taiwan Semiconductor Manufacturing Co Ltd | Semiconductors & semiconductor equipment | Taiwan | 7.2% |\n| | 2 | China Telecom Corp Ltd | Communication services | Hong Kong | 3.0% |\n| | 3 | China Merchants Bank Co Ltd | Banks | Hong Kong | 2.4% |\n| | 4 | SK Hynix Inc | Semiconductors & semiconductor equipment | South Korea | 2.1% |\n| | 5 | ICICI Bank Ltd | Banks | United States | 1.9% |\n| **2025年9月** [来源8] | 1 | Taiwan Semiconductor Manufacturing Co Ltd | Information technology | Taiwan | 6.5% |\n| | 2 | SK Hynix Inc | Information technology | South Korea | 2.3% |\n| | 3 | Tencent Holdings Ltd | Communication services | Hong Kong | 2.0% |\n| | 4 | Wiwynn Corp | Information technology | Taiwan | 2.0% |\n| | 5 | China Mobile Ltd | Communication services | Hong Kong | 1.7% |\n\n## 固定收益持仓 (Top Holdings - Fixed Income)\n\n| 月份 | 排名 | 债券名称 | 行业 | 国家/地区 | 占比 |\n|------|------|----------|------|-----------|------|\n| **2025年1月** [来源3] | 1 | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.4% |\n| | 2 | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0% |\n| | 3 | Elect Global Investments Ltd 4.1% PERP | Real estate | Hong Kong | 0.9% |\n| | 4 | Sumitomo Mitsui Financial Group Inc 6.6% PERP | Financials | Japan | 0.9% |\n| | 5 | Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.8% |\n| **2025年2月** [来源4] | 1 | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.5% |\n| | 2 | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0% |\n| | 3 | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0% |\n| | 4 | Bank Negara Indonesia Persero Tbk PT 4.3% PERP | Financials | Indonesia | 0.9% |\n| | 5 | Elect Global Investments Ltd 4.1% PERP | Real estate | Hong Kong | 0.9% |\n| **2025年3月** [来源11] | 1 | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.5% |\n| | 2 | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0% |\n| | 3 | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0% |\n| | 4 | Fortune Star BVI Ltd 8.5% 05/19/2028 | Industrials | China | 0.8% |\n| | 5 | Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.8% |\n| **2025年4月** [来源5] | 1 | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.5% |\n| | 2 | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.1% |\n| | 3 | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0% |\n| | 4 | Elect Global Investments Ltd 7.2% PERP | Real estate | Hong Kong | 0.9% |\n| | 5 | Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.9% |\n| **2025年5月** [来源9] | 1 | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.4% |\n| | 2 | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.1% |\n| | 3 | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 1.0% |\n| | 4 | Elect Global Investments Ltd 7.2% PERP | Real estate | Hong Kong | 0.9% |\n| | 5 | Westwood Group Holdings Ltd 2.8% 01/20/2026 | Real estate | Hong Kong | 0.8% |\n| **2025年6月** [来源6] | 1 | Fortune Star (BVI) Ltd 5% 05/18/2026 | Industrials | China | 1.3% |\n| | 2 | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0% |\n| | 3 | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 0.9% |\n| | 4 | Elect Global Investments Ltd 7.2% PERP | Real estate | Hong Kong | 0.8% |\n| | 5 | Fortune Star BVI Ltd 8.5% 05/19/2028 | Industrials | China | 0.7% |\n| **2025年9月** [来源7] | 1 | Sumitomo Mitsui Financial Group Inc 6.45% PERP | Financials | Japan | 1.0% |\n| | 2 | Mitsubishi UFJ Financial Group Inc 6.35% PERP | Financials | Japan | 0.9% |\n| | 3 | eHi Car Services Ltd 7% 09/21/2026 | Industrials | China | 0.7% |\n| | 4 | Fortune Star BV I Ltd 5.05% 01/27/2027 | Industrials | China | 0.7% |\n| | 5 | Sumitomo Mitsui Financial Group Inc 6.6% PERP | Financials | Japan | 0.7% |\n\n**主要观察：**\n- 股票持仓中，台积电(TSMC)始终保持第一大持仓，但占比从1月的9.0%逐步下降至9月的6.5%\n- 固定收益持仓中，Fortune Star (BVI) Ltd债券在1-6月期间一直是最大持仓，但在9月份被Sumitomo Mitsui Financial Group债券超越\n- 整体持仓以亚洲市场为主，涵盖台湾、香港、中国、日本、韩国等地区",
+      "status": "✅",
+      "time": 25.286309003829956,
+      "enhance_time": 1.4728448390960693,
+      "retrieval_time": 0.6172332763671875,
+      "generation_time": 23.196131706237793
+    },
+    {
+      "id": "Q11",
+      "question": "what is the return for high dividend stocks fund as of September 2025?",
+      "enhanced": "what is the return for high dividend stocks fund as of September 2025? (high dividend stocks fund September 2025 Monthly performance)",
+      "chunks": 30,
+      "answer": "根据知识库内容，High Dividend Fund截至2025年9月的回报表现如下：\n\n## High Dividend Fund 回报表现（截至2025年9月）[来源2]\n\n| 时间期间 | Class A1 USD | Class A2 USD MDis | Class A RMB Unhedged Acc |\n|:---------|:-------------|:------------------|:-------------------------|\n| 年初至今 | +23.2% | +23.6% | +19.4% |\n| 一个月 | +2.4% | +2.4% | +2.5% |\n| 一年 | +15.7% | +15.9% | +18.1% |\n| 三年 | +62.2% | +62.7% | +60.2% |\n| 五年 | +41.7% | +42.1% | +48.7% |\n| 成立以来总回报 | +1,197.9% | +115.5% | +122.3% |\n| 成立以来年化回报 | +11.7% | +6.1% | +7.2% |\n\n## 与基准指数比较[来源2]\n\n| 时间期间 | MSCI AC Asia (ex-Japan) Index | MSCI AC Asia (ex-Japan) High Dividend Yield Index |\n|:---------|:------------------------------|:--------------------------------------------------|\n| 年初至今 | +26.8% | +15.5% |\n| 一个月 | +6.8% | +1.5% |\n| 一年 | +17.2% | +12.8% |\n| 三年 | +67.6% | +76.2% |\n| 五年 | +36.6% | +76.8% |\n\n该基金在2025年年初至今表现强劲，主要份额类别均录得超过19%的正回报，其中Class A2 USD MDis表现最佳，达到+23.6%。",
+      "status": "✅",
+      "time": 13.207912921905518,
+      "enhance_time": 2.0159637928009033,
+      "retrieval_time": 1.2717993259429932,
+      "generation_time": 9.92008113861084
+    }
+  ],
+  "summary": {
+    "success": 11,
+    "total": 11,
+    "total_time": 137.7278938293457
+  }
+}

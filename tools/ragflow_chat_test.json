@@ -1,0 +1,132 @@
+{
+  "timestamp": "2025-12-10T11:49:27.641825",
+  "strategy": "optimized_short_keywords + ragflow_chat_haiku45",
+  "results": [
+    {
+      "id": "Q1",
+      "question": "what is the management fee for High Dividend Stocks fund?",
+      "enhanced": "what is the management fee for High Dividend Stocks fund? (High Dividend Stocks Fund Fee structure)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 23.35653257369995,
+      "enhance_time": 1.316197156906128,
+      "chat_time": 21.788416147232056
+    },
+    {
+      "id": "Q2",
+      "question": "does High Dividend Stocks fund have performance fees?",
+      "enhanced": "does High Dividend Stocks fund have performance fees? (High Dividend Stocks Fund Fee structure)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 23.384459018707275,
+      "enhance_time": 1.3223023414611816,
+      "chat_time": 22.009668827056885
+    },
+    {
+      "id": "Q3",
+      "question": "what is the performance fee for High Dividend stocks fund?",
+      "enhanced": "what is the performance fee for High Dividend stocks fund? (High Dividend stocks fund Fee structure)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 25.677797317504883,
+      "enhance_time": 1.213883399963379,
+      "chat_time": 24.396087169647217
+    },
+    {
+      "id": "Q4",
+      "question": "what is the performance fee rate for High Dividend Stocks Fund?",
+      "enhanced": "what is the performance fee rate for High Dividend Stocks Fund (High Dividend Stocks Fund Fee structure)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 18.472080945968628,
+      "enhance_time": 1.602846622467041,
+      "chat_time": 16.803221940994263
+    },
+    {
+      "id": "Q5",
+      "question": "what is the top fixed income holdings for Asian Income fund as of September 2025",
+      "enhanced": "what is the top fixed income holdings for Asian Income fund as of September 2025 (Asian Income September Top holdings fixed income)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 20.687402486801147,
+      "enhance_time": 1.7565281391143799,
+      "chat_time": 18.863011121749878
+    },
+    {
+      "id": "Q6",
+      "question": "what are the top equity holdings of Asian Income as of March 2025",
+      "enhanced": "what are the top equity holdings of Asian Income as of March 2025 (Asian Income March Top holdings equities)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 16.850568294525146,
+      "enhance_time": 1.3001899719238281,
+      "chat_time": 15.481429815292358
+    },
+    {
+      "id": "Q7",
+      "question": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025",
+      "enhanced": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025 (High Dividend Stocks Fund January February March April May June July Top holdings equities)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 20.039766550064087,
+      "enhance_time": 1.462012529373169,
+      "chat_time": 18.509320735931396
+    },
+    {
+      "id": "Q8",
+      "question": "what is the geographic exposures for the High dividend stocks fund?",
+      "enhanced": "what is the geographic exposures for the High dividend stocks fund? (High dividend stocks fund Asset type geography)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 18.61285424232483,
+      "enhance_time": 2.0833685398101807,
+      "chat_time": 16.4893696308136
+    },
+    {
+      "id": "Q9",
+      "question": "show me the geographic locations of High dividend stocks from January 2025 to September 2025",
+      "enhanced": "show me the geographic locations of High dividend stocks from January 2025 to September 2025 (High dividend January February March April May June July August September Asset type geography)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 20.396963834762573,
+      "enhance_time": 1.1991429328918457,
+      "chat_time": 19.129047393798828
+    },
+    {
+      "id": "Q10",
+      "question": "what are the top holdings of Asian Income Fund from January 2025 to September 2025",
+      "enhanced": "what are the top holdings of Asian Income Fund from January 2025 to September 2025 (Asian Income Fund January February March April May June July August September Top holdings equities Top holdings fixed income)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 19.740354776382446,
+      "enhance_time": 2.0336520671844482,
+      "chat_time": 17.65096426010132
+    },
+    {
+      "id": "Q11",
+      "question": "what is the return for high dividend stocks fund as of September 2025?",
+      "enhanced": "what is the return for high dividend stocks fund as of September 2025? (High Dividend Stocks Fund September Monthly performance)",
+      "answer": "**ERROR**: GENERIC_ERROR - litellm.APIError: APIError: OpenAIException - Provider returned error",
+      "refs": 30,
+      "status": "✅",
+      "time": 18.373369693756104,
+      "enhance_time": 1.3880317211151123,
+      "chat_time": 16.919670820236206
+    }
+  ],
+  "summary": {
+    "success": 11,
+    "total": 11,
+    "total_time": 225.59214973449707
+  }
+}

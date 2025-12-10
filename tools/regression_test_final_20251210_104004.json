@@ -1,0 +1,105 @@
+{
+  "timestamp": "2025-12-10T10:40:04.970171",
+  "model": "anthropic/claude-haiku-4.5",
+  "results": [
+    {
+      "id": "Q1",
+      "question": "what is the management fee for High Dividend Stocks fund?",
+      "enhanced": "what is the management fee for High Dividend Stocks fund?",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 2.0302531719207764
+    },
+    {
+      "id": "Q2",
+      "question": "does High Dividend Stocks fund have performance fees?",
+      "enhanced": "does High Dividend Stocks fund have performance fees?",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.4992349147796631
+    },
+    {
+      "id": "Q3",
+      "question": "what is the performance fee for High Dividend stocks fund?",
+      "enhanced": "what is the performance fee for High Dividend stocks fund?",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.5255436897277832
+    },
+    {
+      "id": "Q4",
+      "question": "what is the performance fee rate for High Dividend Stocks Fund?",
+      "enhanced": "what is the performance fee rate for High Dividend Stocks Fund?",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.4929697513580322
+    },
+    {
+      "id": "Q5",
+      "question": "what is the top fixed income holdings for Asian Income fund as of September 2025",
+      "enhanced": "what is the top fixed income holdings for Asian Income fund as of September 2025",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.5300884246826172
+    },
+    {
+      "id": "Q6",
+      "question": "what are the top equity holdings of Asian Income as of March 2025",
+      "enhanced": "what are the top equity holdings of Asian Income as of March 2025",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.5133507251739502
+    },
+    {
+      "id": "Q7",
+      "question": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025",
+      "enhanced": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.5358424186706543
+    },
+    {
+      "id": "Q8",
+      "question": "what is the geographic exposures for the High dividend stocks fund?",
+      "enhanced": "what is the geographic exposures for the High dividend stocks fund?",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.49781298637390137
+    },
+    {
+      "id": "Q9",
+      "question": "show me the geographic locations of High dividend stocks from January 2025 to September 2025",
+      "enhanced": "show me the geographic locations of High dividend stocks from January 2025 to September 2025",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.5273282527923584
+    },
+    {
+      "id": "Q10",
+      "question": "what are the top holdings of Asian Income Fund from January 2025 to September 2025",
+      "enhanced": "what are the top holdings of Asian Income Fund from January 2025 to September 2025",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.5084617137908936
+    },
+    {
+      "id": "Q11",
+      "question": "what is the return for high dividend stocks fund as of September 2025?",
+      "enhanced": "what is the return for high dividend stocks fund as of September 2025?",
+      "chunks": 30,
+      "answer": null,
+      "status": "❌",
+      "time": 0.5078675746917725
+    }
+  ]
+}

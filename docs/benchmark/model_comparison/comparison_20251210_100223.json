@@ -1,0 +1,77 @@
+[
+  {
+    "test_id": "TC002",
+    "question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率",
+    "enhanced_question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率 (Dividend information, August 2025)",
+    "gemini_original_score": 1.0,
+    "chunks_count": 30,
+    "model_answers": {
+      "google/gemini-2.0-flash-001": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.5692822933197021
+      },
+      "anthropic/claude-3.5-sonnet": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.5302920341491699
+      },
+      "openai/gpt-4o-mini": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.5363974571228027
+      },
+      "meta-llama/llama-3.3-70b-instruct": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.09335827827453613
+      }
+    }
+  },
+  {
+    "test_id": "TC009",
+    "question": "哪些月份Asian Income Fund持有台积电？",
+    "enhanced_question": "哪些月份Asian Income Fund持有台积电？ (Top holdings - equities, Taiwan Semiconductor Manufacturing Co Ltd)",
+    "gemini_original_score": 5.0,
+    "chunks_count": 30,
+    "model_answers": {
+      "google/gemini-2.0-flash-001": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.698143720626831
+      },
+      "anthropic/claude-3.5-sonnet": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.08365797996520996
+      },
+      "openai/gpt-4o-mini": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.12622880935668945
+      },
+      "meta-llama/llama-3.3-70b-instruct": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.08670616149902344
+      }
+    }
+  },
+  {
+    "test_id": "TC008",
+    "question": "Portfolio characteristics of Asian Income Fund from May to August 2025",
+    "enhanced_question": "Portfolio characteristics of Asian Income Fund from May to August 2025 (Portfolio characteristics, May 2025, June 2025, July 2025, August 2025)",
+    "gemini_original_score": 6.0,
+    "chunks_count": 30,
+    "model_answers": {
+      "google/gemini-2.0-flash-001": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.530867338180542
+      },
+      "anthropic/claude-3.5-sonnet": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.11592841148376465
+      },
+      "openai/gpt-4o-mini": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.11016511917114258
+      },
+      "meta-llama/llama-3.3-70b-instruct": {
+        "error": "API error: 401 - {\"error\":{\"message\":\"User not found.\",\"code\":401}}",
+        "time": 0.09191560745239258
+      }
+    }
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-12-10T10:43:24.819516",
+  "model": "anthropic/claude-haiku-4.5",
+  "results": [
+    {
+      "id": "Q1",
+      "question": "what is the management fee for High Dividend Stocks fund?",
+      "enhanced": "原问题：what is the management fee for High Dividend Stocks fund?\n\n**增强后的问题：**\n(Fee structure) High Dividend Stocks fund management fee",
+      "chunks": 30,
+      "answer": "根据知识库内容，High Dividend Fund（高股息基金）的管理费因基金份额类别而异：\n\n**管理费结构：** [来源1]\n\n- **Class A1**：1.25% p.a.\n- **Class A2 MDis**：1.25% p.a.\n- **Class A Acc**：1.50% p.a.\n- **Class B**：1.50% p.a.\n\n因此，High Dividend Fund的管理费为**1.25% 至 1.50% 每年**，具体费率取决于您选择的份额类别。Class A1和Class A2 MDis的管理费较低（1.25%），而Class A Acc和Class B的管理费较高（1.50%）。",
+      "status": "✅",
+      "time": 6.907111167907715
+    },
+    {
+      "id": "Q2",
+      "question": "does High Dividend Stocks fund have performance fees?",
+      "enhanced": "原问题：does High Dividend Stocks fund have performance fees?\n\n**增强后的问题：** does High Dividend Stocks fund have performance fees? (Fee structure)",
+      "chunks": 30,
+      "answer": "根据知识库内容，**High Dividend Fund（高股息基金）的部分份额类别确实收取业绩费**。\n\n具体情况如下：\n\n**收取业绩费的份额类别：**\n- **Class A1**：15% of profit (High-on-high principle) [来源1、来源2]\n- **Class A2 MDis**：15% of profit (High-on-high principle) [来源1、来源2]\n\n**不收取业绩费的份额类别：**\n- **Class A Acc**：Nil [来源1、来源2]\n- **Class B**：Nil [来源1、来源2]\n\n因此，High Dividend Fund 并非所有份额类别都收取业绩费，投资者在选择份额类别时需要注意这一差异。",
+      "status": "✅",
+      "time": 6.980581283569336
+    },
+    {
+      "id": "Q3",
+      "question": "what is the performance fee for High Dividend stocks fund?",
+      "enhanced": "原问题：what is the performance fee for High Dividend stocks fund?\n\n增强后的问题：(Fee structure) High Dividend stocks fund performance fee",
+      "chunks": 30,
+      "answer": "# High Dividend Fund 的业绩费\n\n根据知识库内容，High Dividend Fund 的业绩费结构如下：\n\n## 按基金份额类别划分：\n\n**收取业绩费的份额类别：**\n- **Class A1**：15% of profit (High-on-high principle) [来源1、2]\n- **Class A2 MDis**：15% of profit (High-on-high principle) [来源1、2]\n\n**不收取业绩费的份额类别：**\n- **Class A Acc**：Nil [来源1、2]\n- **Class B**：Nil [来源1、2]\n\n## 总结\n\nHigh Dividend Fund 对 Class A1 和 Class A2 MDis 份额收取 **15% 的业绩费**，采用\"High-on-high principle\"（高水位线原则）计算方式。而 Class A Acc 和 Class B 份额则不收取业绩费。",
+      "status": "✅",
+      "time": 6.328891754150391
+    },
+    {
+      "id": "Q4",
+      "question": "what is the performance fee rate for High Dividend Stocks Fund?",
+      "enhanced": "原问题：what is the performance fee rate for High Dividend Stocks Fund?\n\n**增强后的问题：**\nwhat is the performance fee rate for High Dividend Stocks Fund? (Fee structure)",
+      "chunks": 30,
+      "answer": "根据知识库内容，High Dividend Fund（高股息基金）的业绩费率如下：\n\n**业绩费率：15%**\n\n具体情况：\n- **Class A1、Class A2 MDis**：15% of profit (High-on-high principle) [来源1、来源2]\n- **Class A Acc、Class B**：无业绩费（Nil）[来源1、来源2]\n\n其中\"High-on-high principle\"（高水位原则）意味着业绩费仅在基金净值超过之前的最高点时才收取。\n\n**注意**：知识库中提供的是\"High Dividend Fund\"，而非\"High Dividend Stocks Fund\"。如果您询问的是其他基金，请提供准确的基金名称。",
+      "status": "✅",
+      "time": 5.672144174575806
+    },
+    {
+      "id": "Q5",
+      "question": "what is the top fixed income holdings for Asian Income fund as of September 2025",
+      "enhanced": "原问题：what is the top fixed income holdings for Asian Income fund as of September 2025\n\n**增强后的问题：**\nTop holdings - fixed income, Asian Income fund, September 2025",
+      "chunks": 30,
+      "answer": "# Asian Income Fund - Top Fixed Income Holdings (September 2025)\n\n根据2025年9月的报告，Asian Income Fund的固定收益类前五大持仓如下[来源2]：\n\n| 持仓名称 | 行业 | 国家/地区 | 占比 |\n|---------|------|---------|------|\n| Sumitomo Mitsui Financial Group Inc 6.45% PERP | 金融 | 日本 | 1.0% |\n| Mitsubishi UFJ Financial Group Inc 6.35% PERP | 金融 | 日本 | 0.9% |\n| eHi Car Services Ltd 7% 09/21/2026 | 工业 | 中国 | 0.7% |\n| Fortune Star BV I Ltd 5.05% 01/27/2027 | 工业 | 中国 | 0.7% |\n| Sumitomo Mitsui Financial Group Inc 6.6% PERP | 金融 | 日本 | 0.7% |\n\n**主要特点：**\n- 日本金融机构占据主导地位，占前五大持仓的60%\n- 中国工业类债券占40%\n- 持仓集中度相对分散，最大单一持仓仅为1.0%",
+      "status": "✅",
+      "time": 6.961852550506592
+    },
+    {
+      "id": "Q6",
+      "question": "what are the top equity holdings of Asian Income as of March 2025",
+      "enhanced": "原问题：what are the top equity holdings of Asian Income as of March 2025\n\n**增强后的问题：**\n(Top holdings - equities, March 2025)",
+      "chunks": 30,
+      "answer": "# Asian Income Fund - 顶级股票持仓（2025年3月）\n\n根据2025年3月的报告，Asian Income Fund的顶级股票持仓如下：[来源1]\n\n| 公司名称 | 行业 | 国家/地区 | 占比 |\n|---------|------|---------|------|\n| Taiwan Semiconductor Manufacturing Co Ltd | 半导体与半导体设备 | 台湾 | 7.2% |\n| China Telecom Corp Ltd | 通信服务 | 香港 | 3.0% |\n| China Merchants Bank Co Ltd | 银行 | 香港 | 2.4% |\n| SK Hynix Inc | 半导体与半导体设备 | 韩国 | 2.1% |\n| ICICI Bank Ltd | 银行 | 美国 | 1.9% |\n\n**主要特点：**\n- 台积电是最大的单一持仓，占基金7.2%\n- 半导体行业是主要配置，前五大持仓中有两家半导体公司\n- 地理分布涵盖台湾、香港和韩国等亚洲主要市场",
+      "status": "✅",
+      "time": 8.319679498672485
+    },
+    {
+      "id": "Q7",
+      "question": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025",
+      "enhanced": "原问题：show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025\n\n**增强后的问题：**\nshow me the top holdings of High Dividend Stocks Fund (Top holdings - equities, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025)",
+      "chunks": 30,
+      "answer": "# High Dividend Fund 顶级持仓（2025年1月至7月）\n\n以下是High Dividend Fund从2025年1月到7月的顶级持仓演变情况：\n\n## 2025年1月 [来源1]\n| 公司名称 | 行业 | 占比 |\n|---------|------|------|\n| Taiwan Semiconductor Manufacturing Co Ltd | 半导体及半导体设备 | 8.7% |\n| China Telecom Corp Ltd | 电信服务 | 5.9% |\n| Samsung Electronics Co Ltd | 技术、硬件及设备 | 5.7% |\n| China Construction Bank Corp | 银行 | 5.4% |\n| China State Construction International Holdings Ltd | 资本货物 | 4.5% |\n\n## 2025年2月 [来源6]\n| 公司名称 | 行业 | 占比 |\n|---------|------|------|\n| Taiwan Semiconductor Manufacturing Co Ltd | 半导体及半导体设备 | 8.9% |\n| Samsung Electronics Co Ltd | 技术、硬件及设备 | 5.8% |\n| China Construction Bank Corp | 银行 | 5.7% |\n| China Telecom Corp Ltd | 电信服务 | 5.5% |\n| China State Construction International Holdings Ltd | 资本货物 | 4.7% |\n\n## 2025年3月 [来源3]\n| 公司名称 | 行业 | 占比 |\n|---------|----",
+      "status": "✅",
+      "time": 9.649796962738037
+    },
+    {
+      "id": "Q8",
+      "question": "what is the geographic exposures for the High dividend stocks fund?",
+      "enhanced": "原问题：what is the geographic exposures for the High dividend stocks fund?\n\n**增强后的问题：**\nAsset type by geography, High dividend stocks fund",
+      "chunks": 30,
+      "answer": "# High Dividend Fund 地理位置敞口\n\n根据最新的报告数据，High Dividend Fund 的地理位置敞口（按上市地）如下：\n\n## 2025年7月报告 [来源11]\n| 地区 | 敞口比例 |\n|------|--------|\n| 香港 | 27% |\n| 南韩 | 16% |\n| 台湾 | 15% |\n| 红筹股 | 14% |\n| H股 | 11% |\n| 印度 | 8% |\n| 新加坡 | 3% |\n| 印尼 | 2% |\n| 其他 | 4% |\n\n## 历史对比\n\n**2025年5月** [来源3]：香港27%、南韩15%、H股13%、红筹股13%、台湾13%、印度10%\n\n**2025年4月** [来源1]：香港25%、南韩16%、红筹股15%、H股12%、台湾11%、印度10%\n\n**2025年1月** [来源2]：香港23%、南韩16%、H股15%、红筹股13%、台湾13%、印度10%\n\n该基金主要投资于**亚洲地区**相对高收益的股票和债券组合，其中**香港**始终是最大的地理敞口，占比在23%-27%之间。",
+      "status": "❓",
+      "time": 7.171623945236206
+    },
+    {
+      "id": "Q9",
+      "question": "show me the geographic locations of High dividend stocks from January 2025 to September 2025",
+      "enhanced": "原问题：show me the geographic locations of High dividend stocks from January 2025 to September 2025\n\n**增强后的问题：**\n(Asset type by geography, Dividend information, Top holdings - equities, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025, August 2025, September 2025)",
+      "chunks": 30,
+      "answer": "# High Dividend Fund 地理位置分布变化（2025年1月至9月）\n\n根据知识库内容，以下是High Dividend Fund在此期间的地理位置分布：\n\n## 2025年1月 [来源1]\n| 地理位置 | 占比 |\n|---------|------|\n| 香港 | 23% |\n| 南韩 | 16% |\n| H股 | 15% |\n| 红筹股 | 13% |\n| 台湾 | 13% |\n| 印度 | 10% |\n| 印尼 | 2% |\n| 新加坡 | 2% |\n| 其他 | 4% |\n| 现金 | 2% |\n\n## 2025年7月 [来源3]\n| 地理位置 | 占比 |\n|---------|------|\n| 香港 | 27% |\n| 南韩 | 16% |\n| 台湾 | 15% |\n| 红筹股 | 14% |\n| H股 | 11% |\n| 印度 | 8% |\n| 新加坡 | 3% |\n| 印尼 | 2% |\n| 其他 | 4% |\n\n## 主要变化趋势：\n- **香港**：从23%增加至27%（增加4%）\n- **H股**：从15%下降至11%（下降4%）\n- **红筹股**：从13%增加至14%（增加1%）\n- **印度**：从10%下降至8%（下降2%）\n- **台湾和南韩**：保持相对稳定",
+      "status": "❓",
+      "time": 7.462442636489868
+    },
+    {
+      "id": "Q10",
+      "question": "what are the top holdings of Asian Income Fund from January 2025 to September 2025",
+      "enhanced": "原问题：what are the top holdings of Asian Income Fund from January 2025 to September 2025\n\n**增强后的问题：**\n\nwhat are the top holdings of Asian Income Fund (Top holdings - equities, Top holdings - fixed income, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025, August 2025, September 2025)",
+      "chunks": 30,
+      "answer": "# Asian Income Fund 顶级持仓概览（2025年1月至9月）\n\n## 固定收益类顶级持仓\n\n**1月2025** [来源1]\n- Fortune Star (BVI) Ltd 5% 05/18/2026（中国，工业）- 1.4%\n- eHi Car Services Ltd 7% 09/21/2026（中国，工业）- 1.0%\n- Elect Global Investments Ltd 4.1% PERP（香港，房地产）- 0.9%\n- Sumitomo Mitsui Financial Group Inc 6.6% PERP（日本，金融）- 0.9%\n- Westwood Group Holdings Ltd 2.8% 01/20/2026（香港，房地产）- 0.8%\n\n**2月2025** [来源3]\n- Fortune Star (BVI) Ltd 5% 05/18/2026（中国，工业）- 1.5%\n- eHi Car Services Ltd 7% 09/21/2026（中国，工业）- 1.0%\n- Sumitomo Mitsui Financial Group Inc 6.45% PERP（日本，金融）- 1.0%\n- Bank Negara Indonesia Persero Tbk PT 4.3% PERP（印度尼西亚，金融）- 0.9%\n- Elect Global Investments Ltd 4.1% PERP（香港，房地产）- 0.9%\n\n**3月2025** [来源11]\n- Fortune Star (BVI) Ltd 5% 05/18/2026（中国，工业）- 1.5%\n- eHi Car Services Ltd 7% 09/21/2026（中国，工业）- 1.0%\n- Sumitomo Mitsui Financial ",
+      "status": "✅",
+      "time": 12.99109673500061
+    },
+    {
+      "id": "Q11",
+      "question": "what is the return for high dividend stocks fund as of September 2025?",
+      "enhanced": "原问题：what is the return for high dividend stocks fund as of September 2025?\n\n**增强后的问题：**\n(Monthly performance, September 2025)\n\nwhat is the monthly performance and return for high dividend stocks fund as of September 2025?",
+      "chunks": 30,
+      "answer": "# High Dividend Fund 返回率（截至2025年9月）\n\n根据知识库内容，High Dividend Fund（Class A1 USD）截至2025年9月的各期间返回率如下[来源2]：\n\n| 时间周期 | 返回率 |\n|---------|--------|\n| 年初至今（Year-to-date） | +23.2% |\n| 一个月 | +2.4% |\n| 一年 | +15.7% |\n| 三年 | +62.2% |\n| 五年 | +41.7% |\n| 自成立以来总回报 | +1,197.9% |\n| 自成立以来年化回报 | +11.7% |\n\n**其他份额类别的表现**[来源2]：\n- **Class A2 USD MDis**：年初至今 +23.6%，一年 +15.9%\n- **Class A RMB Unhedged Acc**：年初至今 +19.4%，一年 +18.1%",
+      "status": "❓",
+      "time": 6.371301174163818
+    }
+  ],
+  "summary": {
+    "success": 8,
+    "partial": 0,
+    "failed": 0,
+    "total_time": 84.81652188301086
+  }
+}
