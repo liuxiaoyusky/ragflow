@@ -199,3 +199,8 @@ backup
 docs/factsheets/
 docs/factsheets_processed/
 docs/benchmark/evaluation_results/
+ragflow_config.yaml
+tools/next_chat_eval_v3_1/results/run_eval21_20251212_091600/
+tools/report_images/
+tools/rag_full_trace/
+tools/prompt_ab_test_holdings/

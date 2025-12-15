@@ -1,0 +1,136 @@
+{
+  "version": "2.0",
+  "timestamp": "2025-12-11T04:28:07.831946",
+  "total_questions": 21,
+  "avg_score": 20.857142857142858,
+  "avg_enhance_time": 1.808542910076323,
+  "avg_chat_time": 22.60265564918518,
+  "evaluations": [
+    {
+      "id": "Q1",
+      "question": "what is the management fee for High Dividend Stock",
+      "score": 43,
+      "comment": "The answer accurately provides management fees for available share classes with proper citations, but lacks information for Class A1 and Class B, and the question asks for 'High Dividend Stocks fund' while the document references 'High Dividend Fund' (potential naming discrepancy)."
+    },
+    {
+      "id": "Q2",
+      "question": "does High Dividend Stocks fund have performance fe",
+      "score": 45,
+      "comment": "The answer accurately addresses the question with clear differentiation by share class, though information gaps for Class A1 and B are acknowledged, and the explanation of high-on-high principle adds helpful context."
+    },
+    {
+      "id": "Q3",
+      "question": "what is the performance fee for High Dividend stoc",
+      "score": 45,
+      "comment": "The answer accurately provides performance fee information across share classes with proper citations, though Class B information is incomplete and the answer could benefit from clarifying whether this applies specifically to the 'High Dividend stocks fund' or a broader fund family."
+    },
+    {
+      "id": "Q4",
+      "question": "what is the performance fee rate for High Dividend",
+      "score": 44,
+      "comment": "The answer accurately provides performance fee rates for available share classes with proper citations, though it acknowledges incomplete information for Class A1 and B, which slightly limits completeness."
+    },
+    {
+      "id": "Q5",
+      "question": "what is the top fixed income holdings for Asian In",
+      "score": 47,
+      "comment": "The answer provides well-structured, directly relevant information about the top fixed income holdings with proper sourcing, though without an expected answer to verify against, absolute accuracy cannot be fully confirmed."
+    },
+    {
+      "id": "Q6",
+      "question": "what are the top equity holdings of Asian Income a",
+      "score": 47,
+      "comment": "The answer provides well-structured, clearly presented top equity holdings with proper sourcing; minor deduction only due to inability to verify against original source document."
+    },
+    {
+      "id": "Q7",
+      "question": "show me the top holdings of High Dividend Stocks F",
+      "score": 34,
+      "comment": "The answer provides relevant and clearly formatted data for January-February 2025 with proper citations, but is incomplete as it cuts off mid-March and fails to deliver data for April-July 2025 as requested, and accuracy cannot be fully verified without access to the source documents."
+    },
+    {
+      "id": "Q8",
+      "question": "what is the geographic exposures for the Asian Inc",
+      "score": 48,
+      "comment": "Excellent response with comprehensive geographic breakdown, clear organization, proper citations, and detailed asset class splits that directly answers the question about Asian Income Fund's geographic exposures."
+    },
+    {
+      "id": "Q9",
+      "question": "show me the geographic locations of High dividend ",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "Q10",
+      "question": "what are the top holdings of Asian Income Fund fro",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "Q11",
+      "question": "what is the return for high dividend stocks fund a",
+      "score": 45,
+      "comment": "The answer directly addresses the question with specific performance data, proper citations, and clear formatting, though it could have included additional context like comparison benchmarks or fund characteristics for fuller completeness."
+    },
+    {
+      "id": "TC001",
+      "question": "What are top holdings of Asian Income Fund from Ja",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "TC002",
+      "question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "TC003",
+      "question": "Show asset allocation by sector for Asian Income F",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "TC004",
+      "question": "What is the credit rating distribution of Asian In",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "TC005",
+      "question": "惠理亚洲收益基金2025年Q1业绩表现",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "TC006",
+      "question": "What are NAV codes for Asian Income Fund Class A?",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "TC007",
+      "question": "Compare fee structures between Asian Income Fund a",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "TC008",
+      "question": "Portfolio characteristics of Asian Income Fund fro",
+      "score": 40,
+      "comment": "The answer accurately presents portfolio yield and volatility data with clear formatting and proper citations, but lacks other important portfolio characteristics (duration, holdings count, credit ratings) that would be expected in a comprehensive factsheet analysis."
+    },
+    {
+      "id": "TC009",
+      "question": "哪些月份Asian Income Fund持有台积电？",
+      "score": 0,
+      "comment": "No response"
+    },
+    {
+      "id": "TC010",
+      "question": "What is the investment objective of Asian Income F",
+      "score": 0,
+      "comment": "No response"
+    }
+  ]
+}

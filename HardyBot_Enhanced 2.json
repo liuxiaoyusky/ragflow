@@ -1,5 +1,5 @@
 {
-  "name": "HardyBot_Enhanced",
+  "name": "HardyBot_Enhanced 2",
   "nodes": [
     {
       "parameters": {
@@ -11,15 +11,15 @@
       "type": "n8n-nodes-feishu-lark.larkTrigger",
       "typeVersion": 1,
       "position": [
-        -1792,
+        -2208,
         96
       ],
-      "id": "fdb71907-0f16-41b3-bdb1-584778faf3ea",
+      "id": "02b40f3b-c987-4de8-a998-93ae12bf07b3",
       "name": "Lark Trigger",
       "credentials": {
         "larkApi": {
-          "id": "co3YMMi97ycnvrm1",
-          "name": "Lark Tenant Token account"
+          "id": "xQ5FhfpMXPyqQ5cl",
+          "name": "Lark Tenant Token account 2"
         }
       }
     },
@@ -38,16 +38,16 @@
       "type": "n8n-nodes-feishu-lark.lark",
       "typeVersion": 1,
       "position": [
-        -32,
+        -448,
         96
       ],
-      "id": "656d44f1-baf2-4f45-bd9d-26eb15499d32",
+      "id": "842a9e64-0ce1-4faf-adb9-adea2cd17ffb",
       "name": "HeadsUp",
       "webhookId": "18078639-3ea0-437e-9f56-1dfb6b3c390b",
       "credentials": {
         "larkApi": {
-          "id": "co3YMMi97ycnvrm1",
-          "name": "Lark Tenant Token account"
+          "id": "xQ5FhfpMXPyqQ5cl",
+          "name": "Lark Tenant Token account 2"
         }
       }
     },
@@ -67,44 +67,44 @@
       "type": "n8n-nodes-feishu-lark.lark",
       "typeVersion": 1,
       "position": [
-        1568,
+        1152,
         192
       ],
-      "id": "95488f1a-5ce7-4d35-9ee0-ddf7fd484913",
+      "id": "ab3f8962-6112-437b-aa04-b697cebee8a1",
       "name": "LLMSend",
       "webhookId": "18078639-3ea0-437e-9f56-1dfb6b3c390b",
       "credentials": {
         "larkApi": {
-          "id": "co3YMMi97ycnvrm1",
-          "name": "Lark Tenant Token account"
+          "id": "xQ5FhfpMXPyqQ5cl",
+          "name": "Lark Tenant Token account 2"
         }
       }
     },
     {
       "parameters": {
-        "jsCode": "// 解析JSON字符串，兼容Webhook和Lark Trigger两种输入\nlet questionContent = $json.question;\n\n// 如果question为null或undefined，尝试从PrimaryParam获取\nif (!questionContent) {\n  try {\n    questionContent = $('PrimaryParam').item.json.question;\n  } catch (e) {\n    // 如果还是获取不到，尝试从Webhook的body获取\n    questionContent = $json.body?.message?.content || $json.message?.content;\n  }\n}\n\n// 如果questionContent是字符串，尝试解析JSON\nlet questionData;\nif (typeof questionContent === 'string') {\n  try {\n    questionData = JSON.parse(questionContent);\n  } catch (e) {\n    // 如果不是JSON格式，直接使用字符串\n    questionData = { text: questionContent };\n  }\n} else if (questionContent && typeof questionContent === 'object') {\n  // 如果已经是对象，直接使用\n  questionData = questionContent;\n} else {\n  // 默认值\n  questionData = { text: '' };\n}\n\n// 提取text内容\nreturn {\n  json: {\n    original_question: questionContent,\n    extracted_text: questionData.text || questionData.content || ''\n  }\n};"
+        "jsCode": "// 解析JSON字符串\nconst questionData = JSON.parse($json.question);\n\n// 提取text内容\nreturn {\n  json: {\n    original_question: $json.question,\n    extracted_text: questionData.text\n  }\n};"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -896,
+        -1312,
         96
       ],
-      "id": "bc802876-ee86-49a2-beed-21c0c1cdc029",
+      "id": "0248b43a-0afd-46c0-bd1c-25e489805248",
       "name": "ExtractQuestion"
     },
     {
       "parameters": {
         "mode": "runOnceForEachItem",
-        "jsCode": "// 获取原始文本 - 添加空值保护\nlet originalText = $('AskRAG').item.json.data?.answer || '知识库中未找到您要的答案！';\nconst mdText = $json.markdown || '';\n\n// 飞书卡片内容长度限制 - 截断过长的回复\nconst MAX_ANSWER_LENGTH = 3000;\nif (originalText.length > MAX_ANSWER_LENGTH) {\n  originalText = originalText.substring(0, MAX_ANSWER_LENGTH) + '\\n\\n[回复过长，已截断...]';\n}\n\n// JSON安全转义函数 - 增强版\nconst jsonEscape = (str) => {\n  if (!str) return '';\n  return str\n    .replace(/\\\\/g, '\\\\\\\\')    // 反斜杠\n    .replace(/\"/g, '\\\\\"')      // 双引号\n    .replace(/\\n/g, '\\\\n')     // 换行符\n    .replace(/\\r/g, '\\\\r')     // 回车符\n    .replace(/\\t/g, '\\\\t')     // 制表符\n    .replace(/\\f/g, '\\\\f')     // 换页符\n    .replace(/\\v/g, '\\\\v')     // 垂直制表符\n    .replace(/[\\x00-\\x1F\\x7F]/g, ''); // 移除其他控制字符\n};\n\nconst escapedText = jsonEscape(originalText);\n// 如果没有 references，显示占位文本而不是空字符串\nconst escapedMdText = mdText ? jsonEscape(mdText) : '(无相关文档引用)';\n\nreturn {\n  json: {\n    original_text: originalText,\n    escaped_text: escapedText,\n    escapedMdText: escapedMdText\n  }\n};"
+        "jsCode": "// 获取原始文本\nconst originalText = $('AskRAG').item.json.data.answer;\nconst mdText = $json.markdown;\n\n// JSON安全转义函数\nconst jsonEscape = (str) => {\n  return str\n    .replace(/\\\\/g, '\\\\\\\\')    // 反斜杠\n    .replace(/\"/g, '\\\\\"')      // 双引号\n    .replace(/\\n/g, '\\\\n')     // 换行符\n    .replace(/\\r/g, '\\\\r')     // 回车符\n    .replace(/\\t/g, '\\\\t')     // 制表符\n    .replace(/\\f/g, '\\\\f')     // 换页符\n    .replace(/\\v/g, '\\\\v');    // 垂直制表符\n};\n\nconst escapedText = jsonEscape(originalText);\nconst escapedMdText = jsonEscape(mdText);\n\nreturn {\n  json: {\n    original_text: originalText,\n    escaped_text: escapedText,\n    escapedMdText: escapedMdText\n  }\n};"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1344,
+        928,
         192
       ],
-      "id": "dc1a9773-4eb9-4760-bdd9-f6407290ccc3",
+      "id": "9761587c-1742-444d-8c10-1dda3990d97f",
       "name": "EscapedCharacters"
     },
     {
@@ -123,15 +123,15 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        192,
+        -224,
         96
       ],
-      "id": "21eec70f-e1c7-4bbb-bd85-caef4f354497",
+      "id": "5572938f-0dd2-44e9-8249-ffe786f14301",
       "name": "AskRAG",
       "credentials": {
         "httpBearerAuth": {
-          "id": "b387wwDj68SSa4YZ",
-          "name": "Ragflow"
+          "id": "JupYljSekYvWsM2S",
+          "name": "Bearer Auth account"
         }
       }
     },
@@ -158,10 +158,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -1568,
+        -1984,
         96
       ],
-      "id": "5605c9df-57d6-4ec6-b835-a632fda62df8",
+      "id": "0c0a3d2c-5034-4b18-b316-8bec2fd98536",
       "name": "PrimaryParam"
     },
     {
@@ -178,15 +178,15 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        -1344,
+        -1760,
         96
       ],
-      "id": "8a2cf5e8-082d-481f-9943-e3aa57af442c",
+      "id": "7f635f2a-ca64-47d6-91d4-7aa602ff25f1",
       "name": "NewSession",
       "credentials": {
         "httpBearerAuth": {
-          "id": "b387wwDj68SSa4YZ",
-          "name": "Ragflow"
+          "id": "JupYljSekYvWsM2S",
+          "name": "Bearer Auth account"
         }
       }
     },
@@ -214,10 +214,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -1120,
+        -1536,
         96
       ],
-      "id": "94d0aab4-6050-42a2-9f52-c455f0d2802b",
+      "id": "c3193b78-d18f-475e-95fc-07fd9cc4b5f1",
       "name": "SecondaryParam"
     },
     {
@@ -228,10 +228,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -672,
+        -1088,
         96
       ],
-      "id": "a73fe761-0c5a-4f15-a61c-e57c36de78f4",
+      "id": "deebce2e-544b-43aa-a53e-10f6658f7115",
       "name": "EscapedCharacters1"
     },
     {
@@ -248,43 +248,37 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        416,
+        0,
         0
       ],
-      "id": "1087a2ca-df16-4b06-986c-def8d45496b0",
+      "id": "3be82c1f-2155-4bfc-8aa6-20503d290a0f",
       "name": "DeleteSession",
-      "credentials": {
-        "httpBearerAuth": {
-          "id": "b387wwDj68SSa4YZ",
-          "name": "Ragflow"
-        }
-      },
       "disabled": true
     },
     {
       "parameters": {
-        "jsCode": "// 获取输入的 JSON 数据\nconst ragData = $('AskRAG').first().json.data;\nconst inputData = ragData?.reference;\n\n// 检查是否有有效的 reference 和 chunks\nif (!inputData || !inputData.chunks || inputData.chunks.length === 0) {\n  // 返回空占位符，避免后续节点崩溃\n  return [{ json: { index: 0, document_id: '', dataset_id: '', document_name: '', image_id: '' } }];\n}\n\nconst chunks = inputData.chunks;\n\n// 提取每个 chunk 的 4 个字段\nconst results = chunks.map((chunk, index) => {\n  return {\n    json: {\n      index: index,\n      document_id: chunk.document_id || '',\n      dataset_id: chunk.dataset_id || '',\n      document_name: chunk.document_name || '',\n      image_id: chunk.image_id || ''\n    }\n  };\n});\n\nreturn results;"
+        "jsCode": "// 获取输入的 JSON 数据\nconst inputData = $('AskRAG').first().json.data.reference;\n\n// 获取 chunks 数组（在第一个对象的 chunks 属性中）\nconst chunks = inputData.chunks;\n\n// 提取每个 chunk 的 4 个字段\nconst results = chunks.map((chunk, index) => {\n  return {\n    json: {\n      index: index,\n      document_id: chunk.document_id,\n      dataset_id: chunk.dataset_id,\n      document_name: chunk.document_name,\n      image_id: chunk.image_id\n    }\n  };\n});\n\nreturn results;"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        416,
+        0,
         192
       ],
-      "id": "d12e8ddc-493a-4251-9717-30b692e1e21b",
+      "id": "3765d203-1dd3-4e9d-9889-f8ed5a703c98",
       "name": "ArrayHandling"
     },
     {
       "parameters": {
-        "jsCode": "// 确保只处理第一个 item，或收集所有输入后合并\nconst allItems = $input.all();\nconst firstItem = allItems[0].json;\nconst chunk = firstItem.chunk ?? firstItem; // 兼容不同输入结构\n\nconst base = 'http://10.1.9.133:8080/chunk/parsed/chunks';\n\nlet mdLines = ['References'];\nlet elements = [];\n\n// 检查是否有有效的 document_id 数组\nconst docIds = chunk.document_id;\nif (!docIds || (Array.isArray(docIds) && docIds.length === 0) || docIds === '') {\n  // 没有有效的 references，返回空\n  return [{ json: { markdown: '', card: null } }];\n}\n\n// 处理单个文档ID的情况（非数组）\nconst docIdArray = Array.isArray(docIds) ? docIds : [docIds];\nconst datasetIdArray = Array.isArray(chunk.dataset_id) ? chunk.dataset_id : [chunk.dataset_id];\nconst docNameArray = Array.isArray(chunk.document_name) ? chunk.document_name : [chunk.document_name];\n\nfor (let i = 0; i < docIdArray.length; i++) {\n  const name = docNameArray[i] || 'Unknown';\n  const docId = docIdArray[i];\n  const url = `${base}?id=${datasetIdArray[i]}&doc_id=${docId}`;\n\n  if (docId && docId !== '') {\n    mdLines.push(`- [${name}](${url})`);\n    elements.push({\n      tag: 'div',\n      text: { tag: 'lark_md', content: `[${name}](${url})` },\n    });\n  }\n}\n\nconst markdown = mdLines.length > 1 ? mdLines.join('\\n') : '';\nconst card = elements.length > 0 ? {\n  config: { wide_screen_mode: true, enable_forward: false },\n  header: {\n    title: { tag: 'plain_text', content: 'Chunk References' },\n    template: 'blue',\n  },\n  elements,\n} : null;\n\nreturn [{ json: { markdown, card } }];"
+        "jsCode": "// 确保只处理第一个 item，或收集所有输入后合并\nconst allItems = $input.all();\nconst firstItem = allItems[0].json;\nconst chunk = firstItem.chunk ?? firstItem; // 兼容不同输入结构\n\nconst base = 'http://10.1.9.133:8080/chunk/parsed/chunks';\n\nlet mdLines = ['References'];\nlet elements = [];\n\nfor (let i = 0; i < chunk.document_id.length; i++) {\n  const name = chunk.document_name[i];\n  const docId = chunk.document_id[i];\n  const url = `${base}?id=${chunk.dataset_id[i]}&doc_id=${docId}`;\n\n  mdLines.push(`- [${name}](${url})`);\n\n  elements.push({\n    tag: 'div',\n    text: { tag: 'lark_md', content: `[${name}](${url})` },\n  });\n}\n\nconst markdown = mdLines.join('\\n');\nconst card = {\n  config: { wide_screen_mode: true, enable_forward: false },\n  header: {\n    title: { tag: 'plain_text', content: 'Chunk References' },\n    template: 'blue',\n  },\n  elements,\n};\n\nreturn [{ json: { markdown, card } }];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1120,
+        704,
         192
       ],
-      "id": "520d7b89-ea77-4d5e-b7ff-8b2903e71f1d",
+      "id": "048ce73e-e095-49c2-b039-a3430ba8f7ca",
       "name": "md"
     },
     {
@@ -297,21 +291,11 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        640,
+        224,
         192
       ],
-      "id": "0e9e76a0-03f4-4da0-8a4d-68d8c3918d7b",
+      "id": "5a6bf411-bf2d-4241-b8fd-8a7195130e4c",
       "name": "DownloadPic",
-      "credentials": {
-        "larkApi": {
-          "id": "co3YMMi97ycnvrm1",
-          "name": "Lark Tenant Token account"
-        },
-        "httpBearerAuth": {
-          "id": "b387wwDj68SSa4YZ",
-          "name": "Ragflow"
-        }
-      },
       "disabled": true
     },
     {
@@ -340,17 +324,11 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3,
       "position": [
-        864,
+        448,
         192
       ],
-      "id": "a6e8af72-bb5e-4f8a-9c10-f07dc4ad917e",
+      "id": "810c9963-1b7b-4d3a-afa0-5e5a25e3cc9f",
       "name": "FeishuPic",
-      "credentials": {
-        "larkApi": {
-          "id": "co3YMMi97ycnvrm1",
-          "name": "Lark Tenant Token account"
-        }
-      },
       "disabled": true
     },
     {
@@ -373,10 +351,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        896,
+        480,
         320
       ],
-      "id": "3f30239b-e59b-4a54-9950-70b6e7ca2979",
+      "id": "f3e9cc3b-389e-4b5f-a14d-4d62d0bd8d55",
       "name": "imgKey"
     },
     {
@@ -408,24 +386,24 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        640,
+        224,
         320
       ],
-      "id": "e7dc6be8-05df-4e43-9d2c-21e4e02f4f39",
+      "id": "e99896f5-d354-4608-ab4a-5870a45a8978",
       "name": "Edit Fields1"
     },
     {
       "parameters": {
         "mode": "runOnceForEachItem",
-        "jsCode": "// Query Enhancement - Prompt v2.0 (Double Emphasis Strategy)\n// Updated: 2025-12-11\n// Changes: Remove hyphens, add double emphasis for holdings, add default time\nconst originalQuestion = $json.escaped_text;\n\nconst now = new Date();\nconst currentDate = now.toISOString().split('T')[0];\n\n// 最新可用数据月份（需定期更新）\nconst latestDataMonth = 'September 2025';\n\nconst prompt = `你是基金文档检索优化专家。为问题添加精准关键词以提高检索精度。\n\n当前日期: ${currentDate}\n最新数据月份: ${latestDataMonth}\n\n## 严格规则\n\n### 1. 只使用精确的Section Title（从以下列表精确选择，注意无连字符）\n| 问题类型 | 精确Section Title |\n|---------|-------------------|\n| 业绩、表现、回报、Q1/Q2/Q3/Q4 | Monthly performance |\n| 股息、分红、派息、yield | Dividend information |\n| 股票持仓、top holdings equities | Top holdings equities |\n| 债券持仓、fixed income holdings | Top holdings fixed income |\n| 费用、管理费 | Fee structure |\n| 信用评级 | Credit ratings |\n| 组合特征、收益率、波动率 | Portfolio characteristics |\n| 净值、代码、ISIN | NAVs & codes |\n| 投资目标 | Investment objective |\n| 行业配置 | Asset type by sector |\n| 地区配置 | Asset type by geography |\n\n### 2. 时间范围展开（重要！）\n- Q1/第一季度 → January 2025, February 2025, March 2025\n- Q2/第二季度 → April 2025, May 2025, June 2025\n- Q3/第三季度 → July 2025, August 2025, September 2025\n- \"从1月到9月\" → January, February, March, April, May, June, July, August, September\n\n### 3. 默认时间处理（重要！）\n当问题**未指定具体时间**时：\n- 自动添加最新数据月份: ${latestDataMonth}\n\n### 4. Top Holdings 双重强调规则（新增！重要！）\n当问题涉及 **持仓/holdings** 时：\n- 如果问题**未指定**是 equities 还是 fixed income：\n  → 同时添加两个: Top holdings equities, Top holdings fixed income\n- 如果问题**已指定** equities 或股票持仓：\n  → 重复强调: Top holdings equities, Top holdings equities\n- 如果问题**已指定** fixed income 或债券持仓：\n  → 重复强调: Top holdings fixed income, Top holdings fixed income\n\n### 5. 精确实体名称\n- 台积电 → Taiwan Semiconductor Manufacturing Co Ltd\n- 腾讯 → Tencent Holdings Ltd\n- 惠理亚洲收益基金 → Asian Income Fund\n- 惠理高息股票基金 → High Dividend Fund\n\n### 6. 禁止使用的泛化词（会干扰排名）\n❌ yield, return, goal, sector, bond, performance, allocation, holdings\n\n## 示例\n\n输入: \"What are top holdings of Asian Income Fund from January to September 2025?\"\n输出: \"What are top holdings of Asian Income Fund from January to September 2025? (Top holdings equities, Top holdings fixed income, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025, August 2025, September 2025)\"\n\n输入: \"What are top equity holdings of Asian Income Fund in September 2025?\"\n输出: \"What are top equity holdings of Asian Income Fund in September 2025? (Top holdings equities, Top holdings equities, September 2025)\"\n\n输入: \"What is the credit rating distribution of Asian Income Fund?\"\n输出: \"What is the credit rating distribution of Asian Income Fund? (Credit ratings, ${latestDataMonth})\"\n\n输入: \"惠理亚洲收益基金2025年Q1业绩表现\"\n输出: \"惠理亚洲收益基金2025年Q1业绩表现 (Monthly performance, January 2025, February 2025, March 2025)\"\n\n## 用户问题\n${originalQuestion}\n\n## 输出（原问题 + 括号内关键词，只输出结果，不要解释）`;\n\nreturn {\n  json: {\n    original_question: originalQuestion,\n    prompt: prompt\n  }\n};"
+        "jsCode": "// 准备LLM Prompt用于查询增强 - 采用末尾keywords标签格式\nconst originalQuestion = $json.escaped_text;\n\nconst prompt = `你是一个金融数据查询预处理助手。请分析用户问题，在末尾添加keywords标签来增强检索精准度。\n\n## 输出格式\n保留原问题完整不变，在末尾添加 keywords: [关键词1, 关键词2, ...]\n\n## 完整关键词库（16个Factsheet Section Titles + 变体）\n\n1. **Investment objective** - 投资目标\n   变体: investment goal, fund objective\n\n2. **Performance since launch** - 成立以来表现\n   变体: historical performance, cumulative return\n\n3. **Performance update** - 业绩更新\n   变体: performance, return, YTD, monthly return\n\n4. **NAVs & codes** - 净值和代码\n   变体: NAV, fund code, ISIN, Bloomberg code\n\n5. **Dividend information** - 股息信息\n   变体: dividend, payout, yield, distribution, income\n\n6. **Top holdings - equities** - 股票持仓\n   变体: top holdings, equities, stock holdings, equity holdings\n\n7. **Top holdings - fixed income** - 债券持仓\n   变体: top holdings, fixed income, bond holdings, debt holdings\n\n8. **Monthly performance** - 月度表现\n   变体: monthly return, monthly performance table\n\n9. **Portfolio characteristics** - 组合特征\n   变体: portfolio, characteristics, yield, duration\n\n10. **Asset type by geography** - 地区配置\n    变体: asset allocation, geography, country allocation, regional\n\n11. **Asset type by sector** - 行业配置\n    变体: asset allocation, sector, industry allocation\n\n12. **Credit ratings** - 信用评级\n    变体: credit rating, rating distribution, AAA, AA, BBB\n\n13. **Fund facts** - 基金概况\n    变体: fund information, fund details, AUM, inception date\n\n14. **Fee structure** - 费用结构\n    变体: fee, management fee, subscription fee, expense ratio\n\n15. **Senior investment staff** - 投资团队\n    变体: fund manager, investment team, portfolio manager\n\n16. **Key fund awards** - 基金奖项\n    变体: awards, recognition, fund awards\n\n## 增强规则\n\n1. 识别问题涉及的section类别\n2. 在末尾添加 keywords: [核心词, 变体词1, 变体词2, ...]\n3. 包含2-5个最相关的关键词\n4. 原问题保持完全不变\n\n## 示例\n\n输入: \"What are top holdings of Asian Income Fund from January to September 2025?\"\n输出: \"What are top holdings of Asian Income Fund from January to September 2025? keywords: [top holdings, equities, fixed income, stock holdings, bond holdings]\"\n\n输入: \"What is the dividend information of High Dividend Fund?\"\n输出: \"What is the dividend information of High Dividend Fund? keywords: [dividend information, dividend, payout, yield, distribution]\"\n\n输入: \"Show me the performance of Asian Income Fund Q1 2025\"\n输出: \"Show me the performance of Asian Income Fund Q1 2025? keywords: [performance update, monthly performance, return, YTD]\"\n\n输入: \"惠理亚洲收益基金的资产配置是什么？\"\n输出: \"惠理亚洲收益基金的资产配置是什么？ keywords: [asset type by geography, asset type by sector, asset allocation, geography, sector]\"\n\n输入: \"What is the credit rating distribution?\"\n输出: \"What is the credit rating distribution? keywords: [credit ratings, rating distribution, AAA, AA, BBB]\"\n\n输入: \"Compare fee structures between funds\"\n输出: \"Compare fee structures between funds? keywords: [fee structure, management fee, expense ratio, fee]\"\n\n## 不要做的事\n- 不要修改原问题的任何部分\n- 不要展开时间范围\n- 不要添加与问题无关的关键词\n\n## 用户问题\n${originalQuestion}\n\n## 输出（原问题 + keywords标签，不要解释）`;\n\nreturn {\n  json: {\n    original_question: originalQuestion,\n    prompt: prompt\n  }\n};"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -448,
+        -864,
         96
       ],
-      "id": "prepare-llm-prompt",
+      "id": "a54ddbc4-a3f6-4682-bf56-6675c4f44be3",
       "name": "PrepareLLMPrompt"
     },
     {
@@ -437,7 +415,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "Bearer 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"
+              "value": "Bearer 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"
             },
             {
               "name": "HTTP-Referer",
@@ -451,7 +429,7 @@
         },
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\n  \"model\": \"anthropic/claude-haiku-4.5\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": {{ JSON.stringify($json.prompt) }}\n    }\n  ],\n  \"temperature\": 0.1,\n  \"max_tokens\": 500\n}",
+        "jsonBody": "={\n  \"model\": \"google/gemini-2.0-flash-001\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": {{ JSON.stringify($json.prompt) }}\n    }\n  ],\n  \"temperature\": 0.1,\n  \"max_tokens\": 500\n}",
         "options": {
           "timeout": 30000
         }
@@ -459,10 +437,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -224,
+        -640,
         96
       ],
-      "id": "call-openrouter",
+      "id": "e4223a1d-4b1f-4a6d-a3f9-8e6ef0153021",
       "name": "CallOpenRouter"
     },
     {
@@ -473,10 +451,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        0,
+        -416,
         192
       ],
-      "id": "parse-llm-result",
+      "id": "dba5bee2-7b45-4f55-9a04-6c412e8819a1",
       "name": "ParseLLMResult"
     }
   ],
@@ -626,6 +604,11 @@
             "node": "DownloadPic",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -635,17 +618,6 @@
         [
           {
             "node": "EscapedCharacters",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "imgKey": {
-      "main": [
-        [
-          {
-            "node": "md",
             "type": "main",
             "index": 0
           }
@@ -674,6 +646,17 @@
         ]
       ]
     },
+    "imgKey": {
+      "main": [
+        [
+          {
+            "node": "md",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "Edit Fields1": {
       "main": [
         [
@@ -690,10 +673,11 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "enhanced-llm-v1",
+  "versionId": "cf288213-1c47-4f79-a452-c43b5d3e985a",
   "meta": {
+    "templateCredsSetupCompleted": true,
     "instanceId": "e1f9e70513f3d44101266576465de1c39aa161b773b32d79c10a23659cb2d846"
   },
-  "id": "HardyBot_Enhanced",
+  "id": "fliQX2KZo820plL0",
   "tags": []
 }

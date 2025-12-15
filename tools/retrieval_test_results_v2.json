@@ -1,0 +1,1333 @@
+{
+  "summary": {
+    "timestamp": "2025-12-11 03:31:24.148510",
+    "total_questions": 21,
+    "tc_found": 10,
+    "tc_total": 10,
+    "avg_first_rank": 1.8,
+    "avg_coverage": 97.8
+  },
+  "results": [
+    {
+      "question": "what is the management fee for High Dividend Stocks fund?,30,✅ 完整,\"Class A1/A2 MDis: 1.25% p.a.; Class A Acc/B: 1.50% p.a.",
+      "enhanced": "what is the management fee for High Dividend Stocks fund? (High Dividend Stocks Fund, Fee structure)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_High_Dividend_Fund_2025Apr_Fee_structure.md",
+            "similarity": 0.3633790204019566
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Feb_Fee_structure.md",
+            "similarity": 0.3629948086008451
+          },
+          {
+            "rank": 3,
+            "document": "VP_High_Dividend_Fund_2025Jan_Fee_structure.md",
+            "similarity": 0.36099386938353156
+          },
+          {
+            "rank": 4,
+            "document": "VP_High_Dividend_Fund_2025Mar_Fee_structure.md",
+            "similarity": 0.36057601937984574
+          },
+          {
+            "rank": 5,
+            "document": "VP_High_Dividend_Fund_2025May_Fee_structure.md",
+            "similarity": 0.3601973047273712
+          },
+          {
+            "rank": 6,
+            "document": "VP_High_Dividend_Fund_2025Sep_Fee_structure.md",
+            "similarity": 0.35973924190888784
+          },
+          {
+            "rank": 7,
+            "document": "VP_High_Dividend_Fund_2025Aug_Fee_structure.md",
+            "similarity": 0.3595863573823882
+          },
+          {
+            "rank": 8,
+            "document": "VP_High_Dividend_Fund_2025Jul_Fee_structure.md",
+            "similarity": 0.35919973305207664
+          },
+          {
+            "rank": 9,
+            "document": "VP_High_Dividend_Fund_2025Jun_Fee_structure.md",
+            "similarity": 0.3587157668913313
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Sep_Fund_facts.md",
+            "similarity": 0.2987077592765876
+          }
+        ]
+      },
+      "id": "Q1"
+    },
+    {
+      "question": "does High Dividend Stocks fund have performance fees?,26,✅ 完整,\"Yes. Class A1/A Acc/B: 15% of profit (high-on-high); Class A2 MDis: Nil",
+      "enhanced": "does High Dividend Stocks fund have performance fees? (High Dividend Fund, Fee structure, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_High_Dividend_Fund_2025Sep_Fee_structure.md",
+            "similarity": 0.4349937731913355
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Apr_Fee_structure.md",
+            "similarity": 0.4224497887281158
+          },
+          {
+            "rank": 3,
+            "document": "VP_High_Dividend_Fund_2025Feb_Fee_structure.md",
+            "similarity": 0.4218130219350416
+          },
+          {
+            "rank": 4,
+            "document": "VP_High_Dividend_Fund_2025Aug_Fee_structure.md",
+            "similarity": 0.41926948183420565
+          },
+          {
+            "rank": 5,
+            "document": "VP_High_Dividend_Fund_2025Jan_Fee_structure.md",
+            "similarity": 0.41910041761963845
+          },
+          {
+            "rank": 6,
+            "document": "VP_High_Dividend_Fund_2025May_Fee_structure.md",
+            "similarity": 0.41898009299306715
+          },
+          {
+            "rank": 7,
+            "document": "VP_High_Dividend_Fund_2025Mar_Fee_structure.md",
+            "similarity": 0.41877703758054613
+          },
+          {
+            "rank": 8,
+            "document": "VP_High_Dividend_Fund_2025Jun_Fee_structure.md",
+            "similarity": 0.4179796661094962
+          },
+          {
+            "rank": 9,
+            "document": "VP_High_Dividend_Fund_2025Jul_Fee_structure.md",
+            "similarity": 0.4163394776054449
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Sep_Monthly_performance.md",
+            "similarity": 0.3735411322742344
+          }
+        ]
+      },
+      "id": "Q2"
+    },
+    {
+      "question": "what is the performance fee for High Dividend stocks fund?,30,✅ 完整,\"15% of profit (high-on-high principle); Nil for Class A Acc",
+      "enhanced": "what is the performance fee for High Dividend stocks fund? (High Dividend Fund, Fee structure, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_High_Dividend_Fund_2025Sep_Fee_structure.md",
+            "similarity": 0.4463256262992488
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Apr_Fee_structure.md",
+            "similarity": 0.43280663336183456
+          },
+          {
+            "rank": 3,
+            "document": "VP_High_Dividend_Fund_2025Feb_Fee_structure.md",
+            "similarity": 0.43278038392036544
+          },
+          {
+            "rank": 4,
+            "document": "VP_High_Dividend_Fund_2025Aug_Fee_structure.md",
+            "similarity": 0.4299979761270474
+          },
+          {
+            "rank": 5,
+            "document": "VP_High_Dividend_Fund_2025Jan_Fee_structure.md",
+            "similarity": 0.4299190799610208
+          },
+          {
+            "rank": 6,
+            "document": "VP_High_Dividend_Fund_2025Mar_Fee_structure.md",
+            "similarity": 0.4293224560963914
+          },
+          {
+            "rank": 7,
+            "document": "VP_High_Dividend_Fund_2025May_Fee_structure.md",
+            "similarity": 0.4291749020840052
+          },
+          {
+            "rank": 8,
+            "document": "VP_High_Dividend_Fund_2025Jun_Fee_structure.md",
+            "similarity": 0.4283298363275692
+          },
+          {
+            "rank": 9,
+            "document": "VP_High_Dividend_Fund_2025Jul_Fee_structure.md",
+            "similarity": 0.42758692719030683
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Sep_Monthly_performance.md",
+            "similarity": 0.3878089371140232
+          }
+        ]
+      },
+      "id": "Q3"
+    },
+    {
+      "question": "what is the performance fee rate for High Dividend Stocks Fund?,30,✅ 完整,\"15% for Class A1/A2 MDis; Nil (0%) for Class A Acc",
+      "enhanced": "what is the performance fee rate for High Dividend Stocks Fund? (Fee structure, High Dividend Stocks Fund, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_High_Dividend_Fund_2025Sep_Fee_structure.md",
+            "similarity": 0.39699333586778895
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Apr_Fee_structure.md",
+            "similarity": 0.38695182315164023
+          },
+          {
+            "rank": 3,
+            "document": "VP_High_Dividend_Fund_2025Feb_Fee_structure.md",
+            "similarity": 0.38647666997156327
+          },
+          {
+            "rank": 4,
+            "document": "VP_High_Dividend_Fund_2025Aug_Fee_structure.md",
+            "similarity": 0.38396327320551116
+          },
+          {
+            "rank": 5,
+            "document": "VP_High_Dividend_Fund_2025Jan_Fee_structure.md",
+            "similarity": 0.38367503456174634
+          },
+          {
+            "rank": 6,
+            "document": "VP_High_Dividend_Fund_2025May_Fee_structure.md",
+            "similarity": 0.38336739369538886
+          },
+          {
+            "rank": 7,
+            "document": "VP_High_Dividend_Fund_2025Mar_Fee_structure.md",
+            "similarity": 0.3833498865605866
+          },
+          {
+            "rank": 8,
+            "document": "VP_High_Dividend_Fund_2025Jun_Fee_structure.md",
+            "similarity": 0.382662960573969
+          },
+          {
+            "rank": 9,
+            "document": "VP_High_Dividend_Fund_2025Jul_Fee_structure.md",
+            "similarity": 0.3817175354567768
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Sep_Monthly_performance.md",
+            "similarity": 0.3534793067333562
+          }
+        ]
+      },
+      "id": "Q4"
+    },
+    {
+      "question": "what is the top fixed income holdings for Asian Income fund as of September 2025,23,✅ 完整,\"提供了Sep 2025 top equity holdings和fixed income地理分布，但注明具体fixed income证券未披露",
+      "enhanced": "what is the top fixed income holdings for Asian Income fund as of September 2025 (Asian Income Fund, Top holdings - fixed income, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+            "similarity": 0.4568392655834749
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_fixed_income.md",
+            "similarity": 0.44158235833459303
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+            "similarity": 0.43544153589278767
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+            "similarity": 0.43540814891417295
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025May_Top_holdings_-_fixed_income.md",
+            "similarity": 0.4351588343606634
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+            "similarity": 0.43393619590270216
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+            "similarity": 0.43299988717932586
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+            "similarity": 0.432502643330834
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+            "similarity": 0.4317217497409277
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Jun_Investment_objective.md",
+            "similarity": 0.4310294388559953
+          }
+        ]
+      },
+      "id": "Q5"
+    },
+    {
+      "question": "what are the top equity holdings of Asian Income as of March 2025,30,⚠️ 部分,\"仅返回fixed income holdings，未能识别equity holdings数据（数据实际存在于chunk中）",
+      "enhanced": "what are the top equity holdings of Asian Income as of March 2025 (Top holdings - equities, March 2025, Asian Income Fund)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+            "similarity": 0.4372149576837668
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+            "similarity": 0.4195266276989513
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_fixed_income.md",
+            "similarity": 0.40222896890024734
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+            "similarity": 0.3954916340091292
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+            "similarity": 0.3947371204219303
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+            "similarity": 0.39411641811834863
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+            "similarity": 0.39382356706731103
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+            "similarity": 0.3929604769474061
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+            "similarity": 0.3927993664776936
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+            "similarity": 0.39217193017637453
+          }
+        ]
+      },
+      "id": "Q6"
+    },
+    {
+      "question": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025,30,✅ 完整,\"完整展示Jan/Mar/Apr/Jul四个月的top 10 holdings对比表格",
+      "enhanced": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025 (High Dividend Stocks Fund, Top holdings - equities, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_High_Dividend_Fund_2025Jan_Top_holdings_-_equities.md",
+            "similarity": 0.44899220377849436
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Jul_Top_holdings_-_equities.md",
+            "similarity": 0.44576896007335487
+          },
+          {
+            "rank": 3,
+            "document": "VP_High_Dividend_Fund_2025Mar_Top_holdings_-_equities.md",
+            "similarity": 0.4428838122398988
+          },
+          {
+            "rank": 4,
+            "document": "VP_High_Dividend_Fund_2025Apr_Top_holdings_-_equities.md",
+            "similarity": 0.4393804637362476
+          },
+          {
+            "rank": 5,
+            "document": "VP_High_Dividend_Fund_2025Feb_Top_holdings_-_equities.md",
+            "similarity": 0.4389722334809595
+          },
+          {
+            "rank": 6,
+            "document": "VP_High_Dividend_Fund_2025Jun_Top_holdings_-_equities.md",
+            "similarity": 0.43896414341069273
+          },
+          {
+            "rank": 7,
+            "document": "VP_High_Dividend_Fund_2025May_Top_holdings_-_equities.md",
+            "similarity": 0.43164433059983603
+          },
+          {
+            "rank": 8,
+            "document": "VP_High_Dividend_Fund_2025Aug_Top_holdings_-_equities.md",
+            "similarity": 0.4309188083785744
+          },
+          {
+            "rank": 9,
+            "document": "VP_High_Dividend_Fund_2025Jul_Monthly_performance.md",
+            "similarity": 0.42669058776706775
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Jan_Monthly_performance.md",
+            "similarity": 0.42586925464217656
+          }
+        ]
+      },
+      "id": "Q7"
+    },
+    {
+      "question": "what is the geographic exposures for the High dividend stocks fund?,30,✅ 完整,\"详细列出各地区配置：Hong Kong ~25-28%, South Korea ~15-17%, Taiwan ~13-16%等",
+      "enhanced": "what is the geographic exposures for the High dividend stocks fund? (High Dividend Fund, Asset type by geography, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_High_Dividend_Fund_2025Apr_Investment_objective.md",
+            "similarity": 0.4254993692409953
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Jan_Investment_objective.md",
+            "similarity": 0.4242513596709188
+          },
+          {
+            "rank": 3,
+            "document": "VP_High_Dividend_Fund_2025Sep_Investment_objective.md",
+            "similarity": 0.39267937778182777
+          },
+          {
+            "rank": 4,
+            "document": "VP_High_Dividend_Fund_2025May_Dividend_information.md",
+            "similarity": 0.384340253337377
+          },
+          {
+            "rank": 5,
+            "document": "VP_High_Dividend_Fund_2025Jul_Dividend_information.md",
+            "similarity": 0.3825503243678772
+          },
+          {
+            "rank": 6,
+            "document": "VP_High_Dividend_Fund_2025Aug_Investment_objective.md",
+            "similarity": 0.37469969712105633
+          },
+          {
+            "rank": 7,
+            "document": "VP_High_Dividend_Fund_2025Jun_Investment_objective.md",
+            "similarity": 0.37462712358139827
+          },
+          {
+            "rank": 8,
+            "document": "VP_High_Dividend_Fund_2025May_Investment_objective.md",
+            "similarity": 0.3734802427463022
+          },
+          {
+            "rank": 9,
+            "document": "VP_High_Dividend_Fund_2025Jul_Investment_objective.md",
+            "similarity": 0.3733207889493044
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Mar_Investment_objective.md",
+            "similarity": 0.37304595744541996
+          }
+        ]
+      },
+      "id": "Q8"
+    },
+    {
+      "question": "show me the geographic locations of High dividend stocks from January 2025 to September 2025,27,✅ 完整,\"Jan/May/Jun/Jul/Sep五个月的地理配置变化趋势表格",
+      "enhanced": "show me the geographic locations of High dividend stocks from January 2025 to September 2025 (High Dividend Fund, Asset type by geography, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025, August 2025, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_High_Dividend_Fund_2025Jan_Investment_objective.md",
+            "similarity": 0.5204419731730591
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Apr_Investment_objective.md",
+            "similarity": 0.5131589285627456
+          },
+          {
+            "rank": 3,
+            "document": "VP_High_Dividend_Fund_2025Jan_Dividend_information.md",
+            "similarity": 0.5106586638063279
+          },
+          {
+            "rank": 4,
+            "document": "VP_High_Dividend_Fund_2025Jul_Dividend_information.md",
+            "similarity": 0.509077691074175
+          },
+          {
+            "rank": 5,
+            "document": "VP_High_Dividend_Fund_2025Mar_Dividend_information.md",
+            "similarity": 0.5090538198331991
+          },
+          {
+            "rank": 6,
+            "document": "VP_High_Dividend_Fund_2025Sep_Dividend_information.md",
+            "similarity": 0.508624399987391
+          },
+          {
+            "rank": 7,
+            "document": "VP_High_Dividend_Fund_2025Jan_Portfolio_characteristics.md",
+            "similarity": 0.5063499460217616
+          },
+          {
+            "rank": 8,
+            "document": "VP_High_Dividend_Fund_2025Sep_Portfolio_characteristics.md",
+            "similarity": 0.5053766555884731
+          },
+          {
+            "rank": 9,
+            "document": "VP_High_Dividend_Fund_2025Mar_Portfolio_characteristics.md",
+            "similarity": 0.5042940469013101
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Jan_Monthly_performance.md",
+            "similarity": 0.5039639364172636
+          }
+        ]
+      },
+      "id": "Q9"
+    },
+    {
+      "question": "what are the top holdings of Asian Income Fund from January 2025 to September 2025,30,⚠️ 部分,\"仅返回fixed income holdings，未能识别equity holdings数据",
+      "enhanced": "what are the top holdings of Asian Income Fund from January 2025 to September 2025 (Asian Income Fund, Top holdings - equities, Top holdings - fixed income, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025, August 2025, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+            "similarity": 0.5135988244388685
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+            "similarity": 0.5113304658028608
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_fixed_income.md",
+            "similarity": 0.5082483931736922
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Jan_Investment_objective.md",
+            "similarity": 0.5079788640163706
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_fixed_income.md",
+            "similarity": 0.5070709753272519
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+            "similarity": 0.5068776583261401
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+            "similarity": 0.5063390129865002
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+            "similarity": 0.506111305386874
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_fixed_income.md",
+            "similarity": 0.5053616412163788
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Jun_Investment_objective.md",
+            "similarity": 0.5050082385600534
+          }
+        ]
+      },
+      "id": "Q10"
+    },
+    {
+      "question": "what is the return for high dividend stocks fund as of September 2025?,30,✅ 完整,\"YTD +23.2%, Since Launch +1197.9%, Annualized +11.7%",
+      "enhanced": "what is the return for high dividend stocks fund as of September 2025? (High Dividend Fund, Monthly performance, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_High_Dividend_Fund_2025Sep_Performance_update.md",
+            "similarity": 0.45295801379260126
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Sep_Portfolio_characteristics.md",
+            "similarity": 0.438276703399375
+          },
+          {
+            "rank": 3,
+            "document": "VP_High_Dividend_Fund_2025Sep_Monthly_performance.md",
+            "similarity": 0.4298018425310258
+          },
+          {
+            "rank": 4,
+            "document": "VP_High_Dividend_Fund_2025Aug_Performance_update.md",
+            "similarity": 0.4217798169041732
+          },
+          {
+            "rank": 5,
+            "document": "VP_High_Dividend_Fund_2025May_Performance_update.md",
+            "similarity": 0.4213177101473786
+          },
+          {
+            "rank": 6,
+            "document": "VP_High_Dividend_Fund_2025Apr_Performance_update.md",
+            "similarity": 0.419222200485519
+          },
+          {
+            "rank": 7,
+            "document": "VP_High_Dividend_Fund_2025Mar_Performance_update.md",
+            "similarity": 0.4191406192080832
+          },
+          {
+            "rank": 8,
+            "document": "VP_High_Dividend_Fund_2025Jun_Performance_update.md",
+            "similarity": 0.41907630005017105
+          },
+          {
+            "rank": 9,
+            "document": "VP_High_Dividend_Fund_2025Feb_Performance_update.md",
+            "similarity": 0.418799082951956
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Jul_Performance_update.md",
+            "similarity": 0.4179631857248849
+          }
+        ]
+      },
+      "id": "Q11"
+    },
+    {
+      "question": "What are top holdings of Asian Income Fund from January to September 2025?",
+      "enhanced": "What are top holdings of Asian Income Fund from January to September 2025? (Asian Income Fund, Top holdings - equities, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025, August 2025, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+            "similarity": 0.5490885229911078
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Jan_Investment_objective.md",
+            "similarity": 0.5452555160529368
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+            "similarity": 0.5443440315068611
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+            "similarity": 0.5430280526842567
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+            "similarity": 0.5427950491404058
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Jun_Investment_objective.md",
+            "similarity": 0.541426999800421
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+            "similarity": 0.5407395155874399
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+            "similarity": 0.5406705925490762
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_fixed_income.md",
+            "similarity": 0.5391214339879026
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+            "similarity": 0.538886561777826
+          }
+        ],
+        "first_relevant_rank": 7,
+        "matched_count": 14,
+        "expected_count": 18,
+        "coverage": 77.77777777777779
+      },
+      "id": "TC001"
+    },
+    {
+      "question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率",
+      "enhanced": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率 (High Dividend Fund, Asian Income Fund, August 2025, Dividend information)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Aug_Dividend_information.md",
+            "similarity": 0.5003268719026613
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Aug_Dividend_information.md",
+            "similarity": 0.463540672074501
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Feb_Dividend_information.md",
+            "similarity": 0.4593692124149418
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Apr_Dividend_information.md",
+            "similarity": 0.4592875894317958
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Sep_Dividend_information.md",
+            "similarity": 0.45908401282864997
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Mar_Dividend_information.md",
+            "similarity": 0.4578689104155485
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Jul_Dividend_information.md",
+            "similarity": 0.4578205823384438
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Jan_Dividend_information.md",
+            "similarity": 0.4576075164496429
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025May_Dividend_information.md",
+            "similarity": 0.4569962341503577
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Jun_Dividend_information.md",
+            "similarity": 0.4568532347243677
+          }
+        ],
+        "first_relevant_rank": 1,
+        "matched_count": 2,
+        "expected_count": 2,
+        "coverage": 100.0
+      },
+      "id": "TC002"
+    },
+    {
+      "question": "Show asset allocation by sector for Asian Income Fund September 2025",
+      "enhanced": "Show asset allocation by sector for Asian Income Fund September 2025 (Asset type by sector, Asian Income Fund, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+            "similarity": 0.6139204983813155
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Sep_Asset_type_by_sector.md",
+            "similarity": 0.6097437939271706
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+            "similarity": 0.5710179398574998
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+            "similarity": 0.5706640809710415
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Jun_Investment_objective.md",
+            "similarity": 0.5689218662545417
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Aug_Asset_type_by_sector.md",
+            "similarity": 0.5685092071185323
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025May_Investment_objective.md",
+            "similarity": 0.5682106119701692
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+            "similarity": 0.5679790271966816
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Feb_Investment_objective.md",
+            "similarity": 0.5678958072756133
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Apr_Asset_type_by_sector.md",
+            "similarity": 0.5674112396823929
+          }
+        ],
+        "first_relevant_rank": 2,
+        "matched_count": 1,
+        "expected_count": 1,
+        "coverage": 100.0
+      },
+      "id": "TC003"
+    },
+    {
+      "question": "What is the credit rating distribution of Asian Income Fund?",
+      "enhanced": "What is the credit rating distribution of Asian Income Fund? (Asian Income Fund, Credit ratings, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Sep_Credit_ratings.md",
+            "similarity": 0.7623703966490728
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025May_Credit_ratings.md",
+            "similarity": 0.7424721828283678
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Jan_Credit_ratings.md",
+            "similarity": 0.7418590136789617
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Mar_Credit_ratings.md",
+            "similarity": 0.7410570178407772
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Feb_Credit_ratings.md",
+            "similarity": 0.7405686837524373
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Jun_Credit_ratings.md",
+            "similarity": 0.7403695505760668
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Apr_Credit_ratings.md",
+            "similarity": 0.7397071622248139
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Aug_Credit_ratings.md",
+            "similarity": 0.736534106944978
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Jul_Credit_ratings.md",
+            "similarity": 0.7356901929392037
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Sep_Monthly_performance.md",
+            "similarity": 0.4370402425144334
+          }
+        ],
+        "first_relevant_rank": 1,
+        "matched_count": 9,
+        "expected_count": 9,
+        "coverage": 100.0
+      },
+      "id": "TC004"
+    },
+    {
+      "question": "惠理亚洲收益基金2025年Q1业绩表现",
+      "enhanced": "惠理亚洲收益基金2025年Q1业绩表现 (Asian Income Fund, Monthly performance, January 2025, February 2025, March 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Mar_Monthly_performance.md",
+            "similarity": 0.4716116545613095
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Jan_Monthly_performance.md",
+            "similarity": 0.46135577885232626
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Feb_Monthly_performance.md",
+            "similarity": 0.46021873536518787
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Mar_Performance_update.md",
+            "similarity": 0.45804906324086087
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Jan_Performance_update.md",
+            "similarity": 0.44605745603470803
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Feb_Performance_update.md",
+            "similarity": 0.44593813720026343
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Apr_Monthly_performance.md",
+            "similarity": 0.4455705453302232
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025May_Monthly_performance.md",
+            "similarity": 0.4446049568767916
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Sep_Monthly_performance.md",
+            "similarity": 0.44249301370810856
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Aug_Monthly_performance.md",
+            "similarity": 0.44211253665072425
+          }
+        ],
+        "first_relevant_rank": 1,
+        "matched_count": 3,
+        "expected_count": 3,
+        "coverage": 100.0
+      },
+      "id": "TC005"
+    },
+    {
+      "question": "What are NAV codes for Asian Income Fund Class A?",
+      "enhanced": "What are NAV codes for Asian Income Fund Class A? (NAVs & codes, Asian Income Fund, Class A)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Aug_NAVs_codes.md",
+            "similarity": 0.6256621538276653
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Jan_NAVs_codes.md",
+            "similarity": 0.6254387621562932
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Mar_NAVs_codes.md",
+            "similarity": 0.625350358095906
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Apr_NAVs_codes.md",
+            "similarity": 0.6253011124404678
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Sep_NAVs_codes.md",
+            "similarity": 0.6251054237037377
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Jul_NAVs_codes.md",
+            "similarity": 0.6245176100837406
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025May_NAVs_codes.md",
+            "similarity": 0.6243631625524954
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Jun_NAVs_codes.md",
+            "similarity": 0.6242121737495562
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Feb_NAVs_codes.md",
+            "similarity": 0.6238005644112148
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Mar_Fund_facts.md",
+            "similarity": 0.4669558494377648
+          }
+        ],
+        "first_relevant_rank": 1,
+        "matched_count": 9,
+        "expected_count": 9,
+        "coverage": 100.0
+      },
+      "id": "TC006"
+    },
+    {
+      "question": "Compare fee structures between Asian Income Fund and High Dividend Fund",
+      "enhanced": "Compare fee structures between Asian Income Fund and High Dividend Fund (Fee structure, Asian Income Fund, High Dividend Fund, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Sep_Fee_structure.md",
+            "similarity": 0.4754911894056394
+          },
+          {
+            "rank": 2,
+            "document": "VP_High_Dividend_Fund_2025Sep_Fee_structure.md",
+            "similarity": 0.465562673218375
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Aug_Fee_structure.md",
+            "similarity": 0.45890439718602904
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Jul_Fee_structure.md",
+            "similarity": 0.4588119988967998
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Mar_Fee_structure.md",
+            "similarity": 0.4586517012229522
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Jun_Fee_structure.md",
+            "similarity": 0.4585956245401714
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025May_Fee_structure.md",
+            "similarity": 0.4582685180968049
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Apr_Fee_structure.md",
+            "similarity": 0.45817496891864334
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Feb_Fee_structure.md",
+            "similarity": 0.458115468684485
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Jan_Fee_structure.md",
+            "similarity": 0.45690122076486694
+          }
+        ],
+        "first_relevant_rank": 1,
+        "matched_count": 2,
+        "expected_count": 2,
+        "coverage": 100.0
+      },
+      "id": "TC007"
+    },
+    {
+      "question": "Portfolio characteristics of Asian Income Fund from May to August 2025",
+      "enhanced": "Portfolio characteristics of Asian Income Fund from May to August 2025 (Portfolio characteristics, Asian Income Fund, May 2025, June 2025, July 2025, August 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+            "similarity": 0.7982889604757594
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Aug_Portfolio_characteristics.md",
+            "similarity": 0.7838192374306098
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Jun_Investment_objective.md",
+            "similarity": 0.7765294747877247
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Jul_Investment_objective.md",
+            "similarity": 0.7735530307197725
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Jun_Portfolio_characteristics.md",
+            "similarity": 0.7626760754273008
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Jul_Portfolio_characteristics.md",
+            "similarity": 0.7604098678995086
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+            "similarity": 0.7568777650567683
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+            "similarity": 0.7553297407986289
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025May_Investment_objective.md",
+            "similarity": 0.7541474361527853
+          },
+          {
+            "rank": 10,
+            "document": "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+            "similarity": 0.7522861101332096
+          }
+        ],
+        "first_relevant_rank": 2,
+        "matched_count": 4,
+        "expected_count": 4,
+        "coverage": 100.0
+      },
+      "id": "TC008"
+    },
+    {
+      "question": "哪些月份Asian Income Fund持有台积电？",
+      "enhanced": "哪些月份Asian Income Fund持有台积电？(Asian Income Fund, Taiwan Semiconductor Manufacturing Co Ltd, Top holdings - equities, January 2025, February 2025, March 2025, April 2025, May 2025, June 2025, July 2025, August 2025, September 2025)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025Mar_Top_holdings_-_equities.md",
+            "similarity": 0.5616951396032466
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Aug_Top_holdings_-_equities.md",
+            "similarity": 0.5579860169696689
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Jun_Top_holdings_-_equities.md",
+            "similarity": 0.557466507523576
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Jul_Top_holdings_-_equities.md",
+            "similarity": 0.5571949253665587
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Feb_Top_holdings_-_equities.md",
+            "similarity": 0.5570431367172703
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Jan_Top_holdings_-_equities.md",
+            "similarity": 0.556919546818422
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Apr_Top_holdings_-_equities.md",
+            "similarity": 0.55594913966287
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Sep_Top_holdings_-_equities.md",
+            "similarity": 0.5530419642443071
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025May_Top_holdings_-_equities.md",
+            "similarity": 0.5487319845164088
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Mar_Top_holdings_-_equities.md",
+            "similarity": 0.5127612014754123
+          }
+        ],
+        "first_relevant_rank": 1,
+        "matched_count": 9,
+        "expected_count": 9,
+        "coverage": 100.0
+      },
+      "id": "TC009"
+    },
+    {
+      "question": "What is the investment objective of Asian Income Fund?",
+      "enhanced": "What is the investment objective of Asian Income Fund? (Investment objective, Asian Income Fund)",
+      "chunks_count": 30,
+      "analysis": {
+        "total_chunks": 30,
+        "top_chunks": [
+          {
+            "rank": 1,
+            "document": "VP_Asian_Income_Fund_2025May_Investment_objective.md",
+            "similarity": 0.7568041558188615
+          },
+          {
+            "rank": 2,
+            "document": "VP_Asian_Income_Fund_2025Mar_Investment_objective.md",
+            "similarity": 0.7565106735053481
+          },
+          {
+            "rank": 3,
+            "document": "VP_Asian_Income_Fund_2025Feb_Investment_objective.md",
+            "similarity": 0.7562088442557768
+          },
+          {
+            "rank": 4,
+            "document": "VP_Asian_Income_Fund_2025Jul_Investment_objective.md",
+            "similarity": 0.7559756888178002
+          },
+          {
+            "rank": 5,
+            "document": "VP_Asian_Income_Fund_2025Aug_Investment_objective.md",
+            "similarity": 0.755739794419407
+          },
+          {
+            "rank": 6,
+            "document": "VP_Asian_Income_Fund_2025Apr_Investment_objective.md",
+            "similarity": 0.7557318082868218
+          },
+          {
+            "rank": 7,
+            "document": "VP_Asian_Income_Fund_2025Jan_Investment_objective.md",
+            "similarity": 0.7555444151216
+          },
+          {
+            "rank": 8,
+            "document": "VP_Asian_Income_Fund_2025Sep_Investment_objective.md",
+            "similarity": 0.7550082791486432
+          },
+          {
+            "rank": 9,
+            "document": "VP_Asian_Income_Fund_2025Jun_Investment_objective.md",
+            "similarity": 0.7546884292044322
+          },
+          {
+            "rank": 10,
+            "document": "VP_High_Dividend_Fund_2025Mar_Investment_objective.md",
+            "similarity": 0.5930917673710643
+          }
+        ],
+        "first_relevant_rank": 1,
+        "matched_count": 9,
+        "expected_count": 9,
+        "coverage": 100.0
+      },
+      "id": "TC010"
+    }
+  ]
+}

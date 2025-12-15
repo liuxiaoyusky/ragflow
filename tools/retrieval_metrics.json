@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-11 01:57:14.842218",
+  "timestamp": "2025-12-11 02:15:44.219923",
   "dataset": "factsheets_tables",
   "questions": [
     {
@@ -7,177 +7,93 @@
       "question": "what is the management fee for High Dividend Stocks fund?",
       "enhanced_query": "what is the management fee for High Dividend Stocks fund? (Fee structure)",
       "chunks_retrieved": 30,
-      "section_hits": 9,
-      "fund_hits": 30,
-      "top10_relevant": 9,
-      "top10_pct": 90.0,
-      "avg_sim": 0.379,
-      "max_sim": 0.39
+      "pattern": "High_Dividend.*Fee_structure",
+      "first_relevant_rank": 1
     },
     {
       "id": "Q2",
       "question": "does High Dividend Stocks fund have performance fees?",
       "enhanced_query": "does High Dividend Stocks fund have performance fees? (Fee structure)",
       "chunks_retrieved": 30,
-      "section_hits": 12,
-      "fund_hits": 27,
-      "top10_relevant": 9,
-      "top10_pct": 90.0,
-      "avg_sim": 0.368,
-      "max_sim": 0.378
+      "pattern": "High_Dividend.*Fee_structure",
+      "first_relevant_rank": 1
     },
     {
       "id": "Q3",
       "question": "what is the performance fee for High Dividend stocks fund?",
       "enhanced_query": "what is the performance fee for High Dividend stocks fund? (Fee structure)",
       "chunks_retrieved": 30,
-      "section_hits": 9,
-      "fund_hits": 30,
-      "top10_relevant": 9,
-      "top10_pct": 90.0,
-      "avg_sim": 0.374,
-      "max_sim": 0.386
+      "pattern": "High_Dividend.*Fee_structure",
+      "first_relevant_rank": 1
     },
     {
       "id": "Q4",
       "question": "what is the performance fee rate for High Dividend Stocks Fund?",
       "enhanced_query": "what is the performance fee rate for High Dividend Stocks Fund? (Fee structure)",
       "chunks_retrieved": 30,
-      "section_hits": 9,
-      "fund_hits": 30,
-      "top10_relevant": 9,
-      "top10_pct": 90.0,
-      "avg_sim": 0.363,
-      "max_sim": 0.374
+      "pattern": "High_Dividend.*Fee_structure",
+      "first_relevant_rank": 1
     },
     {
       "id": "Q5",
       "question": "what is the top fixed income holdings for Asian Income fund as of September 2025",
       "enhanced_query": "what is the top fixed income holdings for Asian Income fund as of September 2025 (Top holdings - fixed income)",
       "chunks_retrieved": 30,
-      "section_hits": 18,
-      "fund_hits": 30,
-      "top10_relevant": 9,
-      "top10_pct": 90.0,
-      "month_coverage": 100.0,
-      "avg_sim": 0.388,
-      "max_sim": 0.398
+      "pattern": "Asian_Income.*Sep.*Top_holdings.*fixed_income",
+      "first_relevant_rank": 1
     },
     {
       "id": "Q6",
       "question": "what are the top equity holdings of Asian Income as of March 2025",
       "enhanced_query": "what are the top equity holdings of Asian Income as of March 2025 (Top holdings - equities, March)",
       "chunks_retrieved": 30,
-      "section_hits": 20,
-      "fund_hits": 28,
-      "top10_relevant": 8,
-      "top10_pct": 80.0,
-      "month_coverage": 100.0,
-      "avg_sim": 0.344,
-      "max_sim": 0.388
+      "pattern": "Asian_Income.*Mar.*Top_holdings.*equities",
+      "first_relevant_rank": 1
     },
     {
       "id": "Q7",
       "question": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025",
       "enhanced_query": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025 (Top holdings - equities, January, February, March, April, May, June, July)",
       "chunks_retrieved": 30,
-      "section_hits": 9,
-      "fund_hits": 30,
-      "top10_relevant": 9,
-      "top10_pct": 90.0,
-      "month_coverage": 100.0,
-      "months_found": [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul"
-      ],
-      "months_missing": [],
-      "avg_sim": 0.335,
-      "max_sim": 0.352
+      "pattern": "High_Dividend.*Top_holdings",
+      "first_relevant_rank": 1
     },
     {
       "id": "Q8",
       "question": "what is the geographic exposures for the High dividend stocks fund?",
       "enhanced_query": "what is the geographic exposures for the High dividend stocks fund? (Asset type by geography)",
       "chunks_retrieved": 30,
-      "section_hits": 9,
-      "fund_hits": 21,
-      "top10_relevant": 0,
-      "top10_pct": 0.0,
-      "avg_sim": 0.302,
-      "max_sim": 0.355
+      "pattern": "High_Dividend.*geography",
+      "first_relevant_rank": null
     },
     {
       "id": "Q9",
       "question": "show me the geographic locations of High dividend stocks from January 2025 to September 2025",
       "enhanced_query": "show me the geographic locations of High dividend stocks from January 2025 to September 2025 (Asset type by geography, January, February, March, April, May, June, July, August, September)",
       "chunks_retrieved": 30,
-      "section_hits": 2,
-      "fund_hits": 27,
-      "top10_relevant": 0,
-      "top10_pct": 0.0,
-      "month_coverage": 100.0,
-      "months_found": [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep"
-      ],
-      "months_missing": [],
-      "avg_sim": 0.318,
-      "max_sim": 0.326
+      "pattern": "High_Dividend.*geography",
+      "first_relevant_rank": null
     },
     {
       "id": "Q10",
       "question": "what are the top holdings of Asian Income Fund from January 2025 to September 2025",
       "enhanced_query": "what are the top holdings of Asian Income Fund from January 2025 to September 2025 (Top holdings - equities, Top holdings - fixed income, January, February, March, April, May, June, July, August, September)",
       "chunks_retrieved": 30,
-      "section_hits": 18,
-      "fund_hits": 30,
-      "top10_relevant": 9,
-      "top10_pct": 90.0,
-      "month_coverage": 100.0,
-      "months_found": [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep"
-      ],
-      "months_missing": [],
-      "avg_sim": 0.369,
-      "max_sim": 0.378
+      "pattern": "Asian_Income.*Top_holdings",
+      "first_relevant_rank": 1
     },
     {
       "id": "Q11",
       "question": "what is the return for high dividend stocks fund as of September 2025?",
       "enhanced_query": "what is the return for high dividend stocks fund as of September 2025? (Monthly performance)",
       "chunks_retrieved": 30,
-      "section_hits": 18,
-      "fund_hits": 30,
-      "top10_relevant": 9,
-      "top10_pct": 90.0,
-      "month_coverage": 100.0,
-      "avg_sim": 0.388,
-      "max_sim": 0.409
+      "pattern": "High_Dividend.*Sep.*performance",
+      "first_relevant_rank": 1
     }
   ],
   "summary": {
-    "avg_top10_relevance": 72.72727272727273,
-    "avg_month_coverage": 100.0,
-    "avg_similarity": 0.35709090909090907
+    "found_count": 9,
+    "total_count": 11,
+    "avg_first_rank": 1.0
   }
 }

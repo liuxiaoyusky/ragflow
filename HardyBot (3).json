@@ -1,0 +1,602 @@
+{
+  "name": "HardyBot",
+  "nodes": [
+    {
+      "parameters": {
+        "events": [
+          "im.message.receive_v1"
+        ],
+        "options": {}
+      },
+      "type": "n8n-nodes-feishu-lark.larkTrigger",
+      "typeVersion": 1,
+      "position": [
+        -448,
+        -192
+      ],
+      "id": "c919ecc9-df50-4e37-9f16-a44be563f631",
+      "name": "Lark Trigger",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "receive_id": {
+          "__rl": true,
+          "value": "={{ $('Lark Trigger').item.json.sender.sender_id.open_id }}",
+          "mode": "id"
+        },
+        "content": "={\n    \"text\": \"答案正在生成中，可能需要30秒左右\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-feishu-lark.lark",
+      "typeVersion": 1,
+      "position": [
+        896,
+        -192
+      ],
+      "id": "69edf79b-2924-4a56-b898-d92d75ea2a16",
+      "name": "HeadsUp",
+      "webhookId": "18078639-3ea0-437e-9f56-1dfb6b3c390b",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "receive_id": {
+          "__rl": true,
+          "value": "={{ $('Lark Trigger').item.json.sender.sender_id.open_id }}",
+          "mode": "id"
+        },
+        "msg_type": "interactive",
+        "content": "={\n    \"config\": { \"wide_screen_mode\": true },\n    \"i18n_header\": {\n      \"zh_cn\": {\n        \"title\": { \"tag\": \"plain_text\", \"content\": \"Question: {{ $('EscapedCharacters1').item.json.escaped_text }}\" }\n      }\n    },\n    \"i18n_elements\": {\n      \"zh_cn\": [\n        {\n          \"tag\": \"div\",\n          \"text\": { \"tag\": \"lark_md\", \"content\": \"{{ $('EscapedCharacters').item.json.escaped_text }}\" }\n        },\n        {\n          \"tag\": \"div\",\n          \"text\": { \"tag\": \"lark_md\", \"content\": \"{{ $json.escapedMdText }}\" }\n        }\n      ]\n    }\n  }",
+        "options": {}
+      },
+      "type": "n8n-nodes-feishu-lark.lark",
+      "typeVersion": 1,
+      "position": [
+        2912,
+        -96
+      ],
+      "id": "0419f2a9-6ae4-4a66-bfd1-12fdc71d61ee",
+      "name": "LLMSend",
+      "webhookId": "18078639-3ea0-437e-9f56-1dfb6b3c390b",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 解析JSON字符串\nconst questionData = JSON.parse($json.question);\n\n// 提取text内容\nreturn {\n  json: {\n    original_question: $json.question,\n    extracted_text: questionData.text\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        -192
+      ],
+      "id": "ac398f94-f850-4860-85da-610792a72c22",
+      "name": "ExtractQuestion"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// 获取原始文本\nconst originalText = $('AskRAG').item.json.data.answer;\nconst mdText = $json.markdown;\n\n// JSON安全转义函数\nconst jsonEscape = (str) => {\n  return str\n    .replace(/\\\\/g, '\\\\\\\\')    // 反斜杠\n    .replace(/\"/g, '\\\\\"')      // 双引号\n    .replace(/\\n/g, '\\\\n')     // 换行符\n    .replace(/\\r/g, '\\\\r')     // 回车符\n    .replace(/\\t/g, '\\\\t')     // 制表符\n    .replace(/\\f/g, '\\\\f')     // 换页符\n    .replace(/\\v/g, '\\\\v');    // 垂直制表符\n};\n\nconst escapedText = jsonEscape(originalText);\nconst escapedMdText = jsonEscape(mdText);\n\nreturn {\n  json: {\n    original_text: originalText,\n    escaped_text: escapedText,\n    escapedMdText: escapedMdText\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2688,
+        -96
+      ],
+      "id": "a7b48aed-05f1-4c98-a408-5d7da464cbe6",
+      "name": "EscapedCharacters"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://10.1.9.133:8443/api/v1/chats/{{ $('PrimaryParam').item.json[\"ragchat-id\"] }}/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n        \"question\": \"{{ $('EscapedCharacters1').item.json.escaped_text }}\",\n        \"stream\": false,\n        \"session_id\": \"{{ $('SecondaryParam').item.json.session_id }}\",\n        \"reference\": true\n}",
+        "options": {
+          "timeout": 3000000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1120,
+        -192
+      ],
+      "id": "0e8b4cf0-66c2-41cd-88b9-46fe4506203d",
+      "name": "AskRAG",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "b387wwDj68SSa4YZ",
+          "name": "Ragflow"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4614a4fc-4b0c-4635-b9c6-93db2703aa8d",
+              "name": "ragchat-id",
+              "value": "f472490cbabe11f0b1a00242ac130006",
+              "type": "string"
+            },
+            {
+              "id": "91329625-73b0-4f3e-b0a6-b7aa3b60b49d",
+              "name": "question",
+              "value": "={{ $json.message.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -224,
+        -192
+      ],
+      "id": "449219fc-7453-4263-8786-3aefd2fb4bf6",
+      "name": "PrimaryParam"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://10.1.9.133:8443/api/v1/chats/{{ $json['ragchat-id'] }}/sessions",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "httpBearerAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"name\": \"NewSession\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        0,
+        -192
+      ],
+      "id": "4e83c501-7817-4fe3-802d-30de6e3e7b68",
+      "name": "NewSession",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "b387wwDj68SSa4YZ",
+          "name": "Ragflow"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fadbba64-c03e-4493-a800-0ce6892044ee",
+              "name": "session_id",
+              "value": "={{ $json.data.id }}",
+              "type": "string"
+            },
+            {
+              "id": "130f10b8-b9f1-4053-b169-eeba530a5445",
+              "name": "question",
+              "value": "={{ $('PrimaryParam').item.json.question }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        -192
+      ],
+      "id": "5ef1db97-f94b-42e9-8a6a-cc4552b5ca4c",
+      "name": "SecondaryParam"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// 获取原始文本\nconst originalText = $json.extracted_text;\n\n// JSON安全转义函数\nconst jsonEscape = (str) => {\n  return str\n    .replace(/\\\\/g, '\\\\\\\\')    // 反斜杠\n    .replace(/\"/g, '\\\\\"')      // 双引号\n    .replace(/\\n/g, '')     // 换行符\n    .replace(/\\r/g, '\\\\r')     // 回车符\n    .replace(/\\t/g, '\\\\t')     // 制表符\n    .replace(/\\f/g, '\\\\f')     // 换页符\n    .replace(/\\v/g, '\\\\v');    // 垂直制表符\n};\n\nconst escapedText = jsonEscape(originalText);\n\nreturn {\n  json: {\n    original_text: originalText,\n    escaped_text: escapedText\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        -192
+      ],
+      "id": "322e56a3-4e07-492b-bc00-8db33ae2ccd7",
+      "name": "EscapedCharacters1"
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://10.1.9.133:8443/api/v1/chats/{{ $('PrimaryParam').item.json['ragchat-id'] }}/sessions",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "httpBearerAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"ids\": [\"{{ $('SecondaryParam').item.json.session_id }}\"]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1344,
+        -288
+      ],
+      "id": "f7ce154d-c8c7-4408-bde9-87326c302ec1",
+      "name": "DeleteSession",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "b387wwDj68SSa4YZ",
+          "name": "Ragflow"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 获取输入的 JSON 数据\nconst inputData = $('AskRAG').first().json.data.reference;\n\n// 获取 chunks 数组（在第一个对象的 chunks 属性中）\nconst chunks = inputData.chunks;\n\n// 提取每个 chunk 的 4 个字段\nconst results = chunks.map((chunk, index) => {\n  return {\n    json: {\n      index: index,\n      document_id: chunk.document_id,\n      dataset_id: chunk.dataset_id,\n      document_name: chunk.document_name,\n      image_id: chunk.image_id\n    }\n  };\n});\n\nreturn results;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1344,
+        -96
+      ],
+      "id": "78f8cdcf-931f-47c6-a47e-f6f7a072f0d6",
+      "name": "ArrayHandling"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 确保只处理第一个 item，或收集所有输入后合并\nconst allItems = $input.all();\nconst firstItem = allItems[0].json;\nconst chunk = firstItem.chunk ?? firstItem; // 兼容不同输入结构\n\n// 从第一个 item 或所有 items 中提取 image_key\n// const imageKeys = firstItem.image_key ?? \n//   allItems.find(item => item.json.image_key)?.json.image_key ?? [];\n\nconst base = 'http://10.1.9.133:8080/chunk/parsed/chunks';\n\nlet mdLines = ['References'];\nlet elements = [];\n\nfor (let i = 0; i < chunk.document_id.length; i++) {\n  const name = chunk.document_name[i];\n  const docId = chunk.document_id[i];\n  const url = `${base}?id=${chunk.dataset_id[i]}&doc_id=${docId}`;\n  // const imgKey = imageKeys[i];\n\n  mdLines.push(`- [${name}](${url})`);\n//   mdLines.push(`![${name}](feishu://image/${imgKey})`);\n\n  // 修复：图片必须是独立的 img 元素，不能放在 extra 里\n  elements.push({\n    tag: 'div',\n    text: { tag: 'lark_md', content: `[${name}](${url})` },\n  });\n  // elements.push({\n  //   tag: 'img',\n  //   img_key: imgKey,\n  //   alt: { tag: 'plain_text', content: name },\n  // });\n}\n\nconst markdown = mdLines.join('\\n');\nconst card = {\n  config: { wide_screen_mode: true, enable_forward: false },\n  header: {\n    title: { tag: 'plain_text', content: 'Chunk References' },\n    template: 'blue',\n  },\n  elements,\n};\n\n// 关键：只返回一个 item，确保 card 只推送一次\nreturn [{ json: { markdown, card } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2464,
+        -96
+      ],
+      "id": "c9774c54-3264-4de7-89a8-01a70b848fb7",
+      "name": "md"
+    },
+    {
+      "parameters": {
+        "url": "=https://10.1.9.133:8443/v1/document/image/{{$json.image_id}}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "httpBearerAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1568,
+        -96
+      ],
+      "id": "21cf1446-c583-43a0-bc70-92019b4a0c5c",
+      "name": "DownloadPic",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        },
+        "httpBearerAuth": {
+          "id": "b387wwDj68SSa4YZ",
+          "name": "Ragflow"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://open.feishu.cn/open-apis/im/v1/images",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "larkApi",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "image_type",
+              "value": "message"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "image",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1792,
+        -96
+      ],
+      "id": "e02e5738-1309-4e87-8696-243682e935dc",
+      "name": "FeishuPic",
+      "credentials": {
+        "larkApi": {
+          "id": "co3YMMi97ycnvrm1",
+          "name": "Lark Tenant Token account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "document_id"
+            },
+            {
+              "fieldToAggregate": "dataset_id"
+            },
+            {
+              "fieldToAggregate": "document_name"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        -96
+      ],
+      "id": "0ca03bb1-6611-45d2-9179-f1a34e234b86",
+      "name": "imgKey"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1a128a78-a4aa-4d0c-934b-3f71ffb5cbbe",
+              "name": "document_id",
+              "value": "={{ $('ArrayHandling').item.json.document_id }}",
+              "type": "string"
+            },
+            {
+              "id": "de2a32e7-b180-4ef0-8162-c5ba9fd5c6d4",
+              "name": "dataset_id",
+              "value": "={{ $('ArrayHandling').item.json.dataset_id }}",
+              "type": "string"
+            },
+            {
+              "id": "3cb85393-2400-45f7-a077-349528b0c261",
+              "name": "document_name",
+              "value": "={{ $('ArrayHandling').item.json.document_name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2016,
+        -96
+      ],
+      "id": "6cd65865-be9d-4dac-8291-e0fec9c9d12f",
+      "name": "Edit Fields1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Lark Trigger": {
+      "main": [
+        [
+          {
+            "node": "PrimaryParam",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HeadsUp": {
+      "main": [
+        [
+          {
+            "node": "AskRAG",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ExtractQuestion": {
+      "main": [
+        [
+          {
+            "node": "EscapedCharacters1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EscapedCharacters": {
+      "main": [
+        [
+          {
+            "node": "LLMSend",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AskRAG": {
+      "main": [
+        [
+          {
+            "node": "DeleteSession",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ArrayHandling",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PrimaryParam": {
+      "main": [
+        [
+          {
+            "node": "NewSession",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NewSession": {
+      "main": [
+        [
+          {
+            "node": "SecondaryParam",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SecondaryParam": {
+      "main": [
+        [
+          {
+            "node": "ExtractQuestion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EscapedCharacters1": {
+      "main": [
+        [
+          {
+            "node": "HeadsUp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ArrayHandling": {
+      "main": [
+        [
+          {
+            "node": "DownloadPic",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "md": {
+      "main": [
+        [
+          {
+            "node": "EscapedCharacters",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DownloadPic": {
+      "main": [
+        [
+          {
+            "node": "FeishuPic",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FeishuPic": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "imgKey": {
+      "main": [
+        [
+          {
+            "node": "md",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "imgKey",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4791e4f4-4812-4a40-8fcc-ab514da4245c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "e1f9e70513f3d44101266576465de1c39aa161b773b32d79c10a23659cb2d846"
+  },
+  "id": "KtyL1u55P8aA357J",
+  "tags": []
+}

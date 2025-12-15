@@ -1,0 +1,1220 @@
+{
+  "version": "3.0",
+  "timestamp": "2025-12-11T08:46:25.454738",
+  "prompt_version": "v3.0",
+  "total_questions": 21,
+  "results": [
+    {
+      "id": "Q1",
+      "question": "what is the management fee for High Dividend Stocks fund?",
+      "enhanced_query": "what is the management fee for High Dividend Stocks fund? (High Dividend Fund, Fee structure, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "September 2025",
+            "section": "Fee structure",
+            "similarity": 0.4524962569726515
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "April 2025",
+            "section": "Fee structure",
+            "similarity": 0.4380394748376725
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "February 2025",
+            "section": "Fee structure",
+            "similarity": 0.4375311408604562
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "January 2025",
+            "section": "Fee structure",
+            "similarity": 0.43551418754695737
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "August 2025",
+            "section": "Fee structure",
+            "similarity": 0.43493220984899544
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 1,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "September 2025",
+            "section": "Fee structure",
+            "similarity": 0.3580926244946331
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "Q2",
+      "question": "does High Dividend Stocks fund have performance fees?",
+      "enhanced_query": "does High Dividend Stocks fund have performance fees? (High Dividend Fund, Fee structure)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "April 2025",
+            "section": "Fee structure",
+            "similarity": 0.38294592245062087
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "February 2025",
+            "section": "Fee structure",
+            "similarity": 0.3824073175914791
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "March 2025",
+            "section": "Fee structure",
+            "similarity": 0.37973076116626925
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "January 2025",
+            "section": "Fee structure",
+            "similarity": 0.37972359940973927
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "May 2025",
+            "section": "Fee structure",
+            "similarity": 0.3797042200763079
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 9,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "April 2025",
+            "section": "Fee structure",
+            "similarity": 0.30359021529671043
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "February 2025",
+            "section": "Fee structure",
+            "similarity": 0.3032180335755287
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "August 2025",
+            "section": "Fee structure",
+            "similarity": 0.3014776685312225
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "March 2025",
+            "section": "Fee structure",
+            "similarity": 0.3008690523776484
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "May 2025",
+            "section": "Fee structure",
+            "similarity": 0.3005876428592078
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "Q3",
+      "question": "what is the performance fee for High Dividend stocks fund?",
+      "enhanced_query": "what is the performance fee for High Dividend stocks fund? (High Dividend Fund, Fee structure, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "September 2025",
+            "section": "Fee structure",
+            "similarity": 0.4463256262992488
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "April 2025",
+            "section": "Fee structure",
+            "similarity": 0.43280663336183456
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "February 2025",
+            "section": "Fee structure",
+            "similarity": 0.43278038392036544
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "August 2025",
+            "section": "Fee structure",
+            "similarity": 0.4299979761270474
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "January 2025",
+            "section": "Fee structure",
+            "similarity": 0.4299190799610208
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 1,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "September 2025",
+            "section": "Fee structure",
+            "similarity": 0.34664749173996445
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "Q4",
+      "question": "what is the performance fee rate for High Dividend Stocks Fund?",
+      "enhanced_query": "what is the performance fee rate for High Dividend Stocks Fund? (High Dividend Fund, Fee structure)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "April 2025",
+            "section": "Fee structure",
+            "similarity": 0.3849305391986678
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "February 2025",
+            "section": "Fee structure",
+            "similarity": 0.38470613390101505
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "March 2025",
+            "section": "Fee structure",
+            "similarity": 0.3818121425232518
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "January 2025",
+            "section": "Fee structure",
+            "similarity": 0.38170524075209733
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "May 2025",
+            "section": "Fee structure",
+            "similarity": 0.3814822937956208
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 9,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "April 2025",
+            "section": "Fee structure",
+            "similarity": 0.3026174168990127
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "February 2025",
+            "section": "Fee structure",
+            "similarity": 0.3024652908348734
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "August 2025",
+            "section": "Fee structure",
+            "similarity": 0.3004280825234556
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "March 2025",
+            "section": "Fee structure",
+            "similarity": 0.30000933763460197
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "May 2025",
+            "section": "Fee structure",
+            "similarity": 0.299749027915647
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "Q5",
+      "question": "what is the top fixed income holdings for Asian Income fund as of September 2025?",
+      "enhanced_query": "what is the top fixed income holdings for Asian Income fund as of September 2025? (Asian Income Fund, Top holdings fixed income, Top holdings fixed income, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.41985641701984155
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.4172010179128566
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Investment objective",
+            "similarity": 0.4153134037144166
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "February 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.4116954534992921
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.4116364748179703
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 1,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.3826355146683026
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "Q6",
+      "question": "what are the top equity holdings of Asian Income as of March 2025",
+      "enhanced_query": "what are the top equity holdings of Asian Income as of March 2025 (Asian Income Fund, Top holdings equities, Top holdings equities, Q1 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "March 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4165148790029356
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.40013197892907815
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.3989355158087846
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.39892098124651143
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.3987753287063839
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 1,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "March 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.3899144646694325
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "Q7",
+      "question": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025",
+      "enhanced_query": "show me the top holdings of High Dividend Stocks Fund from January 2025 to July 2025 (High Dividend Fund, Top holdings equities, Top holdings fixed income, 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "January 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.3668446316146701
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "July 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.36444493986678933
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "February 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.3562515354049942
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "April 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.3551421520615258
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "June 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.3550305961015229
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 0,
+        "top_chunks": [],
+        "error": "ApiError('search_phase_execution_exception', meta=ApiResponseMeta(status=500, http_version='1.1', headers={'X-elastic-product': 'Elasticsearch', 'content-type': 'application/vnd.elasticsearch+json;compatible-with=8', 'content-length': '749'}, duration=0.026923418045043945, node=NodeConfig(scheme='http', host='es01', port=9200, path_prefix='', headers={'user-agent': 'elasticsearch-py/8.12.1 (Python/3.10.12; elastic-transport/8.12.0)'}, connections_per_node=10, request_timeout=10.0, http_compress=False, verify_certs=False, ca_certs=None, client_cert=None, client_key=None, ssl_assert_hostname=None, ssl_assert_fingerprint=None, ssl_version=None, ssl_context=None, ssl_show_warn=True, _extras={})), body={'error': {'root_cause': [{'type': 'too_many_nested_clauses', 'reason': 'Query contains too many nested clauses; maxClauseCount is set to 2541'}], 'type': 'search_phase_execution_exception', 'reason': 'all shards failed', 'phase': 'dfs', 'grouped': True, 'failed_shards': [{'shard': 0, 'index': 'ragflow_1362541483ed11f0ad450242ac130006', 'node': 'vVoWYeDLTOmpFj2EsFLQgQ', 'reason': {'type': 'too_many_nested_clauses', 'reason': 'Query contains too many nested clauses; maxClauseCount is set to 2541'}}], 'caused_by': {'type': 'too_many_nested_clauses', 'reason': 'Query contains too many nested clauses; maxClauseCount is set to 2541', 'caused_by': {'type': 'too_many_nested_clauses', 'reason': 'Query contains too many nested clauses; maxClauseCount is set to 2541'}}}, 'status': 500})"
+      }
+    },
+    {
+      "id": "Q8",
+      "question": "what is the geographic exposures for the Asian Income fund?",
+      "enhanced_query": "what is the geographic exposures for the Asian Income fund? (Asian Income Fund, Asset type by geography, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Investment objective",
+            "similarity": 0.6871866184634668
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.6790721599228442
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Asset type by geography",
+            "similarity": 0.6522113327215133
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Asset type by geography",
+            "similarity": 0.6172647798183887
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "July 2025",
+            "section": "Asset type by geography",
+            "similarity": 0.6152145081451682
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 1,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Asset type by geography",
+            "similarity": 0.37196781095747433
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "Q9",
+      "question": "show me the geographic locations of High dividend stocks from January 2025 to July 2025",
+      "enhanced_query": "show me the geographic locations of High dividend stocks from January 2025 to July 2025 (High Dividend Fund, Asset type by geography, 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "January 2025",
+            "section": "Investment objective",
+            "similarity": 0.42799873852728343
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "April 2025",
+            "section": "Investment objective",
+            "similarity": 0.4135168941740049
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "July 2025",
+            "section": "Dividend information",
+            "similarity": 0.41288155122763215
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "July 2025",
+            "section": "Investment objective",
+            "similarity": 0.3978182705768746
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "May 2025",
+            "section": "Dividend information",
+            "similarity": 0.3959421632579173
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 0,
+        "top_chunks": [],
+        "error": null
+      }
+    },
+    {
+      "id": "Q10",
+      "question": "what are the top holdings of Asian Income Fund from January 2025 to September 2025?",
+      "enhanced_query": "What are the top holdings of Asian Income Fund from January 2025 to September 2025? (Asian Income Fund, Top holdings equities, Top holdings fixed income, 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.43972432114269744
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Credit ratings",
+            "similarity": 0.4393265428971737
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.43915050065244704
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "February 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.4317613947411034
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.4301917572881978
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 0,
+        "top_chunks": [],
+        "error": null
+      }
+    },
+    {
+      "id": "Q11",
+      "question": "what is the return for high dividend stocks fund as of September 2025?",
+      "enhanced_query": "what is the return for high dividend stocks fund as of September 2025? (High Dividend Fund, Monthly performance, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.4759255756063041
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "September 2025",
+            "section": "Unknown",
+            "similarity": 0.45295801379260126
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "September 2025",
+            "section": "Portfolio characteristics",
+            "similarity": 0.438276703399375
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "May 2025",
+            "section": "Monthly performance",
+            "similarity": 0.4298018425310258
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "August 2025",
+            "section": "Unknown",
+            "similarity": 0.4217798169041732
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 1,
+        "top_chunks": [
+          {
+            "fund": "High Dividend Fund",
+            "month": "September 2025",
+            "section": "Unknown",
+            "similarity": 0.2598133441234072
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "TC001",
+      "question": "What are top holdings of Asian Income Fund from January to September 2025?",
+      "enhanced_query": "What are top holdings of Asian Income Fund from January to September 2025? (Asian Income Fund, Top holdings equities, Top holdings fixed income, 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.42093462354945366
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.41991585032717804
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "February 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.4125514416163294
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.4103587519783952
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "Top holdings fixed income",
+            "similarity": 0.4095141069179471
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 9,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.2514610684193443
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.24983224795396486
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.24555737651437498
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "March 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.24505231588915122
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.24346447452535372
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "TC002",
+      "question": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率",
+      "enhanced_query": "比较High Dividend Fund和Asian Income Fund 2025年8月的股息率 (High Dividend Fund, Asian Income Fund, Dividend information, August 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Credit ratings",
+            "similarity": 0.6020639589083037
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Investment objective",
+            "similarity": 0.5029469404211244
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Dividend information",
+            "similarity": 0.5005717369747748
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "August 2025",
+            "section": "Investment objective",
+            "similarity": 0.49449680521080885
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "August 2025",
+            "section": "Dividend information",
+            "similarity": 0.46461036981804454
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 0,
+        "top_chunks": [],
+        "error": null
+      }
+    },
+    {
+      "id": "TC003",
+      "question": "Show asset allocation by sector for Asian Income Fund September 2025",
+      "enhanced_query": "Show asset allocation by sector for Asian Income Fund September 2025 (Asian Income Fund, Asset type by sector, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.6325924058605048
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Investment objective",
+            "similarity": 0.6167392609286346
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Asset type by sector",
+            "similarity": 0.6100555089248164
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Investment objective",
+            "similarity": 0.5741312149306006
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "Investment objective",
+            "similarity": 0.5736943136985784
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 1,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Asset type by sector",
+            "similarity": 0.47340297071238036
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "TC004",
+      "question": "What is the credit rating distribution of Asian Income Fund?",
+      "enhanced_query": "What is the credit rating distribution of Asian Income Fund? (Asian Income Fund, Credit ratings, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.7623703966490728
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Credit ratings",
+            "similarity": 0.7424721828283678
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Credit ratings",
+            "similarity": 0.7418590136789617
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "March 2025",
+            "section": "Credit ratings",
+            "similarity": 0.7410570178407772
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "February 2025",
+            "section": "Credit ratings",
+            "similarity": 0.7405686837524373
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 1,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.5273186584190463
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "TC005",
+      "question": "惠理亚洲收益基金2025年Q1业绩表现",
+      "enhanced_query": "惠理亚洲收益基金2025年Q1业绩表现 (Asian Income Fund, Monthly performance, Q1 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "Credit ratings",
+            "similarity": 0.42805796067611157
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Credit ratings",
+            "similarity": 0.42780081088633903
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Credit ratings",
+            "similarity": 0.4274666414734518
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "February 2025",
+            "section": "Credit ratings",
+            "similarity": 0.4267433135730221
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "March 2025",
+            "section": "Credit ratings",
+            "similarity": 0.42529109923451014
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 0,
+        "top_chunks": [],
+        "error": null
+      }
+    },
+    {
+      "id": "TC006",
+      "question": "What are NAV codes for Asian Income Fund Class A?",
+      "enhanced_query": "What are NAV codes for Asian Income Fund Class A? (Asian Income Fund, NAVs & codes)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.6474829783917302
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.6474733427792871
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.6473617964165659
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "March 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.64731103641784
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.6470031158996716
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 9,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.3506757309218559
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "July 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.350135071890632
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.34986791160393393
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.34922622295395334
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "NAVs & codes",
+            "similarity": 0.34900629412681156
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "TC007",
+      "question": "Compare fee structures between Asian Income Fund and High Dividend Fund",
+      "enhanced_query": "Compare fee structures between Asian Income Fund and High Dividend Fund (Asian Income Fund, High Dividend Fund, Fee structure, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Credit ratings",
+            "similarity": 0.5739237631112063
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Investment objective",
+            "similarity": 0.49610694934843624
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Fee structure",
+            "similarity": 0.47659528298678877
+          },
+          {
+            "fund": "High Dividend Fund",
+            "month": "September 2025",
+            "section": "Fee structure",
+            "similarity": 0.46567313864512017
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "July 2025",
+            "section": "Fee structure",
+            "similarity": 0.45993016920641744
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 0,
+        "top_chunks": [],
+        "error": null
+      }
+    },
+    {
+      "id": "TC008",
+      "question": "Portfolio characteristics of Asian Income Fund from May to August 2025",
+      "enhanced_query": "Portfolio characteristics of Asian Income Fund from May to August 2025 (Asian Income Fund, Portfolio characteristics, 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Credit ratings",
+            "similarity": 0.7860322199096361
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Investment objective",
+            "similarity": 0.7840825129892791
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "Investment objective",
+            "similarity": 0.7521270028679068
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Investment objective",
+            "similarity": 0.7510258858958894
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Investment objective",
+            "similarity": 0.7504327232402747
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 4,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Portfolio characteristics",
+            "similarity": 0.5230111198961009
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "June 2025",
+            "section": "Portfolio characteristics",
+            "similarity": 0.501914249646096
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "July 2025",
+            "section": "Portfolio characteristics",
+            "similarity": 0.5011366966724222
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Portfolio characteristics",
+            "similarity": 0.4928853843090429
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "TC009",
+      "question": "哪些月份Asian Income Fund持有台积电？",
+      "enhanced_query": "哪些月份Asian Income Fund持有台积电？(Asian Income Fund, Taiwan Semiconductor Manufacturing Co Ltd, Top holdings equities, Top holdings equities, September 2025)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4356600040021493
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4267483096717608
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "June 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4246081216965305
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "February 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4241885449883783
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "July 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4238849980759446
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 9,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "September 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4800381788625453
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4700412415757764
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "August 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4698735763883191
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "June 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.4692447973186285
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "April 2025",
+            "section": "Top holdings equities",
+            "similarity": 0.46861846578229405
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "TC010",
+      "question": "What is the investment objective of Asian Income Fund?",
+      "enhanced_query": "What is the investment objective of Asian Income Fund? (Asian Income Fund, Investment objective)",
+      "retrieval": {
+        "chunk_count": 30,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Investment objective",
+            "similarity": 0.7599084003591159
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "March 2025",
+            "section": "Investment objective",
+            "similarity": 0.7594438217018944
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "February 2025",
+            "section": "Investment objective",
+            "similarity": 0.759222093860797
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "July 2025",
+            "section": "Investment objective",
+            "similarity": 0.7591437880068006
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Investment objective",
+            "similarity": 0.7585748588646573
+          }
+        ]
+      },
+      "chat": {
+        "chunk_count": 9,
+        "top_chunks": [
+          {
+            "fund": "Asian Income Fund",
+            "month": "July 2025",
+            "section": "Investment objective",
+            "similarity": 0.5740437308466471
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "May 2025",
+            "section": "Investment objective",
+            "similarity": 0.5739975906955668
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "March 2025",
+            "section": "Investment objective",
+            "similarity": 0.573442264042116
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "February 2025",
+            "section": "Investment objective",
+            "similarity": 0.5729479406031375
+          },
+          {
+            "fund": "Asian Income Fund",
+            "month": "January 2025",
+            "section": "Investment objective",
+            "similarity": 0.5728334066634768
+          }
+        ],
+        "error": null
+      }
+    }
+  ]
+}
