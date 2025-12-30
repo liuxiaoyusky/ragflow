@@ -93,10 +93,7 @@ services:
       - ./entrypoint.sh:/ragflow/entrypoint.sh
       # PyTorch 缓存（基础 OCR GPU 加速需要）
       - /home/calvin/ragflow-mineru:/ragflow/uv_tools
-      # MinerU API + OCR patches
-      - ./patches/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py:ro
-      - ./patches/naive.py:/ragflow/rag/app/naive.py:ro
-      - ./patches/figure_parser.py:/ragflow/deepdoc/parser/figure_parser.py:ro
+      # 只保留 PyTorch 缓存检查 patch（官方 v0.23.0 已修复其他问题）
       - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
     environment:
       - PYTHONPATH=/ragflow:/ragflow/uv_tools/libs
