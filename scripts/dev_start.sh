@@ -3,9 +3,19 @@
 # 进入 docker 目录，确保相对路径正确
 cd "$(dirname "$0")/../docker" || exit 1
 
+# 读取当前配置的 DOC_ENGINE
+DOC_ENGINE=$(grep "^DOC_ENGINE=" .env.dev | cut -d'=' -f2)
+DOC_ENGINE=${DOC_ENGINE:-elasticsearch}
+
 echo "🚀 Starting RAGFlow DEV environment..."
 echo "   - Project: ragflow-dev"
-echo "   - Ports: 10080 (Web), 15455 (MySQL), 19200 (ES)"
+echo "   - DOC_ENGINE: $DOC_ENGINE"
+echo "   - Ports: 10080 (Web), 15455 (MySQL)"
+if [ "$DOC_ENGINE" = "infinity" ]; then
+    echo "   - Infinity: 33817 (Thrift), 33820 (HTTP)"
+else
+    echo "   - Elasticsearch: 19200"
+fi
 echo "   - Config: .env.dev"
 
 # 核心命令
@@ -15,6 +25,7 @@ echo "   - Config: .env.dev"
 docker compose --env-file .env.dev -p ragflow-dev -f docker-compose.yml -f docker-compose.dev.yml up -d
 
 echo "✅ RAGFlow DEV is running at http://localhost:10080"
+echo "   Using $DOC_ENGINE as document store"
 
 
 

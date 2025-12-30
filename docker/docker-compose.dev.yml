@@ -1,5 +1,7 @@
 services:
   # --- 主服务 (GPU) ---
+  # volumes, environment, patches 已在 docker-compose.yml 中定义
+  # 这里只配置 dev 专属的端口映射和容器名
   ragflow-gpu:
     container_name: ragflow-dev-gpu
     ports:
@@ -10,14 +12,6 @@ services:
       - "19382:9382"
     # 加载 dev 专用环境变量 (OIDC 配置等)
     env_file: .env.dev
-    # MinerU 集成修复：挂载 patches 文件覆盖官方镜像
-    volumes:
-      - ./patches/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py:ro
-      - ./patches/naive.py:/ragflow/rag/app/naive.py:ro
-      - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
-      - ./patches/figure_parser.py:/ragflow/deepdoc/parser/figure_parser.py:ro
-      # PyTorch 和重型依赖持久化缓存
-      - /home/calvin/ragflow-mineru/libs:/ragflow/uv_tools/libs
 
   # --- 基础依赖 ---
   mysql:

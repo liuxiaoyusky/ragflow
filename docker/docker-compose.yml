@@ -91,6 +91,15 @@ services:
       - ../history_data_agent:/ragflow/history_data_agent
       - ./service_conf.yaml.template:/ragflow/conf/service_conf.yaml.template
       - ./entrypoint.sh:/ragflow/entrypoint.sh
+      # PyTorch 缓存（基础 OCR GPU 加速需要）
+      - /home/calvin/ragflow-mineru:/ragflow/uv_tools
+      # MinerU API + OCR patches
+      - ./patches/mineru_parser.py:/ragflow/deepdoc/parser/mineru_parser.py:ro
+      - ./patches/naive.py:/ragflow/rag/app/naive.py:ro
+      - ./patches/figure_parser.py:/ragflow/deepdoc/parser/figure_parser.py:ro
+      - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
+    environment:
+      - PYTHONPATH=/ragflow:/ragflow/uv_tools/libs
     env_file: .env
     networks:
       - ragflow
