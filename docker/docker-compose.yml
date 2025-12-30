@@ -97,6 +97,8 @@ services:
       - /home/calvin/ragflow-cache-py312/uv-cache:/root/.cache/uv
       # PyTorch 缓存检查 patch
       - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
+      # SSL 证书
+      - /home/calvin/apps/n8n/ssl:/etc/nginx/ssl:ro
     environment:
       - TORCH_CACHE_DIR=/ragflow/torch_cache/site-packages
       - PYTHONPATH=/ragflow:/ragflow/torch_cache/site-packages
