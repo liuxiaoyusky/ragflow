@@ -91,12 +91,15 @@ services:
       - ../history_data_agent:/ragflow/history_data_agent
       - ./service_conf.yaml.template:/ragflow/conf/service_conf.yaml.template
       - ./entrypoint.sh:/ragflow/entrypoint.sh
-      # PyTorch 缓存（基础 OCR GPU 加速需要）
-      - /home/calvin/ragflow-mineru:/ragflow/uv_tools
-      # 只保留 PyTorch 缓存检查 patch（官方 v0.23.0 已修复其他问题）
+      # PyTorch 持久化缓存（Python 3.12 版本）
+      - /home/calvin/ragflow-cache-py312/site-packages:/ragflow/torch_cache/site-packages
+      # uv 下载缓存（避免重复下载）
+      - /home/calvin/ragflow-cache-py312/uv-cache:/root/.cache/uv
+      # PyTorch 缓存检查 patch
       - ./patches/misc_utils.py:/ragflow/common/misc_utils.py:ro
     environment:
-      - PYTHONPATH=/ragflow:/ragflow/uv_tools/libs
+      - TORCH_CACHE_DIR=/ragflow/torch_cache/site-packages
+      - PYTHONPATH=/ragflow:/ragflow/torch_cache/site-packages
     env_file: .env
     networks:
       - ragflow

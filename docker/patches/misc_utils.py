@@ -103,13 +103,45 @@ def pip_install_torch():
     device = os.getenv("DEVICE", "cpu")
     if device == "cpu":
         return
-    # Check if torch is already available (e.g., pre-installed via entrypoint.sh to persistent cache)
+    
+    # 持久化缓存目录（挂载到主机）
+    cache_dir = os.getenv("TORCH_CACHE_DIR", "/ragflow/torch_cache/site-packages")
+    
+    # 将缓存目录添加到 Python 路径（优先级最高）
+    if cache_dir not in sys.path:
+        sys.path.insert(0, cache_dir)
+    
+    # 检查 torch 是否已安装（在缓存目录或系统中）
     try:
         import torch
-        logging.info(f"PyTorch already available: {torch.__version__}")
+        logging.info(f"PyTorch already available: {torch.__version__} (from cache or system)")
         return
     except ImportError:
         pass
-    logging.info("Installing pytorch")
+    
+    # 安装到持久化缓存目录（v0.23.0 使用 uv）
+    logging.info(f"Installing pytorch to {cache_dir}")
+    os.makedirs(cache_dir, exist_ok=True)
     pkg_names = ["torch>=2.5.0,<3.0.0"]
-    subprocess.check_call([sys.executable, "-m", "pip", "install", *pkg_names])
+    
+    # 尝试使用 uv（v0.23.0），失败则回退到 pip
+    try:
+        subprocess.check_call([
+            "uv", "pip", "install",
+            "--target", cache_dir,
+            "--python", sys.executable,
+            *pkg_names
+        ])
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        # 回退到 pip
+        subprocess.check_call([
+            sys.executable, "-m", "pip", "install", 
+            "--target", cache_dir,
+            *pkg_names
+        ])
+    
+    # 重新导入验证
+    import importlib
+    importlib.invalidate_caches()
+    import torch
+    logging.info(f"PyTorch installed successfully: {torch.__version__}")
