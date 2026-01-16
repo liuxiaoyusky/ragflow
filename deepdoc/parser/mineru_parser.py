@@ -506,39 +506,102 @@ class MinerUParser(RAGFlowPdfParser):
                     item[key] = str((subdir / item[key]).resolve())
         return data
 
-    def _transfer_to_sections(self, outputs: list[dict[str, Any]], parse_method: str = None):
+    def _transfer_to_sections(self, outputs: list[dict[str, Any]], parse_method: str = None, structured: bool = True):
+        """
+        Transfer MinerU outputs to sections.
+        
+        Args:
+            outputs: List of MinerU output blocks
+            parse_method: Parsing method ('manual', 'paper', or 'raw')
+            structured: If True, return structured dicts with type/caption info (new format).
+                       If False, return tuples for backward compatibility.
+        
+        Returns:
+            If structured=True: List of dicts with keys: content, type, caption, position, page_idx
+            If structured=False: List of tuples (content, position) or (content, type, position)
+        """
         sections = []
         for output in outputs:
-            match output["type"]:
+            block_type = output["type"]
+            caption = ""
+            
+            match block_type:
                 case MinerUContentType.TEXT:
                     section = output.get("text", "")
                 case MinerUContentType.TABLE:
-                    section = output.get("table_body", "") + "\n".join(output.get("table_caption", [])) + "\n".join(
-                        output.get("table_footnote", []))
+                    # Separate caption from body for structured output
+                    caption = "\n".join(output.get("table_caption", []))
+                    table_body = output.get("table_body", "")
+                    footnote = "\n".join(output.get("table_footnote", []))
+                    section = table_body + ("\n" + caption if caption else "") + ("\n" + footnote if footnote else "")
                     if not section.strip():
                         section = "FAILED TO PARSE TABLE"
                 case MinerUContentType.IMAGE:
-                    section = "".join(output.get("image_caption", [])) + "\n" + "".join(
-                        output.get("image_footnote", []))
+                    caption = "".join(output.get("image_caption", []))
+                    footnote = "".join(output.get("image_footnote", []))
+                    section = caption + ("\n" + footnote if footnote else "")
                 case MinerUContentType.EQUATION:
                     section = output.get("text", "")
                 case MinerUContentType.CODE:
-                    section = output.get("code_body", "") + "\n".join(output.get("code_caption", []))
+                    caption = "\n".join(output.get("code_caption", []))
+                    section = output.get("code_body", "") + ("\n" + caption if caption else "")
                 case MinerUContentType.LIST:
                     section = "\n".join(output.get("list_items", []))
                 case MinerUContentType.DISCARDED:
                     continue  # Skip discarded blocks entirely
 
-            if section and parse_method == "manual":
-                sections.append((section, output["type"], self._line_tag(output)))
-            elif section and parse_method == "paper":
-                sections.append((section + self._line_tag(output), output["type"]))
+            if not section:
+                continue
+                
+            position = self._line_tag(output)
+            page_idx = output.get("page_idx", 0)
+            
+            if structured:
+                # New structured format with rich metadata
+                sections.append({
+                    "content": section,
+                    "type": str(block_type),  # TEXT, TABLE, IMAGE, etc.
+                    "caption": caption,
+                    "position": position,
+                    "page_idx": page_idx,
+                })
             else:
-                sections.append((section, self._line_tag(output)))
+                # Legacy tuple format for backward compatibility
+                if parse_method == "manual":
+                    sections.append((section, block_type, position))
+                elif parse_method == "paper":
+                    sections.append((section + position, block_type))
+                else:
+                    sections.append((section, position))
+                    
         return sections
 
     def _transfer_to_tables(self, outputs: list[dict[str, Any]]):
-        return []
+        """
+        Transfer MinerU outputs to structured table data.
+        
+        Returns:
+            List of dicts with keys: caption, body, footnote, position, img
+        """
+        tables = []
+        for output in outputs:
+            if output["type"] == MinerUContentType.TABLE:
+                caption = "\n".join(output.get("table_caption", []))
+                body = output.get("table_body", "")
+                footnote = "\n".join(output.get("table_footnote", []))
+                
+                if not body.strip() and not caption.strip():
+                    continue
+                    
+                tables.append({
+                    "caption": caption,
+                    "body": body,
+                    "footnote": footnote,
+                    "position": self._line_tag(output),
+                    "img": output.get("table_img_path"),
+                    "page_idx": output.get("page_idx", 0),
+                })
+        return tables
 
     def parse_pdf(
             self,
@@ -619,7 +682,8 @@ class MinerUParser(RAGFlowPdfParser):
             if callback:
                 callback(0.75, f"[MinerU] Parsed {len(outputs)} blocks from PDF.")
 
-            return self._transfer_to_sections(outputs, parse_method), self._transfer_to_tables(outputs)
+            # Return structured data for semantic chunking
+            return self._transfer_to_sections(outputs, parse_method, structured=True), self._transfer_to_tables(outputs)
         finally:
             if temp_pdf and temp_pdf.exists():
                 try:

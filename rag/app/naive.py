@@ -39,8 +39,22 @@ from deepdoc.parser.pdf_parser import PlainParser, VisionParser
 from deepdoc.parser.docling_parser import DoclingParser
 from deepdoc.parser.tcadp_parser import TCADPParser
 from common.parser_config_utils import normalize_layout_recognizer
-from rag.nlp import concat_img, find_codec, naive_merge, naive_merge_with_images, naive_merge_docx, rag_tokenizer, \
-    tokenize_chunks, tokenize_chunks_with_images, tokenize_table, attach_media_context, append_context2table_image4pdf
+from rag.nlp import (
+    concat_img,
+    find_codec,
+    naive_merge,
+    naive_merge_with_images,
+    naive_merge_docx,
+    rag_tokenizer,
+    semantic_merge_mineru,
+    tokenize_chunks,
+    tokenize_structured_chunks,
+    doc_tokenize_chunks_with_images,
+    tokenize_table,
+    attach_media_context,
+    append_context2table_image4pdf,
+    tokenize_chunks_with_images,
+)  # noqa: F401
 
 
 def by_deepdoc(filename, binary=None, from_page=0, to_page=100000, lang="Chinese", callback=None, pdf_cls=None,
@@ -779,7 +793,9 @@ def chunk(filename, binary=None, from_page=0, to_page=100000, lang="Chinese", ca
         if table_context_size or image_context_size:
             tables = append_context2table_image4pdf(sections, tables, image_context_size)
 
-        if name in ["tcadp", "docling", "mineru"]:
+        # For tcadp, docling, paddleocr: force chunk_token_num=0 to keep their structured output as-is
+        # For mineru: use semantic_merge_mineru which handles structured data intelligently
+        if name in ["tcadp", "docling", "paddleocr"]:
             parser_config["chunk_token_num"] = 0
 
         res = tokenize_table(tables, doc, is_english)
@@ -976,13 +992,21 @@ def chunk(filename, binary=None, from_page=0, to_page=100000, lang="Chinese", ca
             if all(image is None for image in section_images):
                 section_images = None
 
-        if section_images:
-            chunks, images = naive_merge_with_images(sections, section_images,
-                                                     int(parser_config.get(
-                                                         "chunk_token_num", 128)), parser_config.get(
-                    "delimiter", "\n!?。；！？"))
-            res.extend(
-                tokenize_chunks_with_images(chunks, doc, is_english, images, child_delimiters_pattern=child_deli))
+        # Check if sections are in MinerU's structured format (list of dicts)
+        is_structured_mineru = sections and isinstance(sections[0], dict) and "type" in sections[0]
+        
+        if is_structured_mineru:
+            # Use semantic merge for MinerU structured data
+            structured_chunks = semantic_merge_mineru(
+                sections,
+                chunk_token_num=int(parser_config.get("chunk_token_num", 512)),
+                delimiter=parser_config.get("delimiter", "\n!?。；！？"),
+            )
+            # Convert structured chunks to document format
+            res.extend(tokenize_structured_chunks(structured_chunks, doc, is_english, pdf_parser, child_delimiters_pattern=child_deli))
+        elif section_images:
+            chunks, images = naive_merge_with_images(sections, section_images, int(parser_config.get("chunk_token_num", 128)), parser_config.get("delimiter", "\n!?。；！？"))
+            res.extend(tokenize_chunks_with_images(chunks, doc, is_english, images, child_delimiters_pattern=child_deli))
         else:
             chunks = naive_merge(
                 sections, int(parser_config.get(

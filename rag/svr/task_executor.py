@@ -330,14 +330,46 @@ async def build_chunks(task, progress_callback):
         chat_mdl = LLMBundle(task["tenant_id"], LLMType.CHAT, llm_name=task["llm_id"], lang=task["language"])
 
         async def doc_keyword_extraction(chat_mdl, d, topn):
-            cached = get_llm_cache(chat_mdl.llm_name, d["content_with_weight"], "keywords", {"topn": topn})
+            # Smart content selection for keyword extraction
+            doc_type = d.get("doc_type_kwd", "")
+            
+            if doc_type == "table":
+                # For tables, prefer caption/header over cell content
+                content = d.get("table_caption", "")
+                if not content or not content.strip():
+                    # Fallback: use first row (likely header) of the table
+                    full_content = d.get("content_with_weight", "")
+                    first_line = full_content.split("\n")[0] if full_content else ""
+                    # If it looks like HTML table, extract header row
+                    if "<th>" in full_content or "<tr>" in full_content:
+                        import re
+                        header_match = re.search(r"<tr[^>]*>.*?</tr>", full_content, re.DOTALL | re.IGNORECASE)
+                        if header_match:
+                            # Strip HTML tags from header
+                            header_text = re.sub(r"<[^>]+>", " ", header_match.group())
+                            content = " ".join(header_text.split())
+                        else:
+                            content = first_line
+                    else:
+                        content = first_line
+            elif doc_type == "image":
+                # For images, use caption if available
+                content = d.get("image_caption", d.get("content_with_weight", ""))
+            else:
+                content = d.get("content_with_weight", "")
+            
+            # Skip if content is too short (avoid hallucinations)
+            if not content or len(content.strip()) < 20:
+                return
+            
+            cached = get_llm_cache(chat_mdl.llm_name, content, "keywords", {"topn": topn})
             if not cached:
                 if has_canceled(task["id"]):
                     progress_callback(-1, msg="Task has been canceled.")
                     return
                 async with chat_limiter:
-                    cached = await keyword_extraction(chat_mdl, d["content_with_weight"], topn)
-                set_llm_cache(chat_mdl.llm_name, d["content_with_weight"], cached, "keywords", {"topn": topn})
+                    cached = await keyword_extraction(chat_mdl, content, topn)
+                set_llm_cache(chat_mdl.llm_name, content, cached, "keywords", {"topn": topn})
             if cached:
                 d["important_kwd"] = cached.split(",")
                 d["important_tks"] = rag_tokenizer.tokenize(" ".join(d["important_kwd"]))

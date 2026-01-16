@@ -335,6 +335,70 @@ def tokenize_chunks_with_images(chunks, doc, eng, images, child_delimiters_patte
     return res
 
 
+def tokenize_structured_chunks(structured_chunks, doc, eng, pdf_parser=None, child_delimiters_pattern=None):
+    """
+    Tokenize structured chunks from semantic_merge_mineru.
+    
+    Args:
+        structured_chunks: List of dicts with keys:
+            - content: The text content
+            - type: 'text', 'table', or 'image'
+            - caption: Original caption (for tables/images, used for keyword extraction)
+            - position: Position tag
+            - page_idx: Page index
+        doc: Base document dict to copy from
+        eng: Whether the content is in English
+        pdf_parser: PDF parser instance (optional, for position extraction)
+        child_delimiters_pattern: Pattern for splitting child chunks
+        
+    Returns:
+        List of document dicts ready for indexing
+    """
+    res = []
+    for ii, ck in enumerate(structured_chunks):
+        content = ck.get("content", "")
+        if not content.strip():
+            continue
+            
+        logging.debug("-- {}".format(content[:100]))
+        d = copy.deepcopy(doc)
+        
+        # Set document type based on chunk type
+        chunk_type = ck.get("type", "text").lower()
+        if chunk_type == "table":
+            d["doc_type_kwd"] = "table"
+            # Store caption separately for smart keyword extraction
+            if ck.get("caption"):
+                d["table_caption"] = ck["caption"]
+        elif chunk_type == "image":
+            d["doc_type_kwd"] = "image"
+            if ck.get("caption"):
+                d["image_caption"] = ck["caption"]
+        
+        # Extract and add positions
+        position = ck.get("position", "")
+        if position and pdf_parser:
+            try:
+                poss = pdf_parser.extract_positions(position)
+                if poss:
+                    add_positions(d, poss)
+            except Exception:
+                add_positions(d, [[ii] * 5])
+        else:
+            add_positions(d, [[ii] * 5])
+        
+        # Handle child splitting for text chunks
+        if chunk_type == "text" and child_delimiters_pattern:
+            d["mom_with_weight"] = content
+            res.extend(split_with_pattern(d, child_delimiters_pattern, content, eng))
+            continue
+        
+        tokenize(d, content, eng)
+        res.append(d)
+    
+    return res
+
+
 def tokenize_table(tbls, doc, eng, batch_size=10):
     res = []
     # add tables
@@ -991,6 +1055,135 @@ def hierarchical_merge(bull, sections, depth):
         num.append(218)
 
     return res
+
+
+def semantic_merge_mineru(structured_sections, chunk_token_num=512, delimiter="\n。；！？", overlapped_percent=0):
+    """
+    Semantic-aware merge strategy specifically designed for MinerU parser output.
+    
+    Key behaviors:
+    1. TABLE and IMAGE blocks are always kept as independent chunks
+    2. Short text blocks (<50 tokens) are merged with adjacent text blocks
+    3. Long text blocks are split according to chunk_token_num
+    4. Block type metadata is preserved in the output
+    
+    Args:
+        structured_sections: List of dicts from MinerU parser with keys:
+            - content: The text content
+            - type: Block type (TEXT, TABLE, IMAGE, etc.)
+            - caption: Caption text (for tables/images)
+            - position: Position tag string
+            - page_idx: Page index
+        chunk_token_num: Maximum tokens per text chunk (default 512)
+        delimiter: Delimiter pattern for text splitting
+        overlapped_percent: Overlap percentage for text chunks
+        
+    Returns:
+        List of dicts with keys:
+            - content: Merged content
+            - type: 'text', 'table', or 'image'
+            - caption: Original caption (for tables/images)
+            - position: Position tag
+            - page_idx: Page index
+    """
+    if not structured_sections:
+        return []
+    
+    # Check if input is already in structured format (list of dicts)
+    if not isinstance(structured_sections[0], dict):
+        # Fallback: convert legacy tuple format to structured format
+        converted = []
+        for sec in structured_sections:
+            if isinstance(sec, tuple):
+                content = sec[0] if len(sec) > 0 else ""
+                position = sec[1] if len(sec) > 1 else ""
+                block_type = sec[2] if len(sec) > 2 else "text"
+                converted.append({
+                    "content": content,
+                    "type": str(block_type),
+                    "caption": "",
+                    "position": position,
+                    "page_idx": 0,
+                })
+            else:
+                converted.append({"content": str(sec), "type": "text", "caption": "", "position": "", "page_idx": 0})
+        structured_sections = converted
+    
+    chunks = []
+    pending_text = ""
+    pending_position = ""
+    pending_page_idx = 0
+    
+    # Media types that should be kept as independent chunks
+    media_types = {"table", "image"}
+    
+    def flush_pending_text():
+        """Flush accumulated text as a chunk if non-empty."""
+        nonlocal pending_text, pending_position, pending_page_idx
+        if pending_text.strip():
+            chunks.append({
+                "content": pending_text.strip(),
+                "type": "text",
+                "caption": "",
+                "position": pending_position,
+                "page_idx": pending_page_idx,
+            })
+        pending_text = ""
+        pending_position = ""
+    
+    for sec in structured_sections:
+        content = sec.get("content", "")
+        block_type = sec.get("type", "text").lower()
+        caption = sec.get("caption", "")
+        position = sec.get("position", "")
+        page_idx = sec.get("page_idx", 0)
+        
+        if not content.strip():
+            continue
+        
+        # Handle media blocks (table/image) - always independent
+        if block_type in media_types:
+            # First, flush any pending text
+            flush_pending_text()
+            
+            # For tables/images, prepend caption to content
+            full_content = content
+            if caption and caption.strip():
+                # Put caption before the body for better context
+                full_content = caption.strip() + "\n" + content
+            
+            chunks.append({
+                "content": full_content,
+                "type": block_type,
+                "caption": caption,  # Preserve original caption for keyword extraction
+                "position": position,
+                "page_idx": page_idx,
+            })
+        else:
+            # Text-like blocks (text, equation, code, list)
+            content_tokens = num_tokens_from_string(content)
+            pending_tokens = num_tokens_from_string(pending_text) if pending_text else 0
+            
+            # If adding this content would exceed chunk_token_num, flush first
+            if pending_text and (pending_tokens + content_tokens) > chunk_token_num:
+                flush_pending_text()
+            
+            # Accumulate text
+            if pending_text:
+                pending_text += "\n" + content
+            else:
+                pending_text = content
+                pending_position = position
+                pending_page_idx = page_idx
+            
+            # If accumulated text is large enough, flush it
+            if num_tokens_from_string(pending_text) >= chunk_token_num:
+                flush_pending_text()
+    
+    # Flush any remaining text
+    flush_pending_text()
+    
+    return chunks
 
 
 def naive_merge(sections: str | list, chunk_token_num=128, delimiter="\n。；！？", overlapped_percent=0):
